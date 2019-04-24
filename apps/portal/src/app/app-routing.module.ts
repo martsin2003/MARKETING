@@ -6,14 +6,16 @@ import { HomePlansComponent } from './home-plans/home-plans.component';
 import { EmpowerInnovationsComponent } from './empower-innovations/empower-innovations.component';
 import { WhyBrookfieldComponent } from './why-brookfield/why-brookfield.component';
 import { MyAccountComponent } from './my-account/my-account.component';
+import { CommunityMicrositeComponent } from './community-microsite/community-microsite.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'find-my-home', component: FindMyHomeComponent }, 
+  { path: 'find-my-home', component: FindMyHomeComponent },
   { path: 'home-plans', component: HomePlansComponent },
   { path: 'empower-innovations', component: EmpowerInnovationsComponent },
   { path: 'why', component: WhyBrookfieldComponent },
   { path: 'my-account', component: MyAccountComponent },
+  { path: 'community-microsite', component: CommunityMicrositeComponent },
 ];
 
 @NgModule({
