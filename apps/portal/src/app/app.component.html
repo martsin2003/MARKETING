@@ -1,9 +1,14 @@
-<div class="wrapper">
+<div>
   <a *ngFor="let link of links" [routerLink]="link.path" routerLinkActive="active">
-    {{link.label}}
+    {{ link.label }}
   </a>
 </div>
 
 <div class="container">
   <router-outlet></router-outlet>
+</div>
+
+<div class="footer">
+  <brookfield-footer></brookfield-footer>
+  <div class="wrapper"></div>
 </div>

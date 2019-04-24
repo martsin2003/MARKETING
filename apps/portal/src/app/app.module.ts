@@ -18,6 +18,7 @@ import { SitePlanComponent } from './community-microsite/site-plan/site-plan.com
 import { HomeownerReviewsComponent } from './community-microsite/homeowner-reviews/homeowner-reviews.component';
 import { LocationInfoComponent } from './community-microsite/location-info/location-info.component';
 import { CommunityMicrositeModule } from './community-microsite/community-microsite.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,9 @@ import { CommunityMicrositeModule } from './community-microsite/community-micros
     BrowserAnimationsModule,
     AppRoutingModule,
     MaterialModule,
-    CommunityMicrositeModule],
+    CommunityMicrositeModule,
+    SharedModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
