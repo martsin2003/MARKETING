@@ -30,3 +30,17 @@ $portal-theme: mat-light-theme($portal-primary, $portal-accent, $portal-warn);
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px 0px;
+  align-items: center;
+}
