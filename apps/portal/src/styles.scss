@@ -15,8 +15,8 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$portal-primary: mat-palette($mat-indigo);
-$portal-accent: mat-palette($mat-grey, 700, A100, A400);
+$portal-primary: mat-palette($mat-light-blue, 800);
+$portal-accent: mat-palette($mat-light-blue);
 $portal-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
@@ -28,12 +28,19 @@ $portal-theme: mat-light-theme($portal-primary, $portal-accent, $portal-warn);
 @include angular-material-theme($portal-theme);
 
 /* You can add global styles to this file, and also import other style files */
-
+@import './theme.scss';
 html, body { height: 100%; width: 100% }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+.container {
+    margin: 0px 20%;
+}
+
+.community-card {
+    height: 200px;
+}
 .footer {
-    background-color: #3f51b5;
+    background-color: $primary;
 }
 
 .w-15 {

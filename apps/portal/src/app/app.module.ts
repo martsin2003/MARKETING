@@ -19,6 +19,7 @@ import { HomeownerReviewsComponent } from './community-microsite/homeowner-revie
 import { LocationInfoComponent } from './community-microsite/location-info/location-info.component';
 import { CommunityMicrositeModule } from './community-microsite/community-microsite.module';
 import { SharedModule } from './shared/shared.module';
+import { CommunityCardComponent } from './find-my-home/community-card/community-card.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SharedModule } from './shared/shared.module';
     HomePlansComponent,
     EmpowerInnovationsComponent,
     WhyBrookfieldComponent,
-    MyAccountComponent
+    MyAccountComponent,
+    CommunityCardComponent
   ],
   imports: [
     BrowserModule,
