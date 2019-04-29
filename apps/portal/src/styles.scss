@@ -17,8 +17,6 @@
 // hue. Available color palettes: https://material.io/design/color/
 $portal-primary: mat-palette($mat-indigo);
 $portal-accent: mat-palette($mat-grey, 700, A100, A400);
-
-// The warn palette is optional (defaults to red).
 $portal-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
@@ -33,3 +31,11 @@ $portal-theme: mat-light-theme($portal-primary, $portal-accent, $portal-warn);
 
 html, body { height: 100%; width: 100% }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.footer {
+    background-color: #3f51b5;
+}
+
+.w-15 {
+    width: 15%;
+}
