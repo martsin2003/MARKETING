@@ -10,5 +10,5 @@ pipelines:
     develop:
       - step:
           script:
-            - yarn
+            - yarn install
             - yarn deploy:dev
