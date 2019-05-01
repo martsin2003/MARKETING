@@ -10,5 +10,5 @@ pipelines:
     develop:
       - step:
           script:
-            - npm install
-            - npm run deploy:dev
+            - yarn
+            - yarn deploy:dev
