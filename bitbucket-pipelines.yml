@@ -11,4 +11,11 @@ pipelines:
       - step:
           script:
             - yarn install
+            - yarn build
             - yarn deploy:dev
+    master:
+      - step:
+          script:
+            - yarn install
+            - yarn build
+            - yarn deploy:prod
