@@ -1,0 +1,36 @@
+<div class="d-flex flex-row flex-wrap">
+  <div *ngFor="let number of [1,2,3]" class="w-50">
+  <mat-card class="m-2">
+    <div class="d-flex flex-row community-card">
+      <div class="d-flex flex-column justify-content-between w-50">
+        <img src="http://placehold.it/480x270/333333" class="h-75" />
+        <mat-checkbox color="primary" class="ml-1">Compare</mat-checkbox>
+        <div class="d-flex align-items-center">
+          <mat-icon class="mat-18">place</mat-icon>
+          Available Locations
+        </div>
+      </div>
+      <div class="d-flex flex-column justify-content-between w-50 ml-2">
+        <div class="font-weight-bold">Home Name</div>
+        <div class="d-flex align-items-center">
+          <mat-icon class="mat-18 mr-2">home</mat-icon> Home Plan Type
+        </div>
+        <div class="d-flex flex-row justify-content-between">
+          <div class="d-flex">
+            <mat-icon class="mat-18 mr-2">hotel</mat-icon> 4-7<br />Beds
+          </div>
+          <div class="d-flex">
+            <mat-icon class="mat-18 mr-2">hot_tub</mat-icon> 2.5-7<br />Baths
+          </div>
+        </div>
+        <div class="d-flex align-items-center">
+          <mat-icon class="mat-18 mr-2">straighten</mat-icon>2,679 - 2,720 sq.
+          ft.
+        </div>
+        <button mat-raised-button color="primary">SEE THIS PLAN</button>
+      </div>
+    </div>
+  </mat-card>
+  </div>
+  <img src="http://placehold.it/555x200/333333" class="m-2" />
+</div>

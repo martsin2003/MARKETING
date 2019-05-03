@@ -20,7 +20,7 @@ import { LocationInfoComponent } from './community-microsite/location-info/locat
 import { CommunityMicrositeModule } from './community-microsite/community-microsite.module';
 import { SharedModule } from './shared/shared.module';
 import { CommunityCardComponent } from './find-my-home/community-card/community-card.component';
-import { HomePlanCardComponent } from './home-plans/home-plan-card/home-plan-card.component';
+import { HomePlansListComponent } from './home-plans/home-plans-list/home-plans-list.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,7 @@ import { HomePlanCardComponent } from './home-plans/home-plan-card/home-plan-car
     WhyBrookfieldComponent,
     MyAccountComponent,
     CommunityCardComponent,
-    HomePlanCardComponent
+    HomePlansListComponent
   ],
   imports: [
     BrowserModule,
