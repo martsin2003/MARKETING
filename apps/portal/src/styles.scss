@@ -28,9 +28,24 @@ $portal-theme: mat-light-theme($portal-primary, $portal-accent, $portal-warn);
 @include angular-material-theme($portal-theme);
 
 /* You can add global styles to this file, and also import other style files */
-@import './theme.scss';
-html, body { height: 100%; width: 100% }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import '../styles/theme.scss';
+@import '../styles/utils.scss';
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue",
+  sans-serif;
+}
+
+.main-app {
+  max-width: 1440px;
+}
 
 .container {
     margin: 0px 20%;
@@ -39,10 +54,50 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .community-card {
     height: 200px;
 }
-.footer {
-    background-color: $primary;
+
+//FONT COLORS
+.primary-text {
+  color: $primary;
 }
 
-.w-15 {
-    width: 15%;
+.primary-accent-text {
+  color: $primary-accent;
+}
+
+.primary-dark-text {
+  color: $primary-dark;
+}
+
+.secondary-text {
+  color: $secondary;
+}
+
+.white-text {
+  color: white;
+}
+
+.yellow-text {
+  color: $yellow;
+}
+
+//BUTTON STYLING
+.primary-button {
+  background-color: $primary;
+  color: white;
+}
+
+.primary-accent-button {
+  background-color: $primary-accent;
+}
+
+.primary-dark-button {
+  background-color: $primary-dark;
+}
+
+.secondary-button {
+  background-color: $secondary;
+}
+
+.white-button {
+  background-color: white;
 }

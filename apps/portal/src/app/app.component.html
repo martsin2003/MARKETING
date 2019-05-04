@@ -1,18 +1,14 @@
-<div>
-  <a *ngFor="let link of links" [routerLink]="link.path" routerLinkActive="active">
-    {{ link.label }}
-  </a>
-</div>
+<div class="main-app">
+  <brookfield-secondary-navigation></brookfield-secondary-navigation>
 
-<brookfield-secondary-navigation></brookfield-secondary-navigation>
+  <brookfield-main-navigation></brookfield-main-navigation>
 
-<brookfield-main-navigation></brookfield-main-navigation>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
 
-<div>
-  <router-outlet></router-outlet>
-</div>
-
-<div class="footer">
-  <brookfield-footer></brookfield-footer>
-  <div class="wrapper"></div>
+  <div class="footer">
+    <brookfield-footer></brookfield-footer>
+    <div class="wrapper"></div>
+  </div>
 </div>
