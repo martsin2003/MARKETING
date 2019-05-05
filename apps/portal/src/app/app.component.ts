@@ -7,14 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'brookfield';
-
-  links = [
-    { path: '', label: 'Home' },
-    { path: 'find-my-home', label: 'Find My Home' },
-    { path: 'home-plans', label: 'Home Plans' },
-    { path: 'empower-innovations', label: 'Empower Innovations' },
-    { path: 'why', label: 'Why Brookfield' },
-    { path: 'my-account', label: 'My Account' },
-    { path: 'community-microsite', label: 'Community Microsite' },
-  ];
 }

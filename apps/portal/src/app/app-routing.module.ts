@@ -9,7 +9,8 @@ import { MyAccountComponent } from './my-account/my-account.component';
 import { CommunityMicrositeComponent } from './community-microsite/community-microsite.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
   { path: 'find-my-home', component: FindMyHomeComponent },
   { path: 'home-plans', component: HomePlansComponent },
   { path: 'empower-innovations', component: EmpowerInnovationsComponent },
