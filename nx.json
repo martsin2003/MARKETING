@@ -16,6 +16,9 @@
     },
     "material": {
       "tags": []
+    },
+    "shared-navigation": {
+      "tags": ["scope:shared", "type:feature"]
     }
   }
 }

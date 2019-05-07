@@ -11,7 +11,8 @@
     "lib": ["es2017", "dom"],
     "baseUrl": ".",
     "paths": {
-      "@brookfield/material": ["libs/material/src/index.ts"]
+      "@brookfield/material": ["libs/material/src/index.ts"],
+      "@brookfield/shared/navigation": ["libs/shared/navigation/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

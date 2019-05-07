@@ -23,6 +23,7 @@ import { CommunityCardComponent } from './find-my-home/community-card/community-
 import { HomePlansListComponent } from './home-plans/home-plans-list/home-plans-list.component';
 import { HomeMainNavComponent } from './home/home-main-nav/home-main-nav.component';
 import { HomeSecondaryNavComponent } from './home/home-secondary-nav/home-secondary-nav.component';
+import { SharedNavigationModule } from '@brookfield/shared/navigation';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { HomeSecondaryNavComponent } from './home/home-secondary-nav/home-second
     CommunityCardComponent,
     HomePlansListComponent,
     HomeMainNavComponent,
-    HomeSecondaryNavComponent,
+    HomeSecondaryNavComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +46,8 @@ import { HomeSecondaryNavComponent } from './home/home-secondary-nav/home-second
     AppRoutingModule,
     MaterialModule,
     CommunityMicrositeModule,
-    SharedModule
+    SharedModule,
+    SharedNavigationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

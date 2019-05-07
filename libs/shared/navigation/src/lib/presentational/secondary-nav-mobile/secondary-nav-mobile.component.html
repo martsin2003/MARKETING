@@ -1,0 +1,46 @@
+<div class="main-nav">
+  <mat-accordion hideToggle displayMode="flat" multi="true">
+    <mat-expansion-panel disabled>
+      <mat-expansion-panel-header class="primary-dark-text">
+        <span class="pl-2">Homeowner Reviews</span>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header class="primary-dark-text">
+        <span class="pr-1">
+          <mat-icon class="expand-arrow" [ngClass]="{ expanded: menuOpened }">
+            expand_more
+          </mat-icon>
+        </span>
+        <span>Resources</span>
+      </mat-expansion-panel-header>
+      <div>Resources Content</div>
+    </mat-expansion-panel>
+    <mat-expansion-panel disabled>
+      <mat-expansion-panel-header class="primary-dark-text">
+        <span class="pl-2">For Owners</span>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+    <mat-expansion-panel disabled>
+      <mat-expansion-panel-header class="primary-dark-text">
+        <span class="pl-2">For Realtors</span>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header class="primary-dark-text">
+        <span class="pr-1">
+          <mat-icon class="expand-arrow" [ngClass]="{ expanded: menuOpened }">
+            expand_more
+          </mat-icon>
+        </span>
+        <span>Contact Us</span>
+      </mat-expansion-panel-header>
+      <div>Contact Us Content</div>
+    </mat-expansion-panel>
+    <mat-expansion-panel disabled>
+      <mat-expansion-panel-header class="primary-dark-text">
+        <span class="pl-2">My Account</span>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
