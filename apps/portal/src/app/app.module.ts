@@ -21,9 +21,7 @@ import { CommunityMicrositeModule } from './community-microsite/community-micros
 import { SharedModule } from './shared/shared.module';
 import { CommunityCardComponent } from './find-my-home/community-card/community-card.component';
 import { HomePlansListComponent } from './home-plans/home-plans-list/home-plans-list.component';
-import { HomeMainNavComponent } from './home/home-main-nav/home-main-nav.component';
-import { HomeSecondaryNavComponent } from './home/home-secondary-nav/home-secondary-nav.component';
-import { SharedNavigationModule } from '@brookfield/shared/navigation';
+import { PortalSharedFeatureNavigationModule } from '@brookfield/portal/shared/feature-navigation';
 
 @NgModule({
   declarations: [
@@ -35,9 +33,7 @@ import { SharedNavigationModule } from '@brookfield/shared/navigation';
     WhyBrookfieldComponent,
     MyAccountComponent,
     CommunityCardComponent,
-    HomePlansListComponent,
-    HomeMainNavComponent,
-    HomeSecondaryNavComponent
+    HomePlansListComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +43,7 @@ import { SharedNavigationModule } from '@brookfield/shared/navigation';
     MaterialModule,
     CommunityMicrositeModule,
     SharedModule,
-    SharedNavigationModule
+    PortalSharedFeatureNavigationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

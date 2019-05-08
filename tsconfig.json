@@ -12,7 +12,10 @@
     "baseUrl": ".",
     "paths": {
       "@brookfield/material": ["libs/material/src/index.ts"],
-      "@brookfield/shared/navigation": ["libs/shared/navigation/src/index.ts"]
+      "@brookfield/shared/navigation": ["libs/shared/navigation/src/index.ts"],
+      "@brookfield/portal/shared/feature-navigation": [
+        "libs/portal/shared/feature-navigation/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

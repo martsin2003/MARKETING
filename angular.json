@@ -137,9 +137,9 @@
         }
       }
     },
-    "shared-navigation": {
-      "root": "libs/shared/navigation",
-      "sourceRoot": "libs/shared/navigation/src",
+    "portal-shared-feature-navigation": {
+      "root": "libs/portal/shared/feature-navigation",
+      "sourceRoot": "libs/portal/shared/feature-navigation/src",
       "projectType": "library",
       "prefix": "brookfield",
       "architect": {
@@ -147,8 +147,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/shared/navigation/tsconfig.lib.json",
-              "libs/shared/navigation/tsconfig.spec.json"
+              "libs/portal/shared/feature-navigation/tsconfig.lib.json",
+              "libs/portal/shared/feature-navigation/tsconfig.spec.json"
             ],
             "exclude": ["**/node_modules/**"]
           }
@@ -156,9 +156,9 @@
         "test": {
           "builder": "@nrwl/builders:jest",
           "options": {
-            "jestConfig": "libs/shared/navigation/jest.config.js",
-            "tsConfig": "libs/shared/navigation/tsconfig.spec.json",
-            "setupFile": "libs/shared/navigation/src/test-setup.ts"
+            "jestConfig": "libs/portal/shared/feature-navigation/jest.config.js",
+            "tsConfig": "libs/portal/shared/feature-navigation/tsconfig.spec.json",
+            "setupFile": "libs/portal/shared/feature-navigation/src/test-setup.ts"
           }
         }
       },
