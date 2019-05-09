@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FindMyHomeComponent } from './find-my-home/find-my-home.component';
-import { HomePlansComponent } from './home-plans/home-plans.component';
 import { EmpowerInnovationsComponent } from './empower-innovations/empower-innovations.component';
 import { WhyBrookfieldComponent } from './why-brookfield/why-brookfield.component';
 import { MyAccountComponent } from './my-account/my-account.component';

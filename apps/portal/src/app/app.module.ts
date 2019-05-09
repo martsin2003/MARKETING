@@ -7,7 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from '@brookfield/material';
 import { FindMyHomeComponent } from './find-my-home/find-my-home.component';
-import { HomePlansComponent } from './home-plans/home-plans.component';
 import { EmpowerInnovationsComponent } from './empower-innovations/empower-innovations.component';
 import { WhyBrookfieldComponent } from './why-brookfield/why-brookfield.component';
 import { MyAccountComponent } from './my-account/my-account.component';
@@ -19,19 +18,16 @@ import { LocationInfoComponent } from './community-microsite/location-info/locat
 import { CommunityMicrositeModule } from './community-microsite/community-microsite.module';
 import { SharedModule } from './shared/shared.module';
 import { CommunityCardComponent } from './find-my-home/community-card/community-card.component';
-import { HomePlansListComponent } from './home-plans/home-plans-list/home-plans-list.component';
 import { PortalSharedFeatureNavigationModule } from '@brookfield/portal/shared/feature-navigation';
 
 @NgModule({
   declarations: [
     AppComponent,
     FindMyHomeComponent,
-    HomePlansComponent,
     EmpowerInnovationsComponent,
     WhyBrookfieldComponent,
     MyAccountComponent,
-    CommunityCardComponent,
-    HomePlansListComponent
+    CommunityCardComponent
   ],
   imports: [
     BrowserModule,
