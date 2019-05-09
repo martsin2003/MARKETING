@@ -1,8 +1,10 @@
+@import 'variables.scss';
+
 .label-text {
-  color: white;
+  color: $white;
   cursor: pointer;
 }
 .main-navigation {
   margin-left: auto;
-  color: white;
+  color: $white;
 }

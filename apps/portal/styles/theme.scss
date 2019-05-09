@@ -1,9 +1,4 @@
-$primary: rgb(81, 130, 171);
-$primary-dark: rgb(2, 30, 61);
-$primary-accent: rgb(43, 77, 113);
-$secondary: rgb(162, 190, 212);
-$warn: red;
-$yellow: rgb(215, 152, 30);
+@import 'variables.scss';
 
 $mat-primary: (
   50: $primary,
@@ -34,7 +29,7 @@ $mat-primary: (
     A100: white,
     A200: white,
     A400: white,
-    A700: white,
+    A700: white
   )
 );
 
@@ -67,7 +62,7 @@ $mat-secondary: (
     A100: white,
     A200: white,
     A400: white,
-    A700: white,
+    A700: white
   )
 );
 
@@ -100,6 +95,6 @@ $mat-warn: (
     A100: white,
     A200: white,
     A400: white,
-    A700: white,
+    A700: white
   )
 );

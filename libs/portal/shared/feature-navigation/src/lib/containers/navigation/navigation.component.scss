@@ -1,10 +1,12 @@
+@import 'variables.scss';
+
 .navigation {
   // transition: background-color ease-in-out 500ms;
   .label-text {
-    color: white;
+    color: $primary;
   }
   .menu-toggle {
-    color: white;
+    color: $white;
     background-color: transparent;
     box-shadow: none;
     outline: none;
@@ -12,16 +14,16 @@
   }
 
   &.active {
-    background-color: white;
+    background-color: $white;
 
     .label-text-1 {
-      color: rgb(2, 30, 61);
+      color: $primary-dark;
     }
     .label-text-2 {
-      color: rgb(215, 152, 30);
+      color: $yellow;
     }
     .menu-toggle {
-      color: darkgray;
+      color: $darkgray;
     }
   }
 }
@@ -34,7 +36,7 @@
 }
 
 .navigation-menu {
-  background-color: white;
+  background-color: $white;
   position: absolute;
   top: 86px;
   left: 0;
@@ -51,7 +53,7 @@
   font-size: 18px;
   color: black;
   &:not(.empty) {
-    border-top: 1px solid #dadce9;
+    border-top: 1px solid $divider;
   }
 }
 
@@ -59,16 +61,16 @@
   .mat-accordion {
     .mat-expansion-panel {
       border-radius: 0 !important;
-      border-bottom: 1px solid #dadce9;
+      border-bottom: 1px solid $divider;
       box-shadow: none;
       min-height: 50px;
 
       &:first-child {
-        border-top: 1px solid #dadce9;
+        border-top: 1px solid $divider;
       }
 
       &[disabled] .mat-expansion-panel-header {
-        color: rgb(2, 30, 61);
+        color: $primary-dark;
       }
       .mat-expansion-panel-header {
         font-size: 18px;

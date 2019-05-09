@@ -1,5 +1,7 @@
+@import 'variables.scss';
+
 .search-homes-container {
-  background-color: rgb(81, 130, 171);
+  background-color: $primary;
 }
 
 .search-box {
@@ -13,7 +15,7 @@
     text-align: center;
 
     &--input {
-      background-color: white;
+      background-color: $white;
     }
   }
 }
@@ -29,8 +31,8 @@
   // cursor: pointer;
 
   &--accent {
-    color: lightgray;
-    background-color: rgb(43, 77, 113);
+    color: $lightgray;
+    background-color: $primary-accent;
   }
 }
 
@@ -40,7 +42,7 @@
   .image-container {
     position: relative;
     text-align: center;
-    color: white;
+    color: $white;
 
     .top-left {
       position: absolute;
@@ -54,7 +56,7 @@
   }
 
   mat-toolbar {
-    background-color: rgb(81, 130, 171);
+    background-color: $primary;
   }
 
   .mat-raised-button {
@@ -63,13 +65,13 @@
   }
 
   .gray-background {
-    background-color: rgb(237, 240, 242);
+    background-color: $gray-bg;
   }
 
   ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
     height: 50px;
     border-radius: 5px;
-    background-color: white !important;
+    background-color: $white !important;
     padding: 0px;
   }
 
