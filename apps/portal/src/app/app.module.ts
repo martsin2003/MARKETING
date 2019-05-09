@@ -6,7 +6,6 @@ import { NxModule } from '@nrwl/nx';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from '@brookfield/material';
-import { HomeComponent } from './home/home.component';
 import { FindMyHomeComponent } from './find-my-home/find-my-home.component';
 import { HomePlansComponent } from './home-plans/home-plans.component';
 import { EmpowerInnovationsComponent } from './empower-innovations/empower-innovations.component';
@@ -26,7 +25,6 @@ import { PortalSharedFeatureNavigationModule } from '@brookfield/portal/shared/f
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     FindMyHomeComponent,
     HomePlansComponent,
     EmpowerInnovationsComponent,

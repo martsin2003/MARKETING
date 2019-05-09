@@ -167,6 +167,68 @@
           "styleext": "scss"
         }
       }
+    },
+    "portal-feature-home": {
+      "root": "libs/portal/feature/home",
+      "sourceRoot": "libs/portal/feature/home/src",
+      "projectType": "library",
+      "prefix": "brookfield",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/portal/feature/home/tsconfig.lib.json",
+              "libs/portal/feature/home/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/portal/feature/home/jest.config.js",
+            "tsConfig": "libs/portal/feature/home/tsconfig.spec.json",
+            "setupFile": "libs/portal/feature/home/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "portal-feature-find-my-home": {
+      "root": "libs/portal/feature/find-my-home",
+      "sourceRoot": "libs/portal/feature/find-my-home/src",
+      "projectType": "library",
+      "prefix": "brookfield",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/portal/feature/find-my-home/tsconfig.lib.json",
+              "libs/portal/feature/find-my-home/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/portal/feature/find-my-home/jest.config.js",
+            "tsConfig": "libs/portal/feature/find-my-home/tsconfig.spec.json",
+            "setupFile": "libs/portal/feature/find-my-home/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {

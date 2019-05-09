@@ -16,10 +16,6 @@ import { MainNavDesktopComponent } from './presentational/main-nav-desktop/main-
     SecondaryNavDesktopComponent,
     MainNavDesktopComponent
   ],
-  exports: [
-    NavigationComponent,
-    SecondaryNavDesktopComponent,
-    MainNavDesktopComponent
-  ]
+  exports: [NavigationComponent]
 })
 export class PortalSharedFeatureNavigationModule {}
