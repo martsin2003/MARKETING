@@ -8,7 +8,8 @@
   "exclude": ["src/test.ts", "**/*.spec.ts"],
   "include": [
     "**/*.ts",
-
-    "../../libs/portal/feature/home-plan-detail/src/index.ts"
+    "../../libs/portal/feature/home-plans/src/index.ts",
+    "../../libs/portal/feature/home-plan-detail/src/index.ts",
+    "../../libs/portal/feature/find-my-home/src/index.ts"
   ]
 }
