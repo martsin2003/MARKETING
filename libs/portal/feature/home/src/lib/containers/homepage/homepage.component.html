@@ -1,119 +1,64 @@
-<!-- <div class="home-container">
-  <div class="search-homes-container p-3">
-    <h2 class="font-20 white-text text-center my-2">
-      Search for homes in Virginia, Maryland, or Delaware
-    </h2>
-    <div class="search-box">
-      <input
-        matInput
-        class="search-box__item search-box__item--input my-2"
-        type="text"
-        placeholder="Enter a county, city, or community"
-      />
-      <button
-        mat-raised-button
-        class="search-box__item search-box__item--button my-2 button button--accent"
-      >
-        <mat-icon>search</mat-icon>
-        FIND MY NEW HOME
-      </button>
-    </div>
-  </div>
-</div> -->
-
-<!-- OLD ONE - REMOVE WHEN MOVING COMPLETE -->
-<!-- <brookfield-homepage></brookfield-homepage> -->
+<div class="home-container">
+  <brookfield-search-homes></brookfield-search-homes>
+</div>
 
 <div class="d-flex flex-column align-items-center home">
-  <!-- CREATE/IMPLEMENT IMAGE SLIDER -->
-  <!-- <div class="image-container w-100">
-    <div class="bottom-left">
-      <h1 class="m-0 text-left">The Home You Want.</h1>
-      <br />
-      <p class="m-0 text-left">Aliquip consequat eu aliquip.</p>
-    </div>
-  </div> -->
-
-  <mat-toolbar
-    class="d-flex flex-column align-items-center w-100 h-75 text-white"
-  >
-    <h2 class="pt-2">Search for homes in Virginia, Maryland, or Delaware</h2>
-    <div
-      class="d-flex row align-items-center justify-content-between w-75 h-50 mb-2"
-    >
-      <mat-form-field class="w-75 mr-3 h-25 mt-4" appearance="outline">
-        <input
-          matInput
-          type="text"
-          placeholder="Enter a county, city, or community"
-        />
-      </mat-form-field>
-      <!-- TODO: IMPLEMENT SEARCH COMMUNITY LIST FEATURE -->
-      <button
-        mat-raised-button
-        class="text-center primary-accent-button secondary-text mt-3 mb-1"
-      >
-        <mat-icon>search</mat-icon>
-        FIND MY NEW HOME
-      </button>
-    </div>
-  </mat-toolbar>
-
-  <div class="d-flex flex-column align-items-center text-center mb-5">
-    <h1 class="primary-dark-text">
+  <div class="d-flex flex-column align-items-center text-center px-3 py-4">
+    <h1 class="praise-heading primary-dark-text mt-0 mb-3">
       The Mid-Atlantic's Most Innovative Homebuilder
     </h1>
-    <p>
+    <p class="my-2 praise-text w-100">
       Brookfield Residential makes finding the home you want easier than you
       ever imagined.<br />Together, we'll create a home that is everything you
       dreamed.
     </p>
-    <h4>
-      Our Empower innovation features redefine how you shop for your new
-      home,<br />
-      personalize your design and enjoy life in your new home each day.
-    </h4>
-    <button
-      mat-raised-button
-      class="align-self-center w-25 p-2 primary-button"
-      routerLink="empower-innovations"
-    >
+    <p class="my-2 praise-text w-100">
+      <b>
+        Our Empower innovation features redefine how you shop for your new
+        home,<br />
+        personalize your design and enjoy life in your new home each day.
+      </b>
+    </p>
+    <button class="br-button br-button--primary my-3">
       DISCOVER EMPOWER
     </button>
   </div>
 
-  <div class="d-flex w-100">
+  <div class="w-100 info-cards">
     <div
-      class="d-flex flex-column justify-content-center align-items-left w-50 p-5 gray-background"
+      class="info-cards--item d-flex flex-column justify-content-center align-items-left gray-background"
     >
-      <div
-        class="d-flex flex-row align-self-center justify-content-between w-50"
-      >
-        <mat-icon class="primary-text">location_city</mat-icon>
-        <mat-icon class="primary-text">home</mat-icon>
-        <mat-icon class="primary-text">domain</mat-icon>
+      <div class="p-4">
+        <div
+          class="d-flex flex-row align-self-center justify-content-between w-50"
+        >
+          <mat-icon class="primary-text">location_city</mat-icon>
+          <mat-icon class="primary-text">home</mat-icon>
+          <mat-icon class="primary-text">domain</mat-icon>
+        </div>
+        <h2>Search All Home Plans</h2>
+        <p>
+          From condos and townhomes to the most luxurious single-family homes,
+          you'll find a floorplan that fits exactly what you're looking for.
+        </p>
+        <button
+          class="br-button br-button--secondary align-self-start primary-text"
+        >
+          SEE ALL HOMES
+        </button>
       </div>
-      <h2>Search All Home Plans</h2>
-      <p>
-        From condos and townhomes to the most luxurious single-family homes,
-        you'll find a floorplan that fits exactly what you're looking for.
-      </p>
-      <button
-        class="align-self-start w-50 p-2 primary-text"
-        mat-stroked-button
-        routerLink="home-plans"
-      >
-        SEE ALL HOMES
-      </button>
     </div>
-
-    <img src="http://placehold.it/655x540/333333" class="w-50 h-50" />
+    <div class="info-cards--item">
+      <img src="http://placehold.it/655x540/333333" class="w-100" />
+    </div>
   </div>
 
-  <div class="d-flex w-100">
-    <img src="http://placehold.it/655x540/333333" class="w-50 h-50" />
+  <div class="info-cards w-100">
+    <div class="info-cards--item info-cards--order-1">
+      <img src="http://placehold.it/655x540/333333" class="w-100" />
+    </div>
     <div
-      class="d-flex flex-column justify-content-center align-items-left w-50 p-5 gray-background"
+      class="info-cards--item d-flex flex-column justify-content-center align-items-left p-4 gray-background"
     >
       <h4 class="m-0 primary-text">
         TAKE CONTROL OF YOUR SEARCH
@@ -125,9 +70,7 @@
         homes in a smooth, enjoyable process.
       </p>
       <button
-        mat-stroked-button
-        class="align-self-start w-50 p-2 primary-text"
-        routerLink="empower-innovations"
+        class="br-button br-button--secondary align-self-start primary-text"
       >
         GET EMPOWERED
       </button>

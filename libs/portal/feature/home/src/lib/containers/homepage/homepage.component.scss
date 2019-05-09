@@ -1,38 +1,34 @@
 @import 'variables.scss';
 
-.search-homes-container {
-  background-color: $primary;
-}
-
-.search-box {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 450px;
-
-  &__item {
-    // height: 40px;
-    border-radius: 0;
+.praise-text {
+  text-align: left;
+  @media only screen and (min-width: 769px) {
     text-align: center;
-
-    &--input {
-      background-color: $white;
-    }
   }
 }
 
-.button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  font-weight: 600;
-  padding: 15px 20px;
-  outline: none;
-  // cursor: pointer;
+.praise-heading {
+  font-size: 24px;
+  @media only screen and (min-width: 769px) {
+    font-size: 30px;
+  }
+}
 
-  &--accent {
-    color: $lightgray;
-    background-color: $primary-accent;
+.info-cards {
+  display: flex;
+  flex-direction: column-reverse;
+  @media only screen and (min-width: 769px) {
+    flex-direction: row;
+  }
+  &--item {
+    @media only screen and (min-width: 769px) {
+      flex: 1 0 50%;
+    }
+  }
+  &--order-1 {
+    @media only screen and (max-width: 768px) {
+      order: 1;
+    }
   }
 }
 

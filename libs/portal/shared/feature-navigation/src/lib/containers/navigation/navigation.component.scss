@@ -14,6 +14,12 @@
   }
 
   &.active {
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    width: 100%;
+    overflow: scroll;
+    height: 100%;
     background-color: $white;
 
     .label-text-1 {
@@ -41,7 +47,6 @@
   top: 86px;
   left: 0;
   width: 100%;
-  height: 100vh;
   z-index: 999;
 }
 

@@ -83,23 +83,40 @@ body {
 }
 
 //BUTTON STYLING
-.primary-button {
-  background-color: $primary;
-  color: white;
+.br-button {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px 20px;
+  outline: none;
+  border: 1px solid;
+  cursor: pointer;
+
+  &--accent {
+    color: $lightgray;
+    border-color: $primary-accent;
+    background-color: $primary-accent;
+  }
+  &--primary {
+    color: $white;
+    border-color: $primary;
+    background-color: $primary;
+  }
+  &--secondary {
+    color: $primary;
+    border-color: $primary;
+    background-color: transparent;
+  }
 }
 
-.primary-accent-button {
-  background-color: $primary-accent;
-}
-
-.primary-dark-button {
-  background-color: $primary-dark;
-}
-
-.secondary-button {
-  background-color: $secondary;
-}
-
-.white-button {
-  background-color: white;
+// Input styles
+.br-input {
+  border: 1px solid $white;
+  padding: 0;
+  height: 50px;
+  background-color: $white !important;
+  font-size: 16px;
 }
