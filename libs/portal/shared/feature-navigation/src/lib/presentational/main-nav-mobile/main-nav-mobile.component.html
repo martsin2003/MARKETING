@@ -1,6 +1,6 @@
 <div>
   <mat-accordion hideToggle displayMode="flat" multi="true">
-    <mat-expansion-panel>
+    <mat-expansion-panel class="mobile-expansion-panel">
       <mat-expansion-panel-header class="primary-dark-text">
         <span class="pr-1">
           <mat-icon class="expand-arrow" [ngClass]="{ expanded: menuOpened }">
@@ -9,9 +9,59 @@
         </span>
         <span>FIND MY HOME</span>
       </mat-expansion-panel-header>
-      <div>FIND MY HOME CONTENT</div>
+      <div class="d-flex flex-column mobile-list-background">
+        <span class="pl-2 pt-2 font-weight-bold text-left">VIRGINIA</span>
+        <mat-list>
+          <mat-list-item class="font-weight-bold">
+            <span class="ml-5">Frederick County, VA</span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item class="font-weight-bold">
+            <span class="ml-5">Loudoun County, VA</span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item class="font-weight-bold">
+            <span class="ml-5">Prince William County, VA</span>
+          </mat-list-item>
+        </mat-list>
+      </div>
+      <div class="d-flex flex-column">
+        <span class="pl-2 pt-2 font-weight-bold text-left">MARYLAND</span>
+        <mat-list>
+          <mat-list-item class="font-weight-bold">
+            <span class="ml-5">Anne Arundel County, MD</span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item class="font-weight-bold">
+            <span class="ml-5">Montgomery County, MD</span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item class="font-weight-bold">
+            <span class="ml-5">Talbot County, MD</span>
+          </mat-list-item>
+        </mat-list>
+      </div>
+      <div class="d-flex flex-column mobile-list-background">
+        <span class="pl-2 pt-2  font-weight-bold text-left">DELAWARE</span>
+        <mat-list>
+          <mat-list-item class="font-weight-bold">
+            <span class="ml-5">Sussex County, DE</span>
+          </mat-list-item>
+        </mat-list>
+      </div>
+      <div class="d-flex flex-column">
+        <mat-list>
+          <mat-list-item class="font-weight-bold">
+            <span class="ml-5">View All Communities</span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item class="font-weight-bold">
+            <span class="ml-5">View All Move-In-Now Homes</span>
+          </mat-list-item>
+        </mat-list>
+      </div>
     </mat-expansion-panel>
-    <mat-expansion-panel>
+    <mat-expansion-panel class="mobile-expansion-panel">
       <mat-expansion-panel-header class="primary-dark-text">
         <span class="pr-1">
           <mat-icon class="expand-arrow" [ngClass]="{ expanded: menuOpened }">
@@ -20,9 +70,27 @@
         </span>
         <span>HOME PLAN</span>
       </mat-expansion-panel-header>
-      <div>HOME PLAN CONTENT</div>
+      <div class="d-flex flex-column mobile-list-background">
+        <mat-list>
+          <mat-list-item class="font-weight-bold">
+            <span class="ml-5">Single-Family Homes</span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item class="font-weight-bold">
+            <span class="ml-5">Townhomes</span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item class="font-weight-bold">
+            <span class="ml-5">Condos</span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item class="font-weight-bold">
+            <span class="ml-5">See All Home Plans</span>
+          </mat-list-item>
+        </mat-list>
+      </div>
     </mat-expansion-panel>
-    <mat-expansion-panel>
+    <mat-expansion-panel class="mobile-expansion-panel">
       <mat-expansion-panel-header class="primary-dark-text">
         <span class="pr-1">
           <mat-icon class="expand-arrow" [ngClass]="{ expanded: menuOpened }">
@@ -31,11 +99,41 @@
         </span>
         <span>EMPOWER INNOVATIONS</span>
       </mat-expansion-panel-header>
-      <div>EMPOWER INNOVATIONS CONTENT</div>
+      <div class="d-flex flex-column mobile-list-background">
+        <mat-list>
+          <mat-list-item class="font-weight-bold">
+            <span class="ml-5">Overview</span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item class="font-weight-bold">
+            <span class="ml-5">My Time Home Hours</span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item class="font-weight-bold">
+            <span class="ml-5">My Style Quick-Move Homes</span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item class="font-weight-bold">
+            <span class="ml-5">My Vision Virtual Design</span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item class="font-weight-bold">
+            <span class="ml-5 text-left">My Command Smart Home Automation</span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item class="font-weight-bold">
+            <span class="ml-5">My Apps 24/7 Connection</span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item class="font-weight-bold">
+            <span class="ml-5 text-left">My Energy Efficiency and Sustainability</span>
+          </mat-list-item>
+        </mat-list>
+      </div>
     </mat-expansion-panel>
     <mat-expansion-panel disabled>
       <mat-expansion-panel-header class="primary-dark-text">
-        <span class="pl-2">WHY BROOKFIELD?</span>
+        <span>WHY BROOKFIELD?</span>
       </mat-expansion-panel-header>
     </mat-expansion-panel>
   </mat-accordion>

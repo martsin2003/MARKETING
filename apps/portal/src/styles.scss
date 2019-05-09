@@ -53,6 +53,10 @@ body {
   border: 2px solid $primary !important;
 }
 
+.mobile-expansion-panel .mat-expansion-panel-body {
+  padding: 0px;
+}
+
 //FONT COLORS
 .primary-text {
   color: $primary;
