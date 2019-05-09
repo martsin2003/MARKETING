@@ -3,8 +3,15 @@
     Homeowner Reviews
   </button>
 
-  <button mat-button class="nav-item" [matMenuTriggerFor]="resourcesMenu">
-    <mat-icon>expand_more</mat-icon>
+  <button
+    mat-button
+    class="nav-item"
+    [matMenuTriggerFor]="resourcesMenu"
+    #resourcesTrigger="matMenuTrigger"
+  >
+    <mat-icon>{{
+      resourcesTrigger.menuOpen ? 'expand_less' : 'expand_more'
+    }}</mat-icon>
     Resources
   </button>
 
@@ -28,8 +35,15 @@
     For Owners
   </button>
 
-  <button mat-button class="nav-item" [matMenuTriggerFor]="forRealtorsMenu">
-    <mat-icon>expand_more</mat-icon>
+  <button
+    mat-button
+    class="nav-item"
+    [matMenuTriggerFor]="forRealtorsMenu"
+    #realtorsTrigger="matMenuTrigger"
+  >
+    <mat-icon>{{
+      realtorsTrigger.menuOpen ? 'expand_less' : 'expand_more'
+    }}</mat-icon>
     For Realtors
   </button>
 
@@ -51,8 +65,15 @@
     Blog
   </button>
 
-  <button mat-button class="nav-item" [matMenuTriggerFor]="contactUsMenu">
-    <mat-icon>expand_more</mat-icon>
+  <button
+    mat-button
+    class="nav-item"
+    [matMenuTriggerFor]="contactUsMenu"
+    #contactUsTrigger="matMenuTrigger"
+  >
+    <mat-icon>{{
+      contactUsTrigger.menuOpen ? 'expand_less' : 'expand_more'
+    }}</mat-icon>
     Contact Us
   </button>
 
@@ -62,8 +83,15 @@
     <button mat-menu-item>Service Request</button>
   </mat-menu>
 
-  <button mat-button class="nav-item" [matMenuTriggerFor]="myAccountMenu">
-    <mat-icon>expand_more</mat-icon>
+  <button
+    mat-button
+    class="nav-item"
+    [matMenuTriggerFor]="myAccountMenu"
+    #myAccountTrigger="matMenuTrigger"
+  >
+    <mat-icon>{{
+      myAccountTrigger.menuOpen ? 'expand_less' : 'expand_more'
+    }}</mat-icon>
     My Account
   </button>
 
