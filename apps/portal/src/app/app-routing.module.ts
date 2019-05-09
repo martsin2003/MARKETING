@@ -7,10 +7,6 @@ import { WhyBrookfieldComponent } from './why-brookfield/why-brookfield.componen
 import { MyAccountComponent } from './my-account/my-account.component';
 import { CommunityMicrositeComponent } from './community-microsite/community-microsite.component';
 import {
-  PortalFeatureFindMyHomeModule,
-  portalFeatureFindMyHomeRoutes
-} from '@brookfield/portal/feature/find-my-home';
-import {
   PortalFeatureHomeModule,
   portalFeatureHomeRoutes
 } from '@brookfield/portal/feature/home';
@@ -18,9 +14,21 @@ import {
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', children: portalFeatureHomeRoutes },
-  { path: 'find-my-home', component: FindMyHomeComponent },
-  // { path: 'find-my-home', children: portalFeatureFindMyHomeRoutes },
-  { path: 'home-plans', component: HomePlansComponent },
+  {
+    path: 'find-my-home',
+    loadChildren:
+      '@brookfield/portal/feature/find-my-home#PortalFeatureFindMyHomeModule'
+  },
+  {
+    path: 'home-plans',
+    loadChildren:
+      '@brookfield/portal/feature/home-plans#PortalFeatureHomePlansModule'
+  },
+  {
+    path: 'home-plan-detail',
+    loadChildren:
+      '@brookfield/portal/feature/home-plan-detail#PortalFeatureHomePlanDetailModule'
+  },
   { path: 'empower-innovations', component: EmpowerInnovationsComponent },
   { path: 'why', component: WhyBrookfieldComponent },
   { path: 'my-account', component: MyAccountComponent },
@@ -30,7 +38,6 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { initialNavigation: true }),
-    PortalFeatureFindMyHomeModule,
     PortalFeatureHomeModule
   ],
   exports: [RouterModule]

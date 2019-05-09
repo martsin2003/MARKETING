@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Route } from '@angular/router';
-
-export const portalFeatureFindMyHomeRoutes: Route[] = [];
+import { RouterModule } from '@angular/router';
+import { FindMyHomeComponent } from './containers/find-my-home/find-my-home.component';
 
 @NgModule({
-  imports: [CommonModule, RouterModule]
+  imports: [
+    CommonModule,
+    RouterModule.forChild([
+      { path: '', pathMatch: 'full', component: FindMyHomeComponent }
+    ])
+  ],
+  declarations: [FindMyHomeComponent]
 })
 export class PortalFeatureFindMyHomeModule {}

@@ -5,11 +5,10 @@
     "module": "es2015",
     "types": []
   },
-  "exclude": [
-    "src/test.ts",
-    "**/*.spec.ts"
-  ],
+  "exclude": ["src/test.ts", "**/*.spec.ts"],
   "include": [
-    "**/*.ts"
+    "**/*.ts",
+
+    "../../libs/portal/feature/home-plan-detail/src/index.ts"
   ]
 }

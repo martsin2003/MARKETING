@@ -266,6 +266,68 @@
           "styleext": "scss"
         }
       }
+    },
+    "portal-feature-home-plans": {
+      "root": "libs/portal/feature/home-plans",
+      "sourceRoot": "libs/portal/feature/home-plans/src",
+      "projectType": "library",
+      "prefix": "brookfield",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/portal/feature/home-plans/tsconfig.lib.json",
+              "libs/portal/feature/home-plans/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/portal/feature/home-plans/jest.config.js",
+            "tsConfig": "libs/portal/feature/home-plans/tsconfig.spec.json",
+            "setupFile": "libs/portal/feature/home-plans/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "portal-feature-home-plan-detail": {
+      "root": "libs/portal/feature/home-plan-detail",
+      "sourceRoot": "libs/portal/feature/home-plan-detail/src",
+      "projectType": "library",
+      "prefix": "brookfield",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/portal/feature/home-plan-detail/tsconfig.lib.json",
+              "libs/portal/feature/home-plan-detail/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/portal/feature/home-plan-detail/jest.config.js",
+            "tsConfig": "libs/portal/feature/home-plan-detail/tsconfig.spec.json",
+            "setupFile": "libs/portal/feature/home-plan-detail/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {

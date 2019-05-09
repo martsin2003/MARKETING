@@ -11,7 +11,6 @@ export const portalFeatureHomeRoutes: Route[] = [
 
 @NgModule({
   imports: [CommonModule, MaterialModule, RouterModule],
-  declarations: [HomepageComponent, SearchHomesComponent],
-  exports: [HomepageComponent]
+  declarations: [HomepageComponent, SearchHomesComponent]
 })
 export class PortalFeatureHomeModule {}

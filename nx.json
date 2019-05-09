@@ -28,6 +28,12 @@
     },
     "common-styles": {
       "tags": ["scope:shared", "type:styles"]
+    },
+    "portal-feature-home-plans": {
+      "tags": ["scope:home-plans", "type:feature"]
+    },
+    "portal-feature-home-plan-detail": {
+      "tags": ["scope:home-plans", "type:feature"]
     }
   }
 }
