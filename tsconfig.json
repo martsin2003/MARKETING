@@ -28,6 +28,9 @@
       ],
       "@brookfield/portal/feature/home-plan-detail": [
         "libs/portal/feature/home-plan-detail/src/index.ts"
+      ],
+      "@brookfield/common/ui-components/image-carousel": [
+        "libs/common/ui-components/image-carousel/src/index.ts"
       ]
     }
   },

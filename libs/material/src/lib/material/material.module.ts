@@ -10,7 +10,8 @@ import {
   MatButtonToggleModule,
   MatExpansionModule,
   MatListModule,
-  MatDividerModule
+  MatDividerModule,
+  MatRadioModule
 } from '@angular/material';
 
 @NgModule({
@@ -26,7 +27,8 @@ import {
     MatButtonToggleModule,
     MatExpansionModule,
     MatListModule,
-    MatDividerModule
+    MatDividerModule,
+    MatRadioModule
   ],
   exports: [
     MatInputModule,
@@ -39,7 +41,8 @@ import {
     MatButtonToggleModule,
     MatExpansionModule,
     MatListModule,
-    MatDividerModule
+    MatDividerModule,
+    MatRadioModule
   ]
 })
 export class MaterialModule {}
