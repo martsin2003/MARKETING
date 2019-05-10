@@ -1,3 +1,4 @@
+import { AppRoutingModule } from 'apps/portal/src/app/app-routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavigationComponent } from './containers/navigation/navigation.component';
@@ -8,7 +9,7 @@ import { SecondaryNavDesktopComponent } from './presentational/secondary-nav-des
 import { MainNavDesktopComponent } from './presentational/main-nav-desktop/main-nav-desktop.component';
 
 @NgModule({
-  imports: [CommonModule, MaterialModule],
+  imports: [CommonModule, MaterialModule, AppRoutingModule],
   declarations: [
     NavigationComponent,
     MainNavMobileComponent,
