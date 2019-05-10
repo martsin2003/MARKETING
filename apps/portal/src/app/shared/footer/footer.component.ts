@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'brookfield-footer',
+  selector: 'brookfield-footer-old',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })

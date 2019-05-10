@@ -19,6 +19,7 @@ import { CommunityMicrositeModule } from './community-microsite/community-micros
 import { SharedModule } from './shared/shared.module';
 import { CommunityCardComponent } from './find-my-home/community-card/community-card.component';
 import { PortalSharedFeatureNavigationModule } from '@brookfield/portal/shared/feature-navigation';
+import { PortalSharedFeatureFooterModule } from '@brookfield/portal/shared/feature-footer';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { PortalSharedFeatureNavigationModule } from '@brookfield/portal/shared/f
     MaterialModule,
     CommunityMicrositeModule,
     SharedModule,
-    PortalSharedFeatureNavigationModule
+    PortalSharedFeatureNavigationModule,
+    PortalSharedFeatureFooterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

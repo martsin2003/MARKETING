@@ -54,6 +54,7 @@
     "zone.js": "^0.9.0"
   },
   "devDependencies": {
+    "ts-jest": "24.0.0",
     "jest-preset-angular": "7.0.0",
     "@angular-devkit/build-angular": "^0.13.8",
     "@angular/cli": "7.3.8",
@@ -78,7 +79,6 @@
     "karma-jasmine-html-reporter": "^1.4.0",
     "prettier": "1.17.0",
     "protractor": "~5.4.2",
-    "ts-jest": "24.0.0",
     "ts-node": "~8.1.0",
     "tslint": "~5.16.0"
   }
