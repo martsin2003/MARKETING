@@ -84,7 +84,6 @@ body {
 
 //BUTTON STYLING
 .br-button {
-  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,6 +93,10 @@ body {
   outline: none;
   border: 1px solid;
   cursor: pointer;
+  
+  mat-icon {
+    margin-right: 5px;
+  }
 
   &--accent {
     color: $lightgray;
