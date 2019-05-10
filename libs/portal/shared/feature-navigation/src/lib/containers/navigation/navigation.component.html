@@ -14,7 +14,9 @@
     </div>
 
     <div class="navigation-menu" *ngIf="menuOpened">
-      <brookfield-main-nav-mobile></brookfield-main-nav-mobile>
+      <brookfield-main-nav-mobile
+        (navigate)="routeToUrl($event)"
+      ></brookfield-main-nav-mobile>
 
       <div class="line-box empty"></div>
 

@@ -10,7 +10,9 @@
     </button>
     <button mat-button routerLink="home-plans">
       <mat-icon>expand_more</mat-icon>
-      <span class="font-16">HOME PLANS</span>
+      <span class="font-16" (click)="navigateTo('/home-plans')">
+        HOME PLANS
+      </span>
     </button>
     <button mat-button routerLink="empower-innovations">
       <mat-icon>expand_more</mat-icon>
