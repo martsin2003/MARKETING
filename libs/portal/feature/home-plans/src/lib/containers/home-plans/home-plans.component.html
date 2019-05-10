@@ -1,4 +1,44 @@
-<p>
-  home-plans works!
-</p>
+<div>
+  <img src="http://placehold.it/1980x720/333333" class="w-100" />
+
+  <div>
+    <h3 class="text-center font-weight-light">
+      Select a home plan category below or view all. Lorem ipsum dolor sit
+      amet,<br />
+      consectetur adipiscing elit. Aenean id erat id erat ultricies lobortis ac
+      id lectus.
+    </h3>
+    <div class="d-flex flex-row justify-content-center flex-wrap">
+      <button mat-button>
+        <div class="d-flex flex-column align-items-center">
+          <mat-icon>home</mat-icon>
+          <div>VIEW ALL HOME PLANS</div>
+        </div>
+      </button>
+      <button mat-button>
+        <div class="d-flex flex-column align-items-center">
+          <mat-icon>home</mat-icon>
+          CONDOMINIUM HOMES
+        </div>
+      </button>
+      <button mat-button>
+        <div class="d-flex flex-column align-items-center">
+          <mat-icon>home</mat-icon>
+          SINGLE-FAMILY HOMES
+        </div>
+      </button>
+      <button mat-button>
+        <div class="d-flex flex-column align-items-center">
+          <mat-icon>home</mat-icon>
+          TOWNHOMES
+        </div>
+      </button>
+      <button mat-button (click)="(onClick)" color="primary">
+        <mat-icon>tune</mat-icon>
+        Filters
+      </button>
+    </div>
+  </div>
+</div>
+
 <brookfield-home-plan-list></brookfield-home-plan-list>

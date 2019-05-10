@@ -34,6 +34,9 @@
     },
     "portal-feature-home-plan-detail": {
       "tags": ["scope:home-plans", "type:feature"]
+    },
+    "common-ui-components-image-carousel": {
+      "tags": ["scope:common-ua", "type:ui-component"]
     }
   }
 }

@@ -328,6 +328,37 @@
           "styleext": "scss"
         }
       }
+    },
+    "common-ui-components-image-carousel": {
+      "root": "libs/common/ui-components/image-carousel",
+      "sourceRoot": "libs/common/ui-components/image-carousel/src",
+      "projectType": "library",
+      "prefix": "brookfield",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/common/ui-components/image-carousel/tsconfig.lib.json",
+              "libs/common/ui-components/image-carousel/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/common/ui-components/image-carousel/jest.config.js",
+            "tsConfig": "libs/common/ui-components/image-carousel/tsconfig.spec.json",
+            "setupFile": "libs/common/ui-components/image-carousel/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {
