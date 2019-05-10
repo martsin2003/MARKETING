@@ -23,6 +23,7 @@ export class CarouselComponent implements OnInit, OnChanges {
 
   swiping: boolean;
   startedPos = 0;
+  duration: string = '1s';
   endPos = 0;
   mouseup: boolean;
   swipeDirection: 'left' | 'right' = null;
@@ -41,6 +42,7 @@ export class CarouselComponent implements OnInit, OnChanges {
     });
     fromEvent(this.wrapper.nativeElement, 'mousedown').subscribe(
       (event: any) => {
+        this.duration = '1s';
         this.startedPos = event.clientX;
         this.swiping = true;
         this.mouseup = false;
@@ -70,6 +72,7 @@ export class CarouselComponent implements OnInit, OnChanges {
     });
     fromEvent(this.wrapper.nativeElement, 'touchstart').subscribe(
       (event: any) => {
+        this.duration = '0.4s';
         this.startedPos = event.targetTouches[0].clientX;
         this.swiping = true;
         this.mouseup = false;
@@ -161,8 +164,6 @@ export class CarouselComponent implements OnInit, OnChanges {
   }
 
   definedPosition() {
-    this.wrapper.nativeElement.style.animationDuration = '1s';
-    this.wrapper.nativeElement.style.transitionDuration = '1s';
     if (this.swipeDirection === 'left') {
       this.next();
     } else {
@@ -173,8 +174,8 @@ export class CarouselComponent implements OnInit, OnChanges {
   }
 
   next() {
-    this.wrapper.nativeElement.style.animationDuration = '1s';
-    this.wrapper.nativeElement.style.transitionDuration = '1s';
+    this.wrapper.nativeElement.style.animationDuration = this.duration;
+    this.wrapper.nativeElement.style.transitionDuration = this.duration;
     if (this.selectedImage < this.images.length - 1) {
       this.selectedImage++;
       this.wrapper.nativeElement.style.transform =
@@ -184,8 +185,8 @@ export class CarouselComponent implements OnInit, OnChanges {
   }
 
   prev() {
-    this.wrapper.nativeElement.style.animationDuration = '1s';
-    this.wrapper.nativeElement.style.transitionDuration = '1s';
+    this.wrapper.nativeElement.style.animationDuration = this.duration;
+    this.wrapper.nativeElement.style.transitionDuration = this.duration;
     if (this.selectedImage > 0) {
       this.selectedImage--;
       this.wrapper.nativeElement.style.transform =
