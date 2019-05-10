@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'brookfield-main-nav-desktop',
@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-nav-desktop.component.scss']
 })
 export class MainNavDesktopComponent implements OnInit {
+  @Output() navigate = new EventEmitter<string>();
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  navigateTo(url: string) {
+    this.navigate.emit(url);
   }
-
 }
