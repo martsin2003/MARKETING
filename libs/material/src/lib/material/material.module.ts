@@ -11,6 +11,7 @@ import {
   MatExpansionModule,
   MatListModule,
   MatDividerModule,
+  MatMenuModule,
   MatRadioModule
 } from '@angular/material';
 
@@ -28,6 +29,7 @@ import {
     MatExpansionModule,
     MatListModule,
     MatDividerModule,
+    MatMenuModule,
     MatRadioModule
   ],
   exports: [
@@ -42,6 +44,7 @@ import {
     MatExpansionModule,
     MatListModule,
     MatDividerModule,
+    MatMenuModule,
     MatRadioModule
   ]
 })
