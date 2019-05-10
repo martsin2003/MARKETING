@@ -1,14 +1,23 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser'
-import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatInputModule, MatButtonModule, MatIconModule, MatToolbarModule, MatCardModule, MatGridListModule, MatCheckboxModule, MatButtonToggleModule } from '@angular/material';
+import {
+  MatInputModule,
+  MatButtonModule,
+  MatIconModule,
+  MatToolbarModule,
+  MatCardModule,
+  MatGridListModule,
+  MatCheckboxModule,
+  MatButtonToggleModule,
+  MatExpansionModule,
+  MatListModule,
+  MatDividerModule,
+  MatMenuModule,
+  MatRadioModule
+} from '@angular/material';
+
 @NgModule({
   declarations: [],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
     MatInputModule,
     MatButtonModule,
     MatIconModule,
@@ -16,12 +25,14 @@ import { MatInputModule, MatButtonModule, MatIconModule, MatToolbarModule, MatCa
     MatCardModule,
     MatGridListModule,
     MatCheckboxModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatExpansionModule,
+    MatListModule,
+    MatDividerModule,
+    MatMenuModule,
+    MatRadioModule
   ],
   exports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
     MatInputModule,
     MatButtonModule,
     MatIconModule,
@@ -29,7 +40,12 @@ import { MatInputModule, MatButtonModule, MatIconModule, MatToolbarModule, MatCa
     MatCardModule,
     MatGridListModule,
     MatCheckboxModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatExpansionModule,
+    MatListModule,
+    MatDividerModule,
+    MatMenuModule,
+    MatRadioModule
   ]
 })
-export class MaterialModule { }
+export class MaterialModule {}

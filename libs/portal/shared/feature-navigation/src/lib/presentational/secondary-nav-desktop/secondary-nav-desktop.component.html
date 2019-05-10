@@ -1,0 +1,107 @@
+<div class="secondary-nav d-flex justify-content-end">
+  <button mat-button class="nav-item">
+    Homeowner Reviews
+  </button>
+
+  <button
+    mat-button
+    class="nav-item"
+    [matMenuTriggerFor]="resourcesMenu"
+    #resourcesTrigger="matMenuTrigger"
+  >
+    <mat-icon>{{
+      resourcesTrigger.menuOpen ? 'expand_less' : 'expand_more'
+    }}</mat-icon>
+    Resources
+  </button>
+
+  <mat-menu xPosition="before" #resourcesMenu="matMenu">
+    <button mat-menu-item>Customer Care</button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item>Preferred Lenders</button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item>Homes for Heroes</button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item>Relocation Assistance</button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item>Brand Partners</button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item>Referral Program</button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item>FAQs</button>
+  </mat-menu>
+
+  <button mat-button class="nav-item">
+    For Owners
+  </button>
+
+  <button
+    mat-button
+    class="nav-item"
+    [matMenuTriggerFor]="forRealtorsMenu"
+    #realtorsTrigger="matMenuTrigger"
+  >
+    <mat-icon>{{
+      realtorsTrigger.menuOpen ? 'expand_less' : 'expand_more'
+    }}</mat-icon>
+    For Realtors
+  </button>
+
+  <mat-menu xPosition="before" #forRealtorsMenu="matMenu">
+    <button mat-menu-item>My Profile</button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item>Realtor Incentives</button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item>Buyer Incentives</button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item>Sales Materials</button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item>Client Registration</button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item>Sign Out</button>
+  </mat-menu>
+
+  <button mat-button class="nav-item">
+    Blog
+  </button>
+
+  <button
+    mat-button
+    class="nav-item"
+    [matMenuTriggerFor]="contactUsMenu"
+    #contactUsTrigger="matMenuTrigger"
+  >
+    <mat-icon>{{
+      contactUsTrigger.menuOpen ? 'expand_less' : 'expand_more'
+    }}</mat-icon>
+    Contact Us
+  </button>
+
+  <mat-menu xPosition="before" #contactUsMenu="matMenu">
+    <button mat-menu-item>General Inquiries</button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item>Service Request</button>
+  </mat-menu>
+
+  <button
+    mat-button
+    class="nav-item"
+    [matMenuTriggerFor]="myAccountMenu"
+    #myAccountTrigger="matMenuTrigger"
+  >
+    <mat-icon>{{
+      myAccountTrigger.menuOpen ? 'expand_less' : 'expand_more'
+    }}</mat-icon>
+    My Account
+  </button>
+
+  <mat-menu xPosition="before" #myAccountMenu="matMenu">
+    <button mat-menu-item>My Favorites</button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item>My Time Home Tours</button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item>My Profile</button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item>Sign Out</button>
+  </mat-menu>
+</div>

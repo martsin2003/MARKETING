@@ -2,13 +2,10 @@
 
 .main-app {
   max-width: 1440px;
+  position: relative;
+  margin: 0 auto;
 
   .image-container {
-    position: relative;
-    text-align: center;
-    color: white;
-    background-color: $primary;
-
     .top-left {
       position: absolute;
     }
