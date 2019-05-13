@@ -16,7 +16,6 @@ import { SitePlanComponent } from './community-microsite/site-plan/site-plan.com
 import { HomeownerReviewsComponent } from './community-microsite/homeowner-reviews/homeowner-reviews.component';
 import { LocationInfoComponent } from './community-microsite/location-info/location-info.component';
 import { CommunityMicrositeModule } from './community-microsite/community-microsite.module';
-import { SharedModule } from './shared/shared.module';
 import { CommunityCardComponent } from './find-my-home/community-card/community-card.component';
 import { PortalSharedFeatureNavigationModule } from '@brookfield/portal/shared/feature-navigation';
 import { PortalSharedFeatureFooterModule } from '@brookfield/portal/shared/feature-footer';
@@ -37,7 +36,6 @@ import { PortalSharedFeatureFooterModule } from '@brookfield/portal/shared/featu
     AppRoutingModule,
     MaterialModule,
     CommunityMicrositeModule,
-    SharedModule,
     PortalSharedFeatureNavigationModule,
     PortalSharedFeatureFooterModule
   ],
