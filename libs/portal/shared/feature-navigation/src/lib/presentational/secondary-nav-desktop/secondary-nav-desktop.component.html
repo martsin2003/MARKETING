@@ -9,9 +9,11 @@
     [matMenuTriggerFor]="resourcesMenu"
     #resourcesTrigger="matMenuTrigger"
   >
-    <mat-icon>{{
-      resourcesTrigger.menuOpen ? 'expand_less' : 'expand_more'
-    }}</mat-icon>
+    <mat-icon
+      class="expand-arrow"
+      [ngClass]="{ expanded: resourcesTrigger.menuOpen }"
+      >expand_more</mat-icon
+    >
     Resources
   </button>
 
@@ -41,9 +43,11 @@
     [matMenuTriggerFor]="forRealtorsMenu"
     #realtorsTrigger="matMenuTrigger"
   >
-    <mat-icon>{{
-      realtorsTrigger.menuOpen ? 'expand_less' : 'expand_more'
-    }}</mat-icon>
+    <mat-icon
+      class="expand-arrow"
+      [ngClass]="{ expanded: realtorsTrigger.menuOpen }"
+      >expand_more</mat-icon
+    >
     For Realtors
   </button>
 
@@ -71,9 +75,11 @@
     [matMenuTriggerFor]="contactUsMenu"
     #contactUsTrigger="matMenuTrigger"
   >
-    <mat-icon>{{
-      contactUsTrigger.menuOpen ? 'expand_less' : 'expand_more'
-    }}</mat-icon>
+    <mat-icon
+      class="expand-arrow"
+      [ngClass]="{ expanded: contactUsTrigger.menuOpen }"
+      >expand_more</mat-icon
+    >
     Contact Us
   </button>
 
@@ -89,9 +95,11 @@
     [matMenuTriggerFor]="myAccountMenu"
     #myAccountTrigger="matMenuTrigger"
   >
-    <mat-icon>{{
-      myAccountTrigger.menuOpen ? 'expand_less' : 'expand_more'
-    }}</mat-icon>
+    <mat-icon
+      class="expand-arrow"
+      [ngClass]="{ expanded: myAccountTrigger.menuOpen }"
+      >expand_more</mat-icon
+    >
     My Account
   </button>
 

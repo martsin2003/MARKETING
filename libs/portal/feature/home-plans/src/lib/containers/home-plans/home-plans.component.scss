@@ -1,0 +1,51 @@
+.container-of-bottom-menu {
+    width: 100%;
+    position: fixed;
+    display: none;
+    align-items: center;
+    background: white;
+    box-shadow: 0px -1px 1px -1px gray;
+    bottom: 0;
+    left: 0;
+    mat-icon {
+        margin-right: 5px;
+    }
+    &__see-all-button {
+        height: 100%;
+        width: 70%;
+        padding: 12px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background: black;
+        color: white;
+        cursor: pointer;
+    }
+    &__filters {
+        height: 100%;
+        width: 30%;
+        padding: 12px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        cursor: pointer;
+    }
+}
+
+.explained-text-on-mobile {
+    display: none;
+    font-weight: 600;
+    padding: 0px 15px;
+}
+
+@media screen and (max-width: 500px) {
+    .container-of-bottom-menu {
+        display: flex;
+    }
+    .wrapper-of-buttons {
+        display: none !important;
+    }
+    .explained-text-on-mobile {
+        display: block;
+    }
+}
