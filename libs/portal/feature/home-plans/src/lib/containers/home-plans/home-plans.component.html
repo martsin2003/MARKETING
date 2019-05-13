@@ -46,12 +46,157 @@
 <brookfield-home-plan-list></brookfield-home-plan-list>
 
 <div class="container-of-bottom-menu">
-  <div class="container-of-bottom-menu__see-all-button">
-    <mat-icon>menu</mat-icon>
-    <span>See All Home Plans</span>
-  </div>
-  <div class="container-of-bottom-menu__filters">
-    <mat-icon>tune</mat-icon>
-    <span>Filters</span>
+  <div class="container-of-bottom-menu__wrapper">
+    <button class="container-of-bottom-menu__see-all-button" (click)="openViewsMenu()">
+      <mat-icon>menu</mat-icon>
+      <span>{{selectedViewType}}</span>
+    </button>
+
+    <button class="container-of-bottom-menu__filters" (click)="openFilterTools()">
+      <mat-icon>tune</mat-icon>
+      <span>Filters</span>
+    </button>
+
+    <div class="views-menu" #viewsMenu>
+      <button class="views-menu__items" (click)="closeViewsMenu()">
+        <mat-icon>close</mat-icon>
+        <span>Close</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button class="views-menu__items" (click)="closeViewsMenu('Single-Family Homes')">
+        Single-Family Homes
+      </button>
+      <mat-divider></mat-divider>
+      <button class="views-menu__items" (click)="closeViewsMenu('Townhomes')">
+        Townhomes
+      </button>
+      <mat-divider></mat-divider>
+      <button class="views-menu__items" (click)="closeViewsMenu('Condos')">
+        Condos
+      </button>
+      <mat-divider></mat-divider>
+      <button class="views-menu__items" (click)="closeViewsMenu('See All Home Plans')">
+        See All Home Plans
+      </button>
+    </div>
+
+    <div class="filter-tools" #filterTools>
+      <div class="filter-tools__closing-panel" (click)="closeFilterTools(false)">
+        <mat-icon>close</mat-icon>
+      </div>
+      <span class="filter-tools__title">Filter Your Search</span>
+      <div class="filter-tools__filter-setting-item">
+        <span class="setting-type">Home Type</span>
+        <mat-form-field floatLabel="never" appearance="outline">
+          <mat-select placeholder="Select One">
+            <mat-option value="First option">First option</mat-option>
+            <mat-option value="Second option">Second option</mat-option>
+            <mat-option value="Third option">Third option</mat-option>
+          </mat-select>
+          <span class="mat-prefix-icon" matPrefix>
+            <mat-icon>expand_more</mat-icon>
+          </span>
+        </mat-form-field>
+      </div>
+      <div class="filter-tools__filter-setting-item">
+        <span class="setting-type">Price range</span>
+        <div class="price-range">
+          <mat-form-field floatLabel="never" appearance="outline">
+            <mat-select placeholder="$X00,000">
+              <mat-option value="100,000">100,000</mat-option>
+              <mat-option value="200,000">200,000</mat-option>
+              <mat-option value="300,000">300,000</mat-option>
+            </mat-select>
+            <span class="mat-prefix-icon" matPrefix>
+              <mat-icon>expand_more</mat-icon>
+            </span>
+          </mat-form-field>
+          <span class="divider">to</span>
+          <mat-form-field floatLabel="never" appearance="outline">
+            <mat-select placeholder="$X00,000">
+              <mat-option value="100,000">100,000</mat-option>
+              <mat-option value="200,000">200,000</mat-option>
+              <mat-option value="300,000">300,000</mat-option>
+            </mat-select>
+            <span class="mat-prefix-icon" matPrefix>
+              <mat-icon>expand_more</mat-icon>
+            </span>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="filter-tools__filter-setting-item">
+        <span class="setting-type">Bads</span>
+        <div class="select-quantity-beds">
+          <button class="select-quantity-beds__variant">
+            Any
+          </button>
+          <button class="select-quantity-beds__variant">
+            +1
+          </button>
+          <button class="select-quantity-beds__variant">
+            +2
+          </button>
+          <button class="select-quantity-beds__variant">
+            +3
+          </button>
+          <button class="select-quantity-beds__variant">
+            +4
+          </button>
+        </div>
+      </div>
+      <div class="filter-tools__filter-setting-item">
+        <span class="setting-type">Baths</span>
+        <div class="select-quantity-beds">
+          <button class="select-quantity-beds__variant">
+            Any
+          </button>
+          <button class="select-quantity-beds__variant">
+            +1
+          </button>
+          <button class="select-quantity-beds__variant">
+            +2
+          </button>
+          <button class="select-quantity-beds__variant">
+            +3
+          </button>
+          <button class="select-quantity-beds__variant">
+            +4
+          </button>
+        </div>
+      </div>
+      <div class="filter-tools__filter-setting-item">
+        <span class="setting-type">Square Footage</span>
+        <div class="price-range">
+          <mat-form-field floatLabel="never" appearance="outline">
+            <mat-select placeholder="$X,000">
+              <mat-option value="1,000">1,000</mat-option>
+              <mat-option value="2,000">2,000</mat-option>
+              <mat-option value="3,000">3,000</mat-option>
+            </mat-select>
+            <span class="mat-prefix-icon" matPrefix>
+              <mat-icon>expand_more</mat-icon>
+            </span>
+          </mat-form-field>
+          <span class="divider">to</span>
+          <mat-form-field floatLabel="never" appearance="outline">
+            <mat-select placeholder="$X,000">
+              <mat-option value="1,000">1,000</mat-option>
+              <mat-option value="2,000">2,000</mat-option>
+              <mat-option value="3,000">3,000</mat-option>
+            </mat-select>
+            <span class="mat-prefix-icon" matPrefix>
+              <mat-icon>expand_more</mat-icon>
+            </span>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="checkboxes-wrapper">
+        <mat-checkbox>Main-Level Owner's Suites Only!</mat-checkbox>
+        <mat-checkbox>Decorated Models!</mat-checkbox>
+      </div>
+      <div class="button-wrapper">
+        <button class="br-button br-button--primary" (click)="closeFilterTools(true)">UPDATE</button>
+      </div>
+    </div>
   </div>
 </div>
