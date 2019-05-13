@@ -1,25 +1,237 @@
-<div class="main-navigation-container d-flex align-items-center">
-  <a routerLink="home" class="text-right font-weight-bold label-text pl-3 py-2">
-    <span class="font-36 d-block label-text-1">Brookfield</span>
-    <span class="font-24 d-block label-text-2">Residential</span>
-  </a>
-  <div class="main-navigation">
-    <button mat-button routerLink="find-my-home">
-      <mat-icon>expand_more</mat-icon>
-      <span class="font-16">FIND MY HOME</span>
-    </button>
-    <button mat-button routerLink="home-plans">
-      <mat-icon>expand_more</mat-icon>
-      <span class="font-16" (click)="navigateTo('/home-plans')">
+<div (mouseleave)="closeMenu()">
+  <div class="main-navigation-container d-flex align-items-stretch">
+    <a
+      routerLink="home"
+      class="no-underline text-right font-weight-bold label-text pl-3 py-2"
+    >
+      <span class="font-36 d-block label-text-1">Brookfield</span>
+      <span class="font-24 d-block label-text-2">Residential</span>
+    </a>
+    <div class="main-navigation">
+      <button mat-button class="nav-item" (mouseenter)="openMenu('findMyHome')">
+        <mat-icon
+          class="expand-arrow"
+          [ngClass]="{ expanded: openedMenu === 'findMyHome' }"
+        >
+          expand_more
+        </mat-icon>
+        FIND MY HOME
+      </button>
+
+      <button mat-button class="nav-item" (mouseenter)="openMenu('homePlans')">
+        <mat-icon
+          class="expand-arrow"
+          [ngClass]="{ expanded: openedMenu === 'homePlans' }"
+        >
+          expand_more
+        </mat-icon>
         HOME PLANS
-      </span>
-    </button>
-    <button mat-button routerLink="empower-innovations">
-      <mat-icon>expand_more</mat-icon>
-      <span class="font-16">EMPOWER INNOVATIONS</span>
-    </button>
-    <button mat-button routerLink="why">
-      <span class="font-16">WHY BROOKFIELD?</span>
-    </button>
+      </button>
+
+      <button
+        mat-button
+        class="nav-item"
+        (mouseenter)="openMenu('empowerInnovations')"
+      >
+        <mat-icon
+          class="expand-arrow"
+          [ngClass]="{ expanded: openedMenu === 'empowerInnovations' }"
+        >
+          expand_more
+        </mat-icon>
+        EMPOWER INNOVATIONS
+      </button>
+      <button class="nav-item" mat-button routerLink="why">
+        <span class="font-16">WHY BROOKFIELD?</span>
+      </button>
+    </div>
+  </div>
+  <div *ngIf="menuIsOpened">
+    <mat-card *ngIf="openedMenu === 'findMyHome'" class="main-nav-menu">
+      <div class="main-nav-menu-wrapper">
+        <mat-list>
+          <img src="http://placehold.it/400x200/333333" />
+
+          <mat-list-item>
+            <button class="main-nav-list-button">
+              Frederick County, VA
+            </button>
+            <mat-divider></mat-divider>
+          </mat-list-item>
+          <mat-list-item>
+            <button class="main-nav-list-button">
+              Loudoun County, VA
+            </button>
+            <mat-divider></mat-divider>
+          </mat-list-item>
+          <mat-list-item>
+            <button class="main-nav-list-button">
+              Prince William County, VA
+            </button>
+          </mat-list-item>
+        </mat-list>
+
+        <mat-list>
+          <img src="http://placehold.it/400x200/333333" />
+          <mat-list-item>
+            <button class="main-nav-list-button">
+              Anne Arundel County, MD
+            </button>
+            <mat-divider></mat-divider>
+          </mat-list-item>
+          <mat-list-item>
+            <button class="main-nav-list-button">
+              Montgomery County, MD
+            </button>
+            <mat-divider></mat-divider>
+          </mat-list-item>
+          <mat-list-item>
+            <button class="main-nav-list-button">
+              Talbot County, MD
+            </button>
+          </mat-list-item>
+        </mat-list>
+
+        <mat-list>
+          <img src="http://placehold.it/400x200/333333" />
+          <mat-list-item>
+            <button class="main-nav-list-button">
+              Sussex County, DE
+            </button>
+            <mat-divider></mat-divider>
+          </mat-list-item>
+        </mat-list>
+      </div>
+      <div class="underscoring-main-nav-menu">
+        <mat-divider></mat-divider>
+      </div>
+
+      <div class="bottom-buttons">
+        <button class="bottom-buttons__button">View All Communities</button>
+        <button class="bottom-buttons__button">
+          View All Move-In-Now Homes
+        </button>
+      </div>
+    </mat-card>
+
+    <mat-card *ngIf="openedMenu === 'homePlans'" class="main-nav-menu">
+      <div class="d-flex flex-row justify-content-between px-5">
+        <button
+          mat-button
+          class="d-flex flex-column align-items-center main-nav-home-plans-button"
+        >
+          <img src="http://placehold.it/200x200/333333" />
+          <div class="text-center font-weight-bold">
+            SINGLE-FAMILY<br />HOMES
+          </div>
+        </button>
+
+        <button
+          mat-button
+          class="d-flex flex-column align-items-center main-nav-home-plans-button"
+        >
+          <img src="http://placehold.it/200x200/333333" />
+          <div class="text-center font-weight-bold">TOWNHOMES</div>
+        </button>
+
+        <button
+          mat-button
+          class="d-flex flex-column align-items-center main-nav-home-plans-button"
+        >
+          <img src="http://placehold.it/200x200/333333" />
+          <div class="text-center font-weight-bold">CONDOS</div>
+        </button>
+
+        <button
+          mat-button
+          class="d-flex flex-column align-items-center main-nav-home-plans-button"
+        >
+          <img src="http://placehold.it/200x200/333333" />
+          <div class="text-center font-weight-bold">
+            VIEW ALL<br />HOME PLANS
+          </div>
+        </button>
+      </div>
+    </mat-card>
+
+    <mat-card *ngIf="openedMenu === 'empowerInnovations'" class="main-nav-menu">
+      <div class="d-flex flex-column align-items-center">
+        <div class="d-flex flex-row mb-3">
+          <div
+            class="d-flex flex-column align-items-center main-nav-empower-innovations-card"
+          >
+            <button mat-button>
+              <img src="http://placehold.it/200x200/333333" />
+            </button>
+            <div class="text-center main-nav-empower-innovations-text">
+              Access a code online and tour select homes on your own, on your
+              time
+            </div>
+          </div>
+
+          <div
+            class="d-flex flex-column align-items-center main-nav-empower-innovations-card"
+          >
+            <button mat-button>
+              <img src="http://placehold.it/200x200/333333" />
+            </button>
+            <div class="text-center main-nav-empower-innovations-text">
+              Personalize an alread-built home with your design selections. It's
+              yours within two months.
+            </div>
+          </div>
+
+          <div
+            class="d-flex flex-column align-items-center main-nav-empower-innovations-card"
+          >
+            <button mat-button>
+              <img src="http://placehold.it/200x200/333333" />
+            </button>
+            <div class="text-center main-nav-empower-innovations-text">
+              Easy-to-use technology lets you preview your home with a variety
+              of options for paint, cabinets, counters, and more.
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-row">
+          <div
+            class="d-flex flex-column align-items-center main-nav-empower-innovations-card"
+          >
+            <button mat-button>
+              <img src="http://placehold.it/200x200/333333" />
+            </button>
+            <div class="text-center main-nav-empower-innovations-text">
+              Control your home with just your voice using automation technology
+              powered by Amazon Alexa.
+            </div>
+          </div>
+
+          <div
+            class="d-flex flex-column align-items-center main-nav-empower-innovations-card"
+          >
+            <button mat-button>
+              <img src="http://placehold.it/200x200/333333" />
+            </button>
+            <div class="text-center main-nav-empower-innovations-text">
+              The My Brookfield Home app sends you progress updates, photos, and
+              reminders during your home's construction.
+            </div>
+          </div>
+
+          <div
+            class="d-flex flex-column align-items-center main-nav-empower-innovations-card"
+          >
+            <button mat-button>
+              <img src="http://placehold.it/200x200/333333" />
+            </button>
+            <div class="text-center main-nav-empower-innovations-text">
+              Every Brookfield Residential home includes features designed to
+              save energy and save you money.
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-card>
   </div>
 </div>

@@ -7,4 +7,94 @@
 .main-navigation {
   margin-left: auto;
   color: $white;
+  .nav-item {
+    height: 100%;
+  }
+}
+
+.main-nav-menu {
+  width: 100%;
+  padding: 16px 0px;
+}
+
+mat-list {
+  width: 30%;
+  margin: 0px 1.66%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  img {
+    width: 100%;
+  }
+}
+
+mat-card {
+  border-radius: 0px !important;
+}
+
+.underscoring-main-nav-menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  mat-divider {
+    position: unset;
+    width: calc(100% - 3.45%);
+  }
+}
+
+.bottom-buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  &__button {
+    width: 30%;
+    height: 48px;
+    margin: 0px 1.66%;
+    padding: 0px 4px;
+    border: none;
+    background: white;
+    outline: none;
+    text-align: start;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+
+.main-nav-menu-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.main-nav-button {
+  font-size: 22px;
+  text-align: left;
+  width: 30%;
+}
+
+.main-nav-list-button {
+  text-align: left;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
+}
+
+.main-nav-button-container {
+  padding: 0px 0%;
+}
+
+.main-nav-home-plans-button {
+  font-size: 20px;
+}
+
+.main-nav-empower-innovations-card {
+  width: 340px;
+}
+
+.main-nav-empower-innovations-text {
+  width: 70%;
 }
