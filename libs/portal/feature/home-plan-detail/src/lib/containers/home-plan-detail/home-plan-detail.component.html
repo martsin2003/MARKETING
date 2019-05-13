@@ -2,21 +2,15 @@
   <div class="container">
     <div class="wrapper-for-details">
       <div class="mob-items">
-        <span class="mob-title">
-          Torrington II
-        </span>
-        <span class="home-details">
-          The Bluffs at Sleeter Lake
-        </span>
-        <span class="home-price">
-          Starting Price $554,990
+        <span class="home-name">Beckner</span>
+        <span class="place">
+          <mat-icon>place</mat-icon>
+          See Available Location
         </span>
         <div class="buttons">
-          <button class="br-button br-button--primary button">
-            CALL NOW
-          </button>
-          <button class="br-button br-button--primary button">
-            REQUEST INFO
+          <button class="br-button br-button--primary">
+            <mat-icon>mail_outline</mat-icon>
+            <span>REQUEST MORE INFO</span>
           </button>
         </div>
       </div>
@@ -25,17 +19,14 @@
       </div>
       <div class="content-title">
         <div class="wrp-title">
-          <span class="home-name">Torrington II</span>
-          <span class="home-details">
-            The Bluffs at Sleeter Lake
-          </span>
-          <span class="home-price">
-            Starting Price $554,990
+          <span class="home-name">Beckner</span>
+          <span class="place">
+            <mat-icon>place</mat-icon>
+            See Available Location
           </span>
         </div>
         <div class="title-buttons">
-          <mat-icon class="icon-heart">favorite_border</mat-icon>
-          <button class="br-button br-button--primary">
+          <button class="br-button br-button--secondary">
             <mat-icon>mail_outline</mat-icon>
             <span>Request More Info</span>
           </button>
@@ -82,13 +73,13 @@
           </p>
         </div>
         <div class="wrp-description__buttons">
-          <button class="br-button br-button--secondary button">
+          <button class="br-button br-button--primary button">
             DOWNLOAD FLOORPLAN
           </button>
-          <button class="br-button br-button--secondary button">
+          <button class="br-button br-button--primary button">
             VIRTUAL TOUR
           </button>
-          <button class="br-button br-button--secondary button">
+          <button class="br-button br-button--primary button">
             VIDEO TOUR
           </button>
         </div>
@@ -100,6 +91,25 @@
           <li>Owner's Suite with Impressive Ensuite Bath</li>
           <li>Spacious Secondary Bedrooms</li>
         </ul>
+      </div>
+      <div class="mob-key-home">
+        <mat-accordion hideToggle displayMode="flat">
+          <mat-expansion-panel class="mobile-expansion-panel">
+            <mat-expansion-panel-header class="primary-dark-text">
+              <span class="pr-1">
+                <mat-icon class="expand-arrow" [ngClass]="{ expanded: menuOpened }">
+                  expand_more
+                </mat-icon>
+              </span>
+              <span (click)="''">Key Home Features</span>
+            </mat-expansion-panel-header>
+            <ul>
+              <li>Large, Open Kitchen, Breakfast and Grand Room</li>
+              <li>Owner's Suite with Impressive Ensuite Bath</li>
+              <li>Spacious Secondary Bedrooms</li>
+            </ul>
+          </mat-expansion-panel>
+        </mat-accordion>
       </div>
       <div class="wrapper-of-form">
         <span class="title">Request More Info About</span>
@@ -146,15 +156,15 @@
               <mat-checkbox>Request Promotions</mat-checkbox>
             </div>
           </div>
-          <button
-            mat-raised-button
-            color="primary"
-            type="submit"
-            class="btn-submit"
-          >
+          <button type="submit" class="br-button br-button--primary btn-submit">
             GET INFO
           </button>
         </form>
+      </div>
+      <div class="button-back-wrapper">
+        <button class="br-button br-button--secondary btn-back">
+          BACK
+        </button>
       </div>
     </div>
   </div>
