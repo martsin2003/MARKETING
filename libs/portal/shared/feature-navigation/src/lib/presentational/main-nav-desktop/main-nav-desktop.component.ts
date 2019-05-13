@@ -6,22 +6,10 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./main-nav-desktop.component.scss']
 })
 export class MainNavDesktopComponent implements OnInit {
-
   @Output() navigate = new EventEmitter<string>();
 
-  previousMenu: string = null;
-
-  findMyHomeMenu = {
-    menuOpen: false
-  }
-
-  homePlansMenu = {
-    menuOpen: false
-  }
-
-  empowerInnovationsMenu = {
-    menuOpen: false
-  }
+  menuIsOpened: boolean;
+  openedMenu: string | null;
 
   constructor() {}
 
@@ -32,10 +20,14 @@ export class MainNavDesktopComponent implements OnInit {
   }
 
   openMenu(menu: string) {
-    if(this.previousMenu) {
-      this[this.previousMenu].menuOpen = false;
+    if (!this.menuIsOpened) {
+      this.menuIsOpened = true;
     }
-    this[menu].menuOpen = !this[menu].menuOpen;
-    this.previousMenu = menu;
+    this.openedMenu = menu;
+  }
+
+  closeMenu() {
+    this.menuIsOpened = false;
+    this.openedMenu = null;
   }
 }

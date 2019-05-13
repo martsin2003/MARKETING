@@ -1,9 +1,15 @@
 <div>
   <mat-accordion hideToggle displayMode="flat">
-    <mat-expansion-panel class="mobile-expansion-panel">
+    <mat-expansion-panel
+      class="mobile-expansion-panel"
+      #findMyHomePanel="matExpansionPanel"
+    >
       <mat-expansion-panel-header class="primary-dark-text">
         <span class="pr-1">
-          <mat-icon class="expand-arrow" [ngClass]="{ expanded: menuOpened }">
+          <mat-icon
+            class="expand-arrow"
+            [ngClass]="{ expanded: findMyHomePanel.expanded }"
+          >
             expand_more
           </mat-icon>
         </span>
@@ -61,14 +67,20 @@
         </mat-list>
       </div>
     </mat-expansion-panel>
-    <mat-expansion-panel class="mobile-expansion-panel">
+    <mat-expansion-panel
+      class="mobile-expansion-panel"
+      #homePlansPanel="matExpansionPanel"
+    >
       <mat-expansion-panel-header class="primary-dark-text">
         <span class="pr-1">
-          <mat-icon class="expand-arrow" [ngClass]="{ expanded: menuOpened }">
+          <mat-icon
+            class="expand-arrow"
+            [ngClass]="{ expanded: homePlansPanel.expanded }"
+          >
             expand_more
           </mat-icon>
         </span>
-        <span (click)="navigateTo('/home-plans')">HOME PLAN</span>
+        <span (click)="navigateTo('/home-plans')">HOME PLANS</span>
       </mat-expansion-panel-header>
       <div class="d-flex flex-column mobile-list-background">
         <mat-list>
@@ -90,10 +102,16 @@
         </mat-list>
       </div>
     </mat-expansion-panel>
-    <mat-expansion-panel class="mobile-expansion-panel">
+    <mat-expansion-panel
+      class="mobile-expansion-panel"
+      #innovationsPanel="matExpansionPanel"
+    >
       <mat-expansion-panel-header class="primary-dark-text">
         <span class="pr-1">
-          <mat-icon class="expand-arrow" [ngClass]="{ expanded: menuOpened }">
+          <mat-icon
+            class="expand-arrow"
+            [ngClass]="{ expanded: innovationsPanel.expanded }"
+          >
             expand_more
           </mat-icon>
         </span>
