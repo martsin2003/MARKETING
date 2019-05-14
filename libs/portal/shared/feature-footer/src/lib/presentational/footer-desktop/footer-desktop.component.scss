@@ -1,7 +1,7 @@
-@import "../../../styles.scss";
+@import "variables.scss";
 
 .footer {
-  background-color: $primary-dark;
+  background-color: $primary;
 
   .mat-flat-button.mat-accent,
   .mat-raised-button.mat-accent,

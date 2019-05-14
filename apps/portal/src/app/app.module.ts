@@ -15,8 +15,8 @@ import { SitePlanComponent } from './community-microsite/site-plan/site-plan.com
 import { HomeownerReviewsComponent } from './community-microsite/homeowner-reviews/homeowner-reviews.component';
 import { LocationInfoComponent } from './community-microsite/location-info/location-info.component';
 import { CommunityMicrositeModule } from './community-microsite/community-microsite.module';
-import { SharedModule } from './shared/shared.module';
 import { PortalSharedFeatureNavigationModule } from '@brookfield/portal/shared/feature-navigation';
+import { PortalSharedFeatureFooterModule } from '@brookfield/portal/shared/feature-footer';
 
 @NgModule({
   declarations: [
@@ -32,8 +32,8 @@ import { PortalSharedFeatureNavigationModule } from '@brookfield/portal/shared/f
     AppRoutingModule,
     MaterialModule,
     CommunityMicrositeModule,
-    SharedModule,
-    PortalSharedFeatureNavigationModule
+    PortalSharedFeatureNavigationModule,
+    PortalSharedFeatureFooterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
