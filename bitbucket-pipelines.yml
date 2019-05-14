@@ -10,7 +10,7 @@ pipelines:
     feat/backend:
       - step:
           script:
-            - cd vackend
+            - cd backend
             - npm install
             - apt-get update && apt-get install -y python-dev
             - curl -O https://bootstrap.pypa.io/get-pip.py
