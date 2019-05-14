@@ -1,0 +1,14 @@
+{
+    "database": {
+        "url": "postgresql://brookfield_clone:D5YGUzQkmYsab5w9@brookfield-clone.cvxhi948gzuf.us-west-2.rds.amazonaws.com:5432/brookfield_clone",
+        "host": "brookfield-clone.cvxhi948gzuf.us-west-2.rds.amazonaws.com",
+        "username": "brookfield_clone",
+        "password": "D5YGUzQkmYsab5w9",
+        "database": "brookfield_clone",
+        "integrationDatabaseTemplate": "public",
+        "port": "5432"
+    },
+    "postgraphile": {
+        "internalPort": 5000
+    }
+}

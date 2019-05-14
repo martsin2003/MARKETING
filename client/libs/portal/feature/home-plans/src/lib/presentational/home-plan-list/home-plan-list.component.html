@@ -1,0 +1,38 @@
+<div class="wrapper-for-items">
+  <h2>Single-Family Homes</h2>
+ <div class="items" *ngFor="let item of [1,2,3,4]">
+   <div class="items__first-half">
+     <img src="http://placehold.it/230x150/333333" alt="">
+     <mat-checkbox>Compare</mat-checkbox>
+     <span class="place"><mat-icon>place</mat-icon> Available Locations</span>
+   </div>
+   <div class="items__second-half">
+     <span class="home-name">
+       Home name
+     </span>
+     <div class="details">
+       <mat-icon>home</mat-icon>
+       Single-Family Home 
+     </div>
+     <div class="details">
+       <mat-icon>hotel</mat-icon>
+       <span>
+         4 - 5<br>Beds
+       </span>
+       <mat-icon class="second-icon">hot_tub</mat-icon>
+       <span>
+         4 - 5<br>Beds
+       </span>
+     </div>
+     <div class="details">
+       <mat-icon>straighten</mat-icon>
+       1,311 - 1,850 sq. ft.
+     </div>
+     <div class="button">
+       <button class="br-button br-button--primary" routerLink="/home-plan-detail" color="primary">SEE THIS PLAN</button>
+     </div>
+     <mat-checkbox>Compare</mat-checkbox>
+     <span class="place"><mat-icon>place</mat-icon> Available Locations</span>
+   </div>
+ </div>
+</div>

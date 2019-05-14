@@ -1,0 +1,77 @@
+@import 'variables.scss';
+
+.praise-text {
+  text-align: left;
+  @media only screen and (min-width: 769px) {
+    text-align: center;
+  }
+}
+
+.praise-heading {
+  font-size: 24px;
+  @media only screen and (min-width: 769px) {
+    font-size: 30px;
+  }
+}
+
+.info-cards {
+  display: flex;
+  flex-direction: column-reverse;
+  @media only screen and (min-width: 769px) {
+    flex-direction: row;
+  }
+  &--item {
+    @media only screen and (min-width: 769px) {
+      flex: 1 0 50%;
+    }
+  }
+  &--order-1 {
+    @media only screen and (max-width: 768px) {
+      order: 1;
+    }
+  }
+}
+
+// OLD CSS - remove when complete
+// @import '../../styles.scss';
+.home {
+  .image-container {
+    position: relative;
+    text-align: center;
+    color: $white;
+
+    .top-left {
+      position: absolute;
+    }
+
+    .bottom-left {
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+    }
+  }
+
+  mat-toolbar {
+    background-color: $primary;
+  }
+
+  .mat-raised-button {
+    min-width: 215px;
+    height: 50px;
+  }
+
+  .gray-background {
+    background-color: $gray-bg;
+  }
+
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    height: 50px;
+    border-radius: 5px;
+    background-color: $white !important;
+    padding: 0px;
+  }
+
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 0px !important;
+  }
+}

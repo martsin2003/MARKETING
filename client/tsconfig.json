@@ -1,0 +1,41 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "dom"],
+    "baseUrl": ".",
+    "paths": {
+      "@brookfield/material": ["libs/material/src/index.ts"],
+      "@brookfield/shared/navigation": ["libs/shared/navigation/src/index.ts"],
+      "@brookfield/portal/shared/feature-navigation": [
+        "libs/portal/shared/feature-navigation/src/index.ts"
+      ],
+      "@brookfield/portal/feature/home": [
+        "libs/portal/feature/home/src/index.ts"
+      ],
+      "@brookfield/portal/feature/find-my-home": [
+        "libs/portal/feature/find-my-home/src/index.ts"
+      ],
+      "@brookfield/common/styles": ["libs/common/styles/src/index.ts"],
+      "@brookfield/portal/feature/home-plans": [
+        "libs/portal/feature/home-plans/src/index.ts"
+      ],
+      "@brookfield/portal/feature/home-plan-detail": [
+        "libs/portal/feature/home-plan-detail/src/index.ts"
+      ],
+      "@brookfield/common/ui-components/image-carousel": [
+        "libs/common/ui-components/image-carousel/src/index.ts"
+      ],
+      "@brookfield/portal/shared/feature-footer": [
+        "libs/portal/shared/feature-footer/src/index.ts"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

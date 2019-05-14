@@ -1,0 +1,24 @@
+@import '../styles.scss';
+
+.main-app {
+  max-width: 1440px;
+  position: relative;
+  margin: 0 auto;
+
+  .image-container {
+    .top-left {
+      position: absolute;
+    }
+
+    .bottom-left {
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
