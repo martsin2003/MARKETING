@@ -1,38 +1,5 @@
 <div class="container-of-bottom-menu">
   <div class="container-of-bottom-menu__wrapper">
-    <button class="container-of-bottom-menu__see-all-button" (click)="openViewsMenu()">
-      <mat-icon>menu</mat-icon>
-      <span>{{selectedViewType}}</span>
-    </button>
-
-    <button class="container-of-bottom-menu__filters" (click)="openFilterTools()">
-      <mat-icon>tune</mat-icon>
-      <span>Filters</span>
-    </button>
-
-    <div class="views-menu" #viewsMenu>
-      <button class="views-menu__items" (click)="closeViewsMenu()">
-        <mat-icon>close</mat-icon>
-        <span>Close</span>
-      </button>
-      <mat-divider></mat-divider>
-      <button class="views-menu__items" (click)="closeViewsMenu('Single-Family Homes')">
-        Single-Family Homes
-      </button>
-      <mat-divider></mat-divider>
-      <button class="views-menu__items" (click)="closeViewsMenu('Townhomes')">
-        Townhomes
-      </button>
-      <mat-divider></mat-divider>
-      <button class="views-menu__items" (click)="closeViewsMenu('Condos')">
-        Condos
-      </button>
-      <mat-divider></mat-divider>
-      <button class="views-menu__items" (click)="closeViewsMenu('See All Home Plans')">
-        See All Home Plans
-      </button>
-    </div>
-
     <div class="filter-tools" #filterTools>
       <div class="filter-tools__closing-panel" (click)="closeFilterTools(false)">
         <mat-icon>close</mat-icon>

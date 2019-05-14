@@ -22,6 +22,8 @@ export class DesktopViewFilterComponent implements OnInit, OnChanges {
     if(changes.openFilter && changes.openFilter.currentValue) {
       if(this.openFilter.open) {
         this.onOpenFilter();
+      } else {
+        this.onCloseFilter();
       }
     }
   }

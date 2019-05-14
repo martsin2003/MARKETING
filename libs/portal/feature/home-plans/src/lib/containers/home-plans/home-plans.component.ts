@@ -1,4 +1,6 @@
+import { HomePlansOptionsComponent } from './../../presentational/home-plans-options/home-plans-options.component';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { MatBottomSheet } from '@angular/material';
 
 @Component({
   selector: 'brookfield-home-plans',
@@ -7,9 +9,10 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 })
 export class HomePlansComponent implements OnInit, AfterViewInit {
 
-  openDesktopFilter: {open: boolean} = {open: false};
+  openViewFilter: {open: boolean} = {open: false};
+  selectedViewType = 'See All Home Plans';
 
-  constructor() { }
+  constructor(private bottomSheet: MatBottomSheet) { }
 
   ngOnInit() {
   }
@@ -18,7 +21,16 @@ export class HomePlansComponent implements OnInit, AfterViewInit {
   }
 
   openFilter() {
-    this.openDesktopFilter = {open: true};
+    this.openViewFilter = {open: true};
+  }
+
+  openBottomSheet(): void {
+    const bottomSheetRef = this.bottomSheet.open(HomePlansOptionsComponent);
+    bottomSheetRef.afterDismissed().subscribe((type: string) => {
+      if(type) {
+        this.selectedViewType = type;
+      }
+    });
   }
 
 }
