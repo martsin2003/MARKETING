@@ -7,9 +7,21 @@ image: node:10.12.0
 
 pipelines:
   branches:
+    feat/backend:
+      - step:
+          script:
+            - cd vackend
+            - npm install
+            - apt-get update && apt-get install -y python-dev
+            - curl -O https://bootstrap.pypa.io/get-pip.py
+            - python get-pip.py
+            - pip install awsebcli --upgrade
+            - eb init busykid -r us-west-2 -p docker
+            - eb deploy Brookfield-dev-env --timeout 20
     develop:
       - step:
           script:
+            - cd client
             - yarn install
             - yarn build
             - yarn deploy:dev
