@@ -19,7 +19,7 @@ export class PostgraphileService {
 
   constructor() {
     this.createInternalServer();
-    this.schema = this.getSchemaPromise();
+    // this.schema = this.getSchemaPromise();
   }
 
   addPlugin(plugin: PostgraphilePlugin) {
@@ -81,7 +81,6 @@ export class PostgraphileService {
 
     const internalApp = express();
     internalApp.use(bodyParser.json());
-    console.log('process.env.DATABASE_URL: ', process.env.DATABASE_URL);
     internalApp.use(
       postgraphile(process.env.DATABASE_URL, 'public', {
         pgSettings: req => {
@@ -106,7 +105,6 @@ export class PostgraphileService {
         console.log(err);
       }
     });
-
     const server = internalApp.listen(port, () => {
       console.log(
         `postgraphile server listening on port ${config.get(
@@ -114,8 +112,6 @@ export class PostgraphileService {
         )}`
       );
     });
-
-    console.log('server: ', server);
 
     process.on('SIGTERM', () => {
       console.info('SIGTERM signal received.');

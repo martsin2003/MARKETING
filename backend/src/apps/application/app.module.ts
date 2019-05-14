@@ -41,13 +41,14 @@ import { TypeOrmModule } from '@nestjs/typeorm';
           typePaths: [__dirname + '/**/*.graphql'],
           installSubscriptionHandlers: true,
           transformSchema: async (localSchema: GraphQLSchema) => {
-            console.log(11111)
-            const graphileSchema = await postgraphileService.getSchema();
-            console.log(22222)
             const graphqlFactory = moduleRef.get(GraphQLFactory);
             const delegates = graphqlFactory.createDelegates();
             const schemas = [localSchema];
-            schemas.push(graphileSchema);
+            // const graphileSchema = await postgraphileService.getSchema();
+            // console.log('graphileSchema: ', graphileSchema);
+            // if (graphileSchema) {
+            //   schemas.push(graphileSchema);
+            // }
             return mergeSchemas({
               schemas,
               resolvers: delegates
