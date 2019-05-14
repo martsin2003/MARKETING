@@ -7,7 +7,7 @@ image: node:8
 
 pipelines:
   branches:
-    feat/backend:
+    develop:
       - step:
           script:
             - cd client
@@ -30,13 +30,6 @@ pipelines:
             - pip install awsebcli --upgrade
             - eb init Brookfield -r us-west-2 -p docker
             - eb deploy Brookfield-dev-env --timeout 20
-    develop:
-      - step:
-          script:
-            - cd client
-            - yarn install
-            - yarn build
-            - yarn deploy:dev
     master:
       - step:
           script:
