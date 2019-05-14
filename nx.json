@@ -37,6 +37,9 @@
     },
     "common-ui-components-image-carousel": {
       "tags": ["scope:common-ua", "type:ui-component"]
+    },
+    "portal-shared-view-filter": {
+      "tags": ["scope:view-filter", "type:feature"]
     }
   }
 }

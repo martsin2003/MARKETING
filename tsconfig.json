@@ -31,6 +31,9 @@
       ],
       "@brookfield/common/ui-components/image-carousel": [
         "libs/common/ui-components/image-carousel/src/index.ts"
+      ],
+      "@brookfield/portal/shared/view-filter": [
+        "libs/portal/shared/view-filter/src/index.ts"
       ]
     }
   },

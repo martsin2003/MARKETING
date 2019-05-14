@@ -1,222 +1,31 @@
-.container-of-bottom-menu {
-    width: 100%;
-    position: fixed;
-    display: none;
-    align-items: center;
-    background: white;
-    box-shadow: 0px -1px 1px -1px gray;
-    bottom: 0;
-    left: 0;
-    mat-icon {
-        margin-right: 5px;
-    }
-    &__wrapper {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        position: relative;
-    }
-    &__see-all-button {
-        height: 100%;
-        width: 70%;
-        padding: 12px 20px;
-        font-size: 15px;
-        border: none;
-        outline: none;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        background: black;
-        color: white;
-        cursor: pointer;
-        
-    }
-    &__filters {
-        height: 100%;
-        width: 30%;
-        padding: 12px 20px;
-        font-size: 15px;
-        border: none;
-        outline: none;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        background: white;
-        cursor: pointer;
-    }
-    .views-menu {
-        width: 100%;
-        height: auto;
-        user-select: none;
-        display: none;
-        align-items: center;
-        justify-content: flex-start;
-        flex-direction: column;
-        z-index: 999;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        cursor: pointer;
-        &__items {
-            width: 100%;
-            background: black;
-            padding: 15px;
-            font-size: 15px;
-            display: flex;
-            align-items: center;
-            outline: none;
-            border: none;
-            color: white;
-            mat-icon {
-                margin-right: 5px;
-            }
-        }
-        mat-divider {
-            width: 100%;
-            border-color: rgb(197, 197, 197);
-        }
-        transition-duration: 0.5s;
-        transform: translateY(250px);
-    }
-    .filter-tools {
-        width: calc(100% - 30px);
-        height: calc(100vh - 30px);
-        position: fixed;
-        z-index: 999;
-        top: 0;
-        left: 0;
-        background: white;
-        padding: 15px;
-        overflow: auto;
-        transition-duration: 0.5s;
-        transform: translateY(100vh);
-        &__closing-panel {
-            width: 100%;
-            display: flex;
-            justify-content: flex-end;
-            mat-icon {
-                width: auto;
-                height: auto;
-                font-size: 36px;
-                margin: 0px;
-            }
-        }
-        &__title {
-            width: 100%;
-            display: block;
-            font-weight: 100;
-            font-size: 25px;
-            margin-bottom: 15px;
-        }
-        &__filter-setting-item {
-            width: 100%;
-            height: auto;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            .setting-type {
-                font-weight: 100;
-            }
-            .price-range {
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                flex-direction: row;
-                mat-form-field {
-                    width: 42%;
-                }
-                .divider {
-                    padding-bottom: 21px;
-                    font-weight: 100;
-                }
-            }
-            .select-quantity-beds {
-                width: 100%;
-                height: auto;
-                margin-top: 5px;
-                margin-bottom: 21px;
-                display: flex;
-                flex-direction: row;
-                &__variant {
-                    width: 20%;
-                    padding: 15px 0px;
-                    font-size: 15px;
-                    border: 1px solid lightgray;
-                    background: white;
-                    border-left: none;
-                    outline: none;
-                    &:first-child {
-                        background: #6295ba;
-                        color: white;
-                        border: none;
-                    }
-                }
-            }
-        }
-        .checkboxes-wrapper {
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            /deep/mat-checkbox {
-                margin-bottom: 15px;
-                .mat-checkbox-inner-container {
-                    width: 30px;
-                    height: 30px;
-                }
-                .mat-checkbox-frame {
-                    border-width: 1px;
-                    border-radius: 0px;
-                }
-                .mat-checkbox-layout {
-                    display: flex;
-                    align-items: center;
-                }
-            }
-        }
-        .button-wrapper {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-            button {
-                width: 100%;
-            }
-        }
-    }
-}
-
-mat-form-field {
-    width: 100%;
-    position: relative;
-    /deep/.mat-form-field-outline-start, /deep/.mat-form-field-outline-end {
-        border-radius: 0 !important;
-    }
-    /deep/.mat-select-value {
-        transform: translateY(-4px);
-    }
-    .mat-prefix-icon {
-        display: block;
-        transform: translateY(-2px);
-    }
-    /deep/.mat-select-arrow {
-        visibility: hidden !important;
-    }
-}
-
 .explained-text-on-mobile {
     display: none;
     font-weight: 600;
     padding: 0px 15px;
 }
 
+.mobile-view-filter {
+    width: 100%;
+    position: fixed;
+    display: none;
+    box-shadow: 0px -1px 1px -1px gray;
+    left: 0px;
+    bottom: 0px;
+}
+
+.desktop-view-filter {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
 @media screen and (max-width: 500px) {
-    .container-of-bottom-menu {
+    .mobile-view-filter {
         display: block;
     }
-    .wrapper-of-buttons {
-        display: none !important;
+    .desktop-view-filter {
+        display: none;
     }
     .explained-text-on-mobile {
         display: block;
