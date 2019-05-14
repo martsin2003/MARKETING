@@ -142,3 +142,25 @@ body {
     transform: rotate(180deg);
   }
 }
+
+// Bottom Sheet
+::ng-deep mat-bottom-sheet-container {
+  padding: 0px !important;
+  /deep/mat-list {
+    padding: 0px !important;
+    background: black;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    mat-icon {
+      margin-right: 5px;
+    }
+    .mat-list-item-content {
+      color: white !important;
+      font-weight: 100;
+    }
+    mat-divider {
+      border-color: rgb(204, 204, 204) !important;
+    }
+  }
+}
