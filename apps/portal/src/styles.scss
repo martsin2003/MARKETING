@@ -30,9 +30,14 @@ $portal-theme: mat-light-theme($portal-primary, $portal-accent, $portal-warn);
 @import '../styles/theme.scss';
 @import '../styles/utils.scss';
 
-// html {
-//   height: 100%;
-// }
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
 body {
   //   display: flex;
