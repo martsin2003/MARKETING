@@ -10,6 +10,18 @@ pipelines:
     feat/backend:
       - step:
           script:
+            - cd client
+            - yarn install
+            - yarn build
+            - apt-get update && apt-get install -y python-dev
+            - curl -O https://bootstrap.pypa.io/get-pip.py
+            - python get-pip.py
+            - pip install awscli
+            - aws s3 rm s3://brookfield-development --recursive
+            - aws s3 cp ./dist/apps/portal s3://brookfield-development/ --recursive --acl public-read --cache-control max-age=0
+            - cd ..
+      - step:
+          script:
             - cd backend
             - npm install
             - apt-get update && apt-get install -y python-dev
