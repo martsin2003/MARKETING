@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  backendEndpoint: 'http://bf-dev.us-west-2.elasticbeanstalk.com/',
+  backendGraphqlEndpoint: 'http://bf-dev.us-west-2.elasticbeanstalk.com/graphql'
 };
 
 /*
