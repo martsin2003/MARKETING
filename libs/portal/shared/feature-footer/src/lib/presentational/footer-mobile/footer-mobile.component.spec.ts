@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FindMyHomeComponent } from './find-my-home.component';
+import { FooterMobileComponent } from './footer-mobile.component';
 
-describe('FindMyHomeComponent', () => {
-  let component: FindMyHomeComponent;
-  let fixture: ComponentFixture<FindMyHomeComponent>;
+describe('FooterMobileComponent', () => {
+  let component: FooterMobileComponent;
+  let fixture: ComponentFixture<FooterMobileComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FindMyHomeComponent ]
+      declarations: [ FooterMobileComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FindMyHomeComponent);
+    fixture = TestBed.createComponent(FooterMobileComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -34,6 +34,9 @@
       ],
       "@brookfield/portal/shared/view-filter": [
         "libs/portal/shared/view-filter/src/index.ts"
+      ],
+      "@brookfield/portal/shared/feature-footer": [
+        "libs/portal/shared/feature-footer/src/index.ts"
       ]
     }
   },

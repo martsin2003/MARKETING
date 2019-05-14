@@ -42,7 +42,7 @@ body {
 }
 
 .container {
-  margin: 0px 20%;
+  margin: 0px 5%;
 }
 
 .community-card {
@@ -93,7 +93,7 @@ body {
   outline: none;
   border: 1px solid;
   cursor: pointer;
-  
+
   mat-icon {
     margin-right: 5px;
   }
@@ -122,4 +122,18 @@ body {
   height: 50px;
   background-color: $white !important;
   font-size: 16px;
+}
+
+// A link helper styles
+.no-underline {
+  text-decoration: none;
+}
+
+// Expand/collapse arrow animation
+.expand-arrow {
+  transform-origin: center center;
+  transition: transform ease-in-out 0.4s;
+  &.expanded {
+    transform: rotate(180deg);
+  }
 }

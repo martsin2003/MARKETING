@@ -1,0 +1,9 @@
+@import 'variables.scss';
+
+.footer-container {
+    background-color: $primary;
+
+    .label-text {
+        color: $white;
+    }
+}

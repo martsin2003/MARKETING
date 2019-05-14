@@ -40,6 +40,9 @@
     },
     "portal-shared-view-filter": {
       "tags": ["scope:view-filter", "type:feature"]
+    },
+    "portal-shared-feature-footer": {
+      "tags": []
     }
   }
 }

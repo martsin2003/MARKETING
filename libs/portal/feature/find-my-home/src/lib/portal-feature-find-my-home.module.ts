@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FindMyHomeComponent } from './containers/find-my-home/find-my-home.component';
 import { MaterialModule } from '@brookfield/material';
+import { CommunityCardComponent } from './presentational/community-card/community-card.component';
 
 @NgModule({
   imports: [
@@ -12,6 +13,6 @@ import { MaterialModule } from '@brookfield/material';
       { path: '', pathMatch: 'full', component: FindMyHomeComponent }
     ])
   ],
-  declarations: [FindMyHomeComponent]
+  declarations: [FindMyHomeComponent, CommunityCardComponent]
 })
 export class PortalFeatureFindMyHomeModule {}

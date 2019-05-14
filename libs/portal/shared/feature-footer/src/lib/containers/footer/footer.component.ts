@@ -1,20 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Router } from '@angular/router';
 
 @Component({
-  selector: 'brookfield-navigation',
-  templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss']
+  selector: 'brookfield-footer',
+  templateUrl: './footer.component.html',
+  styleUrls: ['./footer.component.scss']
 })
-export class NavigationComponent implements OnInit {
-  menuOpened: boolean;
+export class FooterComponent implements OnInit {
   isMobileScreen: boolean;
 
-  constructor(
-    private breakpointObserver: BreakpointObserver,
-    private router: Router
-  ) {
+  constructor(private breakpointObserver: BreakpointObserver) {
     breakpointObserver.observe(['(max-width: 959px)']).subscribe(result => {
       this.isMobileScreen = result.matches;
     });
@@ -27,12 +22,4 @@ export class NavigationComponent implements OnInit {
     );
   }
 
-  toggleMenuOpen() {
-    this.menuOpened = !this.menuOpened;
-  }
-
-  routeToUrl(url: string) {
-    this.menuOpened = false;
-    this.router.navigateByUrl(url);
-  }
 }
