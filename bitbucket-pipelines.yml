@@ -16,7 +16,7 @@ pipelines:
             - curl -O https://bootstrap.pypa.io/get-pip.py
             - python get-pip.py
             - pip install awsebcli --upgrade
-            - eb init busykid -r us-west-2 -p docker
+            - eb init Brookfield -r us-west-2 -p docker
             - eb deploy Brookfield-dev-env --timeout 20
     develop:
       - step:
