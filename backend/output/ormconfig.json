@@ -1,0 +1,16 @@
+[
+  {
+    "name": "default",
+    "type": "postgres",
+    "host": "brookfield-clone.cvxhi948gzuf.us-west-2.rds.amazonaws.com",
+    "port": 5432,
+    "username": "brookfield_clone",
+    "password": "D5YGUzQkmYsab5w9",
+    "database": "brookfield_clone",
+    "schema": "public",
+    "synchronize": false,
+    "entities": [
+      "entities/*.js"
+    ]
+  }
+]
