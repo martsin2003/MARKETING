@@ -1,427 +1,439 @@
 {
-	"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-	"version": 1,
-	"newProjectRoot": "",
-	"projects": {
-		"portal": {
-			"root": "apps/portal/",
-			"sourceRoot": "apps/portal/src",
-			"projectType": "application",
-			"prefix": "brookfield",
-			"schematics": {
-				"@schematics/angular:component": {
-					"styleext": "scss"
-				}
-			},
-			"architect": {
-				"build": {
-					"builder": "@angular-devkit/build-angular:browser",
-					"options": {
-						"outputPath": "dist/apps/portal",
-						"index": "apps/portal/src/index.html",
-						"main": "apps/portal/src/main.ts",
-						"polyfills": "apps/portal/src/polyfills.ts",
-						"tsConfig": "apps/portal/tsconfig.app.json",
-						"assets": [ "apps/portal/src/favicon.ico", "apps/portal/src/assets" ],
-						"styles": [ "libs/common/styles/src/lib/styles/variables.scss", "apps/portal/src/styles.scss" ],
-						"stylePreprocessorOptions": {
-							"includePaths": [ "libs/common/styles/src/lib/styles/" ]
-						},
-						"scripts": []
-					},
-					"configurations": {
-						"production": {
-							"fileReplacements": [
-								{
-									"replace": "apps/portal/src/environments/environment.ts",
-									"with": "apps/portal/src/environments/environment.prod.ts"
-								}
-							],
-							"optimization": true,
-							"outputHashing": "all",
-							"sourceMap": false,
-							"extractCss": true,
-							"namedChunks": false,
-							"aot": true,
-							"extractLicenses": true,
-							"vendorChunk": false,
-							"buildOptimizer": true
-						}
-					}
-				},
-				"serve": {
-					"builder": "@angular-devkit/build-angular:dev-server",
-					"options": {
-						"browserTarget": "portal:build"
-					},
-					"configurations": {
-						"production": {
-							"browserTarget": "portal:build:production"
-						}
-					}
-				},
-				"extract-i18n": {
-					"builder": "@angular-devkit/build-angular:extract-i18n",
-					"options": {
-						"browserTarget": "portal:build"
-					}
-				},
-				"test": {
-					"builder": "@angular-devkit/build-angular:karma",
-					"options": {
-						"main": "apps/portal/src/test.ts",
-						"polyfills": "apps/portal/src/polyfills.ts",
-						"tsConfig": "apps/portal/tsconfig.spec.json",
-						"karmaConfig": "apps/portal/karma.conf.js",
-						"styles": [ "apps/portal/src/styles.scss" ],
-						"scripts": [],
-						"assets": [ "apps/portal/src/favicon.ico", "apps/portal/src/assets" ]
-					}
-				},
-				"lint": {
-					"builder": "@angular-devkit/build-angular:tslint",
-					"options": {
-						"tsConfig": [ "apps/portal/tsconfig.app.json", "apps/portal/tsconfig.spec.json" ],
-						"exclude": [ "**/node_modules/**" ]
-					}
-				}
-			}
-		},
-		"portal-e2e": {
-			"root": "apps/portal-e2e/",
-			"projectType": "application",
-			"architect": {
-				"e2e": {
-					"builder": "@angular-devkit/build-angular:protractor",
-					"options": {
-						"protractorConfig": "apps/portal-e2e/protractor.conf.js",
-						"devServerTarget": "portal:serve"
-					}
-				},
-				"lint": {
-					"builder": "@angular-devkit/build-angular:tslint",
-					"options": {
-						"tsConfig": "apps/portal-e2e/tsconfig.e2e.json",
-						"exclude": [ "**/node_modules/**" ]
-					}
-				}
-			}
-		},
-		"material": {
-			"root": "libs/material",
-			"sourceRoot": "libs/material/src",
-			"projectType": "library",
-			"prefix": "brookfield",
-			"architect": {
-				"lint": {
-					"builder": "@angular-devkit/build-angular:tslint",
-					"options": {
-						"tsConfig": [ "libs/material/tsconfig.lib.json", "libs/material/tsconfig.spec.json" ],
-						"exclude": [ "**/node_modules/**" ]
-					}
-				},
-				"test": {
-					"builder": "@nrwl/builders:jest",
-					"options": {
-						"jestConfig": "libs/material/jest.config.js",
-						"tsConfig": "libs/material/tsconfig.spec.json"
-					}
-				}
-			},
-			"schematics": {
-				"@nrwl/schematics:component": {
-					"styleext": "scss"
-				}
-			}
-		},
-		"portal-shared-feature-navigation": {
-			"root": "libs/portal/shared/feature-navigation",
-			"sourceRoot": "libs/portal/shared/feature-navigation/src",
-			"projectType": "library",
-			"prefix": "brookfield",
-			"architect": {
-				"lint": {
-					"builder": "@angular-devkit/build-angular:tslint",
-					"options": {
-						"tsConfig": [
-							"libs/portal/shared/feature-navigation/tsconfig.lib.json",
-							"libs/portal/shared/feature-navigation/tsconfig.spec.json"
-						],
-						"exclude": [ "**/node_modules/**" ]
-					}
-				},
-				"test": {
-					"builder": "@nrwl/builders:jest",
-					"options": {
-						"jestConfig": "libs/portal/shared/feature-navigation/jest.config.js",
-						"tsConfig": "libs/portal/shared/feature-navigation/tsconfig.spec.json",
-						"setupFile": "libs/portal/shared/feature-navigation/src/test-setup.ts"
-					}
-				}
-			},
-			"schematics": {
-				"@nrwl/schematics:component": {
-					"styleext": "scss"
-				}
-			}
-		},
-		"portal-feature-home": {
-			"root": "libs/portal/feature/home",
-			"sourceRoot": "libs/portal/feature/home/src",
-			"projectType": "library",
-			"prefix": "brookfield",
-			"architect": {
-				"lint": {
-					"builder": "@angular-devkit/build-angular:tslint",
-					"options": {
-						"tsConfig": [
-							"libs/portal/feature/home/tsconfig.lib.json",
-							"libs/portal/feature/home/tsconfig.spec.json"
-						],
-						"exclude": [ "**/node_modules/**" ]
-					}
-				},
-				"test": {
-					"builder": "@nrwl/builders:jest",
-					"options": {
-						"jestConfig": "libs/portal/feature/home/jest.config.js",
-						"tsConfig": "libs/portal/feature/home/tsconfig.spec.json",
-						"setupFile": "libs/portal/feature/home/src/test-setup.ts"
-					}
-				}
-			},
-			"schematics": {
-				"@nrwl/schematics:component": {
-					"styleext": "scss"
-				}
-			}
-		},
-		"portal-feature-find-my-home": {
-			"root": "libs/portal/feature/find-my-home",
-			"sourceRoot": "libs/portal/feature/find-my-home/src",
-			"projectType": "library",
-			"prefix": "brookfield",
-			"architect": {
-				"lint": {
-					"builder": "@angular-devkit/build-angular:tslint",
-					"options": {
-						"tsConfig": [
-							"libs/portal/feature/find-my-home/tsconfig.lib.json",
-							"libs/portal/feature/find-my-home/tsconfig.spec.json"
-						],
-						"exclude": [ "**/node_modules/**" ]
-					}
-				},
-				"test": {
-					"builder": "@nrwl/builders:jest",
-					"options": {
-						"jestConfig": "libs/portal/feature/find-my-home/jest.config.js",
-						"tsConfig": "libs/portal/feature/find-my-home/tsconfig.spec.json",
-						"setupFile": "libs/portal/feature/find-my-home/src/test-setup.ts"
-					}
-				}
-			},
-			"schematics": {
-				"@nrwl/schematics:component": {
-					"styleext": "scss"
-				}
-			}
-		},
-		"common-styles": {
-			"root": "libs/common/styles",
-			"sourceRoot": "libs/common/styles/src",
-			"projectType": "library",
-			"prefix": "brookfield",
-			"architect": {
-				"lint": {
-					"builder": "@angular-devkit/build-angular:tslint",
-					"options": {
-						"tsConfig": [ "libs/common/styles/tsconfig.lib.json", "libs/common/styles/tsconfig.spec.json" ],
-						"exclude": [ "**/node_modules/**" ]
-					}
-				},
-				"test": {
-					"builder": "@nrwl/builders:jest",
-					"options": {
-						"jestConfig": "libs/common/styles/jest.config.js",
-						"tsConfig": "libs/common/styles/tsconfig.spec.json",
-						"setupFile": "libs/common/styles/src/test-setup.ts"
-					}
-				}
-			},
-			"schematics": {
-				"@nrwl/schematics:component": {
-					"styleext": "scss"
-				}
-			}
-		},
-		"portal-feature-home-plans": {
-			"root": "libs/portal/feature/home-plans",
-			"sourceRoot": "libs/portal/feature/home-plans/src",
-			"projectType": "library",
-			"prefix": "brookfield",
-			"architect": {
-				"lint": {
-					"builder": "@angular-devkit/build-angular:tslint",
-					"options": {
-						"tsConfig": [
-							"libs/portal/feature/home-plans/tsconfig.lib.json",
-							"libs/portal/feature/home-plans/tsconfig.spec.json"
-						],
-						"exclude": [ "**/node_modules/**" ]
-					}
-				},
-				"test": {
-					"builder": "@nrwl/builders:jest",
-					"options": {
-						"jestConfig": "libs/portal/feature/home-plans/jest.config.js",
-						"tsConfig": "libs/portal/feature/home-plans/tsconfig.spec.json",
-						"setupFile": "libs/portal/feature/home-plans/src/test-setup.ts"
-					}
-				}
-			},
-			"schematics": {
-				"@nrwl/schematics:component": {
-					"styleext": "scss"
-				}
-			}
-		},
-		"portal-feature-home-plan-detail": {
-			"root": "libs/portal/feature/home-plan-detail",
-			"sourceRoot": "libs/portal/feature/home-plan-detail/src",
-			"projectType": "library",
-			"prefix": "brookfield",
-			"architect": {
-				"lint": {
-					"builder": "@angular-devkit/build-angular:tslint",
-					"options": {
-						"tsConfig": [
-							"libs/portal/feature/home-plan-detail/tsconfig.lib.json",
-							"libs/portal/feature/home-plan-detail/tsconfig.spec.json"
-						],
-						"exclude": [ "**/node_modules/**" ]
-					}
-				},
-				"test": {
-					"builder": "@nrwl/builders:jest",
-					"options": {
-						"jestConfig": "libs/portal/feature/home-plan-detail/jest.config.js",
-						"tsConfig": "libs/portal/feature/home-plan-detail/tsconfig.spec.json",
-						"setupFile": "libs/portal/feature/home-plan-detail/src/test-setup.ts"
-					}
-				}
-			},
-			"schematics": {
-				"@nrwl/schematics:component": {
-					"styleext": "scss"
-				}
-			}
-		},
-		"common-ui-components-image-carousel": {
-			"root": "libs/common/ui-components/image-carousel",
-			"sourceRoot": "libs/common/ui-components/image-carousel/src",
-			"projectType": "library",
-			"prefix": "brookfield",
-			"architect": {
-				"lint": {
-					"builder": "@angular-devkit/build-angular:tslint",
-					"options": {
-						"tsConfig": [
-							"libs/common/ui-components/image-carousel/tsconfig.lib.json",
-							"libs/common/ui-components/image-carousel/tsconfig.spec.json"
-						],
-						"exclude": [ "**/node_modules/**" ]
-					}
-				},
-				"test": {
-					"builder": "@nrwl/builders:jest",
-					"options": {
-						"jestConfig": "libs/common/ui-components/image-carousel/jest.config.js",
-						"tsConfig": "libs/common/ui-components/image-carousel/tsconfig.spec.json",
-						"setupFile": "libs/common/ui-components/image-carousel/src/test-setup.ts"
-					}
-				}
-			},
-			"schematics": {
-				"@nrwl/schematics:component": {
-					"styleext": "scss"
-				}
-			}
-		},
-		"portal-shared-view-filter": {
-			"root": "libs/portal/shared/view-filter",
-			"sourceRoot": "libs/portal/shared/view-filter/src",
-			"projectType": "library",
-			"prefix": "brookfield",
-			"architect": {
-				"lint": {
-					"builder": "@angular-devkit/build-angular:tslint",
-					"options": {
-						"tsConfig": [
-							"libs/portal/shared/view-filter/tsconfig.lib.json",
-							"libs/portal/shared/view-filter/tsconfig.spec.json"
-						],
-						"exclude": [ "**/node_modules/**" ]
-					}
-				},
-				"test": {
-					"builder": "@nrwl/builders:jest",
-					"options": {
-						"jestConfig": "libs/portal/shared/view-filter/jest.config.js",
-						"tsConfig": "libs/portal/shared/view-filter/tsconfig.spec.json",
-						"setupFile": "libs/portal/shared/view-filter/src/test-setup.ts"
-					}
-				}
-			},
-			"schematics": {
-				"@nrwl/schematics:component": {
-					"styleext": "scss"
-				}
-			}
-		},
-		"portal-shared-feature-footer": {
-			"root": "libs/portal/shared/feature-footer",
-			"sourceRoot": "libs/portal/shared/feature-footer/src",
-			"projectType": "library",
-			"prefix": "brookfield",
-			"architect": {
-				"lint": {
-					"builder": "@angular-devkit/build-angular:tslint",
-					"options": {
-						"tsConfig": [
-							"libs/portal/shared/feature-footer/tsconfig.lib.json",
-							"libs/portal/shared/feature-footer/tsconfig.spec.json"
-						],
-						"exclude": [ "**/node_modules/**" ]
-					}
-				},
-				"test": {
-					"builder": "@nrwl/builders:jest",
-					"options": {
-						"jestConfig": "libs/portal/shared/feature-footer/jest.config.js",
-						"tsConfig": "libs/portal/shared/feature-footer/tsconfig.spec.json",
-						"setupFile": "libs/portal/shared/feature-footer/test-setup.ts"
-					}
-				}
-			},
-			"schematics": {
-				"@nrwl/schematics:component": {
-					"styleext": "scss"
-				}
-			}
-		}
-	},
-	"cli": {
-		"warnings": {
-			"typescriptMismatch": false,
-			"versionMismatch": false
-		},
-		"defaultCollection": "@nrwl/schematics"
-	},
-	"defaultProject": "portal",
-	"schematics": {
-		"@schematics/angular:component": {
-			"styleext": "scss"
-		}
-	}
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "",
+  "projects": {
+    "portal": {
+      "root": "apps/portal/",
+      "sourceRoot": "apps/portal/src",
+      "projectType": "application",
+      "prefix": "brookfield",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/portal",
+            "index": "apps/portal/src/index.html",
+            "main": "apps/portal/src/main.ts",
+            "polyfills": "apps/portal/src/polyfills.ts",
+            "tsConfig": "apps/portal/tsconfig.app.json",
+            "assets": ["apps/portal/src/favicon.ico", "apps/portal/src/assets"],
+            "styles": [
+              "libs/common/styles/src/lib/styles/variables.scss",
+              "apps/portal/src/styles.scss"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["libs/common/styles/src/lib/styles/"]
+            },
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/portal/src/environments/environment.ts",
+                  "with": "apps/portal/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "portal:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "portal:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "portal:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/portal/src/test.ts",
+            "polyfills": "apps/portal/src/polyfills.ts",
+            "tsConfig": "apps/portal/tsconfig.spec.json",
+            "karmaConfig": "apps/portal/karma.conf.js",
+            "styles": ["apps/portal/src/styles.scss"],
+            "scripts": [],
+            "assets": ["apps/portal/src/favicon.ico", "apps/portal/src/assets"]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/portal/tsconfig.app.json",
+              "apps/portal/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    },
+    "portal-e2e": {
+      "root": "apps/portal-e2e/",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "apps/portal-e2e/protractor.conf.js",
+            "devServerTarget": "portal:serve"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/portal-e2e/tsconfig.e2e.json",
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    },
+    "material": {
+      "root": "libs/material",
+      "sourceRoot": "libs/material/src",
+      "projectType": "library",
+      "prefix": "brookfield",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/material/tsconfig.lib.json",
+              "libs/material/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/material/jest.config.js",
+            "tsConfig": "libs/material/tsconfig.spec.json"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "portal-shared-feature-navigation": {
+      "root": "libs/portal/shared/feature-navigation",
+      "sourceRoot": "libs/portal/shared/feature-navigation/src",
+      "projectType": "library",
+      "prefix": "brookfield",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/portal/shared/feature-navigation/tsconfig.lib.json",
+              "libs/portal/shared/feature-navigation/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/portal/shared/feature-navigation/jest.config.js",
+            "tsConfig": "libs/portal/shared/feature-navigation/tsconfig.spec.json",
+            "setupFile": "libs/portal/shared/feature-navigation/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "portal-feature-home": {
+      "root": "libs/portal/feature/home",
+      "sourceRoot": "libs/portal/feature/home/src",
+      "projectType": "library",
+      "prefix": "brookfield",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/portal/feature/home/tsconfig.lib.json",
+              "libs/portal/feature/home/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/portal/feature/home/jest.config.js",
+            "tsConfig": "libs/portal/feature/home/tsconfig.spec.json",
+            "setupFile": "libs/portal/feature/home/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "portal-feature-find-my-home": {
+      "root": "libs/portal/feature/find-my-home",
+      "sourceRoot": "libs/portal/feature/find-my-home/src",
+      "projectType": "library",
+      "prefix": "brookfield",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/portal/feature/find-my-home/tsconfig.lib.json",
+              "libs/portal/feature/find-my-home/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/portal/feature/find-my-home/jest.config.js",
+            "tsConfig": "libs/portal/feature/find-my-home/tsconfig.spec.json",
+            "setupFile": "libs/portal/feature/find-my-home/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "common-styles": {
+      "root": "libs/common/styles",
+      "sourceRoot": "libs/common/styles/src",
+      "projectType": "library",
+      "prefix": "brookfield",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/common/styles/tsconfig.lib.json",
+              "libs/common/styles/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/common/styles/jest.config.js",
+            "tsConfig": "libs/common/styles/tsconfig.spec.json",
+            "setupFile": "libs/common/styles/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "portal-feature-home-plans": {
+      "root": "libs/portal/feature/home-plans",
+      "sourceRoot": "libs/portal/feature/home-plans/src",
+      "projectType": "library",
+      "prefix": "brookfield",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/portal/feature/home-plans/tsconfig.lib.json",
+              "libs/portal/feature/home-plans/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/portal/feature/home-plans/jest.config.js",
+            "tsConfig": "libs/portal/feature/home-plans/tsconfig.spec.json",
+            "setupFile": "libs/portal/feature/home-plans/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "portal-feature-home-plan-detail": {
+      "root": "libs/portal/feature/home-plan-detail",
+      "sourceRoot": "libs/portal/feature/home-plan-detail/src",
+      "projectType": "library",
+      "prefix": "brookfield",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/portal/feature/home-plan-detail/tsconfig.lib.json",
+              "libs/portal/feature/home-plan-detail/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/portal/feature/home-plan-detail/jest.config.js",
+            "tsConfig": "libs/portal/feature/home-plan-detail/tsconfig.spec.json",
+            "setupFile": "libs/portal/feature/home-plan-detail/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "common-ui-components-image-carousel": {
+      "root": "libs/common/ui-components/image-carousel",
+      "sourceRoot": "libs/common/ui-components/image-carousel/src",
+      "projectType": "library",
+      "prefix": "brookfield",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/common/ui-components/image-carousel/tsconfig.lib.json",
+              "libs/common/ui-components/image-carousel/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/common/ui-components/image-carousel/jest.config.js",
+            "tsConfig": "libs/common/ui-components/image-carousel/tsconfig.spec.json",
+            "setupFile": "libs/common/ui-components/image-carousel/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "portal-shared-view-filter": {
+      "root": "libs/portal/shared/view-filter",
+      "sourceRoot": "libs/portal/shared/view-filter/src",
+      "projectType": "library",
+      "prefix": "brookfield",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/portal/shared/view-filter/tsconfig.lib.json",
+              "libs/portal/shared/view-filter/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/portal/shared/view-filter/jest.config.js",
+            "tsConfig": "libs/portal/shared/view-filter/tsconfig.spec.json",
+            "setupFile": "libs/portal/shared/view-filter/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "portal-shared-feature-footer": {
+      "root": "libs/portal/shared/feature-footer",
+      "sourceRoot": "libs/portal/shared/feature-footer/src",
+      "projectType": "library",
+      "prefix": "brookfield",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/portal/shared/feature-footer/tsconfig.lib.json",
+              "libs/portal/shared/feature-footer/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/portal/shared/feature-footer/jest.config.js",
+            "tsConfig": "libs/portal/shared/feature-footer/tsconfig.spec.json",
+            "setupFile": "libs/portal/shared/feature-footer/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
+    }
+  },
+  "cli": {
+    "warnings": {
+      "typescriptMismatch": false,
+      "versionMismatch": false
+    },
+    "defaultCollection": "@nrwl/schematics"
+  },
+  "defaultProject": "portal",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
