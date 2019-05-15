@@ -27,7 +27,11 @@ const routes: Routes = [
     loadChildren:
       '@brookfield/portal/feature/home-plan-detail#PortalFeatureHomePlanDetailModule'
   },
-  { path: 'empower-innovations', component: EmpowerInnovationsComponent },
+  {
+    path: 'empower',
+    loadChildren:
+      '@brookfield/portal/feature/empower#PortalFeatureEmpowerModule'
+  },
   { path: 'why', component: WhyBrookfieldComponent },
   { path: 'my-account', component: MyAccountComponent },
   { path: 'community-microsite', component: CommunityMicrositeComponent }

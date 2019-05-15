@@ -421,6 +421,37 @@
           "styleext": "scss"
         }
       }
+    },
+    "portal-feature-empower": {
+      "root": "libs/portal/feature/empower",
+      "sourceRoot": "libs/portal/feature/empower/src",
+      "projectType": "library",
+      "prefix": "brookfield",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/portal/feature/empower/tsconfig.lib.json",
+              "libs/portal/feature/empower/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/portal/feature/empower/jest.config.js",
+            "tsConfig": "libs/portal/feature/empower/tsconfig.spec.json",
+            "setupFile": "libs/portal/feature/empower/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {
@@ -434,6 +465,14 @@
   "schematics": {
     "@schematics/angular:component": {
       "styleext": "scss"
+    },
+    "@nrwl/schematics:component": {
+      "styleext": "scss"
+    },
+    "@nrwl/schematics:library": {
+      "style": "scss",
+      "unitTestRunner": "jest",
+      "framework": "angular"
     }
   }
 }
