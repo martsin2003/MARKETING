@@ -36,6 +36,7 @@ client/npm-debug.log
 client/yarn-error.log
 client/testem.log
 client/typings
+client/.angulardoc.json
 
 # System Files
 client/.DS_Store

@@ -1,0 +1,11 @@
+<mat-list>
+  <mat-list-item (click)="this.bottomSheetRef.dismiss(null)">
+    <mat-icon>close</mat-icon>
+    <span>Close</span>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  <ng-container *ngFor="let homePlan of homePlansTypes">
+    <mat-list-item (click)="selectHomePlansType(homePlan)">{{homePlan.type}}</mat-list-item>
+    <mat-divider *ngIf="homePlansTypes.indexOf(homePlan) !== homePlansTypes.length -1"></mat-divider>
+  </ng-container>
+</mat-list>
