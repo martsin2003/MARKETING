@@ -17,7 +17,8 @@ import { EmpowerOverviewComponent } from './containers/empower-overview/empower-
             component: EmpowerOverviewComponent
           }
         ]
-      }
+      },
+      { path: '**', redirectTo: '' }
     ])
   ],
   declarations: [EmpowerOverviewComponent]

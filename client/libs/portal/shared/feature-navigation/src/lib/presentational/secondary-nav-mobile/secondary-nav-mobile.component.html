@@ -22,7 +22,10 @@
       </mat-expansion-panel-header>
       <div class="d-flex flex-column mobile-list-background">
         <mat-list>
-          <mat-list-item class="font-weight-bold">
+          <mat-list-item
+            class="font-weight-bold"
+            (click)="navigateTo('resources/customer-care')"
+          >
             <span class="ml-5">Customer Care</span>
           </mat-list-item>
           <mat-divider></mat-divider>
