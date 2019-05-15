@@ -1,185 +1,108 @@
-.container-of-bottom-menu {
+.filter-tools {
     width: 100%;
-    display: block;
-    align-items: center;
+    height: 100vh;
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
     background: white;
-    mat-icon {
-        margin-right: 5px;
-    }
-    &__wrapper {
+    padding: 15px;
+    overflow: auto;
+    z-index: 999;
+    transition-duration: 0.5s;
+    transform: translateY(100vh);
+    &__closing-panel {
         width: 100%;
         display: flex;
-        align-items: center;
-        position: relative;
+        justify-content: flex-end;
+        mat-icon {
+            width: auto;
+            height: auto;
+            font-size: 36px;
+            margin: 0px;
+        }
     }
-    &__see-all-button {
-        height: 100%;
-        width: 70%;
-        padding: 12px 20px;
-        font-size: 15px;
-        border: none;
-        outline: none;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        background: black;
-        color: white;
-        cursor: pointer;
-        
+    &__title {
+        width: 100%;
+        display: block;
+        font-weight: 100;
+        font-size: 25px;
+        margin-bottom: 15px;
     }
-    &__filters {
-        height: 100%;
-        width: 30%;
-        padding: 12px 20px;
-        font-size: 15px;
-        border: none;
-        outline: none;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        background: white;
-        cursor: pointer;
-    }
-    .views-menu {
+    &__filter-setting-item {
         width: 100%;
         height: auto;
-        user-select: none;
-        display: none;
-        align-items: center;
-        justify-content: flex-start;
+        display: flex;
+        align-items: flex-start;
         flex-direction: column;
-        z-index: 999;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        cursor: pointer;
-        &__items {
+        .setting-type {
+            font-weight: 100;
+        }
+        .price-range {
             width: 100%;
-            background: black;
-            padding: 15px;
-            font-size: 15px;
             display: flex;
             align-items: center;
-            outline: none;
-            border: none;
-            color: white;
-            mat-icon {
-                margin-right: 5px;
+            justify-content: space-between;
+            flex-direction: row;
+            mat-form-field {
+                width: 42%;
             }
-        }
-        mat-divider {
-            width: 100%;
-            border-color: rgb(197, 197, 197);
-        }
-        transition-duration: 0.5s;
-        transform: translateY(250px);
-    }
-    .filter-tools {
-        width: calc(100% - 30px);
-        height: calc(100vh - 30px);
-        position: fixed;
-        display: none;
-        z-index: 999;
-        top: 0;
-        left: 0;
-        background: white;
-        padding: 15px;
-        overflow: auto;
-        transition-duration: 0.5s;
-        transform: translateY(100vh);
-        &__closing-panel {
-            width: 100%;
-            display: flex;
-            justify-content: flex-end;
-            mat-icon {
-                width: auto;
-                height: auto;
-                font-size: 36px;
-                margin: 0px;
-            }
-        }
-        &__title {
-            width: 100%;
-            display: block;
-            font-weight: 100;
-            font-size: 25px;
-            margin-bottom: 15px;
-        }
-        &__filter-setting-item {
-            width: 100%;
-            height: auto;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            .setting-type {
+            .divider {
+                padding-bottom: 21px;
                 font-weight: 100;
             }
-            .price-range {
-                width: 100%;
+        }
+        .select-quantity-beds {
+            width: 100%;
+            height: auto;
+            margin-top: 5px;
+            margin-bottom: 21px;
+            display: flex;
+            flex-direction: row;
+            &__variant {
+                width: 20%;
+                padding: 15px 0px;
+                font-size: 15px;
+                border: 1px solid lightgray;
+                background: white;
+                border-left: none;
+                outline: none;
+                &:first-child {
+                    background: #6295ba;
+                    color: white;
+                    border: none;
+                }
+            }
+        }
+    }
+    .checkboxes-wrapper {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        /deep/mat-checkbox {
+            margin-bottom: 15px;
+            .mat-checkbox-inner-container {
+                width: 30px;
+                height: 30px;
+            }
+            .mat-checkbox-frame {
+                border-width: 1px;
+                border-radius: 0px;
+            }
+            .mat-checkbox-layout {
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
-                flex-direction: row;
-                mat-form-field {
-                    width: 42%;
-                }
-                .divider {
-                    padding-bottom: 21px;
-                    font-weight: 100;
-                }
-            }
-            .select-quantity-beds {
-                width: 100%;
-                height: auto;
-                margin-top: 5px;
-                margin-bottom: 21px;
-                display: flex;
-                flex-direction: row;
-                &__variant {
-                    width: 20%;
-                    padding: 15px 0px;
-                    font-size: 15px;
-                    border: 1px solid lightgray;
-                    background: white;
-                    border-left: none;
-                    outline: none;
-                    &:first-child {
-                        background: #6295ba;
-                        color: white;
-                        border: none;
-                    }
-                }
             }
         }
-        .checkboxes-wrapper {
+    }
+    .button-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        button {
             width: 100%;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            /deep/mat-checkbox {
-                margin-bottom: 15px;
-                .mat-checkbox-inner-container {
-                    width: 30px;
-                    height: 30px;
-                }
-                .mat-checkbox-frame {
-                    border-width: 1px;
-                    border-radius: 0px;
-                }
-                .mat-checkbox-layout {
-                    display: flex;
-                    align-items: center;
-                }
-            }
-        }
-        .button-wrapper {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-            button {
-                width: 100%;
-            }
         }
     }
 }

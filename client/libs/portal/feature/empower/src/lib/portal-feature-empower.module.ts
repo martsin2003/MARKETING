@@ -19,7 +19,8 @@ import { InnovationVideosComponent } from './presentational/innovation-videos/in
             component: EmpowerOverviewComponent
           }
         ]
-      }
+      },
+      { path: '**', redirectTo: '' }
     ])
   ],
   declarations: [EmpowerOverviewComponent, InnovationVideosComponent]

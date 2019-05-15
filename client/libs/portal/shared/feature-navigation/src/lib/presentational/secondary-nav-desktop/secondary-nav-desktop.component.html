@@ -18,7 +18,9 @@
   </button>
 
   <mat-menu xPosition="before" #resourcesMenu="matMenu">
-    <button mat-menu-item>Customer Care</button>
+    <button mat-menu-item (click)="navigateTo('resources/customer-care')">
+      Customer Care
+    </button>
     <mat-divider></mat-divider>
     <button mat-menu-item>Preferred Lenders</button>
     <mat-divider></mat-divider>

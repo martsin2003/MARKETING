@@ -10,12 +10,14 @@
       consectetur adipiscing elit. Aenean id erat id erat ultricies lobortis ac
       id lectus.
     </h3>
-    <div class="wrapper-of-buttons d-flex flex-row justify-content-center flex-wrap">
-      <brookfield-types-view-home-plans></brookfield-types-view-home-plans>
-      <button mat-button color="primary" (click)="openFilter()">
-        <mat-icon>tune</mat-icon>
-        Filters
-      </button>
+    <div class="buttons-wrapper d-flex flex-row flex-wrap">
+      <div class="buttons-container">
+        <brookfield-types-view-home-plans></brookfield-types-view-home-plans>
+        <button mat-button color="primary" class="button-filter" (click)="openFilter()">
+          <mat-icon>tune</mat-icon>
+          Filters
+        </button>
+      </div>
     </div>
   </div>
 </div>

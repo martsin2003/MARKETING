@@ -1,9 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { EmpowerInnovationsComponent } from './empower-innovations/empower-innovations.component';
-import { WhyBrookfieldComponent } from './why-brookfield/why-brookfield.component';
-import { MyAccountComponent } from './my-account/my-account.component';
-import { CommunityMicrositeComponent } from './community-microsite/community-microsite.component';
 import {
   PortalFeatureHomeModule,
   portalFeatureHomeRoutes
@@ -32,9 +28,12 @@ const routes: Routes = [
     loadChildren:
       '@brookfield/portal/feature/empower#PortalFeatureEmpowerModule'
   },
-  { path: 'why', component: WhyBrookfieldComponent },
-  { path: 'my-account', component: MyAccountComponent },
-  { path: 'community-microsite', component: CommunityMicrositeComponent }
+  {
+    path: 'resources',
+    loadChildren:
+      '@brookfield/portal/feature/resources#PortalFeatureResourcesModule'
+  },
+  { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({

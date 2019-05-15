@@ -40,6 +40,9 @@
       ],
       "@brookfield/portal/feature/empower": [
         "libs/portal/feature/empower/src/index.ts"
+      ],
+      "@brookfield/portal/feature/resources": [
+        "libs/portal/feature/resources/src/index.ts"
       ]
     }
   },
