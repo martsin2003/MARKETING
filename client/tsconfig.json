@@ -37,6 +37,9 @@
       ],
       "@brookfield/portal/shared/feature-footer": [
         "libs/portal/shared/feature-footer/src/index.ts"
+      ],
+      "@brookfield/portal/feature/empower": [
+        "libs/portal/feature/empower/src/index.ts"
       ]
     }
   },
