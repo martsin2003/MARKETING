@@ -23,7 +23,9 @@
 
       <div class="line-box empty"></div>
 
-      <brookfield-secondary-nav-mobile></brookfield-secondary-nav-mobile>
+      <brookfield-secondary-nav-mobile
+        (navigate)="routeToUrl($event)"
+      ></brookfield-secondary-nav-mobile>
 
       <div class="line-box empty"></div>
       <div class="line-box">
@@ -38,7 +40,9 @@
     </div>
   </ng-container>
   <ng-template #desktopNav>
-    <brookfield-secondary-nav-desktop></brookfield-secondary-nav-desktop>
+    <brookfield-secondary-nav-desktop
+      (navigate)="routeToUrl($event)"
+    ></brookfield-secondary-nav-desktop>
     <brookfield-main-nav-desktop></brookfield-main-nav-desktop>
   </ng-template>
 </div>
