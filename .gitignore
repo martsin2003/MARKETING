@@ -3,6 +3,7 @@
 # root level
 node_modules
 .vscode/*
+!.vscode/settings.json
 
 # compiled output
 client/dist
