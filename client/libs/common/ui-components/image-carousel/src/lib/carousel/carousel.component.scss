@@ -56,10 +56,12 @@
     align-items: center;
     background: transparent;
     .img-container {
-      margin-right: 10px;
       height: auto;
       float: left;
       z-index: -1;
+      &.part-width {
+        margin-right: 10px;
+      }
     }
   }
 }

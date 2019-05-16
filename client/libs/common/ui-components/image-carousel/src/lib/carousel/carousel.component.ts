@@ -15,7 +15,8 @@ import { fromEvent } from 'rxjs';
   styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent implements OnInit, OnChanges {
-  @Input() someImages: string[];
+  @Input() incomingImages: string[];
+  @Input() fullWidth: boolean;
 
   @ViewChild('carousel') carousel: ElementRef<HTMLDivElement>;
   @ViewChild('container') container: ElementRef<HTMLDivElement>;
@@ -23,7 +24,7 @@ export class CarouselComponent implements OnInit, OnChanges {
 
   swiping: boolean;
   startedPos = 0;
-  duration: string = '1s';
+  duration = '1s';
   endPos = 0;
   mouseup: boolean;
   swipeDirection: 'left' | 'right' = null;
@@ -95,8 +96,8 @@ export class CarouselComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    if (changes.someImages && changes.someImages.currentValue) {
-      this.images = this.someImages.map(imgPath => {
+    if (changes.incomingImages && changes.incomingImages.currentValue) {
+      this.images = this.incomingImages.map(imgPath => {
         return {
           path: imgPath,
           translate: 0
@@ -109,18 +110,19 @@ export class CarouselComponent implements OnInit, OnChanges {
   initializationCarousel() {
     const carouselWidth = this.carousel.nativeElement.clientWidth;
     this.wrapper.nativeElement.style.width = carouselWidth * this.images.length + 'px';
-    this.imageWidth = carouselWidth - (carouselWidth * 20) / 100;
+    this.imageWidth = this.fullWidth ? carouselWidth : carouselWidth - (carouselWidth * 20) / 100;
     let index = 0;
     this.images.forEach((obj, i, arr) => {
+      const imageOffset = this.fullWidth ? index : 10 * index;
       if (i === arr.length - 1) {
-        obj.translate =
-          this.imageWidth * index + 10 * index - (carouselWidth - (carouselWidth * 80) / 100);
+        const carouselOffset = this.fullWidth ? 0 : carouselWidth - (carouselWidth * 80) / 100;
+        obj.translate = this.imageWidth * index + imageOffset - carouselOffset;
       } else {
-        obj.translate = this.imageWidth * index + 10 * index;
+        obj.translate = this.imageWidth * index + imageOffset;
         index++;
       }
     });
-    let img: any = this.wrapper.nativeElement.childNodes[1].childNodes[0];
+    const img: any = this.wrapper.nativeElement.childNodes[1].childNodes[0];
     this.wrapper.nativeElement.childNodes.forEach((elem: HTMLDivElement) => {
       if (elem.style) {
         elem.style.width = this.imageWidth + 'px';

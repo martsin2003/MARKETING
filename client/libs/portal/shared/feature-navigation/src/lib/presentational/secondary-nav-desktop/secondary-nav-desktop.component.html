@@ -1,4 +1,7 @@
-<div class="secondary-nav d-flex justify-content-end">
+<div
+  class="secondary-nav d-flex justify-content-end"
+  [ngClass]="{ opened: desktopMenuOpened, 'abolute-nav': absoluteNav }"
+>
   <button mat-button class="nav-item">
     Homeowner Reviews
   </button>

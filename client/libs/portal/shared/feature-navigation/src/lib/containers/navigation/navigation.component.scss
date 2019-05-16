@@ -2,11 +2,17 @@
 
 .navigation {
   // transition: background-color ease-in-out 500ms;
-  .label-text {
-    color: $white;
+  &:not(.absolute-nav) {
+    border-bottom: 1px solid $divider;
+  }
+  .label-text-1 {
+    color: $primary-dark;
+  }
+  .label-text-2 {
+    color: $yellow;
   }
   .menu-toggle {
-    color: $white;
+    color: $primary-dark;
     background-color: transparent;
     box-shadow: none;
     outline: none;
@@ -21,15 +27,19 @@
     overflow: scroll;
     height: 100%;
     background-color: $white;
-
-    .label-text-1 {
-      color: $primary-dark;
-    }
-    .label-text-2 {
-      color: $yellow;
-    }
-    .menu-toggle {
-      color: $darkgray;
+    border-bottom: none;
+  }
+  &.absolute-nav {
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    &:not(.active) {
+      .label-text,
+      .label-text-1,
+      .label-text-2,
+      .menu-toggle {
+        color: $white !important;
+      }
     }
   }
 }
@@ -44,7 +54,7 @@
 .navigation-menu {
   background-color: $white;
   position: absolute;
-  top: 86px;
+  top: 89px;
   left: 0;
   width: 100%;
   z-index: 999;
