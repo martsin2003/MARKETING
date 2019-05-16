@@ -37,15 +37,11 @@ export class PostgraphileService {
   private async getSchemaPromise(): Promise<GraphQLSchema> {
     const fetcher = async ({ query: queryDocument, variables, operationName, context }) => {
       let userId = null;
-      const authorization = get(
-        context,
-        'graphqlContext.req.headers.authorization',
-        null,
-      );
+      const authorization = get(context, 'graphqlContext.req.headers.authorization', null);
       console.log('authorization: ', authorization);
       if (authorization) {
         const data: any = jwt.decode(authorization.split(' ')[1], {
-          complete: true,
+          complete: true
         });
         userId = data.payload.id;
       }
@@ -57,7 +53,7 @@ export class PostgraphileService {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'user-id': userId,
+            'user-id': userId
           },
           body: JSON.stringify({ query, variables, operationName })
         }
@@ -68,7 +64,7 @@ export class PostgraphileService {
     try {
       const pgSchema = makeRemoteExecutableSchema({
         schema: await introspectSchema(fetcher),
-        fetcher,
+        fetcher
       });
 
       return pgSchema;
@@ -88,7 +84,7 @@ export class PostgraphileService {
           const userId = req.headers['user-id'];
           return Promise.resolve({
             role: 'brookfield_clone',
-            ...(userId ? { 'jwt.claims.user_id': String(userId) } : {}),
+            ...(userId ? { 'jwt.claims.user_id': String(userId) } : {})
           });
         },
         classicIds: true,
@@ -97,9 +93,9 @@ export class PostgraphileService {
         graphileBuildOptions: {
           connectionFilterComputedColumns: false,
           connectionFilterSetofFunctions: false,
-          connectionFilterLists: false,
-        },
-      }),
+          connectionFilterLists: false
+        }
+      })
     );
 
     internalApp.once('error', err => {
@@ -109,9 +105,7 @@ export class PostgraphileService {
     });
     const server = internalApp.listen(port, () => {
       console.log(
-        `postgraphile server listening on port ${config.get(
-          'postgraphile.internalPort',
-        )}`,
+        `postgraphile server listening on port ${config.get('postgraphile.internalPort')}`
       );
     });
     // todo remove later when tables count will be decreased, required to start backend without timeout(default timeout 2 minutes)
