@@ -8,9 +8,8 @@ describe('InnovationVideosComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ InnovationVideosComponent ]
-    })
-    .compileComponents();
+      declarations: [InnovationVideosComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
