@@ -8,9 +8,8 @@ describe('EmpowerOverviewComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EmpowerOverviewComponent ]
-    })
-    .compileComponents();
+      declarations: [EmpowerOverviewComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

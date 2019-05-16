@@ -1,92 +1,99 @@
-import {BaseEntity,Column,Entity,Index,JoinColumn,JoinTable,ManyToMany,ManyToOne,OneToMany,OneToOne,PrimaryColumn,PrimaryGeneratedColumn,RelationId} from "typeorm";
-import {tblFPFloorOption} from "./tblFPFloorOption";
-import {tblFPModelGenericElevation} from "./tblFPModelGenericElevation";
+import {
+  BaseEntity,
+  Column,
+  Entity,
+  Index,
+  JoinColumn,
+  JoinTable,
+  ManyToMany,
+  ManyToOne,
+  OneToMany,
+  OneToOne,
+  PrimaryColumn,
+  PrimaryGeneratedColumn,
+  RelationId
+} from 'typeorm';
+import { tblFPFloorOption } from './tblFPFloorOption';
+import { tblFPModelGenericElevation } from './tblFPModelGenericElevation';
 
-
-@Entity("tblFPModelGenericElevationOptionGallery",{schema:"public" } )
+@Entity('tblFPModelGenericElevationOptionGallery', { schema: 'public' })
 export class tblFPModelGenericElevationOptionGallery {
+  @PrimaryGeneratedColumn({
+    type: 'bigint',
+    name: 'intFPModelGenericElevationOptionGalleryID'
+  })
+  intFPModelGenericElevationOptionGalleryID: string;
 
-    @PrimaryGeneratedColumn({
-        type:"bigint", 
-        name:"intFPModelGenericElevationOptionGalleryID"
-        })
-    intFPModelGenericElevationOptionGalleryID:string;
-        
+  @ManyToOne(
+    type => tblFPFloorOption,
+    tblFPFloorOption => tblFPFloorOption.tblFpModelGenericElevationOptionGallerys,
+    { nullable: false }
+  )
+  @JoinColumn({ name: 'intFPModelGenericElevationOptionGalleryFPFloorOptionID' })
+  intFpModelGenericElevationOptionGalleryFpFloorOption: tblFPFloorOption | null;
 
-   
-    @ManyToOne(type=>tblFPFloorOption, tblFPFloorOption=>tblFPFloorOption.tblFpModelGenericElevationOptionGallerys,{  nullable:false, })
-    @JoinColumn({ name:'intFPModelGenericElevationOptionGalleryFPFloorOptionID'})
-    intFpModelGenericElevationOptionGalleryFpFloorOption:tblFPFloorOption | null;
+  @ManyToOne(
+    type => tblFPModelGenericElevation,
+    tblFPModelGenericElevation =>
+      tblFPModelGenericElevation.tblFpModelGenericElevationOptionGallerys,
+    { nullable: false }
+  )
+  @JoinColumn({ name: 'intFPModelGenericElevationOptionGalleryFPModelGenericElevationI' })
+  intFpModelGenericElevationOptionGalleryFpModelGenericElevationI: tblFPModelGenericElevation | null;
 
+  @Column('text', {
+    nullable: true,
+    name: 'varFPModelGenericElevationOptionGalleryImageFile'
+  })
+  varFPModelGenericElevationOptionGalleryImageFile: string | null;
 
-   
-    @ManyToOne(type=>tblFPModelGenericElevation, tblFPModelGenericElevation=>tblFPModelGenericElevation.tblFpModelGenericElevationOptionGallerys,{  nullable:false, })
-    @JoinColumn({ name:'intFPModelGenericElevationOptionGalleryFPModelGenericElevationI'})
-    intFpModelGenericElevationOptionGalleryFpModelGenericElevationI:tblFPModelGenericElevation | null;
+  @Column('text', {
+    nullable: true,
+    name: 'varFPModelGenericElevationOptionGalleryCaption'
+  })
+  varFPModelGenericElevationOptionGalleryCaption: string | null;
 
+  @Column('integer', {
+    nullable: false,
+    name: 'intFPModelGenericElevationOptionGalleryNavOrder'
+  })
+  intFPModelGenericElevationOptionGalleryNavOrder: number;
 
-    @Column("text",{ 
-        nullable:true,
-        name:"varFPModelGenericElevationOptionGalleryImageFile"
-        })
-    varFPModelGenericElevationOptionGalleryImageFile:string | null;
-        
+  @Column('boolean', {
+    nullable: false,
+    default: () => 'false',
+    name: 'bFPModelGenericElevationOptionGalleryDefault'
+  })
+  bFPModelGenericElevationOptionGalleryDefault: boolean;
 
-    @Column("text",{ 
-        nullable:true,
-        name:"varFPModelGenericElevationOptionGalleryCaption"
-        })
-    varFPModelGenericElevationOptionGalleryCaption:string | null;
-        
+  @Column('boolean', {
+    nullable: false,
+    default: () => 'false',
+    name: 'bFPModelGenericElevationOptionGalleryDeletedFlg'
+  })
+  bFPModelGenericElevationOptionGalleryDeletedFlg: boolean;
 
-    @Column("integer",{ 
-        nullable:false,
-        name:"intFPModelGenericElevationOptionGalleryNavOrder"
-        })
-    intFPModelGenericElevationOptionGalleryNavOrder:number;
-        
+  @Column('timestamp with time zone', {
+    nullable: false,
+    name: 'dteFPModelGenericElevationOptionGalleryCreatedDate'
+  })
+  dteFPModelGenericElevationOptionGalleryCreatedDate: Date;
 
-    @Column("boolean",{ 
-        nullable:false,
-        default: () => "false",
-        name:"bFPModelGenericElevationOptionGalleryDefault"
-        })
-    bFPModelGenericElevationOptionGalleryDefault:boolean;
-        
+  @Column('timestamp with time zone', {
+    nullable: false,
+    name: 'dteFPModelGenericElevationOptionGalleryModifiedDate'
+  })
+  dteFPModelGenericElevationOptionGalleryModifiedDate: Date;
 
-    @Column("boolean",{ 
-        nullable:false,
-        default: () => "false",
-        name:"bFPModelGenericElevationOptionGalleryDeletedFlg"
-        })
-    bFPModelGenericElevationOptionGalleryDeletedFlg:boolean;
-        
+  @Column('integer', {
+    nullable: true,
+    name: 'intFPModelGenericElevationOptionGalleryCreatedBy'
+  })
+  intFPModelGenericElevationOptionGalleryCreatedBy: number | null;
 
-    @Column("timestamp with time zone",{ 
-        nullable:false,
-        name:"dteFPModelGenericElevationOptionGalleryCreatedDate"
-        })
-    dteFPModelGenericElevationOptionGalleryCreatedDate:Date;
-        
-
-    @Column("timestamp with time zone",{ 
-        nullable:false,
-        name:"dteFPModelGenericElevationOptionGalleryModifiedDate"
-        })
-    dteFPModelGenericElevationOptionGalleryModifiedDate:Date;
-        
-
-    @Column("integer",{ 
-        nullable:true,
-        name:"intFPModelGenericElevationOptionGalleryCreatedBy"
-        })
-    intFPModelGenericElevationOptionGalleryCreatedBy:number | null;
-        
-
-    @Column("integer",{ 
-        nullable:true,
-        name:"intFPModelGenericElevationOptionGalleryModifiedBy"
-        })
-    intFPModelGenericElevationOptionGalleryModifiedBy:number | null;
-        
+  @Column('integer', {
+    nullable: true,
+    name: 'intFPModelGenericElevationOptionGalleryModifiedBy'
+  })
+  intFPModelGenericElevationOptionGalleryModifiedBy: number | null;
 }

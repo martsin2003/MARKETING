@@ -11,63 +11,63 @@ import {
   OneToOne,
   PrimaryColumn,
   PrimaryGeneratedColumn,
-  RelationId,
+  RelationId
 } from 'typeorm';
 
 @Entity('tblCampaign2', { schema: 'public' })
 export class tblCampaign2 {
   @PrimaryGeneratedColumn({
     type: 'bigint',
-    name: 'intCampaignID',
+    name: 'intCampaignID'
   })
   intCampaignID: string;
 
   @Column('text', {
     nullable: true,
-    name: 'varCampaignName',
+    name: 'varCampaignName'
   })
   varCampaignName: string | null;
 
   @Column('integer', {
     nullable: true,
-    name: 'intCampaignCategoryID',
+    name: 'intCampaignCategoryID'
   })
   intCampaignCategoryID: number | null;
 
   @Column('integer', {
     nullable: true,
-    name: 'intCampaignContactTypeID',
+    name: 'intCampaignContactTypeID'
   })
   intCampaignContactTypeID: number | null;
 
   @Column('integer', {
     nullable: true,
-    name: 'intCRMCommunityID',
+    name: 'intCRMCommunityID'
   })
   intCRMCommunityID: number | null;
 
   @Column('timestamp with time zone', {
     nullable: true,
-    name: 'dteCampaignStartDate',
+    name: 'dteCampaignStartDate'
   })
   dteCampaignStartDate: Date | null;
 
   @Column('timestamp with time zone', {
     nullable: false,
-    name: 'dteCampaignCreatedDate',
+    name: 'dteCampaignCreatedDate'
   })
   dteCampaignCreatedDate: Date;
 
   @Column('timestamp with time zone', {
     nullable: false,
-    name: 'dteCampaignModifiedDate',
+    name: 'dteCampaignModifiedDate'
   })
   dteCampaignModifiedDate: Date;
 
   @Column('boolean', {
     nullable: false,
     default: () => 'false',
-    name: 'bCampaignOSCAssigned',
+    name: 'bCampaignOSCAssigned'
   })
   bCampaignOSCAssigned: boolean;
 }

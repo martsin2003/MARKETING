@@ -1,157 +1,160 @@
 .filter-tools {
+  width: 100%;
+  z-index: 999;
+  background: white;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  animation: show 0.2s;
+  overflow: auto;
+  &__closing-panel {
     width: 100%;
-    z-index: 999;
-    background: white;
-    display: none;
+    display: flex;
+    justify-content: flex-end;
+    mat-icon {
+      width: auto;
+      height: auto;
+      font-size: 36px;
+      margin: 0px;
+      cursor: pointer;
+    }
+  }
+  &__title {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-weight: 100;
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+  &__settings-container {
+    width: 80%;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  &__filter-setting-item {
+    width: 47%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
     flex-direction: column;
-    justify-content: center;
-    padding: 15px;
-    animation: show 0.2s;
-    overflow: auto;
-    &__closing-panel {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        mat-icon {
-            width: auto;
-            height: auto;
-            font-size: 36px;
-            margin: 0px;
-            cursor: pointer;
-        }
+
+    .setting-type {
+      font-weight: 100;
     }
-    &__title {
-        width: 100%;
-        display: block;
-        text-align: center;
+    .price-range {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      mat-form-field {
+        width: 42%;
+      }
+      .divider {
+        padding-bottom: 21px;
         font-weight: 100;
-        font-size: 25px;
-        margin-bottom: 15px;
+      }
     }
-    &__settings-container {
-        width: 80%;
+    .select-quantity-beds {
+      width: 100%;
+      height: auto;
+      margin-top: 5px;
+      margin-bottom: 21px;
+      display: flex;
+      flex-direction: row;
+      &__variant {
+        width: 20%;
+        padding: 15px 0px;
+        font-size: 15px;
+        border: 1px solid lightgray;
+        background: white;
+        border-left: none;
+        outline: none;
+        &:first-child {
+          background: #6295ba;
+          color: white;
+          border: none;
+        }
+      }
+    }
+  }
+  .checkboxes-wrapper {
+    width: 47%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    /deep/mat-checkbox {
+      &:first-child {
+        margin-bottom: 10px;
+        margin-top: -5px;
+      }
+      .mat-checkbox-inner-container {
+        width: 23px;
+        height: 23px;
+      }
+      .mat-checkbox-frame {
+        border-width: 1px;
+        border-radius: 0px;
+      }
+      .mat-checkbox-layout {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        flex-direction: row;
+      }
     }
-    &__filter-setting-item {
-        width: 47%;
-        height: auto;
-        display: flex;
-        align-items: flex-start;
-        flex-direction: column;
-        
-        .setting-type {
-            font-weight: 100;
-        }
-        .price-range {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-direction: row;
-            mat-form-field {
-                width: 42%;
-            }
-            .divider {
-                padding-bottom: 21px;
-                font-weight: 100;
-            }
-        }
-        .select-quantity-beds {
-            width: 100%;
-            height: auto;
-            margin-top: 5px;
-            margin-bottom: 21px;
-            display: flex;
-            flex-direction: row;
-            &__variant {
-                width: 20%;
-                padding: 15px 0px;
-                font-size: 15px;
-                border: 1px solid lightgray;
-                background: white;
-                border-left: none;
-                outline: none;
-                &:first-child {
-                    background: #6295ba;
-                    color: white;
-                    border: none;
-                }
-            }
-        }
+  }
+  .button-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    button {
+      width: 40%;
     }
-    .checkboxes-wrapper {
-        width: 47%;
-        display: flex;
-        align-items: flex-start;
-        flex-direction: column;
-        /deep/mat-checkbox {
-            &:first-child {
-                margin-bottom: 10px;
-                margin-top: -5px;
-            }
-            .mat-checkbox-inner-container {
-                width: 23px;
-                height: 23px;
-            }
-            .mat-checkbox-frame {
-                border-width: 1px;
-                border-radius: 0px;
-            }
-            .mat-checkbox-layout {
-                display: flex;
-                align-items: center;
-            }
-        }
+  }
+  @keyframes show {
+    from {
+      opacity: 0;
     }
-    .button-wrapper {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        button {
-            width: 40%;
-        }
+    to {
+      opacity: 1;
     }
-    @keyframes show {
-        from {
-            opacity: 0;
-        } to {
-            opacity: 1;
-        }
-    }
+  }
 }
 
 .close-filter-tools {
-    animation: hide 0.2s;
-    animation-fill-mode: forwards;
-    @keyframes hide {
-        from {
-            opacity: 1;
-        } to {
-            opacity: 0;
-        }
+  animation: hide 0.2s;
+  animation-fill-mode: forwards;
+  @keyframes hide {
+    from {
+      opacity: 1;
     }
+    to {
+      opacity: 0;
+    }
+  }
 }
 
 mat-form-field {
-    width: 100%;
-    position: relative;
-    /deep/.mat-form-field-outline-start, /deep/.mat-form-field-outline-end {
-        border-radius: 0 !important;
-    }
-    /deep/.mat-select-value {
-        transform: translateY(-4px);
-    }
-    .mat-prefix-icon {
-        display: block;
-        transform: translateY(-2px);
-    }
-    /deep/.mat-select-arrow {
-        visibility: hidden !important;
-    }
+  width: 100%;
+  position: relative;
+  /deep/.mat-form-field-outline-start,
+  /deep/.mat-form-field-outline-end {
+    border-radius: 0 !important;
+  }
+  /deep/.mat-select-value {
+    transform: translateY(-4px);
+  }
+  .mat-prefix-icon {
+    display: block;
+    transform: translateY(-2px);
+  }
+  /deep/.mat-select-arrow {
+    visibility: hidden !important;
+  }
 }

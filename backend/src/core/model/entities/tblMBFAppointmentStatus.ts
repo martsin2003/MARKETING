@@ -1,33 +1,44 @@
-import {BaseEntity,Column,Entity,Index,JoinColumn,JoinTable,ManyToMany,ManyToOne,OneToMany,OneToOne,PrimaryColumn,PrimaryGeneratedColumn,RelationId} from "typeorm";
-import {tblMBFLotAppointment} from "./tblMBFLotAppointment";
+import {
+  BaseEntity,
+  Column,
+  Entity,
+  Index,
+  JoinColumn,
+  JoinTable,
+  ManyToMany,
+  ManyToOne,
+  OneToMany,
+  OneToOne,
+  PrimaryColumn,
+  PrimaryGeneratedColumn,
+  RelationId
+} from 'typeorm';
+import { tblMBFLotAppointment } from './tblMBFLotAppointment';
 
-
-@Entity("tblMBFAppointmentStatus",{schema:"public" } )
+@Entity('tblMBFAppointmentStatus', { schema: 'public' })
 export class tblMBFAppointmentStatus {
+  @PrimaryGeneratedColumn({
+    type: 'bigint',
+    name: 'intMBFAppointmentStatusID'
+  })
+  intMBFAppointmentStatusID: string;
 
-    @PrimaryGeneratedColumn({
-        type:"bigint", 
-        name:"intMBFAppointmentStatusID"
-        })
-    intMBFAppointmentStatusID:string;
-        
+  @Column('text', {
+    nullable: false,
+    name: 'varMBFAppointmentStatus'
+  })
+  varMBFAppointmentStatus: string;
 
-    @Column("text",{ 
-        nullable:false,
-        name:"varMBFAppointmentStatus"
-        })
-    varMBFAppointmentStatus:string;
-        
+  @Column('integer', {
+    nullable: false,
+    name: 'intMBFAppointmentStatusSort'
+  })
+  intMBFAppointmentStatusSort: number;
 
-    @Column("integer",{ 
-        nullable:false,
-        name:"intMBFAppointmentStatusSort"
-        })
-    intMBFAppointmentStatusSort:number;
-        
-
-   
-    @OneToMany(type=>tblMBFLotAppointment, tblMBFLotAppointment=>tblMBFLotAppointment.intMbfLotAppointmentStatus,{ onDelete: 'CASCADE' , })
-    tblMbfLotAppointments:tblMBFLotAppointment[];
-    
+  @OneToMany(
+    type => tblMBFLotAppointment,
+    tblMBFLotAppointment => tblMBFLotAppointment.intMbfLotAppointmentStatus,
+    { onDelete: 'CASCADE' }
+  )
+  tblMbfLotAppointments: tblMBFLotAppointment[];
 }

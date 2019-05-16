@@ -40,19 +40,15 @@ export class CarouselComponent implements OnInit, OnChanges {
     fromEvent(window, 'resize').subscribe(() => {
       this.initializationCarousel();
     });
-    fromEvent(this.wrapper.nativeElement, 'mousedown').subscribe(
-      (event: any) => {
-        this.duration = '1s';
-        this.startedPos = event.clientX;
-        this.swiping = true;
-        this.mouseup = false;
-        if (this.wrapper.nativeElement.style.transform.match(/\d+/)) {
-          this.currentTransform = Number(
-            this.wrapper.nativeElement.style.transform.match(/\d+/)[0]
-          );
-        }
+    fromEvent(this.wrapper.nativeElement, 'mousedown').subscribe((event: any) => {
+      this.duration = '1s';
+      this.startedPos = event.clientX;
+      this.swiping = true;
+      this.mouseup = false;
+      if (this.wrapper.nativeElement.style.transform.match(/\d+/)) {
+        this.currentTransform = Number(this.wrapper.nativeElement.style.transform.match(/\d+/)[0]);
       }
-    );
+    });
     fromEvent(this.wrapper.nativeElement, 'mousemove').subscribe(event => {
       this.swipe(event);
     });
@@ -70,24 +66,18 @@ export class CarouselComponent implements OnInit, OnChanges {
         this.definedPosition();
       }
     });
-    fromEvent(this.wrapper.nativeElement, 'touchstart').subscribe(
-      (event: any) => {
-        this.duration = '0.4s';
-        this.startedPos = event.targetTouches[0].clientX;
-        this.swiping = true;
-        this.mouseup = false;
-        if (this.wrapper.nativeElement.style.transform.match(/\d+/)) {
-          this.currentTransform = Number(
-            this.wrapper.nativeElement.style.transform.match(/\d+/)[0]
-          );
-        }
+    fromEvent(this.wrapper.nativeElement, 'touchstart').subscribe((event: any) => {
+      this.duration = '0.4s';
+      this.startedPos = event.targetTouches[0].clientX;
+      this.swiping = true;
+      this.mouseup = false;
+      if (this.wrapper.nativeElement.style.transform.match(/\d+/)) {
+        this.currentTransform = Number(this.wrapper.nativeElement.style.transform.match(/\d+/)[0]);
       }
-    );
-    fromEvent(this.wrapper.nativeElement, 'touchmove').subscribe(
-      (event: any) => {
-        this.swipe(event.targetTouches[0]);
-      }
-    );
+    });
+    fromEvent(this.wrapper.nativeElement, 'touchmove').subscribe((event: any) => {
+      this.swipe(event.targetTouches[0]);
+    });
     fromEvent(this.wrapper.nativeElement, 'touchend').subscribe(() => {
       this.swiping = false;
       if (!this.mouseup) {
@@ -118,16 +108,13 @@ export class CarouselComponent implements OnInit, OnChanges {
 
   initializationCarousel() {
     const carouselWidth = this.carousel.nativeElement.clientWidth;
-    this.wrapper.nativeElement.style.width =
-      carouselWidth * this.images.length + 'px';
+    this.wrapper.nativeElement.style.width = carouselWidth * this.images.length + 'px';
     this.imageWidth = carouselWidth - (carouselWidth * 20) / 100;
     let index = 0;
     this.images.forEach((obj, i, arr) => {
       if (i === arr.length - 1) {
         obj.translate =
-          this.imageWidth * index +
-          10 * index -
-          (carouselWidth - (carouselWidth * 80) / 100);
+          this.imageWidth * index + 10 * index - (carouselWidth - (carouselWidth * 80) / 100);
       } else {
         obj.translate = this.imageWidth * index + 10 * index;
         index++;
@@ -153,8 +140,7 @@ export class CarouselComponent implements OnInit, OnChanges {
       this.endPos = this.startedPos - event.clientX;
       this.swipeDirection = event.clientX < this.startedPos ? 'left' : 'right';
       if (
-        (this.swipeDirection === 'left' &&
-          this.selectedImage !== this.images.length - 1) ||
+        (this.swipeDirection === 'left' && this.selectedImage !== this.images.length - 1) ||
         (this.swipeDirection === 'right' && this.selectedImage > 0)
       ) {
         this.wrapper.nativeElement.style.transform =

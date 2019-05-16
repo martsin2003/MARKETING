@@ -6,12 +6,10 @@ import { FEATURE_PLUGINS_TOKEN } from './tokens';
 @Module({
   imports: [],
   providers: [PostgraphileService],
-  exports: [PostgraphileService],
+  exports: [PostgraphileService]
 })
 export class PostgraphileModule {
-  static generateProviders(
-    pluginTypes: Type<PostgraphilePlugin>[]
-  ): Provider[] {
+  static generateProviders(pluginTypes: Type<PostgraphilePlugin>[]): Provider[] {
     return [
       ...pluginTypes,
       {

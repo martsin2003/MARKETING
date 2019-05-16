@@ -4,10 +4,9 @@ import { Module } from '@nestjs/common';
 import { AuthResolver } from './auth.resolver';
 
 @Module({
-    imports: [
-        // TypeormCoreModule
-    ],
-    providers: [AuthService, AuthResolver]
+  imports: [
+    // TypeormCoreModule
+  ],
+  providers: [AuthService, AuthResolver]
 })
-export class AuthModule {
-}
+export class AuthModule {}

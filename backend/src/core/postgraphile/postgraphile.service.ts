@@ -35,12 +35,7 @@ export class PostgraphileService {
   }
 
   private async getSchemaPromise(): Promise<GraphQLSchema> {
-    const fetcher = async ({
-      query: queryDocument,
-      variables,
-      operationName,
-      context,
-    }) => {
+    const fetcher = async ({ query: queryDocument, variables, operationName, context }) => {
       let userId = null;
       const authorization = get(context, 'graphqlContext.req.headers.authorization', null);
       console.log('authorization: ', authorization);
@@ -58,8 +53,8 @@ export class PostgraphileService {
             'Content-Type': 'application/json',
             'user-id': userId
           },
-          body: JSON.stringify({ query, variables, operationName }),
-        },
+          body: JSON.stringify({ query, variables, operationName })
+        }
       );
       return fetchResult.json();
     };
@@ -100,16 +95,14 @@ export class PostgraphileService {
       })
     );
 
-    internalApp.once('error', (err) => {
+    internalApp.once('error', err => {
       if (err.code === 'EADDRINUSE') {
         console.log(err);
       }
     });
     const server = internalApp.listen(port, () => {
       console.log(
-        `postgraphile server listening on port ${config.get(
-          'postgraphile.internalPort'
-        )}`
+        `postgraphile server listening on port ${config.get('postgraphile.internalPort')}`
       );
     });
 

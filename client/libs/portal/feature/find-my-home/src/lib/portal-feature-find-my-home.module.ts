@@ -9,9 +9,7 @@ import { CommunityCardComponent } from './presentational/community-card/communit
   imports: [
     CommonModule,
     MaterialModule,
-    RouterModule.forChild([
-      { path: '', pathMatch: 'full', component: FindMyHomeComponent }
-    ])
+    RouterModule.forChild([{ path: '', pathMatch: 'full', component: FindMyHomeComponent }])
   ],
   declarations: [FindMyHomeComponent, CommunityCardComponent]
 })

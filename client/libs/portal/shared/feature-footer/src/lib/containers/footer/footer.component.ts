@@ -17,9 +17,6 @@ export class FooterComponent implements OnInit {
 
   ngOnInit() {
     // One time check as the `observe` method in constructor doesn't always fire on page render
-    this.isMobileScreen = this.breakpointObserver.isMatched(
-      '(max-width: 959px)'
-    );
+    this.isMobileScreen = this.breakpointObserver.isMatched('(max-width: 959px)');
   }
-
 }

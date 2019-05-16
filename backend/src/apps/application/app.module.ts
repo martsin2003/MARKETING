@@ -11,31 +11,22 @@ import { ModuleRef } from '@nestjs/core';
 import * as config from 'config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
-
 @Module({
   imports: [
-    TypeOrmModule.forRoot({      
+    TypeOrmModule.forRoot({
       type: 'postgres',
       host: config.get<string>('database.host'),
       port: config.get<number>('database.port'),
       username: config.get<string>('database.username'),
       password: config.get<string>('database.password'),
       database: config.get<string>('database.database'),
-      entities: [
-        __dirname + `/../../../src/core/model/entities/*.ts`
-      ],
+      entities: [__dirname + `/../../../src/core/model/entities/*.ts`],
       synchronize: false,
       keepConnectionAlive: true
     }),
     GraphQLModule.forRootAsync({
-      imports: [
-        PostgraphileModule,
-        AuthModule
-      ],
-      useFactory: (
-        postgraphileService: PostgraphileService,
-        moduleRef: ModuleRef
-      ) => {
+      imports: [PostgraphileModule, AuthModule],
+      useFactory: (postgraphileService: PostgraphileService, moduleRef: ModuleRef) => {
         return {
           context: ({ req }) => ({ req }),
           typePaths: [__dirname + '/**/*.graphql'],
