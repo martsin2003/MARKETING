@@ -1,50 +1,50 @@
 .video-container {
-    .video-wrapper {
+  .video-wrapper {
+    display: flex;
+    flex-direction: column;
+    &__wrapper {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      .video-title {
         display: flex;
-        flex-direction: column;
-        &__wrapper {
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-            .video-title {
-                display: flex;
-                align-items: center;
-                position: absolute;
-                padding-bottom: 15px;
-                color: white;
-                mat-icon {
-                    width: auto !important;
-                    height: auto !important;
-                    font-size: 60px;
-                    margin: 0px 5px;
-                }
-                .title-text {
-                    display: flex;
-                    flex-direction: column;
-                    font-weight: 100;
-                    span:first-child {
-                        font-size: 30px;
-                    }
-                    span:last-child {
-                        font-size: 14px;
-                    }
-                }
-            }
+        align-items: center;
+        position: absolute;
+        padding-bottom: 15px;
+        color: white;
+        mat-icon {
+          width: auto !important;
+          height: auto !important;
+          font-size: 60px;
+          margin: 0px 5px;
         }
-        &__description {
-            padding: 15px;
-            font-size: 17px;
-            font-weight: 100;
+        .title-text {
+          display: flex;
+          flex-direction: column;
+          font-weight: 100;
+          span:first-child {
+            font-size: 30px;
+          }
+          span:last-child {
+            font-size: 14px;
+          }
         }
-        &__buttons {
-            display: flex;
-            flex-direction: column;
-            padding: 0px 15px 15px;
-            button {
-                &:first-child {
-                    margin-bottom: 15px;
-                }
-            }
-        }
+      }
     }
+    &__description {
+      padding: 15px;
+      font-size: 17px;
+      font-weight: 100;
+    }
+    &__buttons {
+      display: flex;
+      flex-direction: column;
+      padding: 0px 15px 15px;
+      button {
+        &:first-child {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
 }
