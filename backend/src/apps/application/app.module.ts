@@ -44,11 +44,11 @@ import { TypeOrmModule } from '@nestjs/typeorm';
             const graphqlFactory = moduleRef.get(GraphQLFactory);
             const delegates = graphqlFactory.createDelegates();
             const schemas = [localSchema];
-            // const graphileSchema = await postgraphileService.getSchema();
-            // console.log('graphileSchema: ', graphileSchema);
-            // if (graphileSchema) {
-            //   schemas.push(graphileSchema);
-            // }
+            const graphileSchema = await postgraphileService.getSchema();
+            console.log('graphileSchema: ', graphileSchema);
+            if (graphileSchema) {
+              schemas.push(graphileSchema);
+            }
             return mergeSchemas({
               schemas,
               resolvers: delegates

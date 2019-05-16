@@ -21,7 +21,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "generate": "npm run generate:postgraphile-schema && npm run generate:local",
     "generate:local": "./node_modules/@graphql-codegen/cli/dist/commonjs/cli.js",
-    "generate:postgraphile-schema": "postgraphile -c postgresql://brookfield_clone:D5YGUzQkmYsab5w9@brookfield-clone.cvxhi948gzuf.us-west-2.rds.amazonaws.com:5432/brookfield_clone -a -j --no-server --export-schema-graphql ./src/apps/application/core/__generated/graphile-schema.graphql"
+    "generate:postgraphile-schema": "postgraphile -c postgresql://brookfield_clone:D5YGUzQkmYsab5w9@brookfield-clone.cvxhi948gzuf.us-west-2.rds.amazonaws.com:5432/brookfield_clone -j --no-server --export-schema-graphql ./src/apps/application/core/__generated/graphile-schema.graphql"
   },
   "dependencies": {
     "@graphql-codegen/cli": "^1.1.3",

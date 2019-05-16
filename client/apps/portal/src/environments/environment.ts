@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  backendEndpoint: 'http://bf-dev.us-west-2.elasticbeanstalk.com/',
-  backendGraphqlEndpoint: 'http://bf-dev.us-west-2.elasticbeanstalk.com/graphql'
+  apiEndpoint: 'http://localhost:3000/',
+  graphqlEndpoint: 'http://localhost:3000/graphql'
 };
 
 /*
