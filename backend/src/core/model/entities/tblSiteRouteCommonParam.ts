@@ -11,45 +11,44 @@ import {
   OneToOne,
   PrimaryColumn,
   PrimaryGeneratedColumn,
-  RelationId,
+  RelationId
 } from 'typeorm';
 
 @Entity('tblSiteRouteCommonParam', { schema: 'public' })
 export class tblSiteRouteCommonParam {
   @PrimaryGeneratedColumn({
     type: 'bigint',
-    name: 'intSiteRouteCommonParamID',
+    name: 'intSiteRouteCommonParamID'
   })
   intSiteRouteCommonParamID: string;
 
   @Column('int', {
     nullable: false,
-    name: 'intSiteRouteCommonParamSiteRoute',
+    name: 'intSiteRouteCommonParamSiteRoute'
   })
   intSiteRouteCommonParamSiteRoute: tblSiteRouteCommonParam | null;
 
   @Column('text', {
     nullable: false,
-    name: 'varSiteRouteCommonParamDesktopName',
+    name: 'varSiteRouteCommonParamDesktopName'
   })
   varSiteRouteCommonParamDesktopName: string;
 
   @Column('text', {
     nullable: false,
-    name: 'varSiteRouteCommonParamMobileName',
+    name: 'varSiteRouteCommonParamMobileName'
   })
   varSiteRouteCommonParamMobileName: string;
 
   @Column('text', {
     nullable: false,
-    name: 'varSiteRouteCommonParamDataType',
+    name: 'varSiteRouteCommonParamDataType'
   })
   varSiteRouteCommonParamDataType: string;
 
   @Column('text', {
     nullable: true,
-    name: 'varSiteRouteCommonParamDefault',
+    name: 'varSiteRouteCommonParamDefault'
   })
   varSiteRouteCommonParamDefault: string | null;
-
 }

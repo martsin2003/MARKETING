@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'brookfield-secondary-nav-mobile',
@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./secondary-nav-mobile.component.scss']
 })
 export class SecondaryNavMobileComponent implements OnInit {
+  @Output() navigate = new EventEmitter<string>();
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  navigateTo(url: string) {
+    console.log('clicked', url);
+    this.navigate.emit(url);
   }
-
 }

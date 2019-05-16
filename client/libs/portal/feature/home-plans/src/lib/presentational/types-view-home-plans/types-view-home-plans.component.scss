@@ -1,26 +1,28 @@
 .containers-wrapper {
-    width: 100%;
-    padding-top: 20px;
+  width: 100%;
+  padding-top: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  &__container-for-type-view {
+    padding: 0px 20px;
+  }
+  &__type {
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-wrap: wrap;
-    &__container-for-type-view {
-        padding: 0px 20px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    cursor: pointer;
+    img {
+      width: 70px;
     }
-    &__type {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        cursor: pointer;
-        img {
-            width: 70px;
-        }
-        span {
-            margin-top: 10px;
-            text-align: center;
-            display: block;
-        }
+    span {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 15px;
+      font-weight: 600;
+      color: rgb(43, 43, 43);
     }
+  }
 }

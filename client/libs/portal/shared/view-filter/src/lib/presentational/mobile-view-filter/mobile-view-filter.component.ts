@@ -1,4 +1,12 @@
-import { Component, OnInit, ViewChild, ElementRef, Input, OnChanges, SimpleChanges } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  ElementRef,
+  Input,
+  OnChanges,
+  SimpleChanges
+} from '@angular/core';
 
 @Component({
   selector: 'brookfield-mobile-view-filter',
@@ -6,27 +14,25 @@ import { Component, OnInit, ViewChild, ElementRef, Input, OnChanges, SimpleChang
   styleUrls: ['./mobile-view-filter.component.scss']
 })
 export class MobileViewFilterComponent implements OnInit, OnChanges {
-
-  @Input() openFilter: {open: boolean};
+  @Input() openFilter: { open: boolean };
 
   @ViewChild('viewsMenu') viewsMenu: ElementRef<HTMLDivElement>;
   @ViewChild('filterTools') filterTools: ElementRef<HTMLDivElement>;
-  
+
   selectedViewType: string = 'See All Home Plans';
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   ngOnChanges(changes: SimpleChanges) {
-    if(changes.openFilter && changes.openFilter.currentValue) {
-      if(this.openFilter.open) {
+    if (changes.openFilter && changes.openFilter.currentValue) {
+      if (this.openFilter.open) {
         this.openFilterTools();
       } else {
         this.closeFilterTools(null);
       }
-    } 
+    }
   }
 
   openFilterTools() {
@@ -37,7 +43,7 @@ export class MobileViewFilterComponent implements OnInit, OnChanges {
   }
 
   closeFilterTools(submitted: boolean) {
-    if(submitted) {
+    if (submitted) {
       console.log('Update');
     }
     setTimeout(() => {
@@ -45,5 +51,4 @@ export class MobileViewFilterComponent implements OnInit, OnChanges {
     }, 500);
     this.filterTools.nativeElement.style.transform = 'translateY(100vh)';
   }
-
 }

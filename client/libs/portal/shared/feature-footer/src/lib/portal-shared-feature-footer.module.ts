@@ -6,15 +6,8 @@ import { FooterComponent } from './containers/footer/footer.component';
 import { FooterDesktopComponent } from './presentational/footer-desktop/footer-desktop.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    MaterialModule
-  ],
-  declarations: [
-    FooterMobileComponent,
-    FooterComponent,
-    FooterDesktopComponent
-  ],
+  imports: [CommonModule, MaterialModule],
+  declarations: [FooterMobileComponent, FooterComponent, FooterDesktopComponent],
   exports: [FooterComponent]
 })
 export class PortalSharedFeatureFooterModule {}

@@ -1,90 +1,94 @@
-import {BaseEntity,Column,Entity,Index,JoinColumn,JoinTable,ManyToMany,ManyToOne,OneToMany,OneToOne,PrimaryColumn,PrimaryGeneratedColumn,RelationId} from "typeorm";
-import {tblFP} from "./tblFP";
-import {tblFPElevationOptionDisplayOnLoad} from "./tblFPElevationOptionDisplayOnLoad";
-import {tblFPElevationOptionRemove} from "./tblFPElevationOptionRemove";
+import {
+  BaseEntity,
+  Column,
+  Entity,
+  Index,
+  JoinColumn,
+  JoinTable,
+  ManyToMany,
+  ManyToOne,
+  OneToMany,
+  OneToOne,
+  PrimaryColumn,
+  PrimaryGeneratedColumn,
+  RelationId
+} from 'typeorm';
+import { tblFP } from './tblFP';
+import { tblFPElevationOptionDisplayOnLoad } from './tblFPElevationOptionDisplayOnLoad';
+import { tblFPElevationOptionRemove } from './tblFPElevationOptionRemove';
 
-
-@Entity("tblFPElevation",{schema:"public" } )
+@Entity('tblFPElevation', { schema: 'public' })
 export class tblFPElevation {
+  @PrimaryGeneratedColumn({
+    type: 'bigint',
+    name: 'intFPElevationID'
+  })
+  intFPElevationID: string;
 
-    @PrimaryGeneratedColumn({
-        type:"bigint", 
-        name:"intFPElevationID"
-        })
-    intFPElevationID:string;
-        
+  @ManyToOne(type => tblFP, tblFP => tblFP.tblFpElevations, { nullable: false })
+  @JoinColumn({ name: 'intFPElevationFPID' })
+  intFpElevationFp: tblFP | null;
 
-   
-    @ManyToOne(type=>tblFP, tblFP=>tblFP.tblFpElevations,{  nullable:false, })
-    @JoinColumn({ name:'intFPElevationFPID'})
-    intFpElevationFp:tblFP | null;
+  @Column('text', {
+    nullable: false,
+    name: 'varFPElevationTemplateName'
+  })
+  varFPElevationTemplateName: string;
 
+  @Column('text', {
+    nullable: true,
+    name: 'varFPElevationTemplateNotes'
+  })
+  varFPElevationTemplateNotes: string | null;
 
-    @Column("text",{ 
-        nullable:false,
-        name:"varFPElevationTemplateName"
-        })
-    varFPElevationTemplateName:string;
-        
+  @Column('text', {
+    nullable: false,
+    default: () => "'active'",
+    name: 'varFPElevationTemplateStatus'
+  })
+  varFPElevationTemplateStatus: string;
 
-    @Column("text",{ 
-        nullable:true,
-        name:"varFPElevationTemplateNotes"
-        })
-    varFPElevationTemplateNotes:string | null;
-        
+  @Column('timestamp with time zone', {
+    nullable: false,
+    name: 'dteFPElevationTemplateCreatedDate'
+  })
+  dteFPElevationTemplateCreatedDate: Date;
 
-    @Column("text",{ 
-        nullable:false,
-        default: () => "'active'",
-        name:"varFPElevationTemplateStatus"
-        })
-    varFPElevationTemplateStatus:string;
-        
+  @Column('timestamp with time zone', {
+    nullable: false,
+    name: 'dteFPElevationTemplateModifiedDate'
+  })
+  dteFPElevationTemplateModifiedDate: Date;
 
-    @Column("timestamp with time zone",{ 
-        nullable:false,
-        name:"dteFPElevationTemplateCreatedDate"
-        })
-    dteFPElevationTemplateCreatedDate:Date;
-        
+  @Column('integer', {
+    nullable: true,
+    name: 'intFPElevationTemplateCreatedBy'
+  })
+  intFPElevationTemplateCreatedBy: number | null;
 
-    @Column("timestamp with time zone",{ 
-        nullable:false,
-        name:"dteFPElevationTemplateModifiedDate"
-        })
-    dteFPElevationTemplateModifiedDate:Date;
-        
+  @Column('integer', {
+    nullable: true,
+    name: 'intFPElevationTemplateModifiedBy'
+  })
+  intFPElevationTemplateModifiedBy: number | null;
 
-    @Column("integer",{ 
-        nullable:true,
-        name:"intFPElevationTemplateCreatedBy"
-        })
-    intFPElevationTemplateCreatedBy:number | null;
-        
+  @Column('boolean', {
+    nullable: false,
+    default: () => 'false',
+    name: 'bFPElevationTemplateDeletedFlg'
+  })
+  bFPElevationTemplateDeletedFlg: boolean;
 
-    @Column("integer",{ 
-        nullable:true,
-        name:"intFPElevationTemplateModifiedBy"
-        })
-    intFPElevationTemplateModifiedBy:number | null;
-        
+  @OneToMany(
+    type => tblFPElevationOptionDisplayOnLoad,
+    tblFPElevationOptionDisplayOnLoad =>
+      tblFPElevationOptionDisplayOnLoad.intFpElevationOptionDisplayOnLoadFpElevation
+  )
+  tblFpElevationOptionDisplayOnLoads: tblFPElevationOptionDisplayOnLoad[];
 
-    @Column("boolean",{ 
-        nullable:false,
-        default: () => "false",
-        name:"bFPElevationTemplateDeletedFlg"
-        })
-    bFPElevationTemplateDeletedFlg:boolean;
-        
-
-   
-    @OneToMany(type=>tblFPElevationOptionDisplayOnLoad, tblFPElevationOptionDisplayOnLoad=>tblFPElevationOptionDisplayOnLoad.intFpElevationOptionDisplayOnLoadFpElevation)
-    tblFpElevationOptionDisplayOnLoads:tblFPElevationOptionDisplayOnLoad[];
-    
-
-   
-    @OneToMany(type=>tblFPElevationOptionRemove, tblFPElevationOptionRemove=>tblFPElevationOptionRemove.intFpElevationOptionRemoveFpElevation)
-    tblFpElevationOptionRemoves:tblFPElevationOptionRemove[];
-    
+  @OneToMany(
+    type => tblFPElevationOptionRemove,
+    tblFPElevationOptionRemove => tblFPElevationOptionRemove.intFpElevationOptionRemoveFpElevation
+  )
+  tblFpElevationOptionRemoves: tblFPElevationOptionRemove[];
 }

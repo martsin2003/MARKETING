@@ -9,9 +9,7 @@ import { CommonUiComponentsImageCarouselModule } from '@brookfield/common/ui-com
   imports: [
     CommonModule,
     MaterialModule,
-    RouterModule.forChild([
-      { path: '', pathMatch: 'full', component: HomePlanDetailComponent }
-    ]),
+    RouterModule.forChild([{ path: '', pathMatch: 'full', component: HomePlanDetailComponent }]),
     CommonUiComponentsImageCarouselModule
   ],
   declarations: [HomePlanDetailComponent]

@@ -1,4 +1,12 @@
-import { Component, OnInit, ViewChild, ElementRef, Input, OnChanges, SimpleChanges } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  ElementRef,
+  Input,
+  OnChanges,
+  SimpleChanges
+} from '@angular/core';
 
 @Component({
   selector: 'brookfield-desktop-view-filter',
@@ -6,21 +14,19 @@ import { Component, OnInit, ViewChild, ElementRef, Input, OnChanges, SimpleChang
   styleUrls: ['./desktop-view-filter.component.scss']
 })
 export class DesktopViewFilterComponent implements OnInit, OnChanges {
-
-  @Input() openFilter: {open: boolean};
+  @Input() openFilter: { open: boolean };
 
   @ViewChild('filterTools') filterTools: ElementRef<HTMLDivElement>;
 
   closeFilter: boolean;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   ngOnChanges(changes: SimpleChanges) {
-    if(changes.openFilter && changes.openFilter.currentValue) {
-      if(this.openFilter.open) {
+    if (changes.openFilter && changes.openFilter.currentValue) {
+      if (this.openFilter.open) {
         this.onOpenFilter();
       } else {
         this.onCloseFilter();
@@ -35,7 +41,6 @@ export class DesktopViewFilterComponent implements OnInit, OnChanges {
 
   onCloseFilter() {
     this.closeFilter = true;
-    setTimeout(() => this.filterTools.nativeElement.style.display = 'none', 200);
+    setTimeout(() => (this.filterTools.nativeElement.style.display = 'none'), 200);
   }
-
 }

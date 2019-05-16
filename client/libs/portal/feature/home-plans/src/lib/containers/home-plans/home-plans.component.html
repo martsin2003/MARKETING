@@ -5,29 +5,28 @@
   <img src="http://placehold.it/1980x720/333333" class="w-100" />
   <div>
     <h3 class="text-center font-weight-light">
-      Select a home plan category below or view all. Lorem ipsum dolor sit
-      amet,<br />
-      consectetur adipiscing elit. Aenean id erat id erat ultricies lobortis ac
-      id lectus.
+      Select a home plan category below or view all. Lorem ipsum dolor sit amet,<br />
+      consectetur adipiscing elit. Aenean id erat id erat ultricies lobortis ac id lectus.
     </h3>
-    <div class="wrapper-of-buttons d-flex flex-row justify-content-center flex-wrap">
-      <brookfield-types-view-home-plans></brookfield-types-view-home-plans>
-      <button mat-button color="primary" (click)="openFilter()">
-        <mat-icon>tune</mat-icon>
-        Filters
-      </button>
+    <div class="buttons-wrapper d-flex flex-row flex-wrap">
+      <div class="buttons-container">
+        <brookfield-types-view-home-plans></brookfield-types-view-home-plans>
+        <button mat-button color="primary" class="button-filter" (click)="openFilter()">
+          <mat-icon>tune</mat-icon>
+          Filters
+        </button>
+      </div>
     </div>
   </div>
 </div>
 
 <brookfield-home-plan-list></brookfield-home-plan-list>
 
-
 <div class="container-of-bottom-menu">
   <div class="container-of-bottom-menu__wrapper">
     <button class="container-of-bottom-menu__see-all-button" (click)="openBottomSheet()">
       <mat-icon>menu</mat-icon>
-      <span>{{selectedViewType}}</span>
+      <span>{{ selectedViewType }}</span>
     </button>
 
     <button class="container-of-bottom-menu__filters" (click)="openFilter()">

@@ -35,12 +35,7 @@ export class PostgraphileService {
   }
 
   private async getSchemaPromise(): Promise<GraphQLSchema> {
-    const fetcher = async ({
-      query: queryDocument,
-      variables,
-      operationName,
-      context,
-    }) => {
+    const fetcher = async ({ query: queryDocument, variables, operationName, context }) => {
       let userId = null;
       const authorization = get(
         context,
@@ -64,8 +59,8 @@ export class PostgraphileService {
             'Content-Type': 'application/json',
             'user-id': userId,
           },
-          body: JSON.stringify({ query, variables, operationName }),
-        },
+          body: JSON.stringify({ query, variables, operationName })
+        }
       );
       return fetchResult.json();
     };

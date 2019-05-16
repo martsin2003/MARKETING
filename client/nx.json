@@ -43,6 +43,12 @@
     },
     "portal-shared-feature-footer": {
       "tags": []
+    },
+    "portal-feature-empower": {
+      "tags": ["scope:empower", "type:feature"]
+    },
+    "portal-feature-resources": {
+      "tags": ["scope:resources", "type:feature"]
     }
   }
 }

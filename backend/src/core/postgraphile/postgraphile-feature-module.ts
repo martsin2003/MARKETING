@@ -6,7 +6,7 @@ import { PostgraphileService } from './postgraphile.service';
 export class PostgraphileFeatureModule {
   constructor(
     private postgraphileService: PostgraphileService,
-    @Inject('FEATURE_PLUGINS') featurePlugins: PostgraphilePlugin[],
+    @Inject('FEATURE_PLUGINS') featurePlugins: PostgraphilePlugin[]
   ) {
     this.postgraphileService.addPlugins(featurePlugins);
   }

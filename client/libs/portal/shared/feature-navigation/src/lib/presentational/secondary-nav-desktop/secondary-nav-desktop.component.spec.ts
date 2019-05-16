@@ -8,9 +8,8 @@ describe('SecondaryNavDesktopComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SecondaryNavDesktopComponent ]
-    })
-    .compileComponents();
+      declarations: [SecondaryNavDesktopComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

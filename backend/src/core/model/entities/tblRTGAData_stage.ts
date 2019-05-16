@@ -11,26 +11,26 @@ import {
   OneToOne,
   PrimaryColumn,
   PrimaryGeneratedColumn,
-  RelationId,
+  RelationId
 } from 'typeorm';
 
 @Entity('tblRTGAData_stage', { schema: 'public' })
 export class tblRTGAData_stage {
   @PrimaryColumn('integer', {
     nullable: false,
-    name: 'metricID',
+    name: 'metricID'
   })
   metricID: number;
 
   @Column('timestamp with time zone', {
     nullable: false,
-    name: 'dataDate',
+    name: 'dataDate'
   })
   dataDate: Date;
 
   @Column('integer', {
     nullable: false,
-    name: 'dataValue',
+    name: 'dataValue'
   })
   dataValue: number;
 }

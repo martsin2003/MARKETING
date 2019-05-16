@@ -5,7 +5,7 @@
     "no-unused-expression": true
   },
   "rules": {
-    "trailing-comma": [true, {"multiline": "never", "singleline": "never"}],
+    "trailing-comma": [true, { "multiline": "never", "singleline": "never" }],
     "quotemark": [true, "single"],
     "member-access": [false],
     "ordered-imports": [false],

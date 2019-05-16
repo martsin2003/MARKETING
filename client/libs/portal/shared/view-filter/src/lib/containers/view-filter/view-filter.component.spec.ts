@@ -8,9 +8,8 @@ describe('ViewFilterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ViewFilterComponent ]
-    })
-    .compileComponents();
+      declarations: [ViewFilterComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
