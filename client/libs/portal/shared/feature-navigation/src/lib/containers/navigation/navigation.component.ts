@@ -11,10 +11,7 @@ export class NavigationComponent implements OnInit {
   menuOpened: boolean;
   isMobileScreen: boolean;
 
-  constructor(
-    private breakpointObserver: BreakpointObserver,
-    private router: Router
-  ) {
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router) {
     breakpointObserver.observe(['(max-width: 959px)']).subscribe(result => {
       this.isMobileScreen = result.matches;
     });
@@ -22,9 +19,7 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit() {
     // One time check as the `observe` method in constructor doesn't always fire on page render
-    this.isMobileScreen = this.breakpointObserver.isMatched(
-      '(max-width: 959px)'
-    );
+    this.isMobileScreen = this.breakpointObserver.isMatched('(max-width: 959px)');
   }
 
   toggleMenuOpen() {

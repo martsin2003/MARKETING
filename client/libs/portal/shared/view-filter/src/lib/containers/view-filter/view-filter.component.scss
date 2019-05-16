@@ -1,18 +1,18 @@
 .mobile-view-filter {
-    width: 100%;
-    display: none;
+  width: 100%;
+  display: none;
 }
 
 .desktop-view-filter {
-    width: 100%;
-    display: block;
+  width: 100%;
+  display: block;
 }
 
 @media screen and (max-width: 500px) {
-    .mobile-view-filter {
-        display: block;
-    }
-    .desktop-view-filter {
-        display: none;
-    }
+  .mobile-view-filter {
+    display: block;
+  }
+  .desktop-view-filter {
+    display: none;
+  }
 }

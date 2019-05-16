@@ -1,26 +1,36 @@
-import {BaseEntity,Column,Entity,Index,JoinColumn,JoinTable,ManyToMany,ManyToOne,OneToMany,OneToOne,PrimaryColumn,PrimaryGeneratedColumn,RelationId} from "typeorm";
-import {tblTaskStandard} from "./tblTaskStandard";
+import {
+  BaseEntity,
+  Column,
+  Entity,
+  Index,
+  JoinColumn,
+  JoinTable,
+  ManyToMany,
+  ManyToOne,
+  OneToMany,
+  OneToOne,
+  PrimaryColumn,
+  PrimaryGeneratedColumn,
+  RelationId
+} from 'typeorm';
+import { tblTaskStandard } from './tblTaskStandard';
 
-
-@Entity("tblTaskType",{schema:"public" } )
+@Entity('tblTaskType', { schema: 'public' })
 export class tblTaskType {
+  @PrimaryGeneratedColumn({
+    type: 'bigint',
+    name: 'intTaskTypeID'
+  })
+  intTaskTypeID: string;
 
-    @PrimaryGeneratedColumn({
-        type:"bigint", 
-        name:"intTaskTypeID"
-        })
-    intTaskTypeID:string;
-        
+  @Column('text', {
+    nullable: true,
+    name: 'varTaskType'
+  })
+  varTaskType: string | null;
 
-    @Column("text",{ 
-        nullable:true,
-        name:"varTaskType"
-        })
-    varTaskType:string | null;
-        
-
-   
-    @OneToMany(type=>tblTaskStandard, tblTaskStandard=>tblTaskStandard.intTaskTaskType,{ onDelete: 'CASCADE' , })
-    tblTaskStandards:tblTaskStandard[];
-    
+  @OneToMany(type => tblTaskStandard, tblTaskStandard => tblTaskStandard.intTaskTaskType, {
+    onDelete: 'CASCADE'
+  })
+  tblTaskStandards: tblTaskStandard[];
 }

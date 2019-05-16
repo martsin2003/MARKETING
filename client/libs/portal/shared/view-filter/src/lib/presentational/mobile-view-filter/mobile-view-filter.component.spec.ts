@@ -8,9 +8,8 @@ describe('MobileViewFilterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MobileViewFilterComponent ]
-    })
-    .compileComponents();
+      declarations: [MobileViewFilterComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

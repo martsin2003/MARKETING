@@ -8,9 +8,8 @@ describe('MainNavMobileComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MainNavMobileComponent ]
-    })
-    .compileComponents();
+      declarations: [MainNavMobileComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

@@ -8,29 +8,25 @@ import { MatBottomSheet } from '@angular/material';
   styleUrls: ['./home-plans.component.scss']
 })
 export class HomePlansComponent implements OnInit, AfterViewInit {
-
-  openViewFilter: {open: boolean} = {open: false};
+  openViewFilter: { open: boolean } = { open: false };
   selectedViewType = 'See All Home Plans';
 
-  constructor(private bottomSheet: MatBottomSheet) { }
+  constructor(private bottomSheet: MatBottomSheet) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  ngAfterViewInit() {
-  }
+  ngAfterViewInit() {}
 
   openFilter() {
-    this.openViewFilter = {open: true};
+    this.openViewFilter = { open: true };
   }
 
   openBottomSheet(): void {
     const bottomSheetRef = this.bottomSheet.open(HomePlansOptionsComponent);
     bottomSheetRef.afterDismissed().subscribe((type: string) => {
-      if(type) {
+      if (type) {
         this.selectedViewType = type;
       }
     });
   }
-
 }

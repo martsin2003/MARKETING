@@ -1,20 +1,30 @@
-import {BaseEntity,Column,Entity,Index,JoinColumn,JoinTable,ManyToMany,ManyToOne,OneToMany,OneToOne,PrimaryColumn,PrimaryGeneratedColumn,RelationId} from "typeorm";
+import {
+  BaseEntity,
+  Column,
+  Entity,
+  Index,
+  JoinColumn,
+  JoinTable,
+  ManyToMany,
+  ManyToOne,
+  OneToMany,
+  OneToOne,
+  PrimaryColumn,
+  PrimaryGeneratedColumn,
+  RelationId
+} from 'typeorm';
 
-
-@Entity("tblPrimaryContact",{schema:"public" } )
+@Entity('tblPrimaryContact', { schema: 'public' })
 export class tblPrimaryContact {
+  @PrimaryGeneratedColumn({
+    type: 'bigint',
+    name: 'intPrimaryContactID'
+  })
+  intPrimaryContactID: string;
 
-    @PrimaryGeneratedColumn({
-        type:"bigint", 
-        name:"intPrimaryContactID"
-        })
-    intPrimaryContactID:string;
-        
-
-    @Column("text",{ 
-        nullable:true,
-        name:"varPrimaryContact"
-        })
-    varPrimaryContact:string | null;
-        
+  @Column('text', {
+    nullable: true,
+    name: 'varPrimaryContact'
+  })
+  varPrimaryContact: string | null;
 }

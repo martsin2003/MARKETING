@@ -1,68 +1,84 @@
-import {BaseEntity,Column,Entity,Index,JoinColumn,JoinTable,ManyToMany,ManyToOne,OneToMany,OneToOne,PrimaryColumn,PrimaryGeneratedColumn,RelationId} from "typeorm";
-import {tblCommunity} from "./tblCommunity";
-import {tblWMCommunityMap} from "./tblWMCommunityMap";
-import {tblWMCommunitySeries} from "./tblWMCommunitySeries";
-import {tblWMProject} from "./tblWMProject";
+import {
+  BaseEntity,
+  Column,
+  Entity,
+  Index,
+  JoinColumn,
+  JoinTable,
+  ManyToMany,
+  ManyToOne,
+  OneToMany,
+  OneToOne,
+  PrimaryColumn,
+  PrimaryGeneratedColumn,
+  RelationId
+} from 'typeorm';
+import { tblCommunity } from './tblCommunity';
+import { tblWMCommunityMap } from './tblWMCommunityMap';
+import { tblWMCommunitySeries } from './tblWMCommunitySeries';
+import { tblWMProject } from './tblWMProject';
 
-
-@Entity("tblWMCommunity",{schema:"public" } )
-@Index("idx_20786_IX_tblWMCommunity",["intWmCommunityCommunity","intWMCommunityID","varWMCommunityStatus",],{unique:true})
+@Entity('tblWMCommunity', { schema: 'public' })
+@Index(
+  'idx_20786_IX_tblWMCommunity',
+  ['intWmCommunityCommunity', 'intWMCommunityID', 'varWMCommunityStatus'],
+  { unique: true }
+)
 export class tblWMCommunity {
+  @PrimaryGeneratedColumn({
+    type: 'bigint',
+    name: 'intWMCommunityID'
+  })
+  intWMCommunityID: string;
 
-    @PrimaryGeneratedColumn({
-        type:"bigint", 
-        name:"intWMCommunityID"
-        })
-    intWMCommunityID:string;
-        
+  @ManyToOne(type => tblCommunity, tblCommunity => tblCommunity.tblWmCommunitys, {
+    nullable: false,
+    onDelete: 'CASCADE'
+  })
+  @JoinColumn({ name: 'intWMCommunityCommunityID' })
+  intWmCommunityCommunity: tblCommunity | null;
 
-   
-    @ManyToOne(type=>tblCommunity, tblCommunity=>tblCommunity.tblWmCommunitys,{  nullable:false,onDelete: 'CASCADE', })
-    @JoinColumn({ name:'intWMCommunityCommunityID'})
-    intWmCommunityCommunity:tblCommunity | null;
+  @Column('text', {
+    nullable: false,
+    default: () => "'active'",
+    name: 'varWMCommunityStatus'
+  })
+  varWMCommunityStatus: string;
 
+  @Column('timestamp with time zone', {
+    nullable: false,
+    name: 'dteWMCommunityCreatedDate'
+  })
+  dteWMCommunityCreatedDate: Date;
 
-    @Column("text",{ 
-        nullable:false,
-        default: () => "'active'",
-        name:"varWMCommunityStatus"
-        })
-    varWMCommunityStatus:string;
-        
+  @Column('timestamp with time zone', {
+    nullable: false,
+    name: 'dteWMCommunityModifiedDate'
+  })
+  dteWMCommunityModifiedDate: Date;
 
-    @Column("timestamp with time zone",{ 
-        nullable:false,
-        name:"dteWMCommunityCreatedDate"
-        })
-    dteWMCommunityCreatedDate:Date;
-        
+  @Column('text', {
+    nullable: true,
+    name: 'varWMCommunityCommunityName'
+  })
+  varWMCommunityCommunityName: string | null;
 
-    @Column("timestamp with time zone",{ 
-        nullable:false,
-        name:"dteWMCommunityModifiedDate"
-        })
-    dteWMCommunityModifiedDate:Date;
-        
+  @OneToMany(
+    type => tblWMCommunityMap,
+    tblWMCommunityMap => tblWMCommunityMap.intWmCommunityMapWmCommunity,
+    { onDelete: 'CASCADE' }
+  )
+  tblWmCommunityMaps: tblWMCommunityMap[];
 
-    @Column("text",{ 
-        nullable:true,
-        name:"varWMCommunityCommunityName"
-        })
-    varWMCommunityCommunityName:string | null;
-        
+  @OneToMany(
+    type => tblWMCommunitySeries,
+    tblWMCommunitySeries => tblWMCommunitySeries.intWmCommunitySeriesWmCommunity,
+    { onDelete: 'CASCADE' }
+  )
+  tblWmCommunitySeriess: tblWMCommunitySeries[];
 
-   
-    @OneToMany(type=>tblWMCommunityMap, tblWMCommunityMap=>tblWMCommunityMap.intWmCommunityMapWmCommunity,{ onDelete: 'CASCADE' , })
-    tblWmCommunityMaps:tblWMCommunityMap[];
-    
-
-   
-    @OneToMany(type=>tblWMCommunitySeries, tblWMCommunitySeries=>tblWMCommunitySeries.intWmCommunitySeriesWmCommunity,{ onDelete: 'CASCADE' , })
-    tblWmCommunitySeriess:tblWMCommunitySeries[];
-    
-
-   
-    @OneToMany(type=>tblWMProject, tblWMProject=>tblWMProject.intWmProjectWmCommunity,{ onDelete: 'CASCADE' , })
-    tblWmProjects:tblWMProject[];
-    
+  @OneToMany(type => tblWMProject, tblWMProject => tblWMProject.intWmProjectWmCommunity, {
+    onDelete: 'CASCADE'
+  })
+  tblWmProjects: tblWMProject[];
 }

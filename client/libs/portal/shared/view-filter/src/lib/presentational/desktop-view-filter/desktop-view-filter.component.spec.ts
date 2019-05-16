@@ -8,9 +8,8 @@ describe('DesktopViewFilterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DesktopViewFilterComponent ]
-    })
-    .compileComponents();
+      declarations: [DesktopViewFilterComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
