@@ -1,10 +1,7 @@
 <div class="container">
   <div class="d-flex flex-row">
     <h1 class="flex-grow-1">4 Communities in Loudoun County, VA</h1>
-    <mat-button-toggle-group
-      #group="matButtonToggleGroup"
-      class="align-self-center"
-    >
+    <mat-button-toggle-group #group="matButtonToggleGroup" class="align-self-center">
       <mat-button-toggle value="left">
         <mat-icon>list</mat-icon>
         <mat-icon>map</mat-icon>
@@ -16,19 +13,13 @@
         <mat-icon>map</mat-icon>
       </mat-button-toggle>
     </mat-button-toggle-group>
-    <button
-      class="align-self-center ml-2 py-1"
-      mat-raised-button
-      color="primary"
-    >
+    <button class="align-self-center ml-2 py-1" mat-raised-button color="primary">
       Filters
     </button>
   </div>
 
   <div class="d-flex flex-row flex-wrap">
-    <brookfield-community-card
-      class="w-50 community-card"
-    ></brookfield-community-card>
+    <brookfield-community-card class="w-50 community-card"></brookfield-community-card>
     <brookfield-community-card class="w-50"></brookfield-community-card>
     <brookfield-community-card class="w-50"></brookfield-community-card>
     <brookfield-community-card class="w-50"></brookfield-community-card>

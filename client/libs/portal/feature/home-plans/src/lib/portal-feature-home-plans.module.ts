@@ -12,12 +12,15 @@ import { TypesViewHomePlansComponent } from './presentational/types-view-home-pl
   imports: [
     CommonModule,
     MaterialModule,
-    RouterModule.forChild([
-      { path: '', pathMatch: 'full', component: HomePlansComponent }
-    ]),
+    RouterModule.forChild([{ path: '', pathMatch: 'full', component: HomePlansComponent }]),
     PortalSharedViewFilterModule
   ],
-  declarations: [HomePlansComponent, HomePlanListComponent, HomePlansOptionsComponent, TypesViewHomePlansComponent],
+  declarations: [
+    HomePlansComponent,
+    HomePlanListComponent,
+    HomePlansOptionsComponent,
+    TypesViewHomePlansComponent
+  ],
   entryComponents: [HomePlansOptionsComponent]
 })
 export class PortalFeatureHomePlansModule {}

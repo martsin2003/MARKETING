@@ -6,12 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./view-filter.component.scss']
 })
 export class ViewFilterComponent implements OnInit {
+  @Input() openFilter?: { open: boolean };
 
-  @Input() openFilter?: {open: boolean};
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

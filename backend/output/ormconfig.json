@@ -9,8 +9,6 @@
     "database": "brookfield_clone",
     "schema": "public",
     "synchronize": false,
-    "entities": [
-      "entities/*.js"
-    ]
+    "entities": ["entities/*.js"]
   }
 ]
