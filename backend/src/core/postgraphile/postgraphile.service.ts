@@ -87,7 +87,6 @@ export class PostgraphileService {
             ...(userId ? { 'jwt.claims.user_id': String(userId) } : {})
           });
         },
-        classicIds: true,
         appendPlugins: [ConnectionFilterPlugin],
         graphiql: true,
         graphileBuildOptions: {
