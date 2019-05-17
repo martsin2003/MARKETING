@@ -1,5 +1,5 @@
 <div class="footer-container">
-  <ng-container *ngIf="isMobileScreen; else desktopFooter">
+  <ng-container *ngIf="isMobileScreen$ | async; else desktopFooter">
     <brookfield-footer-mobile></brookfield-footer-mobile>
   </ng-container>
   <ng-template #desktopFooter>

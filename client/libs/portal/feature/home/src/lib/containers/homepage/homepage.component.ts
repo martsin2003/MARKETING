@@ -1,5 +1,7 @@
+import { DetectMobileViewService } from '@brookfield/common/utilities';
 import { Component, OnInit } from '@angular/core';
-import { BreakpointObserver } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
+import { withLatestFrom } from 'rxjs/operators';
 
 @Component({
   selector: 'brookfield-homepage',
@@ -7,8 +9,8 @@ import { BreakpointObserver } from '@angular/cdk/layout';
   styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent implements OnInit {
-  isMobileScreen: boolean;
-  carouselImages: string[];
+  isMobileScreen$: Observable<boolean>;
+  carouselImages$: Observable<string[]>;
   mobileCarouselImages = [
     '../assets/images/mobile/mobile_header_slider_1_3x.png',
     '../assets/images/mobile/mobile_header_slider_2_3x.png',
@@ -19,14 +21,18 @@ export class HomepageComponent implements OnInit {
     '../assets/images/desktop/header_slider_2_3x.png',
     '../assets/images/desktop/header_slider_3_3x.png'
   ];
-  constructor(private breakpointObserver: BreakpointObserver) {
-    this.breakpointObserver.observe(['(max-width: 959px)']).subscribe(result => {
-      this.isMobileScreen = result.matches;
-      this.carouselImages = this.isMobileScreen
-        ? this.mobileCarouselImages
-        : this.desktopCarouselImages;
-    });
+  constructor(private detectMobileViewService: DetectMobileViewService) {}
+
+  ngOnInit() {
+    this.isMobileScreen$ = this.detectMobileViewService.isMobileView();
+    this.carouselImages$ = this.setImagesBasedOnViewChage();
   }
 
-  ngOnInit() {}
+  private setImagesBasedOnViewChage() {
+    return this.isMobileScreen$.pipe(
+      withLatestFrom(viewIsMobile => {
+        return viewIsMobile ? this.mobileCarouselImages : this.desktopCarouselImages;
+      })
+    );
+  }
 }

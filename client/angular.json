@@ -539,6 +539,37 @@
           "styleext": "scss"
         }
       }
+    },
+    "common-utilities": {
+      "root": "libs/common/utilities",
+      "sourceRoot": "libs/common/utilities/src",
+      "projectType": "library",
+      "prefix": "brookfield",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/common/utilities/tsconfig.lib.json",
+              "libs/common/utilities/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/common/utilities/jest.config.js",
+            "tsConfig": "libs/common/utilities/tsconfig.spec.json",
+            "setupFile": "libs/common/utilities/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {

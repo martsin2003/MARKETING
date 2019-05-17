@@ -1,5 +1,5 @@
 <div class="navigation" [ngClass]="{ active: menuOpened, 'absolute-nav': absoluteHeader }">
-  <ng-container *ngIf="isMobileScreen; else desktopNav">
+  <ng-container *ngIf="isMobileScreen$ | async; else desktopNav">
     <div class="d-flex justify-content-between align-items-center p-2">
       <a
         (click)="routeToUrl('home')"
