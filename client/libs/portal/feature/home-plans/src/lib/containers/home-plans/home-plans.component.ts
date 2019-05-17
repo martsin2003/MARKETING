@@ -1,21 +1,20 @@
 import { HomePlansOptionsComponent } from './../../presentational/home-plans-options/home-plans-options.component';
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { MatBottomSheet } from '@angular/material';
 
 @Component({
   selector: 'brookfield-home-plans',
   templateUrl: './home-plans.component.html',
-  styleUrls: ['./home-plans.component.scss']
+  styleUrls: ['./home-plans.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HomePlansComponent implements OnInit, AfterViewInit {
+export class HomePlansComponent implements OnInit {
   openViewFilter: { open: boolean } = { open: false };
   selectedViewType = 'See All Home Plans';
 
   constructor(private bottomSheet: MatBottomSheet) {}
 
   ngOnInit() {}
-
-  ngAfterViewInit() {}
 
   openFilter() {
     this.openViewFilter = { open: true };

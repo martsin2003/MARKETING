@@ -1,7 +1,6 @@
 @import 'variables.scss';
 
 .navigation {
-  // transition: background-color ease-in-out 500ms;
   &:not(.absolute-nav) {
     border-bottom: 1px solid $divider;
   }
@@ -17,6 +16,9 @@
     box-shadow: none;
     outline: none;
     border: none;
+  }
+  .home-link {
+    cursor: pointer;
   }
 
   &.active {
