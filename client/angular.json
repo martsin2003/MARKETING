@@ -585,7 +585,8 @@
       "styleext": "scss"
     },
     "@nrwl/schematics:component": {
-      "styleext": "scss"
+      "styleext": "scss",
+      "changeDetection": "OnPush"
     },
     "@nrwl/schematics:library": {
       "style": "scss",
