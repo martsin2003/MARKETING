@@ -1,0 +1,8 @@
+{
+  "entities": [
+    "TblSiteplan"
+  ],
+  "graphql-schema-json": "./graphql.schema.json",
+  "destination": "./libs/core-data/generated",
+  "graphql-query-interfaces": "./libs/core-data/generated/graphql-requests-model.interface.ts"
+}

@@ -19,7 +19,7 @@ export class PostgraphileService {
 
   constructor() {
     this.createInternalServer();
-    // this.schema = this.getSchemaPromise();
+    this.schema = this.getSchemaPromise();
   }
 
   addPlugin(plugin: PostgraphilePlugin) {
@@ -40,7 +40,9 @@ export class PostgraphileService {
       const authorization = get(context, 'graphqlContext.req.headers.authorization', null);
       console.log('authorization: ', authorization);
       if (authorization) {
-        const data: any = jwt.decode(authorization.split(' ')[1], { complete: true });
+        const data: any = jwt.decode(authorization.split(' ')[1], {
+          complete: true
+        });
         userId = data.payload.id;
       }
       const query = print(queryDocument);
@@ -105,6 +107,8 @@ export class PostgraphileService {
         `postgraphile server listening on port ${config.get('postgraphile.internalPort')}`
       );
     });
+    // todo remove later when tables count will be decreased, required to start backend without timeout(default timeout 2 minutes)
+    server.timeout = 1000000;
 
     process.on('SIGTERM', () => {
       console.info('SIGTERM signal received.');
