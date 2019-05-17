@@ -1,7 +1,10 @@
-<div class="navigation" [ngClass]="{ active: menuOpened }">
+<div class="navigation" [ngClass]="{ active: menuOpened, 'absolute-nav': absoluteHeader }">
   <ng-container *ngIf="isMobileScreen; else desktopNav">
     <div class="d-flex justify-content-between align-items-center p-2">
-      <a routerLink="home" class="no-underline text-right font-weight-bold label-text pl-1">
+      <a
+        (click)="routeToUrl('home')"
+        class="no-underline text-right font-weight-bold label-text pl-1"
+      >
         <span class="font-36 d-block label-text-1">Brookfield</span>
         <span class="font-24 d-block label-text-2">Residential</span>
       </a>
@@ -36,8 +39,14 @@
   </ng-container>
   <ng-template #desktopNav>
     <brookfield-secondary-nav-desktop
+      [absoluteNav]="absoluteHeader"
+      [desktopMenuOpened]="desktopMenuOpened"
       (navigate)="routeToUrl($event)"
     ></brookfield-secondary-nav-desktop>
-    <brookfield-main-nav-desktop></brookfield-main-nav-desktop>
+    <brookfield-main-nav-desktop
+      [absoluteNav]="absoluteHeader"
+      (menuInOpenedState)="setMenuOpenedState($event)"
+      (navigate)="routeToUrl($event)"
+    ></brookfield-main-nav-desktop>
   </ng-template>
 </div>

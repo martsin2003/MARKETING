@@ -27,8 +27,9 @@ $portal-theme: mat-light-theme($portal-primary, $portal-accent, $portal-warn);
 @include angular-material-theme($portal-theme);
 
 /* You can add global styles to this file, and also import other style files */
-@import '../styles/theme.scss';
-@import '../styles/utils.scss';
+@import 'styles/theme.scss';
+@import 'styles/utils.scss';
+@import 'styles/fonts.scss';
 
 html {
   box-sizing: border-box;

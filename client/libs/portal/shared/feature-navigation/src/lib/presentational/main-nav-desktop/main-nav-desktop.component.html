@@ -1,25 +1,46 @@
 <div (mouseleave)="closeMenu()">
-  <div class="main-navigation-container d-flex align-items-stretch">
-    <a routerLink="home" class="no-underline text-right font-weight-bold label-text pl-3 py-2">
+  <div
+    class="main-navigation-container d-flex align-items-stretch opened"
+    [ngClass]="{ opened: menuIsOpened, 'absolute-nav': absoluteNav }"
+  >
+    <a
+      (click)="navigateTo('home')"
+      class="no-underline text-right font-weight-bold label-text pl-3 py-2"
+    >
       <span class="font-36 d-block label-text-1">Brookfield</span>
       <span class="font-24 d-block label-text-2">Residential</span>
     </a>
     <div class="main-navigation">
-      <button mat-button class="nav-item" (mouseenter)="openMenu('findMyHome')">
+      <button
+        mat-button
+        class="nav-item"
+        (mouseenter)="openMenu('findMyHome')"
+        (click)="navigateTo('/find-my-home')"
+      >
         <mat-icon class="expand-arrow" [ngClass]="{ expanded: openedMenu === 'findMyHome' }">
           expand_more
         </mat-icon>
         FIND MY HOME
       </button>
 
-      <button mat-button class="nav-item" (mouseenter)="openMenu('homePlans')">
+      <button
+        mat-button
+        class="nav-item"
+        (mouseenter)="openMenu('homePlans')"
+        (click)="navigateTo('/home-plans')"
+      >
         <mat-icon class="expand-arrow" [ngClass]="{ expanded: openedMenu === 'homePlans' }">
           expand_more
         </mat-icon>
         HOME PLANS
       </button>
 
-      <button mat-button class="nav-item" (mouseenter)="openMenu('empowerInnovations')">
+      <button
+        mat-button
+        class="nav-item"
+        (mouseenter)="openMenu('empowerInnovations')"
+        (click)="navigateTo('/empower')"
+      >
         <mat-icon
           class="expand-arrow"
           [ngClass]="{ expanded: openedMenu === 'empowerInnovations' }"

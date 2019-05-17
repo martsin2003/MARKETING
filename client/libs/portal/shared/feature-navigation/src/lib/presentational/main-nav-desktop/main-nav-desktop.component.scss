@@ -1,14 +1,37 @@
 @import 'variables.scss';
 
 .label-text {
-  color: $white;
   cursor: pointer;
+}
+.label-text-1 {
+  color: $primary-dark;
+}
+.label-text-2 {
+  color: $yellow;
 }
 .main-navigation {
   margin-left: auto;
-  color: $white;
   .nav-item {
     height: 100%;
+  }
+}
+.main-navigation-container {
+  background-color: transparent;
+  color: $white;
+  &.opened,
+  &:not(.absolute-nav) {
+    background-color: white;
+    color: $primary-accent !important;
+  }
+  &.absolute-nav {
+    &:not(.opened) {
+      .label-text,
+      .label-text-1,
+      .label-text-2,
+      .menu-toggle {
+        color: $white !important;
+      }
+    }
   }
 }
 
