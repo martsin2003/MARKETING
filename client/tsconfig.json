@@ -34,7 +34,8 @@
       "@brookfield/portal/feature/resources": ["libs/portal/feature/resources/src/index.ts"],
       "@brookfield/portal/feature/home-design-detail": [
         "libs/portal/feature/home-design-detail/src/index.ts"
-      ]
+      ],
+      "@brookfield/portal/feature/community": ["libs/portal/feature/community/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -52,6 +52,9 @@
     },
     "portal-feature-home-design-detail": {
       "tags": ["scope:home-design-detail", "type:feature"]
+    },
+    "portal-feature-community": {
+      "tags": ["scope:community", "type:feature"]
     }
   }
 }

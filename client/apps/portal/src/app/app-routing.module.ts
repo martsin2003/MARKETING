@@ -30,6 +30,10 @@ const routes: Routes = [
     loadChildren:
       '@brookfield/portal/feature/home-design-detail#PortalFeatureHomeDesignDetailModule'
   },
+  {
+    path: 'community-microsite',
+    loadChildren: '@brookfield/portal/feature/community#PortalFeatureCommunityModule'
+  },
   { path: '**', redirectTo: 'home' }
 ];
 
