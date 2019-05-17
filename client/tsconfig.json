@@ -31,7 +31,9 @@
         "libs/portal/shared/feature-footer/src/index.ts"
       ],
       "@brookfield/portal/feature/empower": ["libs/portal/feature/empower/src/index.ts"],
-      "@brookfield/portal/feature/resources": ["libs/portal/feature/resources/src/index.ts"]
+      "@brookfield/portal/feature/resources": ["libs/portal/feature/resources/src/index.ts"],
+      "@brookfield/portal/feature/communities": ["libs/portal/feature/communities/src/index.ts"],
+      "@brookfield/portal/shared-components": ["libs/portal/shared-components/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

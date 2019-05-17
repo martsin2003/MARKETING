@@ -49,6 +49,12 @@
     },
     "portal-feature-resources": {
       "tags": ["scope:resources", "type:feature"]
+    },
+    "portal-feature-communities": {
+      "tags": ["scope:communities", "type:feature"]
+    },
+    "portal-shared-components": {
+      "tags": ["scope:shared-components", "type:feature"]
     }
   }
 }

@@ -25,6 +25,23 @@ const routes: Routes = [
     path: 'resources',
     loadChildren: '@brookfield/portal/feature/resources#PortalFeatureResourcesModule'
   },
+  {
+    path: 'find',
+    children: [
+      {
+        path: 'find-my-home',
+        loadChildren: '@brookfield/portal/feature/find-my-home#PortalFeatureFindMyHomeModule'
+      },
+      {
+        path: 'communities',
+        loadChildren: '@brookfield/portal/feature/communities#PortalFeatureCommunitiesModule'
+      }
+    ]
+  },
+  {
+    path: 'resources',
+    loadChildren: '@brookfield/portal/feature/resources#PortalFeatureResourcesModule'
+  },
   { path: '**', redirectTo: 'home' }
 ];
 
