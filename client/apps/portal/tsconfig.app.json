@@ -12,6 +12,8 @@
     "../../libs/portal/feature/home-plan-detail/src/index.ts",
     "../../libs/portal/feature/find-my-home/src/index.ts",
     "../../libs/portal/feature/empower/src/index.ts",
-    "../../libs/portal/feature/resources/src/index.ts"
+    "../../libs/portal/feature/resources/src/index.ts",
+
+    "../../libs/portal/feature/home-design-detail/src/index.ts"
   ]
 }

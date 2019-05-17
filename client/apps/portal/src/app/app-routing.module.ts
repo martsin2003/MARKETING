@@ -25,6 +25,11 @@ const routes: Routes = [
     path: 'resources',
     loadChildren: '@brookfield/portal/feature/resources#PortalFeatureResourcesModule'
   },
+  {
+    path: 'home-design-detail',
+    loadChildren:
+      '@brookfield/portal/feature/home-design-detail#PortalFeatureHomeDesignDetailModule'
+  },
   { path: '**', redirectTo: 'home' }
 ];
 

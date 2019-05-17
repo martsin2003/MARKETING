@@ -49,6 +49,9 @@
     },
     "portal-feature-resources": {
       "tags": ["scope:resources", "type:feature"]
+    },
+    "portal-feature-home-design-detail": {
+      "tags": ["scope:home-design-detail", "type:feature"]
     }
   }
 }
