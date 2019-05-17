@@ -55,6 +55,9 @@
     },
     "portal-feature-community": {
       "tags": ["scope:community", "type:feature"]
+    },
+    "common-utilities": {
+      "tags": ["scope:portal", "type:util"]
     }
   }
 }
