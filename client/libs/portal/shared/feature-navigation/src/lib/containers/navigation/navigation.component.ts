@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { Location } from '@angular/common';
 import { filter, takeUntil } from 'rxjs/operators';
@@ -8,7 +8,8 @@ import { DetectMobileViewService } from '@brookfield/common/utilities';
 @Component({
   selector: 'brookfield-navigation',
   templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss']
+  styleUrls: ['./navigation.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavigationComponent implements OnInit, OnDestroy {
   menuOpened: boolean;

@@ -5,13 +5,15 @@ import {
   ElementRef,
   Input,
   OnChanges,
-  SimpleChanges
+  SimpleChanges,
+  ChangeDetectionStrategy
 } from '@angular/core';
 
 @Component({
   selector: 'brookfield-desktop-view-filter',
   templateUrl: './desktop-view-filter.component.html',
-  styleUrls: ['./desktop-view-filter.component.scss']
+  styleUrls: ['./desktop-view-filter.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DesktopViewFilterComponent implements OnInit, OnChanges {
   @Input() openFilter: { open: boolean };
