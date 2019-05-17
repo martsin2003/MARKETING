@@ -478,9 +478,9 @@
         }
       }
     },
-    "portal-feature-communities": {
-      "root": "libs/portal/feature/communities",
-      "sourceRoot": "libs/portal/feature/communities/src",
+    "portal-feature-home-design-detail": {
+      "root": "libs/portal/feature/home-design-detail",
+      "sourceRoot": "libs/portal/feature/home-design-detail/src",
       "projectType": "library",
       "prefix": "brookfield",
       "architect": {
@@ -488,8 +488,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/portal/feature/communities/tsconfig.lib.json",
-              "libs/portal/feature/communities/tsconfig.spec.json"
+              "libs/portal/feature/home-design-detail/tsconfig.lib.json",
+              "libs/portal/feature/home-design-detail/tsconfig.spec.json"
             ],
             "exclude": ["**/node_modules/**"]
           }
@@ -497,9 +497,9 @@
         "test": {
           "builder": "@nrwl/builders:jest",
           "options": {
-            "jestConfig": "libs/portal/feature/communities/jest.config.js",
-            "tsConfig": "libs/portal/feature/communities/tsconfig.spec.json",
-            "setupFile": "libs/portal/feature/communities/src/test-setup.ts"
+            "jestConfig": "libs/portal/feature/home-design-detail/jest.config.js",
+            "tsConfig": "libs/portal/feature/home-design-detail/tsconfig.spec.json",
+            "setupFile": "libs/portal/feature/home-design-detail/src/test-setup.ts"
           }
         }
       },
@@ -509,9 +509,9 @@
         }
       }
     },
-    "portal-shared-components": {
-      "root": "libs/portal/shared-components",
-      "sourceRoot": "libs/portal/shared-components/src",
+    "portal-feature-community": {
+      "root": "libs/portal/feature/community",
+      "sourceRoot": "libs/portal/feature/community/src",
       "projectType": "library",
       "prefix": "brookfield",
       "architect": {
@@ -519,8 +519,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/portal/shared-components/tsconfig.lib.json",
-              "libs/portal/shared-components/tsconfig.spec.json"
+              "libs/portal/feature/community/tsconfig.lib.json",
+              "libs/portal/feature/community/tsconfig.spec.json"
             ],
             "exclude": ["**/node_modules/**"]
           }
@@ -528,9 +528,9 @@
         "test": {
           "builder": "@nrwl/builders:jest",
           "options": {
-            "jestConfig": "libs/portal/shared-components/jest.config.js",
-            "tsConfig": "libs/portal/shared-components/tsconfig.spec.json",
-            "setupFile": "libs/portal/shared-components/src/test-setup.ts"
+            "jestConfig": "libs/portal/feature/community/jest.config.js",
+            "tsConfig": "libs/portal/feature/community/tsconfig.spec.json",
+            "setupFile": "libs/portal/feature/community/src/test-setup.ts"
           }
         }
       },

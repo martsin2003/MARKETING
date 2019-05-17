@@ -1,9 +1,7 @@
-import { get } from 'lodash';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { Apollo, ApolloModule } from 'apollo-angular';
-import { HttpLinkModule } from 'apollo-angular-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { BatchHttpLink } from 'apollo-link-batch-http';
 import { setContext } from 'apollo-link-context';
@@ -15,7 +13,6 @@ import { MaterialModule } from '@brookfield/material';
 import { PortalSharedFeatureNavigationModule } from '@brookfield/portal/shared/feature-navigation';
 import { PortalSharedFeatureFooterModule } from '@brookfield/portal/shared/feature-footer';
 import { environment } from '../environments/environment';
-import { allTblSiteplansGeneratedQuery } from 'libs/core-data/generated/tbl-siteplan/graphql/tbl-siteplan-queries.graphql.generated';
 
 @NgModule({
   declarations: [AppComponent],

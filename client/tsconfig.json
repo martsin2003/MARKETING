@@ -32,8 +32,10 @@
       ],
       "@brookfield/portal/feature/empower": ["libs/portal/feature/empower/src/index.ts"],
       "@brookfield/portal/feature/resources": ["libs/portal/feature/resources/src/index.ts"],
-      "@brookfield/portal/feature/communities": ["libs/portal/feature/communities/src/index.ts"],
-      "@brookfield/portal/shared-components": ["libs/portal/shared-components/src/index.ts"]
+      "@brookfield/portal/feature/home-design-detail": [
+        "libs/portal/feature/home-design-detail/src/index.ts"
+      ],
+      "@brookfield/portal/feature/community": ["libs/portal/feature/community/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

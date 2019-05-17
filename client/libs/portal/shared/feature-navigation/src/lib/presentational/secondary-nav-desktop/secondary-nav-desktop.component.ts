@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'brookfield-secondary-nav-desktop',
@@ -7,6 +7,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class SecondaryNavDesktopComponent implements OnInit {
   @Output() navigate = new EventEmitter<string>();
+  @Input() absoluteNav: boolean;
+  @Input() desktopMenuOpened: boolean;
 
   constructor() {}
 

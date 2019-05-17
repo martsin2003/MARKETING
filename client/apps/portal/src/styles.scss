@@ -27,12 +27,14 @@ $portal-theme: mat-light-theme($portal-primary, $portal-accent, $portal-warn);
 @include angular-material-theme($portal-theme);
 
 /* You can add global styles to this file, and also import other style files */
-@import '../styles/theme.scss';
-@import '../styles/utils.scss';
+@import 'styles/theme.scss';
+@import 'styles/utils.scss';
+@import 'styles/fonts.scss';
 
 html {
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
@@ -89,14 +91,18 @@ body {
 
 //BUTTON STYLING
 .br-button {
+  height: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: franklin-gothic-urw-cond, sans-serif;
   font-size: 16px;
-  font-weight: 600;
-  padding: 15px 20px;
+  font-weight: 800;
+  padding: 0px 20px;
   outline: none;
   border: 1px solid;
+  transition: color 0.1s;
+  transition: 0.25s;
   cursor: pointer;
 
   mat-icon {
@@ -112,11 +118,18 @@ body {
     color: $white;
     border-color: $primary;
     background-color: $primary;
+    &:hover {
+      background: $primary-accent;
+    }
   }
   &--secondary {
     color: $primary;
     border-color: $primary;
     background-color: transparent;
+    &:hover {
+      background: $primary;
+      color: white;
+    }
   }
 }
 

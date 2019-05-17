@@ -26,21 +26,13 @@ const routes: Routes = [
     loadChildren: '@brookfield/portal/feature/resources#PortalFeatureResourcesModule'
   },
   {
-    path: 'find',
-    children: [
-      {
-        path: 'find-my-home',
-        loadChildren: '@brookfield/portal/feature/find-my-home#PortalFeatureFindMyHomeModule'
-      },
-      {
-        path: 'communities',
-        loadChildren: '@brookfield/portal/feature/communities#PortalFeatureCommunitiesModule'
-      }
-    ]
+    path: 'home-design-detail',
+    loadChildren:
+      '@brookfield/portal/feature/home-design-detail#PortalFeatureHomeDesignDetailModule'
   },
   {
-    path: 'resources',
-    loadChildren: '@brookfield/portal/feature/resources#PortalFeatureResourcesModule'
+    path: 'community-microsite',
+    loadChildren: '@brookfield/portal/feature/community#PortalFeatureCommunityModule'
   },
   { path: '**', redirectTo: 'home' }
 ];

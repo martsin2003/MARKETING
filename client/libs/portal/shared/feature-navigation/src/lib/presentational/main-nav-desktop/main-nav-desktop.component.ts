@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'brookfield-main-nav-desktop',
@@ -7,6 +7,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class MainNavDesktopComponent implements OnInit {
   @Output() navigate = new EventEmitter<string>();
+  @Output() menuInOpenedState = new EventEmitter<boolean>();
+  @Input() absoluteNav: boolean;
 
   menuIsOpened: boolean;
   openedMenu: string | null;
@@ -16,10 +18,12 @@ export class MainNavDesktopComponent implements OnInit {
   ngOnInit() {}
 
   navigateTo(url: string) {
+    this.menuIsOpened = false;
     this.navigate.emit(url);
   }
 
   openMenu(menu: string) {
+    this.menuInOpenedState.emit(true);
     if (!this.menuIsOpened) {
       this.menuIsOpened = true;
     }
@@ -27,6 +31,7 @@ export class MainNavDesktopComponent implements OnInit {
   }
 
   closeMenu() {
+    this.menuInOpenedState.emit(false);
     this.menuIsOpened = false;
     this.openedMenu = null;
   }
