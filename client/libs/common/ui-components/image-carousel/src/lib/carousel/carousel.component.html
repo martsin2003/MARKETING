@@ -3,14 +3,8 @@
     <mat-icon>arrow_back_ios</mat-icon>
   </button>
   <div #container class="container">
-    <div #wrapper class="wrapper-of-images">
-      <div
-        class="img-container"
-        [ngClass]="{ 'part-width': !fullWidth }"
-        *ngFor="let image of images"
-      >
-        <img draggable="false" [src]="image.path" class="w-100" />
-      </div>
+    <div #wrapper class="wrapper-of-slider">
+      <ng-content select=".carousel-content"></ng-content>
     </div>
   </div>
   <button class="next arrow" [disabled]="nextDisabled" (click)="[(duration = '1s'), next()]">

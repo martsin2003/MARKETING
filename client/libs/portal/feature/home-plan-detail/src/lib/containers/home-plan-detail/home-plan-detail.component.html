@@ -14,7 +14,17 @@
       </div>
     </div>
     <div class="wrapper-for-slider">
-      <brookfield-carousel [incomingImages]="images"></brookfield-carousel>
+      <brookfield-carousel [quantitySlides]="images.length" [fullWidth]="false">
+        <div class="carousel-content">
+          <div  
+            class="slide part-width"
+            *ngFor="let image of images"
+          >
+            <img #mainImage [src]="image" draggable="false">
+            myroslav
+          </div>
+        </div>
+      </brookfield-carousel>
     </div>
     <div class="content-title">
       <div>

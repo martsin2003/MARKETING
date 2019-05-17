@@ -1,4 +1,13 @@
-<brookfield-carousel [incomingImages]="carouselImages" [fullWidth]="true"></brookfield-carousel>
+<brookfield-carousel [quantitySlides]="carouselImages.length" [fullWidth]="true">
+  <div class="carousel-content">
+    <div  
+      class="slide"
+      *ngFor="let image of carouselImages"
+    >
+      <img #mainImage [src]="image" draggable="false">
+    </div>
+  </div>
+</brookfield-carousel>
 <div class="home-container">
   <brookfield-search-homes></brookfield-search-homes>
 </div>
