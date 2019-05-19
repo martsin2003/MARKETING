@@ -4,6 +4,11 @@
   </button>
   <div #container class="container">
     <div #wrapper class="wrapper-of-slider">
+      <div class="carousel-content" *ngIf="images">
+        <div class="slide part-width" *ngFor="let image of images">
+          <img #onlyImage [src]="image" draggable="false">
+        </div>
+      </div>
       <ng-content select=".carousel-content"></ng-content>
     </div>
   </div>
