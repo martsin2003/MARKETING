@@ -6,7 +6,6 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import { BatchHttpLink } from 'apollo-link-batch-http';
 import { setContext } from 'apollo-link-context';
 import { AppComponent } from './app.component';
-import { NxModule } from '@nrwl/nx';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from '@brookfield/material';
@@ -21,7 +20,6 @@ import { PortalCoreStateModule } from '@brookfield/portal/core-state';
   imports: [
     ApolloModule,
     BrowserModule,
-    NxModule.forRoot(),
     BrowserAnimationsModule,
     AppRoutingModule,
     MaterialModule,
