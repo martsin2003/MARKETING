@@ -58,6 +58,9 @@
     },
     "common-utilities": {
       "tags": ["scope:portal", "type:util"]
+    },
+    "portal-core-state": {
+      "tags": ["scope:core-data", "type:data-access"]
     }
   }
 }
