@@ -1,5 +1,5 @@
 <div class="cm-container">
-  <brookfield-carousel [incomingImages]='communityImages'></brookfield-carousel>
+  <brookfield-carousel [images]='communityImages'></brookfield-carousel>
 
   <div class="cm-container__header">
     <div class="cm-container__header__details">
@@ -36,8 +36,56 @@
   </div>
 
   <div class="cm-container__description">
-      Innovative design meets relaxed Loudoun County lakefront style — all at a price that ensures this opportunity won't last long. Make the morning coffee in your spacious, gourmet kitchen. Sit on your front porch and savor each sip. Spend the day kayaking or paddleboarding. Cast a line or pack a picnic. This community is full of outdoor fun in the Loudoun countryside. Hike the trails amid Virginia's stunning natural beauty. This is home.
+    Innovative design meets relaxed Loudoun County lakefront style — all at a price that ensures this opportunity won't
+    last long. Make the morning coffee in your spacious, gourmet kitchen. Sit on your front porch and savor each sip.
+    Spend the day kayaking or paddleboarding. Cast a line or pack a picnic. This community is full of outdoor fun in the
+    Loudoun countryside. Hike the trails amid Virginia's stunning natural beauty. This is home.
   </div>
 
-  
+  <div class="cm-container__second-carousel">
+    <brookfield-carousel [quantitySlides]="2" [fullWidth]="true">
+      <div class="carousel-content" #insertedContent>
+        <div class="slide" *ngFor="let image of [1,2]">
+          <div class="slide-content">
+            <div class="slide-content__card">
+              <img #mainImage src="assets/images/desktop/cm-second-slider-first-img.png">
+            </div>
+            <div class="slide-content__card">
+              <img #mainImage src="assets/images/desktop/cm-second-slider-second-img.png">
+            </div>
+            <div class="slide-content__card">
+              <img #mainImage src="assets/images/desktop/cm-second-slider-third-img.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </brookfield-carousel>
+  </div>
+
+  <div class="cm-container__key-features-container">
+    <div class="cm-container__key-features-container__option">
+      <span class="cm-container__key-features-container__title">
+        Nearby School
+      </span>
+      <ul>
+        <li>Harmony Middle School</li>
+        <li>Mountain View Elementary School</li>
+        <li>Woodgrove High School</li>
+      </ul>
+    </div>
+    <div class="cm-container__key-features-container__option">
+      <span class="cm-container__key-features-container__title">
+        Key Features
+      </span>
+      <ul>
+        <li>Spacious, Scenic Homesites in the Loudoun Countryside</li>
+        <li>Award-Winning Designs Featuring 4 to 7 Bedrooms</li>
+        <li>Main-Level Owner's Suites Available</li>
+        <li>Voice-Enabled Smart Home Technology</li>
+      </ul>
+    </div>
+  </div>
+
+  <brookfield-get-empowered></brookfield-get-empowered>
+
 </div>

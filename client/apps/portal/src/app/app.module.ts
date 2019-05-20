@@ -24,8 +24,7 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     MaterialModule,
     PortalSharedFeatureNavigationModule,
-    PortalSharedFeatureFooterModule
-  ],
+    PortalSharedFeatureFooterModule],
   providers: [],
   bootstrap: [AppComponent]
 })
