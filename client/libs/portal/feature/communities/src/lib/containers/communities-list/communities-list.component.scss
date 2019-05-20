@@ -1,0 +1,51 @@
+.community-list {
+  &__content {
+    display: flex;
+  }
+  &__communities {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+  }
+  &__map-block {
+    height: 70vh;
+  }
+  &__community {
+    flex-basis: 50%;
+    display: flex;
+    min-width: 200px;
+    padding: 5px;
+    @media screen and (max-width: 800px) {
+      flex-basis: 100%;
+    }
+  }
+  &__community-card {
+    width: 100%;
+  }
+}
+
+.community-list__list-map {
+  .community-list {
+    &__community {
+      flex-basis: 100% !important;
+    }
+    &__map-block {
+      flex: 1;
+    }
+  }
+}
+
+.community-list__map {
+  .community-list {
+    &__content {
+      flex-direction: column;
+    }
+    &__map-block {
+      order: 1;
+    }
+    &__communities {
+      order: 2;
+    }
+  }
+}

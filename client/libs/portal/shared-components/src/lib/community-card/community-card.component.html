@@ -1,33 +1,35 @@
-<div class="items" *ngFor="let item of [1, 2, 3, 4]">
-  <div class="items__first-half">
-    <img src="http://placehold.it/230x150/333333" alt="" />
-    <mat-checkbox>Compare</mat-checkbox>
-    <span class="place"><mat-icon>place</mat-icon> Available Locations</span>
+<mat-card class="community-card">
+  <div class="community-card__top">
+    <img
+      src="https://www.brookfielddc.com/uploads/galleryCommunity/full/910E9D40-B5EF-744C-7350F20E63B49AE1.jpg"
+      class="community-card__image h-75"
+    />
+    <div class="community-card__content">
+      <div class="community-card__name">Community Name</div>
+      <div class="community-card__state">City ST</div>
+      <div class="community-card__price">Starting Price $X00,000</div>
+      <div class="community-card__icon community-card__homes-icon">
+        <img src="assets/icons/homes.svg" />
+        <div class="community-card__icon-text">Single-Family Homes</div>
+      </div>
+      <div class="community-card__home-inside-icon">
+        <div class="community-card__icon">
+          <img src="assets/icons/beds.svg" />
+          <div class="community-card__icon-text">4-7 Beds</div>
+        </div>
+        <div class="community-card__icon">
+          <img src="assets/icons/baths.svg" />
+          <div class="community-card__icon-text">2.5-7 Baths</div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="items__second-half">
-    <span class="home-name">
-      Home name
-    </span>
-    <div class="details">
-      <mat-icon>home</mat-icon>
-      Single-Family Home
+  <div class="community-card__bottom">
+    <div class="community-card__compare">
+      <mat-checkbox color="primary" (click)="compareCard(community.id)">Compare</mat-checkbox>
     </div>
-    <div class="details">
-      <mat-icon>hotel</mat-icon>
-      <span> 4 - 5<br />Beds </span>
-      <mat-icon class="second-icon">hot_tub</mat-icon>
-      <span> 4 - 5<br />Beds </span>
+    <div class="community-card__explore">
+      <button class="community-card__explore-button">EXPLORE COMMUNITY</button>
     </div>
-    <div class="details">
-      <mat-icon>straighten</mat-icon>
-      1,311 - 1,850 sq. ft.
-    </div>
-    <div class="button">
-      <button class="br-button br-button--primary" routerLink="/home-plan-detail" color="primary">
-        SEE THIS PLAN
-      </button>
-    </div>
-    <mat-checkbox>Compare</mat-checkbox>
-    <span class="place"><mat-icon>place</mat-icon> Available Locations</span>
   </div>
-</div>
+</mat-card>
