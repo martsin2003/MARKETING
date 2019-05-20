@@ -5,13 +5,15 @@ import {
   ElementRef,
   Input,
   OnChanges,
-  SimpleChanges
+  SimpleChanges,
+  ChangeDetectionStrategy
 } from '@angular/core';
 
 @Component({
   selector: 'brookfield-mobile-view-filter',
   templateUrl: './mobile-view-filter.component.html',
-  styleUrls: ['./mobile-view-filter.component.scss']
+  styleUrls: ['./mobile-view-filter.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MobileViewFilterComponent implements OnInit, OnChanges {
   @Input() openFilter: { open: boolean };
@@ -19,7 +21,7 @@ export class MobileViewFilterComponent implements OnInit, OnChanges {
   @ViewChild('viewsMenu') viewsMenu: ElementRef<HTMLDivElement>;
   @ViewChild('filterTools') filterTools: ElementRef<HTMLDivElement>;
 
-  selectedViewType: string = 'See All Home Plans';
+  selectedViewType = 'See All Home Plans';
 
   constructor() {}
 

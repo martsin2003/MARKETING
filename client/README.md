@@ -10,35 +10,101 @@ Nx is an open source toolkit for enterprise Angular applications.
 
 Nx is designed to help you create and build enterprise grade Angular applications. It provides an opinionated approach to application project structure and patterns.
 
-## Quick Start & Documentation
-
-[Watch a 5-minute video on how to get started with Nx.](http://nrwl.io/nx)
-
-## Generate your first application
-
-Run `ng generate app myapp` to generate an application. When using Nx, you can create multiple applications and libraries in the same CLI workspace. Read more [here](http://nrwl.io/nx).
-
-## Development server
-
-Run `ng serve --app=myapp` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name --app=myapp` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build --app=myapp` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Overview of app structure
+
+_Note: The structure approach is mostly influenced by conbination of Victor Savki's book "Enterprise Angular Monorepo Patterns" and examples from Venturplex projects_
+
+_Apps_ - (From the guide):
+An app produces a binary. It contains the minimal amount of code required to package many libs to create an artifact that is deployed.
+Apps are meant only to organize other libs into a deployable artifact - there is not a lot of code present in the applications outside of the module file and maybe a some basic routing.
+All of the application’s code is organized into libs.
+
+_Libs_ - A lib is a set of files packaged together that is consumed by apps. It has units that build up a application - features, data-services, everything state-related, etc.
+Lib is usually a module, and has a barrel file that exports the lib’s public API.
+
+## Our app structure
+
+```
+apps
+- portal
+...
+
+libs
+
+- material	// lib for importing Angular Material Modules
+
+- common			// things that can be shared between different apps.
+- - styles			// lib for variables to be used across libs and apps
+- - ui-components 	// lib for components, which can be shared across different apps
+- - utilities		// lib for utility services, which can be shared across different apps
+
+- portal		// everything that intended to be used only across ‘portal’ app
+- - feature 	// grouping folder for features that form the ‘portal’ app.
+			  	// Each is a module, usually lazy loaded, that has it’s ‘container’ and ‘presentational’ components, specific only to this feature.
+
+- - shared-components	// lib for components which may be reused within the ‘portal’ app (modals, selects, filters, header, footer, etc.)
+
+- - core-data		// grouping folder for data-services
+- - - generated		// everything generated, module + folders, split by features
+- - - feature		// feature-related data-services
+- - - - interface
+- - - - http service
+- - - utils			// utils to be used across ‘portal’ app
+- - - common
+- - - - interceptors
+- - - - error handlers
+
+- - core-state
+- - - feature
+- - - - actions
+- - - - reducers
+- - - - effects
+- - - - facade
+```
+
+# CLI commands for generating things:
+
+Below are listed some of most commonly used commands so far. We’ll be adding more as we use them.
+
+All can be found [here](https://nx.dev/getting-started/what-is-nx) under _CLI Schematics_.
+We can also run any of the generate commands with —-help to get usage details.
+_Ex:_ `ng g lib --help`.
+
+## Generating lib:
+
+Command: `ng g lib {{ lib-name }} [options]`
+
+_Example:_ `ng g lib empower --directory portal/feature --routing=true --parent-module=apps/portal/src/app/app-routing.module.ts --lazy --tags=scope:empower,type:feature`
+
+Options:
+
+`--directory={{ path }}` // path relative to _libs_ folder, where the lib will be generated
+
+`--routing=true` // add router configuration
+
+`-—lazy` // Add _RouterModule.forChild_ when set to true, and a simple array of routes when set to false.
+
+`--parent-module={{ pathToParentModule }}` // path to parent module for registering lib's routes as child routes. From project root.
+
+`--tags=scope:{{ scope }},type:{{ type }}` (see below)
+
+`{{ scope }}` - logical grouping, business use-case, or domain. May be routing group, general feature or collection of pages the lib belongs to. Ex. `community`, `resources`
+
+`{{ type }}` - one of 4: _feature, ui, data-access_ or _utility_.
+
+_Note on lazy loading_: _In some cases, when creating lazy-loaded libraries, you need to manually add an entry to the `tsconfig.app.json` file of the parent module app, so TypeScript knows to build it as well_.
+
+## Generating component
+
+Command:
+
+`ng g c containers/{{component-name}} --project={{ project-name }}`
+`ng g c presentational/{{component-name}} --project={{ project-name }}`
+
+`{{ project-name }}` - lib, whose module will be registering and containing the component. `{{ project-name }}` can be found in `nx.json` file.
+
+_Example_: `ng g c containers/empower --project=portal-feature-empower`

@@ -1,37 +1,33 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { BreakpointObserver } from '@angular/cdk/layout';
+import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { Location } from '@angular/common';
 import { filter, takeUntil } from 'rxjs/operators';
-import { Subject } from 'rxjs';
+import { Subject, Observable } from 'rxjs';
+import { DetectMobileViewService } from '@brookfield/common/utilities';
 
 @Component({
   selector: 'brookfield-navigation',
   templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss']
+  styleUrls: ['./navigation.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavigationComponent implements OnInit, OnDestroy {
   menuOpened: boolean;
   desktopMenuOpened: boolean;
-  isMobileScreen: boolean;
+  isMobileScreen$: Observable<boolean>;
   absoluteHeader = true;
   private destroy$: Subject<boolean> = new Subject<boolean>();
   private urlsWithAbsoluteHeader = ['/home'];
 
   constructor(
-    private breakpointObserver: BreakpointObserver,
     private router: Router,
-    private location: Location
-  ) {
-    breakpointObserver.observe(['(max-width: 959px)']).subscribe(result => {
-      this.isMobileScreen = result.matches;
-    });
-  }
+    private location: Location,
+    private detectMobileViewService: DetectMobileViewService
+  ) {}
 
   ngOnInit() {
+    this.isMobileScreen$ = this.detectMobileViewService.isMobileView();
     this.listenToRouteChange();
-    // One time check as the `observe` method in constructor doesn't always fire on page render
-    this.isMobileScreen = this.breakpointObserver.isMatched('(max-width: 959px)');
   }
 
   ngOnDestroy() {

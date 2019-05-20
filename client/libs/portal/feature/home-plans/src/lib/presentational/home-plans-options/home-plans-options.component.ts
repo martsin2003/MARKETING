@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { MatBottomSheetRef } from '@angular/material';
 
 @Component({
   selector: 'brookfield-home-plans-options',
   templateUrl: './home-plans-options.component.html',
-  styleUrls: ['./home-plans-options.component.scss']
+  styleUrls: ['./home-plans-options.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomePlansOptionsComponent implements OnInit {
   homePlansTypes = [
