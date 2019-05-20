@@ -13,6 +13,8 @@ import { MaterialModule } from '@brookfield/material';
 import { PortalSharedFeatureNavigationModule } from '@brookfield/portal/shared/feature-navigation';
 import { PortalSharedFeatureFooterModule } from '@brookfield/portal/shared/feature-footer';
 import { environment } from '../environments/environment';
+import { PortalCoreDataDataServicesModule } from '@brookfield/portal/core-data/data-services';
+import { PortalCoreStateModule } from '@brookfield/portal/core-state';
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,7 +26,9 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     MaterialModule,
     PortalSharedFeatureNavigationModule,
-    PortalSharedFeatureFooterModule
+    PortalSharedFeatureFooterModule,
+    PortalCoreDataDataServicesModule,
+    PortalCoreStateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
