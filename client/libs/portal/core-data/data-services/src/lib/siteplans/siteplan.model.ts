@@ -1,0 +1,21 @@
+export interface Siteplan {
+  intSiteplanId?: string | null;
+  varSiteplanLotSection?: string | null;
+  varSiteplanLotLetter?: string | null;
+  intSiteplanLotNumber?: number | null;
+  varSiteplanLotInstanceId?: string | null;
+  intSiteplanCommunityId?: number | null;
+  varSiteplanLotStatus?: string | null;
+  curSiteplanLotPrice?: string | null;
+  intSiteplanLotSqFt?: number | null;
+  varSiteplanLotImgPath?: string | null;
+  varSiteplanLotHomeFeatures?: string | null;
+  txtSiteplanLotAmenityDetails?: string | null;
+  varSiteplanLotLat?: string | null;
+  varSiteplanLotLong?: string | null;
+  varSiteplanLotAcres?: string | null;
+  varSiteplanAddress?: string | null;
+  varSiteplanCity?: string | null;
+  varSiteplanState?: string | null;
+  varSiteplanZip?: string | null;
+}

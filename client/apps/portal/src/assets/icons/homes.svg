@@ -1,0 +1,34 @@
+
+<svg width="41px" height="32px" viewBox="0 0 41 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <filter x="-1.7%" y="-3.1%" width="103.4%" height="106.2%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Listings/DesktopCom/NOmin" transform="translate(-234.000000, -84.000000)" fill="#6295BA">
+            <g id="Community-Listing" filter="url(#filter-1)">
+                <g id="Home-Type-Copy" transform="translate(238.000000, 88.000000)">
+                    <g id="Icons/SFH/Color">
+                        <g id="Group-11">
+                            <polygon id="Fill-1" points="15.1837304 19.5330857 17.7330522 19.5330857 17.7330522 16.7296571 15.1837304 16.7296571"></polygon>
+                            <polygon id="Fill-2" points="19.8507913 19.5330857 22.400113 19.5330857 22.400113 16.7296571 19.8507913 16.7296571"></polygon>
+                            <polygon id="Fill-3" points="24.5175652 19.5330857 27.066887 19.5330857 27.066887 16.7296571 24.5175652 16.7296571"></polygon>
+                            <polygon id="Fill-4" points="6.67317391 19.5328 9.22278261 19.5328 9.22278261 16.7293714 6.67317391 16.7293714"></polygon>
+                            <polygon id="Fill-5" points="10.9281652 13.1393714 13.4777739 13.1393714 13.4777739 10.3356571 10.9281652 10.3356571"></polygon>
+                            <polygon id="Fill-6" points="6.67317391 13.1393714 9.22278261 13.1393714 9.22278261 10.3356571 6.67317391 10.3356571"></polygon>
+                            <polygon id="Fill-7" points="15.1837304 13.1393714 17.7330522 13.1393714 17.7330522 10.3356571 15.1837304 10.3356571"></polygon>
+                            <path d="M10.9283374,16.5750571 L10.9283374,22.3773429 L4.9863287,22.3773429 L4.9863287,7.9922 L12.2029983,3.09905714 L19.4202417,7.99248571 L19.4202417,15.3564857 L28.9004243,15.3564857 L28.9004243,22.3773429 L13.4779461,22.3773429 L13.4779461,16.5750571 L10.9283374,16.5750571 Z M32.2394504,22.3773429 L30.4382243,22.3773429 L30.4382243,13.8256286 L20.9577548,13.8256286 L20.9577548,13.2284857 L30.42732,13.2284857 L30.42732,11.6973429 L20.9577548,11.6973429 L20.9577548,9.03477143 L22.9667374,10.3970571 L24.4063983,8.29248571 L12.9226852,0.506485714 C12.48852,0.211914286 11.9174765,0.211914286 11.4833113,0.506485714 L-0.000114782609,8.29248571 L1.43954609,10.3970571 L3.4485287,9.03477143 L3.4485287,22.3773429 L1.6163113,22.3773429 C1.24527652,22.3773429 0.940815652,22.6799143 0.940815652,23.0493429 L0.940815652,23.8824857 L32.9146591,23.8824857 L32.9146591,23.0493429 C32.9146591,22.6799143 32.6110591,22.3773429 32.2394504,22.3773429 L32.2394504,22.3773429 Z" id="Fill-8"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

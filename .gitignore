@@ -46,3 +46,5 @@ client/.angulardoc.json
 # System Files
 client/.DS_Store
 client/Thumbs.db
+.DS_Store
+.DS_Store?

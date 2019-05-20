@@ -31,6 +31,15 @@ const routes: Routes = [
       '@brookfield/portal/feature/home-design-detail#PortalFeatureHomeDesignDetailModule'
   },
   {
+    path: 'find',
+    children: [
+      {
+        path: 'communities',
+        loadChildren: '@brookfield/portal/feature/communities#PortalFeatureCommunitiesModule'
+      }
+    ]
+  },
+  {
     path: 'community-microsite',
     loadChildren: '@brookfield/portal/feature/community#PortalFeatureCommunityModule'
   },

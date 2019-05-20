@@ -1,0 +1,32 @@
+<div class="communities-header">
+  <div class="communities-header__title">
+    4 Communities in London COuntry, VA
+  </div>
+  <div class="communities-header__actions">
+    <div class="communities-header__display">
+      <img src="assets/icons/list-map-view.svg" *ngIf="view === 'listMap'" />
+      <img
+        src="assets/icons/list-map-view-grey.svg"
+        *ngIf="view !== 'listMap'"
+        (click)="changeView('listMap')"
+      />
+      <img src="assets/icons/list-view.svg" *ngIf="view === 'list'" />
+      <img
+        src="assets/icons/list-view-grey.svg"
+        *ngIf="view !== 'list'"
+        (click)="changeView('list')"
+      />
+      <img src="assets/icons/map-view.svg" *ngIf="view === 'map'" />
+      <img
+        src="assets/icons/map-view-grey.svg"
+        *ngIf="view !== 'map'"
+        (click)="changeView('map')"
+      />
+    </div>
+
+    <div class="communities-header__filter">
+      <img src="assets/icons/filter-icon.svg" (click)="openFilter()" />
+      <span class="communities-header__filter-text">Filters</span>
+    </div>
+  </div>
+</div>

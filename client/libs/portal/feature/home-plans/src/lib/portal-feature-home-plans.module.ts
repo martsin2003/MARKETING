@@ -1,3 +1,4 @@
+import { PortalSharedComponentsModule } from './../../../../shared-components/src/lib/portal-shared-components.module';
 import { PortalSharedViewFilterModule } from './../../../../shared/view-filter/src/lib/portal-shared-view-filter.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -11,6 +12,7 @@ import { TypesViewHomePlansComponent } from './presentational/types-view-home-pl
 @NgModule({
   imports: [
     CommonModule,
+    PortalSharedComponentsModule,
     MaterialModule,
     RouterModule.forChild([{ path: '', pathMatch: 'full', component: HomePlansComponent }]),
     PortalSharedViewFilterModule

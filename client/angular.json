@@ -570,6 +570,130 @@
           "styleext": "scss"
         }
       }
+    },
+    "portal-feature-communities": {
+      "root": "libs/portal/feature/communities",
+      "sourceRoot": "libs/portal/feature/communities/src",
+      "projectType": "library",
+      "prefix": "brookfield",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/portal/feature/communities/tsconfig.lib.json",
+              "libs/portal/feature/communities/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/portal/feature/communities/jest.config.js",
+            "tsConfig": "libs/portal/feature/communities/tsconfig.spec.json",
+            "setupFile": "libs/portal/feature/communities/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "common-utilities": {
+      "root": "libs/common/utilities",
+      "sourceRoot": "libs/common/utilities/src",
+      "projectType": "library",
+      "prefix": "brookfield",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/common/utilities/tsconfig.lib.json",
+              "libs/common/utilities/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/common/utilities/jest.config.js",
+            "tsConfig": "libs/common/utilities/tsconfig.spec.json",
+            "setupFile": "libs/common/utilities/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "portal-core-state": {
+      "root": "libs/portal/core-state",
+      "sourceRoot": "libs/portal/core-state/src",
+      "projectType": "library",
+      "prefix": "brookfield",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/portal/core-state/tsconfig.lib.json",
+              "libs/portal/core-state/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/portal/core-state/jest.config.js",
+            "tsConfig": "libs/portal/core-state/tsconfig.spec.json",
+            "setupFile": "libs/portal/core-state/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "portal-core-data-data-services": {
+      "root": "libs/portal/core-data/data-services",
+      "sourceRoot": "libs/portal/core-data/data-services/src",
+      "projectType": "library",
+      "prefix": "brookfield",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/portal/core-data/data-services/tsconfig.lib.json",
+              "libs/portal/core-data/data-services/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/portal/core-data/data-services/jest.config.js",
+            "tsConfig": "libs/portal/core-data/data-services/tsconfig.spec.json",
+            "setupFile": "libs/portal/core-data/data-services/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {
@@ -585,7 +709,8 @@
       "styleext": "scss"
     },
     "@nrwl/schematics:component": {
-      "styleext": "scss"
+      "styleext": "scss",
+      "changeDetection": "OnPush"
     },
     "@nrwl/schematics:library": {
       "style": "scss",

@@ -1,22 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { DetectMobileViewService } from '@brookfield/common/utilities';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'brookfield-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss']
+  styleUrls: ['./footer.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FooterComponent implements OnInit {
-  isMobileScreen: boolean;
+  isMobileScreen$: Observable<boolean>;
 
-  constructor(private breakpointObserver: BreakpointObserver) {
-    breakpointObserver.observe(['(max-width: 959px)']).subscribe(result => {
-      this.isMobileScreen = result.matches;
-    });
-  }
+  constructor(private detectMobileViewService: DetectMobileViewService) {}
 
   ngOnInit() {
-    // One time check as the `observe` method in constructor doesn't always fire on page render
-    this.isMobileScreen = this.breakpointObserver.isMatched('(max-width: 959px)');
+    this.isMobileScreen$ = this.detectMobileViewService.isMobileView();
   }
 }

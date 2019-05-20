@@ -1,0 +1,30 @@
+<div
+  class="community-list"
+  [ngClass]="{
+    'community-list__list-map': view === 'listMap',
+    'community-list__list': view === 'list',
+    'community-list__map': view === 'map'
+  }"
+>
+  <brookfield-communities-header
+    [view]="view"
+    (viewChanged)="viewChanged($event)"
+  ></brookfield-communities-header>
+  <div class="community-list__content">
+    <div class="community-list__communities">
+      <div class="community-list__community" *ngFor="let community of communities">
+        <brookfield-community-card
+          class="community-list__community-card"
+          [community]="community"
+          (cardSelected)="communitySelected($event)"
+        ></brookfield-community-card>
+      </div>
+    </div>
+    <div [hidden]="view === 'list'" class="community-list__map-block" #map></div>
+  </div>
+  <div class="community-list__compare-comunities" *ngIf="communitiesForCompare?.length">
+    <brookfield-communities-selected
+      [communities]="communitiesForCompare"
+    ></brookfield-communities-selected>
+  </div>
+</div>

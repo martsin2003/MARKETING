@@ -58,6 +58,18 @@
     },
     "portal-shared-feature-empowered-slider": {
       "tags": ["scope:home-plans", "type:feature"]
+    },
+    "portal-feature-communities": {
+      "tags": ["scope:communities", "type:feature"]
+    },
+    "common-utilities": {
+      "tags": ["scope:portal", "type:util"]
+    },
+    "portal-core-state": {
+      "tags": ["scope:core-data", "type:data-access"]
+    },
+    "portal-core-data-data-services": {
+      "tags": ["scope:core-data", "type:data-access"]
     }
   }
 }

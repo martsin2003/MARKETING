@@ -1,9 +1,17 @@
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Output,
+  EventEmitter,
+  Input,
+  ChangeDetectionStrategy
+} from '@angular/core';
 
 @Component({
   selector: 'brookfield-main-nav-desktop',
   templateUrl: './main-nav-desktop.component.html',
-  styleUrls: ['./main-nav-desktop.component.scss']
+  styleUrls: ['./main-nav-desktop.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MainNavDesktopComponent implements OnInit {
   @Output() navigate = new EventEmitter<string>();

@@ -1,37 +1,33 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { BreakpointObserver } from '@angular/cdk/layout';
+import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { Location } from '@angular/common';
-import { filter, takeUntil } from 'rxjs/operators';
-import { Subject } from 'rxjs';
+import { filter, takeUntil, distinctUntilChanged, map } from 'rxjs/operators';
+import { Subject, Observable, combineLatest } from 'rxjs';
+import { DetectMobileViewService } from '@brookfield/common/utilities';
 
 @Component({
   selector: 'brookfield-navigation',
   templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss']
+  styleUrls: ['./navigation.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavigationComponent implements OnInit, OnDestroy {
   menuOpened: boolean;
   desktopMenuOpened: boolean;
-  isMobileScreen: boolean;
+  showMobileHeader$: Observable<boolean>;
   absoluteHeader = true;
   private destroy$: Subject<boolean> = new Subject<boolean>();
   private urlsWithAbsoluteHeader = ['/home'];
 
   constructor(
-    private breakpointObserver: BreakpointObserver,
     private router: Router,
-    private location: Location
-  ) {
-    breakpointObserver.observe(['(max-width: 959px)']).subscribe(result => {
-      this.isMobileScreen = result.matches;
-    });
-  }
+    private location: Location,
+    private detectMobileViewService: DetectMobileViewService
+  ) {}
 
   ngOnInit() {
+    this.showMobileHeader$ = this.shouldShowMobileHeader();
     this.listenToRouteChange();
-    // One time check as the `observe` method in constructor doesn't always fire on page render
-    this.isMobileScreen = this.breakpointObserver.isMatched('(max-width: 959px)');
   }
 
   ngOnDestroy() {
@@ -50,6 +46,18 @@ export class NavigationComponent implements OnInit, OnDestroy {
 
   setMenuOpenedState(opened: boolean) {
     this.desktopMenuOpened = opened;
+  }
+
+  private shouldShowMobileHeader(): Observable<boolean> {
+    return combineLatest(
+      this.detectMobileViewService.isMobileView().pipe(distinctUntilChanged()),
+      this.detectMobileViewService.isTabletView().pipe(distinctUntilChanged())
+    ).pipe(
+      map(([isMobileView, isTabletView]) => {
+        return isMobileView || isTabletView;
+      }),
+      takeUntil(this.destroy$)
+    );
   }
 
   private listenToRouteChange() {
