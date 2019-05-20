@@ -1,0 +1,35 @@
+<mat-card class="community-card">
+  <div class="community-card__top">
+    <img
+      src="https://www.brookfielddc.com/uploads/galleryCommunity/full/910E9D40-B5EF-744C-7350F20E63B49AE1.jpg"
+      class="community-card__image h-75"
+    />
+    <div class="community-card__content">
+      <div class="community-card__name">Community Name</div>
+      <div class="community-card__state">City ST</div>
+      <div class="community-card__price">Starting Price $X00,000</div>
+      <div class="community-card__icon community-card__homes-icon">
+        <img src="assets/icons/homes.svg" />
+        <div class="community-card__icon-text">Single-Family Homes</div>
+      </div>
+      <div class="community-card__home-inside-icon">
+        <div class="community-card__icon">
+          <img src="assets/icons/beds.svg" />
+          <div class="community-card__icon-text">4-7 Beds</div>
+        </div>
+        <div class="community-card__icon">
+          <img src="assets/icons/baths.svg" />
+          <div class="community-card__icon-text">2.5-7 Baths</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="community-card__bottom">
+    <div class="community-card__compare">
+      <mat-checkbox color="primary" (click)="compareCard(community.id)">Compare</mat-checkbox>
+    </div>
+    <div class="community-card__explore">
+      <button class="community-card__explore-button">EXPLORE COMMUNITY</button>
+    </div>
+  </div>
+</mat-card>

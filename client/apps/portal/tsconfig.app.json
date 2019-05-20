@@ -16,6 +16,8 @@
 
     "../../libs/portal/feature/home-design-detail/src/index.ts",
 
-    "../../libs/portal/feature/community/src/index.ts"
+    "../../libs/portal/feature/community/src/index.ts",
+
+    "../../libs/portal/feature/communities/src/index.ts"
   ]
 }

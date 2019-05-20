@@ -1,0 +1,188 @@
+.items {
+  width: calc(50% - 40px);
+  display: flex;
+  height: auto;
+  margin: 10px;
+  background: white;
+  padding: 10px;
+  box-shadow: 0px 0px 4px -1px rgb(155, 155, 155);
+  &__first-half {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 8px;
+    img {
+      width: 100%;
+    }
+    .place {
+      display: flex;
+      align-items: center;
+      mat-icon {
+        margin-right: 5px;
+      }
+    }
+    @media screen and (max-width: 940px) {
+      mat-checkbox,
+      .place {
+        display: none;
+      }
+    }
+  }
+  &__second-half {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 8px;
+    .home-name {
+      width: 100%;
+      text-align: start;
+      font-weight: 600;
+      font-size: 18px;
+    }
+    .details {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: 'Open Sans', sans-serif;
+      padding: 8px 0px;
+      font-size: 14px;
+      font-weight: 100;
+      color: rgb(78, 78, 78);
+      mat-icon {
+        margin-right: 5px;
+      }
+      .second-icon {
+        margin-left: 20px;
+      }
+    }
+    .button {
+      width: 100%;
+      button {
+        width: 100%;
+      }
+    }
+    .place {
+      display: none;
+      align-items: center;
+      mat-icon {
+        margin-right: 5px;
+      }
+    }
+    mat-checkbox {
+      display: none;
+      margin-top: 5px;
+    }
+    @media screen and (max-width: 940px) {
+      mat-checkbox,
+      .place {
+        display: flex;
+      }
+    }
+  }
+  @media screen and (max-width: 940px) {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+.community-card {
+  padding: 8px;
+  color: #404042;
+  font-family: HelveticaNeue-Bold;
+
+  &__checkbox {
+    font-size: 18px;
+    letter-spacing: 0;
+  }
+  &__top {
+    display: flex;
+    @media screen and(max-width: 500px) {
+      flex-direction: column;
+    }
+  }
+  &__image {
+    width: 50%;
+    padding-right: 5px;
+    @media screen and(max-width: 500px) {
+      width: 100%;
+      height: auto !important;
+    }
+  }
+  &__name {
+    font-size: 18px;
+    color: #0f2d4f;
+    line-height: 22px;
+  }
+  &__state {
+    font-size: 16px;
+    color: #404042;
+    line-height: 22px;
+  }
+  &__price {
+    font-size: 16px;
+    color: #6295ba;
+    line-height: 22px;
+  }
+  &__icon {
+    font-size: 16px;
+    color: #404042;
+    letter-spacing: 0;
+    line-height: 20px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    img {
+      margin-right: 2px;
+    }
+  }
+  &__home-inside-icon {
+    display: flex;
+    @media screen and(max-width: 500px) {
+      flex-direction: column;
+    }
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    @media screen and(max-width: 500px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  &__explore-button {
+    color: #6295ba;
+    border: 1px solid #6295ba;
+    padding: 10px;
+    width: 100%;
+    font-size: 14px;
+  }
+  &__compare {
+    flex: 1;
+    @media screen and(max-width: 500px) {
+      order: 2;
+      margin-top: 10px;
+      .mat-checkbox-inner-container {
+        height: 22px;
+        width: 22px;
+      }
+    }
+  }
+  &__explore {
+    flex: 1;
+    @media screen and(max-width: 500px) {
+      order: 1;
+      width: 100%;
+    }
+    button {
+      outline: 0;
+    }
+  }
+}

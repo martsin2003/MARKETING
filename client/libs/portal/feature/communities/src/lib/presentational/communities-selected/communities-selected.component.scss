@@ -1,0 +1,37 @@
+.communities-selected {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item {
+    margin-right: 10px;
+  }
+  &__image {
+    width: 100px;
+    height: auto;
+  }
+  &__image-wrapper {
+    position: relative;
+    width: fit-content;
+  }
+  &__close {
+    top: 0;
+    right: 0;
+    position: absolute;
+  }
+  &__compare-button {
+    color: #fff;
+    background: #6295ba;
+    padding: 10px;
+    border: none;
+    font-size: 14px;
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+}
