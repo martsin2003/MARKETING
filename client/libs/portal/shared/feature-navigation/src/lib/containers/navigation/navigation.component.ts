@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { Location } from '@angular/common';
-import { filter, takeUntil } from 'rxjs/operators';
-import { Subject, Observable } from 'rxjs';
+import { filter, takeUntil, distinctUntilChanged, map } from 'rxjs/operators';
+import { Subject, Observable, combineLatest } from 'rxjs';
 import { DetectMobileViewService } from '@brookfield/common/utilities';
 
 @Component({
@@ -14,7 +14,7 @@ import { DetectMobileViewService } from '@brookfield/common/utilities';
 export class NavigationComponent implements OnInit, OnDestroy {
   menuOpened: boolean;
   desktopMenuOpened: boolean;
-  isMobileScreen$: Observable<boolean>;
+  showMobileHeader$: Observable<boolean>;
   absoluteHeader = true;
   private destroy$: Subject<boolean> = new Subject<boolean>();
   private urlsWithAbsoluteHeader = ['/home'];
@@ -26,7 +26,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    this.isMobileScreen$ = this.detectMobileViewService.isMobileView();
+    this.showMobileHeader$ = this.shouldShowMobileHeader();
     this.listenToRouteChange();
   }
 
@@ -46,6 +46,18 @@ export class NavigationComponent implements OnInit, OnDestroy {
 
   setMenuOpenedState(opened: boolean) {
     this.desktopMenuOpened = opened;
+  }
+
+  private shouldShowMobileHeader(): Observable<boolean> {
+    return combineLatest(
+      this.detectMobileViewService.isMobileView().pipe(distinctUntilChanged()),
+      this.detectMobileViewService.isTabletView().pipe(distinctUntilChanged())
+    ).pipe(
+      map(([isMobileView, isTabletView]) => {
+        return isMobileView || isTabletView;
+      }),
+      takeUntil(this.destroy$)
+    );
   }
 
   private listenToRouteChange() {
