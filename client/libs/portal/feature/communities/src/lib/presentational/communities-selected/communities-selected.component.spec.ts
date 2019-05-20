@@ -8,8 +8,9 @@ describe('CommunitiesSelectedComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [CommunitiesSelectedComponent]
-    }).compileComponents();
+      declarations: [ CommunitiesSelectedComponent ]
+    })
+    .compileComponents();
   }));
 
   beforeEach(() => {
