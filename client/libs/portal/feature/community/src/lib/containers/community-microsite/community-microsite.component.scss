@@ -32,6 +32,33 @@
 				margin-right: 20px;
 			}
 		}
+		&.mobile-header {
+			display: none;
+			.btn-container {
+				display: flex;
+				flex-direction: row;
+				padding-top: 15px;
+				button {
+					width: 50%;
+					font-weight: 100;
+					font-size: 14px;
+					&:first-child {
+						margin-right: 7.5px;
+					}
+					&:last-child {
+						margin-left: 7.5px;
+					}
+				}
+			}
+		}
+		@media screen and (max-width: 780px) {
+			&.mobile-header {
+				display: block;
+			}
+			&.desktop-header {
+				display: none;
+			}
+		}
 	}
 	&__home-services {
 		display: flex;
@@ -51,6 +78,12 @@
 				font-family: 'Helvetica Neue';
 			}
 		}
+		@media screen and (max-width: 650px) {
+			flex-direction: column;
+			.service-detail {
+				margin: 10px 0px;
+			}
+		}
 	}
 	&__description {
 		padding: 15px;
@@ -58,6 +91,8 @@
 		font-family: 'Helvetica Neue';
 		font-weight: 'Regular';
 		color: #404042;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 	&__second-carousel {
 		padding: 15px 0px;
