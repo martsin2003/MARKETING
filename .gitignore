@@ -4,6 +4,7 @@
 node_modules
 .vscode/*
 !.vscode/settings.json
+.angulardoc.json
 
 # compiled output
 client/dist
