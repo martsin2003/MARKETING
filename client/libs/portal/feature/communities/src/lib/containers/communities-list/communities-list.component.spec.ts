@@ -8,9 +8,8 @@ describe('CommunitiesListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CommunitiesListComponent ]
-    })
-    .compileComponents();
+      declarations: [CommunitiesListComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

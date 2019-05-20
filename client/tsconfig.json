@@ -36,6 +36,9 @@
         "libs/portal/feature/home-design-detail/src/index.ts"
       ],
       "@brookfield/portal/feature/community": ["libs/portal/feature/community/src/index.ts"],
+      "@brookfield/portal/shared/feature-empowered-slider": [
+        "libs/portal/shared/feature-empowered-slider/src/index.ts"
+      ],
       "@brookfield/portal/feature/communities": ["libs/portal/feature/communities/src/index.ts"],
       "@brookfield/common/utilities": ["libs/common/utilities/src/index.ts"],
       "@brookfield/portal/core-state": ["libs/portal/core-state/src/index.ts"],
