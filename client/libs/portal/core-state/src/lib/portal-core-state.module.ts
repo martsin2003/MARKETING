@@ -12,6 +12,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 @NgModule({
   imports: [
     CommonModule,
+    NxModule.forRoot(),
     StoreModule.forRoot(reducers),
     EffectsModule.forRoot([SiteplansEffects]),
     !environment.production ? StoreDevtoolsModule.instrument() : []

@@ -10,7 +10,7 @@ import {
   SiteplansActionTypes
 } from './siteplans.actions';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class SiteplansEffects {
   @Effect() loadSiteplans$ = this.dataPersistence.fetch(SiteplansActionTypes.LoadSiteplans, {
     run: (action: LoadSiteplans, state: SiteplansState) => {
