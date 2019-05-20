@@ -61,6 +61,9 @@
     },
     "portal-core-state": {
       "tags": ["scope:core-data", "type:data-access"]
+    },
+    "portal-core-data-data-services": {
+      "tags": ["scope:core-data", "type:data-access"]
     }
   }
 }
