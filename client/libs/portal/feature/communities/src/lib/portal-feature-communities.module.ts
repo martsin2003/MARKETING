@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { CommunitiesListComponent } from './containers/communities-list/communities-list.component';
 import { CommunitiesHeaderComponent } from './presentational/communities-header/communities-header.component';
 import { CommunitiesSelectedComponent } from './presentational/communities-selected/communities-selected.component';
+import { CommunitiesCompareComponent } from './containers/communities-compare/communities-compare.component';
 
 @NgModule({
   imports: [
@@ -12,6 +13,11 @@ import { CommunitiesSelectedComponent } from './presentational/communities-selec
     PortalSharedComponentsModule,
     RouterModule.forChild([{ path: '', pathMatch: 'full', component: CommunitiesListComponent }])
   ],
-  declarations: [CommunitiesListComponent, CommunitiesHeaderComponent, CommunitiesSelectedComponent]
+  declarations: [
+    CommunitiesListComponent,
+    CommunitiesHeaderComponent,
+    CommunitiesSelectedComponent,
+    CommunitiesCompareComponent
+  ]
 })
 export class PortalFeatureCommunitiesModule {}
