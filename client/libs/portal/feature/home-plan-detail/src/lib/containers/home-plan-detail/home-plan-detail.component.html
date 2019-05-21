@@ -69,7 +69,13 @@
         </p>
       </div>
       <div class="wrp-description__buttons">
-        <button class="br-button br-button--primary button">DOWNLOAD FLOORPLAN</button>
+        <button
+          class="br-button br-button--primary button"
+          [routerLink]="['/find/home-plan-detail/interactive-floorplan']"
+          routerLinkActive="router-link-active"
+        >
+          INTERACTIVE FLOORPLAN
+        </button>
         <button class="br-button br-button--primary button">VIRTUAL TOUR</button>
         <button class="br-button br-button--primary button">VIDEO TOUR</button>
       </div>

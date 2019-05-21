@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FindMyHomeComponent } from './find-my-home.component';
+import { ElevationSelectComponent } from './elevation-select.component';
 
-describe('FindMyHomeComponent', () => {
-  let component: FindMyHomeComponent;
-  let fixture: ComponentFixture<FindMyHomeComponent>;
+describe('ElevationSelectComponent', () => {
+  let component: ElevationSelectComponent;
+  let fixture: ComponentFixture<ElevationSelectComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [FindMyHomeComponent]
+      declarations: [ElevationSelectComponent]
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FindMyHomeComponent);
+    fixture = TestBed.createComponent(ElevationSelectComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

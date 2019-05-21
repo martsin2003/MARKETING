@@ -11,12 +11,7 @@
       <span class="font-24 d-block label-text-2">Residential</span>
     </a>
     <div class="main-navigation">
-      <button
-        mat-button
-        class="nav-item"
-        (mouseenter)="openMenu('findMyHome')"
-        (click)="navigateTo('/find-my-home')"
-      >
+      <button mat-button class="nav-item" (mouseenter)="openMenu('findMyHome')">
         <mat-icon class="expand-arrow" [ngClass]="{ expanded: openedMenu === 'findMyHome' }">
           expand_more
         </mat-icon>

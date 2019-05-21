@@ -20,6 +20,6 @@ export class HomeCardComponent implements OnInit {
   }
 
   goToDetails() {
-    this.router.navigateByUrl('/home-plan-detail');
+    this.router.navigateByUrl('/find/home-plan-detail');
   }
 }
