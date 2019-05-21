@@ -93,7 +93,29 @@
 		color: #404042;
 		overflow: hidden;
 		text-overflow: ellipsis;
-	}
+  }
+  .more-info-container {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    img {
+      margin-right: 20px;
+      animation-duration: 0.4s;
+      transform: rotate(0deg);
+    }
+    .read-less {
+      transform: rotate(180deg);
+    }
+    span {
+      font-size: 16px;
+      font-family: 'Helvetica Neue', 'Medium';
+      color: #404042;
+      line-height: 1;
+    }
+    @media screen and (min-width: 500px) {
+			display: none;
+    }
+  }
 	&__second-carousel {
 		padding: 15px 0px;
 		.slide-content {
@@ -102,12 +124,29 @@
 			justify-content: space-between;
 			box-sizing: border-box;
 			&__card {
-				width: 32.5%;
+        width: 32.5%;
+        &.mobile {
+          width: 100%;
+        }
 				img {
 					width: 100%;
 				}
 			}
-		}
+    }
+    .desktop-carousel {
+      display: block;
+    }
+    .mobile-carousel {
+      display: none;
+    }
+    @media screen and (max-width: 500px) {
+      .desktop-carousel {
+        display: none;
+      }
+      .mobile-carousel {
+        display: block;
+      }
+    }
 	}
 	&__key-features-container {
 		display: flex;
@@ -117,7 +156,8 @@
 		&__option {
 			width: 65%;
 			&:first-child {
-				width: 35%;
+        width: 35%;
+        padding-right: 18px;
 			}
 			ul {
 				padding-left: 18px;
@@ -127,14 +167,50 @@
 					font-family: 'Helvetica Neue';
 					padding: 5px 0px;
 				}
-			}
+      }
+      @media screen and (max-width: 750px) {
+        display: none;
+      }
 		}
 		&__title {
 			font-size: 28px;
 			color: #6295BA;
 			font-family: 'Helvetica Neue';
 			font-weight: 'Light';
-		}
+    }
+    mat-accordion {
+      width: 100%;
+      &:last-child {
+        mat-expansion-panel {
+          border-top: none;
+        }
+      }
+      ul {
+				li {
+					font-size: 18px;
+					color: #404042;
+					font-family: 'Helvetica Neue';
+					padding: 5px 0px;
+				}
+      }
+      img {
+        margin-right: 15px;
+      }
+      ::ng-deep .mat-content {
+        span {
+          color: #6295BA;
+          font-size: 26px;
+          font-family: 'Helvetica Neue', 'Light';
+        }
+      }
+      @media screen and (min-width: 750px) {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 750px) {
+      padding: 15px 0px 0px;
+      flex-direction: column;
+    }
 	}
 	&__get-empowered {
 		display: flex;
@@ -190,5 +266,5 @@
 				}
 			}
 		}
-	}
+  }
 }
