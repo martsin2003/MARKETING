@@ -1,10 +1,10 @@
-import { Community } from './../../../../../../core-data/data-services/src/lib/communities/communities.model';
-import { CommunitiesFacade } from './../../../../../../core-state/src/lib/communities/communities.facade';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {} from 'googlemaps';
 import { CommunitiesView } from '../../view-model/communities';
-import { BehaviorSubject, ReplaySubject } from 'rxjs';
+import { ReplaySubject } from 'rxjs';
 import { take, filter, map } from 'rxjs/operators';
+import { Community } from '@brookfield/portal/core-data/data-services';
+import { CommunitiesFacade } from '@brookfield/portal/core-state';
 
 @Component({
   selector: 'brookfield-communities-list',
