@@ -53,8 +53,8 @@
 
   <div class="cm-container__description" #description></div>
   <div class="more-info-container" (click)="readMore()">
-    <img src="assets/icons/bottom-arrow.svg" [ngClass]="{'read-less': readLess}">
-    <span>Read {{readLess ? 'Less' : 'More'}}</span>
+    <img src="assets/icons/bottom-arrow.svg" [ngClass]="{ 'read-less': readLess }" />
+    <span>Read {{ readLess ? 'Less' : 'More' }}</span>
   </div>
 
   <div class="cm-container__second-carousel">
@@ -108,7 +108,7 @@
       <mat-expansion-panel class="mobile-expansion-panel" #homePlansPanel="matExpansionPanel">
         <mat-expansion-panel-header class="primary-dark-text">
           <span class="pr-1">
-            <img src="assets/icons/bottom-arrow-blue.svg" alt="" srcset="">
+            <img src="assets/icons/bottom-arrow-blue.svg" alt="" srcset="" />
           </span>
           <span>Nearby Schools</span>
         </mat-expansion-panel-header>
@@ -125,7 +125,7 @@
       <mat-expansion-panel class="mobile-expansion-panel" #homePlansPanel="matExpansionPanel">
         <mat-expansion-panel-header class="primary-dark-text">
           <span class="pr-1">
-            <img src="assets/icons/bottom-arrow-blue.svg" alt="" srcset="">
+            <img src="assets/icons/bottom-arrow-blue.svg" alt="" srcset="" />
           </span>
           <span>Key Features</span>
         </mat-expansion-panel-header>
@@ -140,6 +140,8 @@
       </mat-expansion-panel>
     </mat-accordion>
   </div>
+
+  <brookfield-area-amenities></brookfield-area-amenities>
 
   <div class="cm-container__header mobile-header">
     <div class="btn-container">
