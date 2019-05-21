@@ -17,9 +17,6 @@
     "material": {
       "tags": []
     },
-    "portal-shared-feature-navigation": {
-      "tags": ["scope:shared", "type:feature"]
-    },
     "portal-feature-home": {
       "tags": ["scope:home", "type:feature"]
     },
