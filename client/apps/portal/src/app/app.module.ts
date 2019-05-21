@@ -49,7 +49,9 @@ export class AppModule {
 
     apollo.create({
       link: auth.concat(httpLinkBatch),
-      cache: new InMemoryCache(),
+      cache: new InMemoryCache({
+        dataIdFromObject: o => (o.id ? `${o.__typename}:${o.id}` : null)
+      }),
       defaultOptions: {
         query: {
           fetchPolicy: 'network-only'
