@@ -11,14 +11,16 @@
     (viewChanged)="viewChanged($event)"
   ></brookfield-communities-header>
   <div class="community-list__content">
-    <div class="community-list__communities" *ngIf="communities$ | async as communities">
-      <div class="community-list__community" *ngFor="let community of communities">
-        <brookfield-community-card
-          class="community-list__community-card"
-          [community]="community"
-          (cardSelected)="communitySelected($event)"
-        ></brookfield-community-card>
-      </div>
+    <div class="community-list__communities">
+      <ng-container *ngIf="communities$ | async as communities">
+        <div class="community-list__community" *ngFor="let community of communities">
+          <brookfield-community-card
+            class="community-list__community-card"
+            [community]="community"
+            (cardSelected)="communitySelected($event)"
+          ></brookfield-community-card>
+        </div>
+      </ng-container>
     </div>
     <div [hidden]="view === 'list'" class="community-list__map-block" #map></div>
   </div>

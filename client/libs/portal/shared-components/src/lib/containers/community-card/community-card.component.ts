@@ -1,5 +1,5 @@
-import { Community } from './../../../../core-data/data-services/src/lib/communities/communities.model';
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Community } from 'libs/portal/core-data/data-services/src/lib/communities/communities.model';
 
 @Component({
   selector: 'brookfield-community-card',

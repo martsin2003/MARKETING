@@ -6,7 +6,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { reducers } from '.';
 import { SiteplansEffects } from './siteplans/siteplans.effects';
 import { SiteplansFacade } from './siteplans/siteplans.facade';
-import { NxModule } from '@nrwl/nx';
+import { NxModule, DataPersistence } from '@nrwl/nx';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import {
   COMMUNITIES_FEATURE_KEY,
@@ -33,6 +33,6 @@ import { storeFreeze } from 'ngrx-store-freeze';
     ),
     EffectsModule.forRoot([CommunitiesEffects])
   ],
-  providers: [SiteplansFacade, CommunitiesFacade]
+  providers: [SiteplansFacade, CommunitiesFacade, DataPersistence]
 })
 export class PortalCoreStateModule {}

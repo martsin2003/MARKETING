@@ -13,6 +13,7 @@ export class CommunitiesService extends TblCommunityServiceGenerated {
 
   loadCommunities() {
     return this.allTblCommunitiesGeneratedQuery({
+      first: 4,
       condition: {
         varCommunityStatus: 'active'
       }

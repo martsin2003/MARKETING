@@ -3,7 +3,7 @@ import { CommunitiesFacade } from './../../../../../../core-state/src/lib/commun
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {} from 'googlemaps';
 import { CommunitiesView } from '../../view-model/communities';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, ReplaySubject } from 'rxjs';
 import { take, filter, map } from 'rxjs/operators';
 
 @Component({
@@ -12,14 +12,16 @@ import { take, filter, map } from 'rxjs/operators';
   styleUrls: ['./communities-list.component.scss']
 })
 export class CommunitiesListComponent implements OnInit {
-  communities$: BehaviorSubject<Community[]> = new BehaviorSubject([]);
+  communities$: ReplaySubject<Community[]> = new ReplaySubject(1);
   communitiesForCompare = [];
   view: CommunitiesView = CommunitiesView.listMap;
+
   @ViewChild('map') mapElement: any;
   map: google.maps.Map;
   constructor(private communitiesFacade: CommunitiesFacade) {}
 
   ngOnInit() {
+    console.log('view: ', this.view);
     this.loadCommunities();
     this.initGoogleMaps();
   }
