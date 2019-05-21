@@ -1,50 +1,28 @@
 <div (mouseleave)="closeMenu()">
-  <div
-    class="main-navigation-container d-flex align-items-stretch opened"
-    [ngClass]="{ opened: menuIsOpened, 'absolute-nav': absoluteNav }"
-  >
-    <a
-      (click)="navigateTo('home')"
-      class="no-underline text-right font-weight-bold label-text pl-3 py-2"
-    >
+  <div class="main-navigation-container d-flex align-items-stretch opened"
+    [ngClass]="{ opened: menuIsOpened, 'absolute-nav': absoluteNav }">
+    <a (click)="navigateTo('home')" class="no-underline text-right font-weight-bold label-text pl-3 py-2">
       <span class="font-36 d-block label-text-1">Brookfield</span>
       <span class="font-24 d-block label-text-2">Residential</span>
     </a>
     <div class="main-navigation">
-      <button
-        mat-button
-        class="nav-item"
-        (mouseenter)="openMenu('findMyHome')"
-        (click)="navigateTo('/find-my-home')"
-      >
+      <button mat-button class="nav-item" (mouseenter)="openMenu('findMyHome')" (click)="navigateTo('/find-my-home')">
         <mat-icon class="expand-arrow" [ngClass]="{ expanded: openedMenu === 'findMyHome' }">
           expand_more
         </mat-icon>
         FIND MY HOME
       </button>
 
-      <button
-        mat-button
-        class="nav-item"
-        (mouseenter)="openMenu('homePlans')"
-        (click)="navigateTo('/home-plans')"
-      >
+      <button mat-button class="nav-item" (mouseenter)="openMenu('homePlans')" (click)="navigateTo('/home-plans')">
         <mat-icon class="expand-arrow" [ngClass]="{ expanded: openedMenu === 'homePlans' }">
           expand_more
         </mat-icon>
         HOME PLANS
       </button>
 
-      <button
-        mat-button
-        class="nav-item"
-        (mouseenter)="openMenu('empowerInnovations')"
-        (click)="navigateTo('/empower')"
-      >
-        <mat-icon
-          class="expand-arrow"
-          [ngClass]="{ expanded: openedMenu === 'empowerInnovations' }"
-        >
+      <button mat-button class="nav-item" (mouseenter)="openMenu('empowerInnovations')"
+        (click)="navigateTo('/empower')">
+        <mat-icon class="expand-arrow" [ngClass]="{ expanded: openedMenu === 'empowerInnovations' }">
           expand_more
         </mat-icon>
         EMPOWER INNOVATIONS
@@ -58,8 +36,10 @@
     <mat-card *ngIf="openedMenu === 'findMyHome'" class="main-nav-menu">
       <div class="main-nav-menu-wrapper">
         <mat-list>
-          <img src="http://placehold.it/400x200/333333" />
-
+          <div class="fixed-img">
+            <img src="assets/images/desktop/states-va-fixed.png" />
+            <p class="image-txt">VIRGINIA</p>
+          </div>
           <mat-list-item>
             <button class="main-nav-list-button">
               Frederick County, VA
@@ -80,7 +60,10 @@
         </mat-list>
 
         <mat-list>
-          <img src="http://placehold.it/400x200/333333" />
+          <div class="fixed-img">
+            <img src="assets/images/desktop/states-md-fixed.png" />
+            <p class="image-txt">MARYLAND</p>
+          </div>
           <mat-list-item>
             <button class="main-nav-list-button">
               Anne Arundel County, MD
@@ -101,7 +84,10 @@
         </mat-list>
 
         <mat-list>
-          <img src="http://placehold.it/400x200/333333" />
+          <div class="fixed-img">
+            <img src="assets/images/desktop/states-de-fixed.png" />
+            <p class="image-txt">DELAWARE</p>
+          </div>
           <mat-list-item>
             <button class="main-nav-list-button">
               Sussex County, DE
@@ -165,7 +151,7 @@
               <img src="http://placehold.it/200x200/333333" />
             </button>
             <div class="text-center main-nav-empower-innovations-text">
-              Personalize an alread-built home with your design selections. It's yours within two
+              Personalize an already-built home with your design selections. It's yours within two
               months.
             </div>
           </div>

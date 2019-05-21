@@ -1,0 +1,49 @@
+<div class="communities-compare-table">
+  <div class="communities-compare-table__row">
+    <div class="communities-compare-table__column" *ngFor="let c of communities">
+      <img
+        src="https://www.brookfielddc.com/uploads/galleryCommunity/full/910E9D40-B5EF-744C-7350F20E63B49AE1.jpg"
+        class="h-75 communities-compare-table__image"
+      />
+      <div class="communities-compare-table__name">
+        Mayfair
+        <img src="assets/icons/arrow-right.svg" class="communities-compare-table__arrow-icon" />
+      </div>
+    </div>
+  </div>
+  <ng-container *ngFor="let c of characteristics">
+    <div class="communities-compare-table__row communities-compare-table__row--empty">
+      <div class="communities-compare-table__column" *ngFor="let column of c.values; let i = index">
+        {{ i === 0 ? c.name : '' }}
+      </div>
+    </div>
+    <div class="communities-compare-table__row">
+      <div
+        class="communities-compare-table__column helvetica-light"
+        *ngFor="let column of c.values; let i = index"
+      >
+        <ng-container *ngIf="c.type === 'icon'">
+          <img
+            src="assets/icons/amenities/playground.svg"
+            class="communities-compare-table__arrow-icon"
+          />
+          <img
+            src="assets/icons/amenities/picnic.svg"
+            class="communities-compare-table__arrow-icon"
+          />
+        </ng-container>
+        <ng-container *ngIf="c.type !== 'icon'">
+          {{ column }}
+        </ng-container>
+      </div>
+    </div>
+  </ng-container>
+  <div class="communities-compare-table__row communities-compare-table__row--empty">
+    <div
+      class="communities-compare-table__column communities-compare-table__column--centered"
+      *ngFor="let column of communities"
+    >
+      <button class="br-button br-button--primary">REQUEST MORE INFO</button>
+    </div>
+  </div>
+</div>

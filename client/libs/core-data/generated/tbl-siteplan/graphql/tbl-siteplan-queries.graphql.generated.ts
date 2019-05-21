@@ -57,8 +57,8 @@ export const deleteTblSiteplanByIntSiteplanIdGeneratedMutation = gql`
 `;
 
 export const allTblSiteplansGeneratedQuery = gql`
-    query AllTblSiteplansGenerated($first: Int, $last: Int, $offset: Int, $before: Cursor, $after: Cursor, $orderBy: [TblSiteplansOrderBy!], $condition: TblSiteplanCondition) {
-        allTblSiteplans(first: $first, last: $last, offset: $offset, before: $before, after: $after, orderBy: $orderBy, condition: $condition) {
+    query AllTblSiteplansGenerated($first: Int, $last: Int, $offset: Int, $before: Cursor, $after: Cursor, $orderBy: [TblSiteplansOrderBy!], $condition: TblSiteplanCondition, $filter: TblSiteplanFilter) {
+        allTblSiteplans(first: $first, last: $last, offset: $offset, before: $before, after: $after, orderBy: $orderBy, condition: $condition, filter: $filter) {
             nodes {
                 ...tblSiteplanFragmentGenerated
             }
@@ -77,8 +77,8 @@ export const tblSiteplanByIntSiteplanIdGeneratedQuery = gql`
 `;
 
 export const tblSiteplanGeneratedQuery = gql`
-    query TblSiteplanGenerated($id: ID!) {
-        tblSiteplan(id: $id) {
+    query TblSiteplanGenerated($nodeId: ID!) {
+        tblSiteplan(nodeId: $nodeId) {
             ...tblSiteplanFragmentGenerated
         }
     }
