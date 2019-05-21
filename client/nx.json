@@ -56,7 +56,7 @@
     "portal-core-data-data-services": {
       "tags": ["scope:core-data", "type:data-access"]
     },
-    "portal-core-shared-components": {
+    "portal-shared-components": {
       "tags": ["scope:shared", "type:ui-components"]
     }
   }
