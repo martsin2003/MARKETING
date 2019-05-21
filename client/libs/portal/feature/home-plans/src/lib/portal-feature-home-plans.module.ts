@@ -1,5 +1,4 @@
-import { PortalSharedComponentsModule } from './../../../../shared-components/src/lib/portal-shared-components.module';
-import { PortalSharedViewFilterModule } from './../../../../shared/view-filter/src/lib/portal-shared-view-filter.module';
+import { PortalSharedComponentsModule } from '@brookfield/portal/shared-components';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -14,8 +13,7 @@ import { TypesViewHomePlansComponent } from './presentational/types-view-home-pl
     CommonModule,
     PortalSharedComponentsModule,
     MaterialModule,
-    RouterModule.forChild([{ path: '', pathMatch: 'full', component: HomePlansComponent }]),
-    PortalSharedViewFilterModule
+    RouterModule.forChild([{ path: '', pathMatch: 'full', component: HomePlansComponent }])
   ],
   declarations: [
     HomePlansComponent,

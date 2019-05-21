@@ -354,37 +354,6 @@
         }
       }
     },
-    "portal-shared-view-filter": {
-      "root": "libs/portal/shared/view-filter",
-      "sourceRoot": "libs/portal/shared/view-filter/src",
-      "projectType": "library",
-      "prefix": "brookfield",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/portal/shared/view-filter/tsconfig.lib.json",
-              "libs/portal/shared/view-filter/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/builders:jest",
-          "options": {
-            "jestConfig": "libs/portal/shared/view-filter/jest.config.js",
-            "tsConfig": "libs/portal/shared/view-filter/tsconfig.spec.json",
-            "setupFile": "libs/portal/shared/view-filter/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/schematics:component": {
-          "styleext": "scss"
-        }
-      }
-    },
     "portal-shared-feature-footer": {
       "root": "libs/portal/shared/feature-footer",
       "sourceRoot": "libs/portal/shared/feature-footer/src",
@@ -694,6 +663,37 @@
           "styleext": "scss"
         }
       }
+    },
+    "portal-shared-components": {
+      "root": "libs/portal/shared-components",
+      "sourceRoot": "libs/portal/shared-components/src",
+      "projectType": "library",
+      "prefix": "brookfield",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/portal/shared-components/tsconfig.lib.json",
+              "libs/portal/shared-components/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/portal/shared-components/jest.config.js",
+            "tsConfig": "libs/portal/shared-components/tsconfig.spec.json",
+            "setupFile": "libs/portal/shared-components/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {
@@ -709,8 +709,7 @@
       "styleext": "scss"
     },
     "@nrwl/schematics:component": {
-      "styleext": "scss",
-      "changeDetection": "OnPush"
+      "styleext": "scss"
     },
     "@nrwl/schematics:library": {
       "style": "scss",

@@ -1,4 +1,4 @@
-import { PortalSharedComponentsModule } from './../../../../shared-components/src/lib/portal-shared-components.module';
+import { PortalSharedComponentsModule } from '@brookfield/portal/shared-components';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';

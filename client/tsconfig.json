@@ -26,7 +26,6 @@
       "@brookfield/common/ui-components/image-carousel": [
         "libs/common/ui-components/image-carousel/src/index.ts"
       ],
-      "@brookfield/portal/shared/view-filter": ["libs/portal/shared/view-filter/src/index.ts"],
       "@brookfield/portal/shared/feature-footer": [
         "libs/portal/shared/feature-footer/src/index.ts"
       ],
@@ -44,7 +43,8 @@
       "@brookfield/portal/core-state": ["libs/portal/core-state/src/index.ts"],
       "@brookfield/portal/core-data/data-services": [
         "libs/portal/core-data/data-services/src/index.ts"
-      ]
+      ],
+      "@brookfield/portal/shared-components": ["libs/portal/shared-components/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
