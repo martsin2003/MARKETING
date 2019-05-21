@@ -13,8 +13,6 @@
     "../../libs/portal/feature/empower/src/index.ts",
     "../../libs/portal/feature/resources/src/index.ts",
 
-    "../../libs/portal/feature/home-design-detail/src/index.ts",
-
     "../../libs/portal/feature/community/src/index.ts",
 
     "../../libs/portal/feature/communities/src/index.ts"

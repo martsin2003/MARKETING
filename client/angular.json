@@ -323,37 +323,6 @@
         }
       }
     },
-    "portal-feature-home-design-detail": {
-      "root": "libs/portal/feature/home-design-detail",
-      "sourceRoot": "libs/portal/feature/home-design-detail/src",
-      "projectType": "library",
-      "prefix": "brookfield",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/portal/feature/home-design-detail/tsconfig.lib.json",
-              "libs/portal/feature/home-design-detail/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/builders:jest",
-          "options": {
-            "jestConfig": "libs/portal/feature/home-design-detail/jest.config.js",
-            "tsConfig": "libs/portal/feature/home-design-detail/tsconfig.spec.json",
-            "setupFile": "libs/portal/feature/home-design-detail/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/schematics:component": {
-          "styleext": "scss"
-        }
-      }
-    },
     "portal-feature-community": {
       "root": "libs/portal/feature/community",
       "sourceRoot": "libs/portal/feature/community/src",

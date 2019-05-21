@@ -10,21 +10,12 @@ const routes: Routes = [
     loadChildren: '@brookfield/portal/feature/home-plans#PortalFeatureHomePlansModule'
   },
   {
-    path: 'home-plan-detail',
-    loadChildren: '@brookfield/portal/feature/home-plan-detail#PortalFeatureHomePlanDetailModule'
-  },
-  {
     path: 'empower',
     loadChildren: '@brookfield/portal/feature/empower#PortalFeatureEmpowerModule'
   },
   {
     path: 'resources',
     loadChildren: '@brookfield/portal/feature/resources#PortalFeatureResourcesModule'
-  },
-  {
-    path: 'home-design-detail',
-    loadChildren:
-      '@brookfield/portal/feature/home-design-detail#PortalFeatureHomeDesignDetailModule'
   },
   {
     path: 'find',
@@ -36,6 +27,11 @@ const routes: Routes = [
       {
         path: 'community-microsite',
         loadChildren: '@brookfield/portal/feature/community#PortalFeatureCommunityModule'
+      },
+      {
+        path: 'home-plan-detail',
+        loadChildren:
+          '@brookfield/portal/feature/home-plan-detail#PortalFeatureHomePlanDetailModule'
       }
     ]
   },
