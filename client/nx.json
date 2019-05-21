@@ -17,9 +17,6 @@
     "material": {
       "tags": []
     },
-    "portal-shared-feature-navigation": {
-      "tags": ["scope:shared", "type:feature"]
-    },
     "portal-feature-home": {
       "tags": ["scope:home", "type:feature"]
     },
@@ -35,15 +32,6 @@
     "portal-feature-home-plan-detail": {
       "tags": ["scope:home-plans", "type:feature"]
     },
-    "common-ui-components-image-carousel": {
-      "tags": ["scope:common-ua", "type:ui-component"]
-    },
-    "portal-shared-view-filter": {
-      "tags": ["scope:view-filter", "type:feature"]
-    },
-    "portal-shared-feature-footer": {
-      "tags": []
-    },
     "portal-feature-empower": {
       "tags": ["scope:empower", "type:feature"]
     },
@@ -56,9 +44,6 @@
     "portal-feature-community": {
       "tags": ["scope:community", "type:feature"]
     },
-    "portal-shared-feature-empowered-slider": {
-      "tags": ["scope:home-plans", "type:feature"]
-    },
     "portal-feature-communities": {
       "tags": ["scope:communities", "type:feature"]
     },
@@ -70,6 +55,9 @@
     },
     "portal-core-data-data-services": {
       "tags": ["scope:core-data", "type:data-access"]
+    },
+    "portal-core-shared-components": {
+      "tags": ["scope:shared", "type:ui-components"]
     }
   }
 }

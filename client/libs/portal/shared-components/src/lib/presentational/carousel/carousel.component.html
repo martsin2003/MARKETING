@@ -1,0 +1,18 @@
+<div #carousel class="carousel">
+  <button class="prev arrow" [disabled]="prevDisabled" (click)="[(duration = '1s'), prev()]">
+    <mat-icon>arrow_back_ios</mat-icon>
+  </button>
+  <div #container class="container">
+    <div #wrapper class="wrapper-of-slider">
+      <div class="carousel-content" *ngIf="images">
+        <div class="slide" [ngClass]="{ 'part-width': !fullWidth }" *ngFor="let image of images">
+          <img #onlyImage [src]="image" draggable="false" />
+        </div>
+      </div>
+      <ng-content select=".carousel-content"></ng-content>
+    </div>
+  </div>
+  <button class="next arrow" [disabled]="nextDisabled" (click)="[(duration = '1s'), next()]">
+    <mat-icon>arrow_forward_ios</mat-icon>
+  </button>
+</div>

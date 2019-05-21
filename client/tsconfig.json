@@ -12,10 +12,6 @@
     "baseUrl": ".",
     "paths": {
       "@brookfield/material": ["libs/material/src/index.ts"],
-      "@brookfield/shared/navigation": ["libs/shared/navigation/src/index.ts"],
-      "@brookfield/portal/shared/feature-navigation": [
-        "libs/portal/shared/feature-navigation/src/index.ts"
-      ],
       "@brookfield/portal/feature/home": ["libs/portal/feature/home/src/index.ts"],
       "@brookfield/portal/feature/find-my-home": ["libs/portal/feature/find-my-home/src/index.ts"],
       "@brookfield/common/styles": ["libs/common/styles/src/index.ts"],
@@ -23,28 +19,19 @@
       "@brookfield/portal/feature/home-plan-detail": [
         "libs/portal/feature/home-plan-detail/src/index.ts"
       ],
-      "@brookfield/common/ui-components/image-carousel": [
-        "libs/common/ui-components/image-carousel/src/index.ts"
-      ],
-      "@brookfield/portal/shared/view-filter": ["libs/portal/shared/view-filter/src/index.ts"],
-      "@brookfield/portal/shared/feature-footer": [
-        "libs/portal/shared/feature-footer/src/index.ts"
-      ],
       "@brookfield/portal/feature/empower": ["libs/portal/feature/empower/src/index.ts"],
       "@brookfield/portal/feature/resources": ["libs/portal/feature/resources/src/index.ts"],
       "@brookfield/portal/feature/home-design-detail": [
         "libs/portal/feature/home-design-detail/src/index.ts"
       ],
       "@brookfield/portal/feature/community": ["libs/portal/feature/community/src/index.ts"],
-      "@brookfield/portal/shared/feature-empowered-slider": [
-        "libs/portal/shared/feature-empowered-slider/src/index.ts"
-      ],
       "@brookfield/portal/feature/communities": ["libs/portal/feature/communities/src/index.ts"],
       "@brookfield/common/utilities": ["libs/common/utilities/src/index.ts"],
       "@brookfield/portal/core-state": ["libs/portal/core-state/src/index.ts"],
       "@brookfield/portal/core-data/data-services": [
         "libs/portal/core-data/data-services/src/index.ts"
-      ]
+      ],
+      "@brookfield/portal/shared-components": ["libs/portal/shared-components/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
