@@ -1,5 +1,4 @@
 <div class="cm-container">
-
   <div class="cm-container__header mobile-header">
     <div class="cm-container__header__details">
       <span class="home-type">The Bluffs at Sleeter Lake</span>
@@ -16,7 +15,7 @@
     </div>
   </div>
 
-  <brookfield-carousel [images]='communityImages'></brookfield-carousel>
+  <brookfield-carousel [images]="communityImages"></brookfield-carousel>
 
   <div class="cm-container__header desktop-header">
     <div class="cm-container__header__details">
@@ -25,9 +24,9 @@
       <span class="price-detail">Starting Price $554,990</span>
     </div>
     <div class="cm-container__header__btn-container">
-      <img class="heart-icon" src="assets/icons/heart-icon.svg">
+      <img class="heart-icon" src="assets/icons/heart-icon.svg" />
       <button class="br-button br-button--primary">
-        <img src="assets/icons/Mail.svg">
+        <img src="assets/icons/Mail.svg" />
         <span>Request More Info</span>
       </button>
     </div>
@@ -35,43 +34,44 @@
 
   <div class="cm-container__home-services">
     <div class="service-detail">
-      <img src="assets/icons/cm-home-type.svg">
+      <img src="assets/icons/cm-home-type.svg" />
       <span>Single-Family Homes</span>
     </div>
     <div class="service-detail">
-      <img src="assets/icons/cm-bed.svg">
+      <img src="assets/icons/cm-bed.svg" />
       <span>4 - 7 Beds</span>
     </div>
     <div class="service-detail">
-      <img src="assets/icons/cm-bath.svg">
+      <img src="assets/icons/cm-bath.svg" />
       <span>2.5 - 7 Baths</span>
     </div>
     <div class="service-detail">
-      <img src="assets/icons/cm-sq.svg">
+      <img src="assets/icons/cm-sq.svg" />
       <span>2,922 - 7,082 sq. ft.</span>
     </div>
   </div>
 
   <div class="cm-container__description">
-    Innovative design meets relaxed Loudoun County lakefront style — all at a price that ensures this opportunity won't
-    last long. Make the morning coffee in your spacious, gourmet kitchen. Sit on your front porch and savor each sip.
-    Spend the day kayaking or paddleboarding. Cast a line or pack a picnic. This community is full of outdoor fun in the
-    Loudoun countryside. Hike the trails amid Virginia's stunning natural beauty. This is home.
+    Innovative design meets relaxed Loudoun County lakefront style — all at a price that ensures
+    this opportunity won't last long. Make the morning coffee in your spacious, gourmet kitchen. Sit
+    on your front porch and savor each sip. Spend the day kayaking or paddleboarding. Cast a line or
+    pack a picnic. This community is full of outdoor fun in the Loudoun countryside. Hike the trails
+    amid Virginia's stunning natural beauty. This is home.
   </div>
 
   <div class="cm-container__second-carousel">
     <brookfield-carousel [quantitySlides]="2" [fullWidth]="true">
       <div class="carousel-content" #insertedContent>
-        <div class="slide" *ngFor="let image of [1,2]">
+        <div class="slide" *ngFor="let image of [1, 2]">
           <div class="slide-content">
             <div class="slide-content__card">
-              <img #mainImage src="assets/images/desktop/cm-second-slider-first-img.png">
+              <img #mainImage src="assets/images/desktop/cm-second-slider-first-img.png" />
             </div>
             <div class="slide-content__card">
-              <img #mainImage src="assets/images/desktop/cm-second-slider-second-img.png">
+              <img #mainImage src="assets/images/desktop/cm-second-slider-second-img.png" />
             </div>
             <div class="slide-content__card">
-              <img #mainImage src="assets/images/desktop/cm-second-slider-third-img.png">
+              <img #mainImage src="assets/images/desktop/cm-second-slider-third-img.png" />
             </div>
           </div>
         </div>
@@ -103,6 +103,5 @@
     </div>
   </div>
 
-  <brookfield-get-empowered></brookfield-get-empowered>
-
+  <brookfield-empowered-slider></brookfield-empowered-slider>
 </div>
