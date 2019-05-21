@@ -16,6 +16,7 @@ export class AreaAmenitiesComponent implements OnInit {
     'assets/icons/hospitals.svg',
     'assets/icons/transportation.svg'
   ];
+  selectedPlace = 0;
 
   communities = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }];
   communitiesForCompare = [];
@@ -49,5 +50,9 @@ export class AreaAmenitiesComponent implements OnInit {
     } else {
       this.communitiesForCompare.push(id);
     }
+  }
+
+  selectPlace(index: number) {
+    this.selectedPlace = index;
   }
 }
