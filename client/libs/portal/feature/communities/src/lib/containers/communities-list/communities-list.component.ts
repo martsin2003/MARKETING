@@ -1,6 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {} from 'googlemaps';
 import { CommunitiesView } from '../../view-model/communities';
+import { ReplaySubject } from 'rxjs';
+import { take, filter, map } from 'rxjs/operators';
+import { Community } from '@brookfield/portal/core-data/data-services';
+import { CommunitiesFacade } from '@brookfield/portal/core-state';
 
 @Component({
   selector: 'brookfield-communities-list',
@@ -8,15 +12,27 @@ import { CommunitiesView } from '../../view-model/communities';
   styleUrls: ['./communities-list.component.scss']
 })
 export class CommunitiesListComponent implements OnInit {
-  communities = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }];
+  communities$: ReplaySubject<Community[]> = new ReplaySubject(1);
   communitiesForCompare = [];
   view: CommunitiesView = CommunitiesView.listMap;
+
   @ViewChild('map') mapElement: any;
   map: google.maps.Map;
-  constructor() {}
+  constructor(private communitiesFacade: CommunitiesFacade) {}
 
   ngOnInit() {
+    this.loadCommunities();
     this.initGoogleMaps();
+  }
+
+  loadCommunities() {
+    this.communitiesFacade.loadAll();
+    this.communitiesFacade.allCommunities$
+      .pipe(
+        filter(communities => !!communities && !!communities.length),
+        take(1)
+      )
+      .subscribe(this.communities$);
   }
 
   initGoogleMaps() {
@@ -33,7 +49,6 @@ export class CommunitiesListComponent implements OnInit {
   }
 
   communitySelected(id: string) {
-    console.log('id:---- ', id);
     const index = this.communitiesForCompare.indexOf(id);
     if (index !== -1) {
       this.communitiesForCompare.pop();

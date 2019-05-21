@@ -51,38 +51,41 @@
     </div>
   </div>
 
-  <div class="cm-container__description">
-    Innovative design meets relaxed Loudoun County lakefront style — all at a price that ensures
-    this opportunity won't last long. Make the morning coffee in your spacious, gourmet kitchen. Sit
-    on your front porch and savor each sip. Spend the day kayaking or paddleboarding. Cast a line or
-    pack a picnic. This community is full of outdoor fun in the Loudoun countryside. Hike the trails
-    amid Virginia's stunning natural beauty. This is home.
+  <div class="cm-container__description">{{ desrciptionText }}</div>
+  <div class="more-info-container" (click)="readMore()">
+    <img src="assets/icons/bottom-arrow.svg" [ngClass]="{ 'read-less': readLess }" />
+    <span>Read {{ readLess ? 'Less' : 'More' }}</span>
   </div>
 
   <div class="cm-container__second-carousel">
-    <brookfield-carousel [quantitySlides]="2" [fullWidth]="true">
-      <div class="carousel-content" #insertedContent>
-        <div class="slide" *ngFor="let image of [1, 2]">
-          <div class="slide-content">
-            <div class="slide-content__card">
-              <img #mainImage src="assets/images/desktop/cm-second-slider-first-img.png" />
-            </div>
-            <div class="slide-content__card">
-              <img #mainImage src="assets/images/desktop/cm-second-slider-second-img.png" />
-            </div>
-            <div class="slide-content__card">
-              <img #mainImage src="assets/images/desktop/cm-second-slider-third-img.png" />
+    <div class="desktop-carousel">
+      <brookfield-carousel [quantitySlides]="2" [fullWidth]="true">
+        <div class="carousel-content" #insertedContent>
+          <div class="slide" *ngFor="let image of [1, 2]">
+            <div class="slide-content">
+              <div class="slide-content__card" *ngFor="let img of secondSliderCommynityImages">
+                <img #mainImage [src]="img" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </brookfield-carousel>
+      </brookfield-carousel>
+    </div>
+    <div class="mobile-carousel">
+      <brookfield-carousel [quantitySlides]="3" [fullWidth]="false">
+        <div class="carousel-content" #insertedContent>
+          <div class="slide part-width" *ngFor="let image of secondSliderCommynityImages">
+            <img #mainImage [src]="image" />
+          </div>
+        </div>
+      </brookfield-carousel>
+    </div>
   </div>
 
   <div class="cm-container__key-features-container">
     <div class="cm-container__key-features-container__option">
       <span class="cm-container__key-features-container__title">
-        Nearby School
+        Nearby Schools
       </span>
       <ul>
         <li>Harmony Middle School</li>
@@ -100,6 +103,54 @@
         <li>Main-Level Owner's Suites Available</li>
         <li>Voice-Enabled Smart Home Technology</li>
       </ul>
+    </div>
+    <mat-accordion hideToggle displayMode="flat">
+      <mat-expansion-panel class="mobile-expansion-panel" #homePlansPanel="matExpansionPanel">
+        <mat-expansion-panel-header class="primary-dark-text">
+          <span class="pr-1">
+            <img src="assets/icons/bottom-arrow-blue.svg" alt="" srcset="" />
+          </span>
+          <span>Nearby Schools</span>
+        </mat-expansion-panel-header>
+        <div class="d-flex flex-column mobile-list-background">
+          <ul>
+            <li>Harmony Middle School</li>
+            <li>Mountain View Elementary School</li>
+            <li>Woodgrove High School</li>
+          </ul>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+    <mat-accordion hideToggle displayMode="flat">
+      <mat-expansion-panel class="mobile-expansion-panel" #homePlansPanel="matExpansionPanel">
+        <mat-expansion-panel-header class="primary-dark-text">
+          <span class="pr-1">
+            <img src="assets/icons/bottom-arrow-blue.svg" alt="" srcset="" />
+          </span>
+          <span>Key Features</span>
+        </mat-expansion-panel-header>
+        <div class="d-flex flex-column mobile-list-background">
+          <ul>
+            <li>Spacious, Scenic Homesites in the Loudoun Countryside</li>
+            <li>Award-Winning Designs Featuring 4 to 7 Bedrooms</li>
+            <li>Main-Level Owner's Suites Available</li>
+            <li>Voice-Enabled Smart Home Technology</li>
+          </ul>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+
+  <brookfield-area-amenities></brookfield-area-amenities>
+
+  <div class="cm-container__header mobile-header">
+    <div class="btn-container">
+      <button class="br-button br-button--primary">
+        <span>CALL NOW</span>
+      </button>
+      <button class="br-button br-button--primary">
+        <span>REQUEST MORE</span>
+      </button>
     </div>
   </div>
 

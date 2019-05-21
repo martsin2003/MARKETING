@@ -1,0 +1,37 @@
+.communities-compare-table {
+  &__row {
+    display: flex;
+    font-family: HelveticaNeue;
+    font-size: 18px;
+    color: #404042;
+    line-height: 22px;
+    &--empty {
+      background: #f0f3f5;
+      font-size: 18px;
+      color: #0f2d4f;
+    }
+  }
+  &__column {
+    padding: 10px;
+    flex: 1;
+    border-right: 1px solid #ccc;
+    &--centered {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &__image {
+    width: 200px;
+    height: auto;
+  }
+  &__name {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: #6295ba;
+    line-height: 20px;
+  }
+  &__arrow-icon {
+    margin-left: 10px;
+  }
+}

@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { CarouselComponent } from './presentational/carousel/carousel.component';
 import { MaterialModule } from '@brookfield/material';
 import { NgModule } from '@angular/core';
@@ -17,7 +18,7 @@ import { FooterDesktopComponent } from './presentational/footer-desktop/footer-d
 import { FooterMobileComponent } from './presentational/footer-mobile/footer-mobile.component';
 
 @NgModule({
-  imports: [CommonModule, MaterialModule],
+  imports: [CommonModule, MaterialModule, RouterModule],
   declarations: [
     CommunityCardComponent,
     ViewFilterComponent,

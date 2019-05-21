@@ -1,0 +1,20 @@
+.communities-compare {
+  display: flex;
+  flex-direction: column;
+  &__header {
+    color: #0f2d4f;
+    padding: 10px;
+    font-family: HelveticaNeue-Bold;
+    font-size: 28px;
+    letter-spacing: 0;
+    line-height: 30px;
+  }
+  &__footer {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  &__back-button {
+    width: 226px;
+  }
+}
