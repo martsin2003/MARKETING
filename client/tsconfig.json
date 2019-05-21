@@ -31,8 +31,7 @@
       "@brookfield/portal/core-data/data-services": [
         "libs/portal/core-data/data-services/src/index.ts"
       ],
-      "@brookfield/portal/shared-components": ["libs/portal/shared-components/src/index.ts"],
-      "@brookfield/common/ui-components": ["libs/common/ui-components/src/index.ts"]
+      "@brookfield/portal/shared-components": ["libs/portal/shared-components/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -57,10 +57,7 @@
       "tags": ["scope:core-data", "type:data-access"]
     },
     "portal-core-shared-components": {
-      "tags": ["scope:cshared", "type:ui-components"]
-    },
-    "common-ui-components": {
-      "tags": ["scope:common", "type:ui-components"]
+      "tags": ["scope:shared", "type:ui-components"]
     }
   }
 }

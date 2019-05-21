@@ -1,4 +1,3 @@
-import { CommonUiComponentsModule } from '@brookfield/common/ui-components';
 import { PortalSharedComponentsModule } from '@brookfield/portal/shared-components';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -9,7 +8,6 @@ import { CommunityMicrositeComponent } from './containers/community-microsite/co
   imports: [
     CommonModule,
     PortalSharedComponentsModule,
-    CommonUiComponentsModule,
     RouterModule.forChild([{ path: '', pathMatch: 'full', component: CommunityMicrositeComponent }])
   ],
   declarations: [CommunityMicrositeComponent]

@@ -1,4 +1,4 @@
-import { CommonUiComponentsModule } from '@brookfield/common/ui-components';
+import { CarouselComponent } from './presentational/carousel/carousel.component';
 import { MaterialModule } from '@brookfield/material';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -17,7 +17,7 @@ import { FooterDesktopComponent } from './presentational/footer-desktop/footer-d
 import { FooterMobileComponent } from './presentational/footer-mobile/footer-mobile.component';
 
 @NgModule({
-  imports: [CommonModule, MaterialModule, CommonUiComponentsModule],
+  imports: [CommonModule, MaterialModule],
   declarations: [
     CommunityCardComponent,
     ViewFilterComponent,
@@ -31,14 +31,16 @@ import { FooterMobileComponent } from './presentational/footer-mobile/footer-mob
     SecondaryNavDesktopComponent,
     FooterComponent,
     FooterDesktopComponent,
-    FooterMobileComponent
+    FooterMobileComponent,
+    CarouselComponent
   ],
   exports: [
     CommunityCardComponent,
     ViewFilterComponent,
     EmpoweredSliderComponent,
     NavigationComponent,
-    FooterComponent
+    FooterComponent,
+    CarouselComponent
   ]
 })
 export class PortalSharedComponentsModule {}
