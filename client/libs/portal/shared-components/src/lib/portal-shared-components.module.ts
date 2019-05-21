@@ -15,6 +15,7 @@ import { SecondaryNavDesktopComponent } from './presentational/secondary-nav-des
 import { FooterComponent } from './containers/footer/footer.component';
 import { FooterDesktopComponent } from './presentational/footer-desktop/footer-desktop.component';
 import { FooterMobileComponent } from './presentational/footer-mobile/footer-mobile.component';
+import { HomeCardComponent } from './presentational/home-card/home-card.component';
 
 @NgModule({
   imports: [CommonModule, MaterialModule],
@@ -32,7 +33,8 @@ import { FooterMobileComponent } from './presentational/footer-mobile/footer-mob
     FooterComponent,
     FooterDesktopComponent,
     FooterMobileComponent,
-    CarouselComponent
+    CarouselComponent,
+    HomeCardComponent
   ],
   exports: [
     CommunityCardComponent,
@@ -40,7 +42,8 @@ import { FooterMobileComponent } from './presentational/footer-mobile/footer-mob
     EmpoweredSliderComponent,
     NavigationComponent,
     FooterComponent,
-    CarouselComponent
+    CarouselComponent,
+    HomeCardComponent
   ]
 })
 export class PortalSharedComponentsModule {}
