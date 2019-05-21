@@ -12,6 +12,9 @@ import { MainNavDesktopComponent } from './presentational/main-nav-desktop/main-
 import { MainNavMobileComponent } from './presentational/main-nav-mobile/main-nav-mobile.component';
 import { SecondaryNavMobileComponent } from './presentational/secondary-nav-mobile/secondary-nav-mobile.component';
 import { SecondaryNavDesktopComponent } from './presentational/secondary-nav-desktop/secondary-nav-desktop.component';
+import { FooterComponent } from './containers/footer/footer.component';
+import { FooterDesktopComponent } from './presentational/footer-desktop/footer-desktop.component';
+import { FooterMobileComponent } from './presentational/footer-mobile/footer-mobile.component';
 
 @NgModule({
   imports: [CommonModule, MaterialModule, CommonUiComponentsImageCarouselModule],
@@ -25,13 +28,17 @@ import { SecondaryNavDesktopComponent } from './presentational/secondary-nav-des
     MainNavDesktopComponent,
     MainNavMobileComponent,
     SecondaryNavMobileComponent,
-    SecondaryNavDesktopComponent
+    SecondaryNavDesktopComponent,
+    FooterComponent,
+    FooterDesktopComponent,
+    FooterMobileComponent
   ],
   exports: [
     CommunityCardComponent,
     ViewFilterComponent,
     EmpoweredSliderComponent,
-    NavigationComponent
+    NavigationComponent,
+    FooterComponent
   ]
 })
 export class PortalSharedComponentsModule {}

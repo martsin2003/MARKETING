@@ -10,7 +10,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from '@brookfield/material';
-import { PortalSharedFeatureFooterModule } from '@brookfield/portal/shared/feature-footer';
 import { environment } from '../environments/environment';
 import { PortalCoreDataDataServicesModule } from '@brookfield/portal/core-data/data-services';
 import { PortalCoreStateModule } from '@brookfield/portal/core-state';
@@ -23,7 +22,6 @@ import { PortalCoreStateModule } from '@brookfield/portal/core-state';
     BrowserAnimationsModule,
     AppRoutingModule,
     MaterialModule,
-    PortalSharedFeatureFooterModule,
     PortalCoreDataDataServicesModule,
     PortalCoreStateModule,
     PortalSharedComponentsModule

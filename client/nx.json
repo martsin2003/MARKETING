@@ -35,9 +35,6 @@
     "common-ui-components-image-carousel": {
       "tags": ["scope:common-ua", "type:ui-component"]
     },
-    "portal-shared-feature-footer": {
-      "tags": []
-    },
     "portal-feature-empower": {
       "tags": ["scope:empower", "type:feature"]
     },
