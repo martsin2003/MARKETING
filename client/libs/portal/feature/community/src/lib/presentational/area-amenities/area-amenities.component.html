@@ -7,7 +7,12 @@
       Discover all the exciting conveniences and attractions so close to this exceptional community.
     </p>
     <div class="area-container__panel-tools__places">
-      <div class="area-container__panel-tools__places__place" *ngFor="let place of places">
+      <div
+        class="area-container__panel-tools__places__place"
+        *ngFor="let place of places"
+        [ngClass]="{ selected: place === places[this.selectedPlace] }"
+        (click)="selectPlace(places.indexOf(place))"
+      >
         <img [src]="place" alt="" />
       </div>
     </div>
