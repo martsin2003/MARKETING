@@ -1,6 +1,10 @@
+import { Community } from './../../../../../../core-data/data-services/src/lib/communities/communities.model';
+import { CommunitiesFacade } from './../../../../../../core-state/src/lib/communities/communities.facade';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {} from 'googlemaps';
 import { CommunitiesView } from '../../view-model/communities';
+import { BehaviorSubject } from 'rxjs';
+import { take, filter, map } from 'rxjs/operators';
 
 @Component({
   selector: 'brookfield-communities-list',
@@ -8,15 +12,30 @@ import { CommunitiesView } from '../../view-model/communities';
   styleUrls: ['./communities-list.component.scss']
 })
 export class CommunitiesListComponent implements OnInit {
-  communities = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }];
+  communities$: BehaviorSubject<Community[]> = new BehaviorSubject([]);
   communitiesForCompare = [];
   view: CommunitiesView = CommunitiesView.listMap;
   @ViewChild('map') mapElement: any;
   map: google.maps.Map;
-  constructor() {}
+  constructor(private communitiesFacade: CommunitiesFacade) {}
 
   ngOnInit() {
+    this.loadCommunities();
     this.initGoogleMaps();
+  }
+
+  loadCommunities() {
+    this.communitiesFacade.loadAll();
+    this.communitiesFacade.allCommunities$
+      .pipe(
+        filter(communities => !!communities && !!communities.length),
+        take(1),
+        map(ressss => {
+          console.log('ressss: ', ressss);
+          return ressss;
+        })
+      )
+      .subscribe(this.communities$);
   }
 
   initGoogleMaps() {

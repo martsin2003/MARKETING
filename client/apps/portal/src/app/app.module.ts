@@ -15,6 +15,7 @@ import { PortalSharedFeatureFooterModule } from '@brookfield/portal/shared/featu
 import { environment } from '../environments/environment';
 import { PortalCoreDataDataServicesModule } from '@brookfield/portal/core-data/data-services';
 import { PortalCoreStateModule } from '@brookfield/portal/core-state';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,6 +26,7 @@ import { PortalCoreStateModule } from '@brookfield/portal/core-state';
     BrowserAnimationsModule,
     AppRoutingModule,
     MaterialModule,
+    !environment.production ? StoreDevtoolsModule.instrument() : [],
     PortalSharedFeatureNavigationModule,
     PortalSharedFeatureFooterModule,
     PortalCoreDataDataServicesModule,
@@ -53,7 +55,9 @@ export class AppModule {
 
     apollo.create({
       link: auth.concat(httpLinkBatch),
-      cache: new InMemoryCache(),
+      cache: new InMemoryCache({
+        dataIdFromObject: o => (o.id ? `${o.__typename}:${o.id}` : null)
+      }),
       defaultOptions: {
         query: {
           fetchPolicy: 'network-only'

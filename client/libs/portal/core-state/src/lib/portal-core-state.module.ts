@@ -8,15 +8,31 @@ import { SiteplansEffects } from './siteplans/siteplans.effects';
 import { SiteplansFacade } from './siteplans/siteplans.facade';
 import { NxModule } from '@nrwl/nx';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import {
+  COMMUNITIES_FEATURE_KEY,
+  initialState as communitiesInitialState,
+  communitiesReducer
+} from './communities/communities.reducer';
+import { CommunitiesEffects } from './communities/communities.effects';
+import { CommunitiesFacade } from './communities/communities.facade';
+import { storeFreeze } from 'ngrx-store-freeze';
 
 @NgModule({
   imports: [
     CommonModule,
-    NxModule.forRoot(),
+    // NxModule.forRoot(),
     StoreModule.forRoot(reducers),
     EffectsModule.forRoot([SiteplansEffects]),
-    !environment.production ? StoreDevtoolsModule.instrument() : []
+    !environment.production ? StoreDevtoolsModule.instrument() : [],
+    StoreModule.forRoot(
+      { communities: communitiesReducer },
+      {
+        initialState: { communities: communitiesInitialState },
+        metaReducers: !environment.production ? [storeFreeze] : []
+      }
+    ),
+    EffectsModule.forRoot([CommunitiesEffects])
   ],
-  providers: [SiteplansFacade]
+  providers: [SiteplansFacade, CommunitiesFacade]
 })
 export class PortalCoreStateModule {}

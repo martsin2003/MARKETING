@@ -1,3 +1,4 @@
+import { Community } from './../../../../core-data/data-services/src/lib/communities/communities.model';
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
@@ -7,13 +8,13 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 })
 export class CommunityCardComponent implements OnInit {
   @Output() cardSelected = new EventEmitter<string>();
-  @Input() community: any;
+  @Input() community: Community;
   constructor() {}
 
   ngOnInit() {}
 
   compareCard(id) {
     console.log('id: ', this.community.id);
-    this.cardSelected.emit(this.community.id);
+    this.cardSelected.emit(this.community.intCommunityId);
   }
 }
