@@ -21,7 +21,6 @@ export class CommunitiesListComponent implements OnInit {
   constructor(private communitiesFacade: CommunitiesFacade) {}
 
   ngOnInit() {
-    console.log('view: ', this.view);
     this.loadCommunities();
     this.initGoogleMaps();
   }
@@ -31,11 +30,7 @@ export class CommunitiesListComponent implements OnInit {
     this.communitiesFacade.allCommunities$
       .pipe(
         filter(communities => !!communities && !!communities.length),
-        take(1),
-        map(ressss => {
-          console.log('ressss: ', ressss);
-          return ressss;
-        })
+        take(1)
       )
       .subscribe(this.communities$);
   }
@@ -54,7 +49,6 @@ export class CommunitiesListComponent implements OnInit {
   }
 
   communitySelected(id: string) {
-    console.log('id:---- ', id);
     const index = this.communitiesForCompare.indexOf(id);
     if (index !== -1) {
       this.communitiesForCompare.pop();

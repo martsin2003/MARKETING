@@ -14,7 +14,6 @@ export class CommunityCardComponent implements OnInit {
   ngOnInit() {}
 
   compareCard(id) {
-    console.log('id: ', this.community.id);
     this.cardSelected.emit(this.community.intCommunityId);
   }
 }

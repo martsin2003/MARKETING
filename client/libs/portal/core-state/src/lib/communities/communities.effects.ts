@@ -17,12 +17,9 @@ import { of, from } from 'rxjs';
 export class CommunitiesEffects {
   @Effect() loadCommunities$ = this.dataPersistence.fetch(CommunitiesActionTypes.LoadCommunities, {
     run: (action: LoadCommunities, state: CommunitiesPartialState) => {
-      console.log('action: ', action);
-      console.log('state: ', state);
       // Your custom REST 'load' logic goes here. For now just return an empty list...
       return this.communitiesService.loadCommunities().pipe(
         map(result => {
-          console.log('result: ', result);
           return new CommunitiesLoaded(result.allTblCommunities.nodes);
         })
       );
