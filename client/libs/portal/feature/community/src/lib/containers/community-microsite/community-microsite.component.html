@@ -51,7 +51,7 @@
     </div>
   </div>
 
-  <div class="cm-container__description" #description>{{ desrciptionText }}</div>
+  <div class="cm-container__description">{{ desrciptionText }}</div>
   <div class="more-info-container" (click)="readMore()">
     <img src="assets/icons/bottom-arrow.svg" [ngClass]="{ 'read-less': readLess }" />
     <span>Read {{ readLess ? 'Less' : 'More' }}</span>

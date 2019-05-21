@@ -48,7 +48,6 @@ export class CommunityMicrositeComponent implements OnInit, OnDestroy {
     return this.isMobileView$
       .pipe(
         map(viewIsMobile => {
-          console.log(1111, viewIsMobile);
           this.desrciptionText = viewIsMobile
             ? this.trimmedDescriptionText
             : this.fullDesrciptionText;

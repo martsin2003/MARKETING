@@ -18,8 +18,6 @@ export class AreaAmenitiesComponent implements OnInit {
   ];
   selectedPlace = 0;
 
-  communities = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }];
-  communitiesForCompare = [];
   view: CommunitiesView = CommunitiesView.listMap;
   @ViewChild('map') mapElement: any;
   map: google.maps.Map;
@@ -40,16 +38,6 @@ export class AreaAmenitiesComponent implements OnInit {
 
   viewChanged(view: CommunitiesView) {
     this.view = view;
-  }
-
-  communitySelected(id: string) {
-    console.log('id:---- ', id);
-    const index = this.communitiesForCompare.indexOf(id);
-    if (index !== -1) {
-      this.communitiesForCompare.pop();
-    } else {
-      this.communitiesForCompare.push(id);
-    }
   }
 
   selectPlace(index: number) {
