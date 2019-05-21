@@ -5,8 +5,8 @@
   <div #container class="container">
     <div #wrapper class="wrapper-of-slider">
       <div class="carousel-content" *ngIf="images">
-        <div class="slide" [ngClass]="{'part-width': !fullWidth}" *ngFor="let image of images">
-          <img #onlyImage [src]="image" draggable="false">
+        <div class="slide" [ngClass]="{ 'part-width': !fullWidth }" *ngFor="let image of images">
+          <img #onlyImage [src]="image" draggable="false" />
         </div>
       </div>
       <ng-content select=".carousel-content"></ng-content>

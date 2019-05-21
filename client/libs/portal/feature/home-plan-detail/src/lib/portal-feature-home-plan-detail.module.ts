@@ -3,14 +3,14 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HomePlanDetailComponent } from './containers/home-plan-detail/home-plan-detail.component';
 import { MaterialModule } from '@brookfield/material';
-import { CommonUiComponentsImageCarouselModule } from '@brookfield/common/ui-components/image-carousel';
+import { CommonUiComponentsModule } from '@brookfield/common/ui-components';
 
 @NgModule({
   imports: [
     CommonModule,
     MaterialModule,
-    RouterModule.forChild([{ path: '', pathMatch: 'full', component: HomePlanDetailComponent }]),
-    CommonUiComponentsImageCarouselModule
+    CommonUiComponentsModule,
+    RouterModule.forChild([{ path: '', pathMatch: 'full', component: HomePlanDetailComponent }])
   ],
   declarations: [HomePlanDetailComponent]
 })

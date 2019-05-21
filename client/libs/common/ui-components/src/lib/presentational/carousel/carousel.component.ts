@@ -42,7 +42,7 @@ export class CarouselComponent implements OnInit, AfterContentInit, AfterViewIni
   slides: { translate: number }[] | any = [];
   clickOnButton: boolean;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
     fromEvent(window, 'resize').subscribe(() => {
@@ -57,7 +57,9 @@ export class CarouselComponent implements OnInit, AfterContentInit, AfterViewIni
         this.swiping = true;
         this.mouseup = false;
         if (this.wrapper.nativeElement.style.transform.match(/\d+/)) {
-          this.currentTransform = Number(this.wrapper.nativeElement.style.transform.match(/\d+/)[0]);
+          this.currentTransform = Number(
+            this.wrapper.nativeElement.style.transform.match(/\d+/)[0]
+          );
         }
       }
     });
@@ -85,7 +87,9 @@ export class CarouselComponent implements OnInit, AfterContentInit, AfterViewIni
         this.swiping = true;
         this.mouseup = false;
         if (this.wrapper.nativeElement.style.transform.match(/\d+/)) {
-          this.currentTransform = Number(this.wrapper.nativeElement.style.transform.match(/\d+/)[0]);
+          this.currentTransform = Number(
+            this.wrapper.nativeElement.style.transform.match(/\d+/)[0]
+          );
         }
       }
     });
@@ -105,7 +109,7 @@ export class CarouselComponent implements OnInit, AfterContentInit, AfterViewIni
         this.mouseup = true;
         this.definedPosition();
       }
-    })
+    });
   }
 
   ngAfterViewInit() {
@@ -115,7 +119,7 @@ export class CarouselComponent implements OnInit, AfterContentInit, AfterViewIni
         this.slides.push({
           translate: 0
         });
-      };
+      }
       if (this.onlyImage) {
         this.onlyImage.nativeElement.onload = () => {
           this.initializationCarousel();
@@ -131,7 +135,7 @@ export class CarouselComponent implements OnInit, AfterContentInit, AfterViewIni
         this.slides.push({
           translate: 0
         });
-      };
+      }
       if (this.mainImage) {
         this.mainImage.nativeElement.onload = () => {
           this.initializationCarousel();

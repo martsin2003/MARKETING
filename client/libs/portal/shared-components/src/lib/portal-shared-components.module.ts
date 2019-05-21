@@ -1,4 +1,4 @@
-import { CommonUiComponentsImageCarouselModule } from '@brookfield/common/ui-components/image-carousel';
+import { CommonUiComponentsModule } from '@brookfield/common/ui-components';
 import { MaterialModule } from '@brookfield/material';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -17,7 +17,7 @@ import { FooterDesktopComponent } from './presentational/footer-desktop/footer-d
 import { FooterMobileComponent } from './presentational/footer-mobile/footer-mobile.component';
 
 @NgModule({
-  imports: [CommonModule, MaterialModule, CommonUiComponentsImageCarouselModule],
+  imports: [CommonModule, MaterialModule, CommonUiComponentsModule],
   declarations: [
     CommunityCardComponent,
     ViewFilterComponent,

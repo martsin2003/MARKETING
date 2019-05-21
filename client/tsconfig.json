@@ -19,9 +19,6 @@
       "@brookfield/portal/feature/home-plan-detail": [
         "libs/portal/feature/home-plan-detail/src/index.ts"
       ],
-      "@brookfield/common/ui-components/image-carousel": [
-        "libs/common/ui-components/image-carousel/src/index.ts"
-      ],
       "@brookfield/portal/feature/empower": ["libs/portal/feature/empower/src/index.ts"],
       "@brookfield/portal/feature/resources": ["libs/portal/feature/resources/src/index.ts"],
       "@brookfield/portal/feature/home-design-detail": [
@@ -34,7 +31,8 @@
       "@brookfield/portal/core-data/data-services": [
         "libs/portal/core-data/data-services/src/index.ts"
       ],
-      "@brookfield/portal/shared-components": ["libs/portal/shared-components/src/index.ts"]
+      "@brookfield/portal/shared-components": ["libs/portal/shared-components/src/index.ts"],
+      "@brookfield/common/ui-components": ["libs/common/ui-components/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
