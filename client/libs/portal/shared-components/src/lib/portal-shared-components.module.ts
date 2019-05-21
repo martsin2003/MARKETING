@@ -14,6 +14,6 @@ import { MobileViewFilterComponent } from './presentational/mobile-view-filter/m
     DesktopViewFilterComponent,
     MobileViewFilterComponent
   ],
-  exports: [CommunityCardComponent]
+  exports: [CommunityCardComponent, ViewFilterComponent]
 })
 export class PortalSharedComponentsModule {}
