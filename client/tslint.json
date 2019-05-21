@@ -59,7 +59,7 @@
     "nx-enforce-module-boundaries": [
       true,
       {
-        "allow": [],
+        "allow": ["@brookfield/portal/shared-components"],
         "depConstraints": [{ "sourceTag": "*", "onlyDependOnLibsWithTags": ["*"] }]
       }
     ]

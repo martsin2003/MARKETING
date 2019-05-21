@@ -4,6 +4,7 @@
 node_modules
 .vscode/*
 !.vscode/settings.json
+.angulardoc.json
 
 # compiled output
 client/dist
@@ -46,3 +47,5 @@ client/.angulardoc.json
 # System Files
 client/.DS_Store
 client/Thumbs.db
+.DS_Store
+.DS_Store?

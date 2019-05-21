@@ -1,36 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { Apollo, ApolloModule } from 'apollo-angular';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { BatchHttpLink } from 'apollo-link-batch-http';
 import { setContext } from 'apollo-link-context';
 import { AppComponent } from './app.component';
-import { NxModule } from '@nrwl/nx';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
-import { MaterialModule } from '@brookfield/material';
-import { PortalSharedFeatureNavigationModule } from '@brookfield/portal/shared/feature-navigation';
-import { PortalSharedFeatureFooterModule } from '@brookfield/portal/shared/feature-footer';
 import { environment } from '../environments/environment';
+import { MaterialModule } from '@brookfield/material';
 import { PortalCoreDataDataServicesModule } from '@brookfield/portal/core-data/data-services';
 import { PortalCoreStateModule } from '@brookfield/portal/core-state';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { PortalSharedComponentsModule } from '@brookfield/portal/shared-components';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     ApolloModule,
     BrowserModule,
-    NxModule.forRoot(),
     BrowserAnimationsModule,
     AppRoutingModule,
     MaterialModule,
-    !environment.production ? StoreDevtoolsModule.instrument() : [],
-    PortalSharedFeatureNavigationModule,
-    PortalSharedFeatureFooterModule,
     PortalCoreDataDataServicesModule,
-    PortalCoreStateModule
+    PortalCoreStateModule,
+    PortalSharedComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

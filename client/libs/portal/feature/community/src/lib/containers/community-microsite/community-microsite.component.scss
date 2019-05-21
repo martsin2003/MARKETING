@@ -1,0 +1,194 @@
+.cm-container {
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue';
+  &__header {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    &__details {
+      span {
+        display: block;
+      }
+      .home-type {
+        font-size: 36px;
+        font-weight: bold;
+        color: #0f2d4f;
+      }
+      .place-detail {
+        font-size: 18px;
+        font-weight: bold;
+        color: #404042;
+      }
+      .price-detail {
+        font-size: 18px;
+        font-weight: bold;
+        color: #6295ba;
+      }
+    }
+    &__btn-container {
+      display: flex;
+      align-items: center;
+      .heart-icon {
+        margin-right: 20px;
+      }
+    }
+    &.mobile-header {
+      display: none;
+      .btn-container {
+        display: flex;
+        flex-direction: row;
+        padding-top: 15px;
+        button {
+          width: 50%;
+          font-weight: 100;
+          font-size: 14px;
+          &:first-child {
+            margin-right: 7.5px;
+          }
+          &:last-child {
+            margin-left: 7.5px;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 780px) {
+      &.mobile-header {
+        display: block;
+      }
+      &.desktop-header {
+        display: none;
+      }
+    }
+  }
+  &__home-services {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    .service-detail {
+      margin-right: 25px;
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: 15px;
+      }
+      span {
+        font-size: 16px;
+        color: #404042;
+        font-weight: 'Regular';
+        font-family: 'Helvetica Neue';
+      }
+    }
+    @media screen and (max-width: 650px) {
+      flex-direction: column;
+      .service-detail {
+        margin: 10px 0px;
+      }
+    }
+  }
+  &__description {
+    padding: 15px;
+    font-size: 18px;
+    font-family: 'Helvetica Neue';
+    font-weight: 'Regular';
+    color: #404042;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__second-carousel {
+    padding: 15px 0px;
+    .slide-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      box-sizing: border-box;
+      &__card {
+        width: 32.5%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &__key-features-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 15px;
+    &__option {
+      width: 65%;
+      &:first-child {
+        width: 35%;
+      }
+      ul {
+        padding-left: 18px;
+        li {
+          font-size: 18px;
+          color: #404042;
+          font-family: 'Helvetica Neue';
+          padding: 5px 0px;
+        }
+      }
+    }
+    &__title {
+      font-size: 28px;
+      color: #6295ba;
+      font-family: 'Helvetica Neue';
+      font-weight: 'Light';
+    }
+  }
+  &__get-empowered {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px 0px;
+    &__small-description {
+      text-align: center;
+      font-size: 18px;
+      color: #404042;
+      padding: 40px 15px;
+    }
+    &__carousel-container {
+      width: 100%;
+    }
+    .slide-content {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      img {
+        width: 100%;
+      }
+      .slide-description {
+        max-width: 280px;
+        position: absolute;
+        margin: 0px 100px;
+        img {
+          width: 230px;
+        }
+        .slide-text {
+          padding: 20px 0px;
+          font-size: 22px;
+          font-family: 'Helvetica Neue';
+          font-weight: 400;
+          color: white;
+        }
+        .slide-buttons {
+          display: flex;
+          flex-direction: column;
+          button {
+            color: white;
+            border-color: white;
+            &:hover {
+              background: white;
+              color: #6295ba;
+            }
+            &:first-child {
+              margin-bottom: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

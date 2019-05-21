@@ -1,4 +1,4 @@
-import { CommonUiComponentsImageCarouselModule } from '@brookfield/common/ui-components/image-carousel';
+import { PortalSharedComponentsModule } from '@brookfield/portal/shared-components';
 import { MaterialModule } from '@brookfield/material';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -11,7 +11,7 @@ export const portalFeatureHomeRoutes: Route[] = [
 ];
 
 @NgModule({
-  imports: [CommonModule, MaterialModule, RouterModule, CommonUiComponentsImageCarouselModule],
+  imports: [CommonModule, MaterialModule, RouterModule, PortalSharedComponentsModule],
   declarations: [HomepageComponent, SearchHomesComponent]
 })
 export class PortalFeatureHomeModule {}

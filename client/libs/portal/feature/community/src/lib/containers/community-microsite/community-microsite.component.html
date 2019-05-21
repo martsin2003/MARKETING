@@ -1,3 +1,107 @@
-<p>
-  community-microsite works!
-</p>
+<div class="cm-container">
+  <div class="cm-container__header mobile-header">
+    <div class="cm-container__header__details">
+      <span class="home-type">The Bluffs at Sleeter Lake</span>
+      <span class="place-detail">Loudoun County | Round Hill, VA</span>
+      <span class="price-detail">Starting Price $554,990</span>
+    </div>
+    <div class="btn-container">
+      <button class="br-button br-button--primary">
+        <span>CALL NOW</span>
+      </button>
+      <button class="br-button br-button--primary">
+        <span>REQUEST MORE</span>
+      </button>
+    </div>
+  </div>
+
+  <brookfield-carousel [images]="communityImages"></brookfield-carousel>
+
+  <div class="cm-container__header desktop-header">
+    <div class="cm-container__header__details">
+      <span class="home-type">The Bluffs at Sleeter Lake</span>
+      <span class="place-detail">Loudoun County | Round Hill, VA</span>
+      <span class="price-detail">Starting Price $554,990</span>
+    </div>
+    <div class="cm-container__header__btn-container">
+      <img class="heart-icon" src="assets/icons/heart-icon.svg" />
+      <button class="br-button br-button--primary">
+        <img src="assets/icons/Mail.svg" />
+        <span>Request More Info</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="cm-container__home-services">
+    <div class="service-detail">
+      <img src="assets/icons/cm-home-type.svg" />
+      <span>Single-Family Homes</span>
+    </div>
+    <div class="service-detail">
+      <img src="assets/icons/cm-bed.svg" />
+      <span>4 - 7 Beds</span>
+    </div>
+    <div class="service-detail">
+      <img src="assets/icons/cm-bath.svg" />
+      <span>2.5 - 7 Baths</span>
+    </div>
+    <div class="service-detail">
+      <img src="assets/icons/cm-sq.svg" />
+      <span>2,922 - 7,082 sq. ft.</span>
+    </div>
+  </div>
+
+  <div class="cm-container__description">
+    Innovative design meets relaxed Loudoun County lakefront style — all at a price that ensures
+    this opportunity won't last long. Make the morning coffee in your spacious, gourmet kitchen. Sit
+    on your front porch and savor each sip. Spend the day kayaking or paddleboarding. Cast a line or
+    pack a picnic. This community is full of outdoor fun in the Loudoun countryside. Hike the trails
+    amid Virginia's stunning natural beauty. This is home.
+  </div>
+
+  <div class="cm-container__second-carousel">
+    <brookfield-carousel [quantitySlides]="2" [fullWidth]="true">
+      <div class="carousel-content" #insertedContent>
+        <div class="slide" *ngFor="let image of [1, 2]">
+          <div class="slide-content">
+            <div class="slide-content__card">
+              <img #mainImage src="assets/images/desktop/cm-second-slider-first-img.png" />
+            </div>
+            <div class="slide-content__card">
+              <img #mainImage src="assets/images/desktop/cm-second-slider-second-img.png" />
+            </div>
+            <div class="slide-content__card">
+              <img #mainImage src="assets/images/desktop/cm-second-slider-third-img.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </brookfield-carousel>
+  </div>
+
+  <div class="cm-container__key-features-container">
+    <div class="cm-container__key-features-container__option">
+      <span class="cm-container__key-features-container__title">
+        Nearby School
+      </span>
+      <ul>
+        <li>Harmony Middle School</li>
+        <li>Mountain View Elementary School</li>
+        <li>Woodgrove High School</li>
+      </ul>
+    </div>
+    <div class="cm-container__key-features-container__option">
+      <span class="cm-container__key-features-container__title">
+        Key Features
+      </span>
+      <ul>
+        <li>Spacious, Scenic Homesites in the Loudoun Countryside</li>
+        <li>Award-Winning Designs Featuring 4 to 7 Bedrooms</li>
+        <li>Main-Level Owner's Suites Available</li>
+        <li>Voice-Enabled Smart Home Technology</li>
+      </ul>
+    </div>
+  </div>
+
+  <brookfield-empowered-slider></brookfield-empowered-slider>
+</div>
