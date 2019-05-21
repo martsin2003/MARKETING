@@ -4,13 +4,14 @@
   text-align: left;
   @media only screen and (min-width: 769px) {
     text-align: center;
+    font-size: 20px;
   }
 }
 
 .praise-heading {
   font-size: 24px;
   @media only screen and (min-width: 769px) {
-    font-size: 30px;
+    font-size: 48px;
   }
 }
 
@@ -74,4 +75,23 @@
   ::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix {
     padding: 0px !important;
   }
+}
+// Changes by David
+.bigger-logo {
+  width: 75px;
+  height: 75px;
+}
+.big-head {
+  font-size: 30px;
+  color: $primary-dark;
+}
+.big-text {
+  font-size: 20px;
+  width: 70%;
+}
+.big-button {
+  width: 40%;
+}
+.long-button {
+  width: 240px;
 }
