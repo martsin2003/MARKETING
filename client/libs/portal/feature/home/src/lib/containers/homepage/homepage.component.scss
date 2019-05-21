@@ -4,16 +4,29 @@
   text-align: left;
   @media only screen and (min-width: 769px) {
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
 .praise-heading {
   font-size: 24px;
   @media only screen and (min-width: 769px) {
-    font-size: 48px;
+    font-size: 36px;
   }
 }
+// font-family: HelveticaNeue;
+// font-size: 18px;
+// color: #404042;
+// letter-spacing: 0;
+// text-align: center;
+// line-height: 24px;
+
+// font-family: HelveticaNeue-Bold;
+// font-size: 36px;
+// color: #0F2D4F;
+// letter-spacing: 0;
+// text-align: center;
+// line-height: 42px;
 
 .info-cards {
   display: flex;
@@ -82,16 +95,15 @@
   height: 75px;
 }
 .big-head {
-  font-size: 30px;
+  font-size: 28px;
   color: $primary-dark;
-}
-.big-text {
-  font-size: 20px;
-  width: 70%;
 }
 .big-button {
   width: 40%;
 }
 .long-button {
   width: 240px;
+}
+.fitted-correctly-img {
+  object-fit: contain;
 }
