@@ -509,37 +509,6 @@
         }
       }
     },
-    "portal-shared-feature-empowered-slider": {
-      "root": "libs/portal/shared/feature-empowered-slider",
-      "sourceRoot": "libs/portal/shared/feature-empowered-slider/src",
-      "projectType": "library",
-      "prefix": "brookfield",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/portal/shared/feature-empowered-slider/tsconfig.lib.json",
-              "libs/portal/shared/feature-empowered-slider/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/builders:jest",
-          "options": {
-            "jestConfig": "libs/portal/shared/feature-empowered-slider/jest.config.js",
-            "tsConfig": "libs/portal/shared/feature-empowered-slider/tsconfig.spec.json",
-            "setupFile": "libs/portal/shared/feature-empowered-slider/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/schematics:component": {
-          "styleext": "scss"
-        }
-      }
-    },
     "portal-feature-communities": {
       "root": "libs/portal/feature/communities",
       "sourceRoot": "libs/portal/feature/communities/src",
