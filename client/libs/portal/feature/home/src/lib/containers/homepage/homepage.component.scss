@@ -14,19 +14,6 @@
     font-size: 36px;
   }
 }
-// font-family: HelveticaNeue;
-// font-size: 18px;
-// color: #404042;
-// letter-spacing: 0;
-// text-align: center;
-// line-height: 24px;
-
-// font-family: HelveticaNeue-Bold;
-// font-size: 36px;
-// color: #0F2D4F;
-// letter-spacing: 0;
-// text-align: center;
-// line-height: 42px;
 
 .info-cards {
   display: flex;
@@ -105,5 +92,5 @@
   width: 240px;
 }
 .fitted-correctly-img {
-  object-fit: contain;
+  object-fit: cover;
 }
