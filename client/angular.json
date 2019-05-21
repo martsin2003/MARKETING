@@ -168,37 +168,6 @@
         }
       }
     },
-    "portal-feature-find-my-home": {
-      "root": "libs/portal/feature/find-my-home",
-      "sourceRoot": "libs/portal/feature/find-my-home/src",
-      "projectType": "library",
-      "prefix": "brookfield",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/portal/feature/find-my-home/tsconfig.lib.json",
-              "libs/portal/feature/find-my-home/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/builders:jest",
-          "options": {
-            "jestConfig": "libs/portal/feature/find-my-home/jest.config.js",
-            "tsConfig": "libs/portal/feature/find-my-home/tsconfig.spec.json",
-            "setupFile": "libs/portal/feature/find-my-home/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/schematics:component": {
-          "styleext": "scss"
-        }
-      }
-    },
     "common-styles": {
       "root": "libs/common/styles",
       "sourceRoot": "libs/common/styles/src",

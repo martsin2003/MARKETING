@@ -13,7 +13,6 @@
     "paths": {
       "@brookfield/material": ["libs/material/src/index.ts"],
       "@brookfield/portal/feature/home": ["libs/portal/feature/home/src/index.ts"],
-      "@brookfield/portal/feature/find-my-home": ["libs/portal/feature/find-my-home/src/index.ts"],
       "@brookfield/common/styles": ["libs/common/styles/src/index.ts"],
       "@brookfield/portal/feature/home-plans": ["libs/portal/feature/home-plans/src/index.ts"],
       "@brookfield/portal/feature/home-plan-detail": [

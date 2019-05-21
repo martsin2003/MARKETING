@@ -6,10 +6,6 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', children: portalFeatureHomeRoutes },
   {
-    path: 'find-my-home',
-    loadChildren: '@brookfield/portal/feature/find-my-home#PortalFeatureFindMyHomeModule'
-  },
-  {
     path: 'home-plans',
     loadChildren: '@brookfield/portal/feature/home-plans#PortalFeatureHomePlansModule'
   },
@@ -36,12 +32,12 @@ const routes: Routes = [
       {
         path: 'communities',
         loadChildren: '@brookfield/portal/feature/communities#PortalFeatureCommunitiesModule'
+      },
+      {
+        path: 'community-microsite',
+        loadChildren: '@brookfield/portal/feature/community#PortalFeatureCommunityModule'
       }
     ]
-  },
-  {
-    path: 'community-microsite',
-    loadChildren: '@brookfield/portal/feature/community#PortalFeatureCommunityModule'
   },
   { path: '**', redirectTo: 'home' }
 ];

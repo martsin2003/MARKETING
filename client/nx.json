@@ -20,9 +20,6 @@
     "portal-feature-home": {
       "tags": ["scope:home", "type:feature"]
     },
-    "portal-feature-find-my-home": {
-      "tags": ["scope:find-my-home", "type:feature"]
-    },
     "common-styles": {
       "tags": ["scope:shared", "type:styles"]
     },
