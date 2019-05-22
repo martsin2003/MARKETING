@@ -1,0 +1,50 @@
+@import 'variables.scss';
+
+.sales-center-container {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  &__detail {
+    flex-basis: 40%;
+    background: $primary;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    .title {
+      font-size: 22px;
+      color: $primary-dark;
+      padding: 10px 0px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      padding: 10px 0px;
+      &__img-cont {
+        width: 8%;
+      }
+      &__text {
+        padding-left: 20px;
+        color: white;
+        span {
+          display: block;
+          font-family: 'Helvetica Neue', 'Regular';
+          font-size: 18px;
+        }
+        .place-name,
+        .phone {
+          font-family: 'Helvetica Neue';
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  &__map-container {
+    flex-basis: 60%;
+    .area-container {
+      &__map-block {
+        height: 40vh;
+      }
+    }
+  }
+}
