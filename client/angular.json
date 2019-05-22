@@ -168,37 +168,6 @@
         }
       }
     },
-    "portal-feature-find-my-home": {
-      "root": "libs/portal/feature/find-my-home",
-      "sourceRoot": "libs/portal/feature/find-my-home/src",
-      "projectType": "library",
-      "prefix": "brookfield",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/portal/feature/find-my-home/tsconfig.lib.json",
-              "libs/portal/feature/find-my-home/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/builders:jest",
-          "options": {
-            "jestConfig": "libs/portal/feature/find-my-home/jest.config.js",
-            "tsConfig": "libs/portal/feature/find-my-home/tsconfig.spec.json",
-            "setupFile": "libs/portal/feature/find-my-home/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/schematics:component": {
-          "styleext": "scss"
-        }
-      }
-    },
     "common-styles": {
       "root": "libs/common/styles",
       "sourceRoot": "libs/common/styles/src",
@@ -345,37 +314,6 @@
             "jestConfig": "libs/portal/feature/resources/jest.config.js",
             "tsConfig": "libs/portal/feature/resources/tsconfig.spec.json",
             "setupFile": "libs/portal/feature/resources/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/schematics:component": {
-          "styleext": "scss"
-        }
-      }
-    },
-    "portal-feature-home-design-detail": {
-      "root": "libs/portal/feature/home-design-detail",
-      "sourceRoot": "libs/portal/feature/home-design-detail/src",
-      "projectType": "library",
-      "prefix": "brookfield",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/portal/feature/home-design-detail/tsconfig.lib.json",
-              "libs/portal/feature/home-design-detail/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/builders:jest",
-          "options": {
-            "jestConfig": "libs/portal/feature/home-design-detail/jest.config.js",
-            "tsConfig": "libs/portal/feature/home-design-detail/tsconfig.spec.json",
-            "setupFile": "libs/portal/feature/home-design-detail/src/test-setup.ts"
           }
         }
       },
@@ -562,6 +500,68 @@
             "jestConfig": "libs/portal/shared-components/jest.config.js",
             "tsConfig": "libs/portal/shared-components/tsconfig.spec.json",
             "setupFile": "libs/portal/shared-components/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "portal-feature-my-time-tour": {
+      "root": "libs/portal/feature/my-time-tour",
+      "sourceRoot": "libs/portal/feature/my-time-tour/src",
+      "projectType": "library",
+      "prefix": "brookfield",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/portal/feature/my-time-tour/tsconfig.lib.json",
+              "libs/portal/feature/my-time-tour/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/portal/feature/my-time-tour/jest.config.js",
+            "tsConfig": "libs/portal/feature/my-time-tour/tsconfig.spec.json",
+            "setupFile": "libs/portal/feature/my-time-tour/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "portal-feature-my-account": {
+      "root": "libs/portal/feature/my-account",
+      "sourceRoot": "libs/portal/feature/my-account/src",
+      "projectType": "library",
+      "prefix": "brookfield",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/portal/feature/my-account/tsconfig.lib.json",
+              "libs/portal/feature/my-account/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/portal/feature/my-account/jest.config.js",
+            "tsConfig": "libs/portal/feature/my-account/tsconfig.spec.json",
+            "setupFile": "libs/portal/feature/my-account/src/test-setup.ts"
           }
         }
       },

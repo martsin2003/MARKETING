@@ -20,9 +20,6 @@
     "portal-feature-home": {
       "tags": ["scope:home", "type:feature"]
     },
-    "portal-feature-find-my-home": {
-      "tags": ["scope:find-my-home", "type:feature"]
-    },
     "common-styles": {
       "tags": ["scope:shared", "type:styles"]
     },
@@ -37,9 +34,6 @@
     },
     "portal-feature-resources": {
       "tags": ["scope:resources", "type:feature"]
-    },
-    "portal-feature-home-design-detail": {
-      "tags": ["scope:home-design-detail", "type:feature"]
     },
     "portal-feature-community": {
       "tags": ["scope:community", "type:feature"]
@@ -56,8 +50,14 @@
     "portal-core-data-data-services": {
       "tags": ["scope:core-data", "type:data-access"]
     },
-    "portal-core-shared-components": {
+    "portal-shared-components": {
       "tags": ["scope:shared", "type:ui-components"]
+    },
+    "portal-feature-my-time-tour": {
+      "tags": ["scope:my-time-tour", "type:feature"]
+    },
+    "portal-feature-my-account": {
+      "tags": ["scope:my-account", "type:feature"]
     }
   }
 }

@@ -13,7 +13,6 @@
     "paths": {
       "@brookfield/material": ["libs/material/src/index.ts"],
       "@brookfield/portal/feature/home": ["libs/portal/feature/home/src/index.ts"],
-      "@brookfield/portal/feature/find-my-home": ["libs/portal/feature/find-my-home/src/index.ts"],
       "@brookfield/common/styles": ["libs/common/styles/src/index.ts"],
       "@brookfield/portal/feature/home-plans": ["libs/portal/feature/home-plans/src/index.ts"],
       "@brookfield/portal/feature/home-plan-detail": [
@@ -21,9 +20,6 @@
       ],
       "@brookfield/portal/feature/empower": ["libs/portal/feature/empower/src/index.ts"],
       "@brookfield/portal/feature/resources": ["libs/portal/feature/resources/src/index.ts"],
-      "@brookfield/portal/feature/home-design-detail": [
-        "libs/portal/feature/home-design-detail/src/index.ts"
-      ],
       "@brookfield/portal/feature/community": ["libs/portal/feature/community/src/index.ts"],
       "@brookfield/portal/feature/communities": ["libs/portal/feature/communities/src/index.ts"],
       "@brookfield/common/utilities": ["libs/common/utilities/src/index.ts"],
@@ -31,7 +27,9 @@
       "@brookfield/portal/core-data/data-services": [
         "libs/portal/core-data/data-services/src/index.ts"
       ],
-      "@brookfield/portal/shared-components": ["libs/portal/shared-components/src/index.ts"]
+      "@brookfield/portal/shared-components": ["libs/portal/shared-components/src/index.ts"],
+      "@brookfield/portal/feature/my-time-tour": ["libs/portal/feature/my-time-tour/src/index.ts"],
+      "@brookfield/portal/feature/my-account": ["libs/portal/feature/my-account/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

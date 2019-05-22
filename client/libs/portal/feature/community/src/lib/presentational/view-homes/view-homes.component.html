@@ -1,0 +1,41 @@
+<div class="view-homes-container">
+  <h1 class="view-homes-container__title">
+    See The Homes
+  </h1>
+
+  <div class="view-homes-container__tools-panel">
+    <div class="view-homes-container__toggle-buttons">
+      <button
+        [ngClass]="{ 'selected-button': selectedOption === 'home-plans' }"
+        (click)="selectViewOption('home-plans')"
+      >
+        Home Plans
+      </button>
+      <button
+        [ngClass]="{ 'selected-button': selectedOption === 'builded-homes' }"
+        (click)="selectViewOption('builded-homes')"
+      >
+        Move-In-Now Only
+      </button>
+    </div>
+    <div class="button-filter" (click)="openFilter()">
+      <img src="assets/icons/filter-icon.svg" />
+      Filters
+    </div>
+  </div>
+
+  <div class="cards-container">
+    <brookfield-home-card></brookfield-home-card>
+    <brookfield-home-card></brookfield-home-card>
+    <brookfield-home-card></brookfield-home-card>
+    <brookfield-home-card></brookfield-home-card>
+    <brookfield-home-card></brookfield-home-card>
+    <brookfield-home-card></brookfield-home-card>
+    <brookfield-home-card></brookfield-home-card>
+    <brookfield-home-card></brookfield-home-card>
+  </div>
+
+  <div class="filter-container">
+    <brookfield-view-filter [openFilter]="filter"></brookfield-view-filter>
+  </div>
+</div>

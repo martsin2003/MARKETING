@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {} from 'googlemaps';
-import { CommunitiesView } from '../../../../../communities/src/lib/view-model/communities';
 
 @Component({
   selector: 'brookfield-area-amenities',
@@ -18,7 +17,6 @@ export class AreaAmenitiesComponent implements OnInit {
   ];
   selectedPlace = 0;
 
-  view: CommunitiesView = CommunitiesView.listMap;
   @ViewChild('map') mapElement: any;
   map: google.maps.Map;
   constructor() {}
@@ -34,10 +32,6 @@ export class AreaAmenitiesComponent implements OnInit {
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     this.map = new google.maps.Map(this.mapElement.nativeElement, mapProperties);
-  }
-
-  viewChanged(view: CommunitiesView) {
-    this.view = view;
   }
 
   selectPlace(index: number) {
