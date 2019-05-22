@@ -5,11 +5,12 @@ import { MyAccountComponent } from './containers/my-account/my-account.component
 import { FavoritesComponent } from './presentaitonal/favorites/favorites.component';
 import { MyTimeHomeToursComponent } from './presentaitonal/my-time-home-tours/my-time-home-tours.component';
 import { ProfileComponent } from './presentaitonal/profile/profile.component';
+import { MaterialModule } from '@brookfield/material';
 
 @NgModule({
   imports: [
     CommonModule,
-
+    MaterialModule,
     RouterModule.forChild([{ path: '', pathMatch: 'full', component: MyAccountComponent }])
   ],
   declarations: [MyAccountComponent, FavoritesComponent, MyTimeHomeToursComponent, ProfileComponent]
