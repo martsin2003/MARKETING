@@ -2,7 +2,6 @@ import { map, takeUntil } from 'rxjs/operators';
 import { DetectMobileViewService } from '@brookfield/common/utilities';
 import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import {} from 'googlemaps';
 
 @Component({
   selector: 'brookfield-community-microsite',
@@ -33,15 +32,11 @@ export class CommunityMicrositeComponent implements OnInit, OnDestroy {
   readLess: boolean;
   isMobileView$: Observable<boolean>;
 
-  @ViewChild('map') mapElement: any;
-  map: google.maps.Map;
-
   constructor(private detectMobileViewService: DetectMobileViewService) {}
 
   ngOnInit() {
     this.isMobileView$ = this.detectMobileViewService.isMobileView();
     this.setUpDescriptionChange();
-    this.initGoogleMaps();
   }
 
   ngOnDestroy() {
@@ -66,14 +61,5 @@ export class CommunityMicrositeComponent implements OnInit, OnDestroy {
   readMore() {
     this.readLess = !this.readLess;
     this.desrciptionText = this.readLess ? this.fullDesrciptionText : this.trimmedDescriptionText;
-  }
-
-  initGoogleMaps() {
-    const mapProperties = {
-      center: new google.maps.LatLng(35.2271, -80.8431),
-      zoom: 15,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    this.map = new google.maps.Map(this.mapElement.nativeElement, mapProperties);
   }
 }
