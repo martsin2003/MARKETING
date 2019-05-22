@@ -17,3 +17,10 @@
   align-items: center;
   font-size: 14px;
 }
+.nav-item {
+  border-bottom: 5px solid rgba(0, 0, 0, 0);
+}
+.nav-item:hover {
+  border-bottom: 5px solid $secondary;
+  color: $secondary !important;
+}
