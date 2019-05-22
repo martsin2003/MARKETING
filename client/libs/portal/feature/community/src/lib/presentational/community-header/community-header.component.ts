@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { fromEvent, combineLatest } from 'rxjs';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { fromEvent, combineLatest, Subject } from 'rxjs';
 import { throttleTime, debounceTime } from 'rxjs/operators';
 
 @Component({
@@ -7,8 +7,9 @@ import { throttleTime, debounceTime } from 'rxjs/operators';
   templateUrl: './community-header.component.html',
   styleUrls: ['./community-header.component.scss']
 })
-export class CommunityHeaderComponent implements OnInit {
+export class CommunityHeaderComponent implements OnInit, OnDestroy {
   showCommunityHeader: boolean;
+  private destroy$: Subject<boolean> = new Subject<boolean>();
 
   constructor() {}
 
@@ -24,5 +25,10 @@ export class CommunityHeaderComponent implements OnInit {
         this.showCommunityHeader = false;
       }
     });
+  }
+
+  ngOnDestroy() {
+    this.destroy$.next(true);
+    this.destroy$.complete();
   }
 }
