@@ -9,6 +9,7 @@ import { ViewHomesComponent } from './presentational/view-homes/view-homes.compo
 import { SitePlanComponent } from './presentational/site-plan/site-plan.component';
 import { ResidentReviewsComponent } from './presentational/resident-reviews/resident-reviews.component';
 import { SalesCenterComponent } from './presentational/sales-center/sales-center.component';
+import { CommunityHeaderComponent } from './presentational/community-header/community-header.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { SalesCenterComponent } from './presentational/sales-center/sales-center
     ViewHomesComponent,
     SitePlanComponent,
     ResidentReviewsComponent,
-    SalesCenterComponent
+    SalesCenterComponent,
+    CommunityHeaderComponent
   ]
 })
 export class PortalFeatureCommunityModule {}

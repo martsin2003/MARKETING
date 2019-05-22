@@ -1,0 +1,82 @@
+@import 'variables.scss';
+
+.ch-container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: white;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  display: flex;
+  animation: opacity 0.4s;
+  @keyframes opacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  .secondary-button {
+    flex-basis: 35%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:first-child {
+      flex-basis: 25%;
+    }
+    &__title {
+      font-size: 18px;
+      color: $primary-dark;
+    }
+    .favorite-button {
+      flex-basis: 17%;
+      height: 100%;
+      background: $primary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid white;
+      img {
+        width: 30px;
+      }
+    }
+    .more-info-button {
+      flex-basis: 83%;
+      height: 100%;
+      background: $primary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 16px;
+      img {
+        margin: 0px 10px;
+      }
+    }
+  }
+  .main-button {
+    flex-basis: 40%;
+    box-sizing: border-box;
+    display: flex;
+    &__overview-button {
+      flex-basis: 100%;
+      background: $primary-dark;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 16px;
+      color: white;
+      img {
+        margin: 10px 5px 5px;
+      }
+    }
+  }
+}
