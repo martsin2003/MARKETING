@@ -1,0 +1,37 @@
+.tour-verification-type {
+  padding-bottom: 50px;
+  &__text {
+    text-align: center;
+    &--centered {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &__cards {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+.verification-type-card {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  &__text {
+    text-align: center;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    height: 270px;
+    justify-content: center;
+    padding: 40px;
+    background: #fff;
+    border: 1px solid #c0c7cb;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+  }
+  &__icons {
+    display: flex;
+    justify-content: center;
+  }
+}

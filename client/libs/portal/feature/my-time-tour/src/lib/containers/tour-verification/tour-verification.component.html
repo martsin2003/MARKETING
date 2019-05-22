@@ -1,3 +1,9 @@
-<p>
-  tour-verification works!
-</p>
+<div class="tour-verification">
+  <brookfield-tour-step [data]="data"></brookfield-tour-step>
+
+  <ng-container [ngSwitch]="step">
+    <ng-container *ngSwitchCase="'selectType'">
+      <brookfield-tour-verification-type></brookfield-tour-verification-type>
+    </ng-container>
+  </ng-container>
+</div>
