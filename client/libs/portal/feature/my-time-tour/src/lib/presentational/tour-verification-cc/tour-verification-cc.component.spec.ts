@@ -8,9 +8,8 @@ describe('TourVerificationCcComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TourVerificationCcComponent ]
-    })
-    .compileComponents();
+      declarations: [TourVerificationCcComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
