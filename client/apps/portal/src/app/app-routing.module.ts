@@ -22,6 +22,10 @@ const routes: Routes = [
     loadChildren: '@brookfield/portal/feature/my-time-tour#PortalFeatureMyTimeTourModule'
   },
   {
+    path: 'my-account',
+    loadChildren: '@brookfield/portal/feature/my-account#PortalFeatureMyAccountModule'
+  },
+  {
     path: 'find',
     children: [
       {

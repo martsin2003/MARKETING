@@ -4,10 +4,9 @@
   border-bottom: 1px solid $white;
   &.opened,
   &:not(.absolute-nav) {
-    // background-color: #f0f3f5;
+    background-color: #f0f3f5;
     .nav-item {
-      // color: $primary-accent;
-      color: $white;
+      color: $primary-accent;
     }
   }
 }

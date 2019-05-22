@@ -88,7 +88,12 @@
     <button mat-menu-item>Service Request</button>
   </mat-menu>
 
-  <button
+  <button mat-button class="nav-item" (click)="navigateTo('my-account')">
+    My Account
+  </button>
+  <!-- The layout below will be for logged in user - commenting out during UI work -->
+  <!-- TODO - connect section below when doing login funcitonaliy - ~RG -->
+  <!-- <button
     mat-button
     class="nav-item"
     [matMenuTriggerFor]="myAccountMenu"
@@ -99,7 +104,6 @@
     >
     My Account
   </button>
-
   <mat-menu xPosition="before" #myAccountMenu="matMenu">
     <button mat-menu-item>My Favorites</button>
     <mat-divider></mat-divider>
@@ -108,5 +112,5 @@
     <button mat-menu-item>My Profile</button>
     <mat-divider></mat-divider>
     <button mat-menu-item>Sign Out</button>
-  </mat-menu>
+  </mat-menu> -->
 </div>
