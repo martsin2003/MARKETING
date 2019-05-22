@@ -14,23 +14,19 @@ export class CommunityHeaderComponent implements OnInit, OnDestroy {
   constructor() {}
 
   ngOnInit() {
-    const lastScrollEvent = fromEvent(document, 'scroll').pipe(
-      debounceTime(400),
-      takeUntil(this.destroy$)
-    );
+    const lastScrollEvent = fromEvent(document, 'scroll').pipe(debounceTime(400));
 
-    const throttledScrollEvents = fromEvent(document, 'scroll').pipe(
-      throttleTime(400),
-      takeUntil(this.destroy$)
-    );
+    const throttledScrollEvents = fromEvent(document, 'scroll').pipe(throttleTime(400));
 
-    combineLatest(lastScrollEvent, throttledScrollEvents).subscribe(values => {
-      if (window.pageYOffset > 142) {
-        this.showCommunityHeader = true;
-      } else {
-        this.showCommunityHeader = false;
-      }
-    });
+    combineLatest(lastScrollEvent, throttledScrollEvents)
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(values => {
+        if (window.pageYOffset > 142) {
+          this.showCommunityHeader = true;
+        } else {
+          this.showCommunityHeader = false;
+        }
+      });
   }
 
   ngOnDestroy() {
