@@ -15,7 +15,7 @@
     </div>
   </div>
 
-  <brookfield-carousel [images]="communityImages"></brookfield-carousel>
+  <brookfield-carousel [images]="communityImages" id="overview"></brookfield-carousel>
 
   <div class="cm-container__header desktop-header">
     <div class="cm-container__header__details">
@@ -141,7 +141,7 @@
     </mat-accordion>
   </div>
 
-  <brookfield-area-amenities></brookfield-area-amenities>
+  <brookfield-area-amenities id="area-amenities"></brookfield-area-amenities>
 
   <div class="cm-container__header mobile-header">
     <div class="btn-container">
@@ -154,17 +154,20 @@
     </div>
   </div>
 
-  <brookfield-empowered-slider></brookfield-empowered-slider>
+  <brookfield-empowered-slider id="empower-features"></brookfield-empowered-slider>
 
-  <brookfield-view-homes></brookfield-view-homes>
+  <brookfield-view-homes id="see-the-homes"></brookfield-view-homes>
 
-  <brookfield-site-plan></brookfield-site-plan>
+  <brookfield-site-plan id="site-plan"></brookfield-site-plan>
 
-  <brookfield-resident-reviews></brookfield-resident-reviews>
+  <brookfield-resident-reviews id="reviews"></brookfield-resident-reviews>
 
-  <brookfield-sales-center></brookfield-sales-center>
+  <brookfield-sales-center id="sales-center-info"></brookfield-sales-center>
 
-  <brookfield-more-info-form></brookfield-more-info-form>
+  <brookfield-more-info-form id="request-more-info"></brookfield-more-info-form>
 
-  <brookfield-community-header></brookfield-community-header>
+  <brookfield-community-header
+    (viewComponent)="scrollTo($event)"
+    [menuItems]="menuItems"
+  ></brookfield-community-header>
 </div>

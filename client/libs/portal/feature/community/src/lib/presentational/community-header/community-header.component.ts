@@ -1,4 +1,14 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  OnDestroy,
+  Output,
+  EventEmitter,
+  Input,
+  OnChanges,
+  SimpleChange,
+  SimpleChanges
+} from '@angular/core';
 import { fromEvent, combineLatest, Subject } from 'rxjs';
 import { throttleTime, debounceTime, takeUntil } from 'rxjs/operators';
 
@@ -7,8 +17,14 @@ import { throttleTime, debounceTime, takeUntil } from 'rxjs/operators';
   templateUrl: './community-header.component.html',
   styleUrls: ['./community-header.component.scss']
 })
-export class CommunityHeaderComponent implements OnInit, OnDestroy {
+export class CommunityHeaderComponent implements OnInit, OnDestroy, OnChanges {
+  @Input() menuItems: { title: string; id: string };
+  @Output() viewComponent: EventEmitter<string> = new EventEmitter();
+
+  observableComponent: string;
+
   showCommunityHeader: boolean;
+  showMenu: boolean;
   private destroy$: Subject<boolean> = new Subject<boolean>();
 
   constructor() {}
@@ -29,8 +45,24 @@ export class CommunityHeaderComponent implements OnInit, OnDestroy {
       });
   }
 
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.menuItems && changes.menuItems.currentValue) {
+      this.observableComponent = this.menuItems[0].title;
+    }
+  }
+
   ngOnDestroy() {
     this.destroy$.next(true);
     this.destroy$.complete();
+  }
+
+  openMenu() {
+    this.showMenu = !this.showMenu;
+  }
+
+  selectItem(component: any) {
+    this.observableComponent = component.title;
+    this.showMenu = !this.showMenu;
+    this.viewComponent.emit(component.id);
   }
 }

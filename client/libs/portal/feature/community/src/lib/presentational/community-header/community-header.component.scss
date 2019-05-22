@@ -66,6 +66,7 @@
     flex-basis: 40%;
     box-sizing: border-box;
     display: flex;
+    position: relative;
     &__overview-button {
       flex-basis: 100%;
       background: $primary-dark;
@@ -76,6 +77,44 @@
       color: white;
       img {
         margin: 10px 5px 5px;
+      }
+    }
+    .menu {
+      width: 100%;
+      position: absolute;
+      height: auto;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      background: $primary-dark;
+      color: white;
+      font-family: 'Helvetica Neue', 'Medium';
+      transform: translateY(-450px);
+      transition-duration: 0.3s;
+      .menu-item,
+      .close-menu {
+        height: 50px;
+        padding: 0px 10px;
+        border-bottom: 1px solid white;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        &:last-child {
+          border: none;
+        }
+        img {
+          width: 25px;
+          margin-right: 5px;
+        }
+      }
+      &.hide {
+        transform: translateY(-450px);
+      }
+      &.show {
+        transform: translateY(0px);
       }
     }
   }
