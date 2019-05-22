@@ -12,8 +12,7 @@
 .main-navigation {
   margin-left: auto;
   .nav-item {
-    // height: 100%;
-    margin-top: 25px;
+    height: 100%;
   }
 }
 .main-navigation-container {
@@ -118,30 +117,38 @@ mat-card {
 .main-nav-empower-innovations-card {
   width: 340px;
 }
-
 .main-nav-empower-innovations-text {
   width: 70%;
 }
-// changes by david
-.fixed-img img {
+
+.fixed-img {
   background-color: #eef1f4;
-  max-width: 480px;
-  max-height: 180px;
-  min-width: 480px;
-  min-height: 180px;
-  object-fit: contain;
+  height: 150px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
 }
 .image-txt {
-  margin-top: -45px;
-  padding-left: 10px;
-  font-size: 18px;
+  position: absolute;
+  bottom: 0;
+  padding-left: 23px;
   color: $primary-dark;
 }
-.mat-button:hover {
+.btn-border-bottom {
+  display: flex;
+  align-items: center;
+  border-bottom: 5px solid rgba(0, 0, 0, 0);
+}
+.btn-border-bottom:hover {
   border-bottom: 5px solid $secondary;
   color: $secondary;
 }
-.mat-button:active {
+.btn-border-bottom:active {
   border-bottom: 5px solid $secondary;
   color: $secondary;
 }
