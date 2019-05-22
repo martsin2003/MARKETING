@@ -1,0 +1,56 @@
+<div class="d-flex flex-column align-items-center">
+  <div class="d-flex flex-column my-time-tour-container align-items-center">
+    <img class="m-5" src="../assets/logos/my_time_white.svg" />
+
+    <div class="mt-3 white-text text-center">
+      Step 1 of 5:<br />
+      Select a Date and Time to See
+    </div>
+
+    <div class="font-24 white-text text-center">
+      The Torrington II
+    </div>
+
+    <div class="m-5">
+      STEPPER
+    </div>
+
+    <div class="w-50 d-flex flex-row justify-content-center">
+      <div class="w-50 mr-2 d-flex flex-column">
+        <div class="white-text">
+          Date
+        </div>
+        <input
+          matInput
+          class="search-box__item search-box__item--input my-2 br-input"
+          type="text"
+          placeholder="01/03/2019"
+        />
+      </div>
+
+      <div class="w-50 ml-2 d-flex flex-column white-text">
+        <div class="white-text">
+          Time
+        </div>
+        <mat-select
+          class="search-box__item search-box__item--input my-2 br-input"
+          placeholder="TIME"
+        >
+          <mat-option>10:00 AM</mat-option>
+          <mat-option>11:30 AM</mat-option>
+          <mat-option>1:00 PM</mat-option>
+          <mat-option>2:30 PM</mat-option>
+        </mat-select>
+      </div>
+    </div>
+
+    <button class="my-time-button br-button br-button--primary my-3">
+      CONTINUE
+    </button>
+  </div>
+
+  <button class="my-time-button w-15 m-3 br-button br-button--secondary primary-text">
+    BACK
+  </button>
+  <div></div>
+</div>
