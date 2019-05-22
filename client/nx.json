@@ -52,6 +52,9 @@
     },
     "portal-shared-components": {
       "tags": ["scope:shared", "type:ui-components"]
+    },
+    "portal-feature-my-time-tour": {
+      "tags": ["scope:my-time-tour", "type:feature"]
     }
   }
 }

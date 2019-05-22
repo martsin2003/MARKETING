@@ -508,6 +508,37 @@
           "styleext": "scss"
         }
       }
+    },
+    "portal-feature-my-time-tour": {
+      "root": "libs/portal/feature/my-time-tour",
+      "sourceRoot": "libs/portal/feature/my-time-tour/src",
+      "projectType": "library",
+      "prefix": "brookfield",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/portal/feature/my-time-tour/tsconfig.lib.json",
+              "libs/portal/feature/my-time-tour/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/portal/feature/my-time-tour/jest.config.js",
+            "tsConfig": "libs/portal/feature/my-time-tour/tsconfig.spec.json",
+            "setupFile": "libs/portal/feature/my-time-tour/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {
