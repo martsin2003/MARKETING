@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { fromEvent, combineLatest, Subject } from 'rxjs';
-import { throttleTime, debounceTime } from 'rxjs/operators';
+import { throttleTime, debounceTime, takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'brookfield-community-header',
@@ -14,9 +14,15 @@ export class CommunityHeaderComponent implements OnInit, OnDestroy {
   constructor() {}
 
   ngOnInit() {
-    const lastScrollEvent = fromEvent(document, 'scroll').pipe(debounceTime(400));
+    const lastScrollEvent = fromEvent(document, 'scroll').pipe(
+      debounceTime(400),
+      takeUntil(this.destroy$)
+    );
 
-    const throttledScrollEvents = fromEvent(document, 'scroll').pipe(throttleTime(400));
+    const throttledScrollEvents = fromEvent(document, 'scroll').pipe(
+      throttleTime(400),
+      takeUntil(this.destroy$)
+    );
 
     combineLatest(lastScrollEvent, throttledScrollEvents).subscribe(values => {
       if (window.pageYOffset > 142) {
