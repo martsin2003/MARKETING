@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { TourStepData } from '../../interfaces/tour-step.interface';
 
 @Component({
   selector: 'brookfield-tour-step',
@@ -6,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tour-step.component.scss']
 })
 export class TourStepComponent implements OnInit {
+  @Input() whiteBackground: boolean;
+  @Input() data: TourStepData;
+  steps: number[];
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.steps = [];
+    this.steps.length = this.data.stepsCount;
+  }
 }

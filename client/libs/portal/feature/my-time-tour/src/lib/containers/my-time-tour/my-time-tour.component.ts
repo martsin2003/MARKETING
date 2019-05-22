@@ -6,8 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-time-tour.component.scss']
 })
 export class MyTimeTourComponent implements OnInit {
-  step = 0;
+  step = 3;
   constructor() {}
 
   ngOnInit() {}
+
+  timeStepCompleted() {
+    this.step++;
+  }
+
+  nextStep() {
+    this.step++;
+  }
 }

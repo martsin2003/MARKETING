@@ -101,6 +101,10 @@ body {
   transition: color 0.1s;
   transition: 0.25s;
   cursor: pointer;
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
 
   mat-icon,
   img {
@@ -129,6 +133,30 @@ body {
       color: white;
     }
   }
+  &--light {
+    font-family: HelveticaNeue-Light;
+    font-weight: 100;
+  }
+}
+
+// header style
+.br-header {
+  font-family: HelveticaNeue-Bold;
+  font-size: 28px;
+  color: #0f2d4f;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 32px;
+}
+
+// header style
+.br-description {
+  font-family: HelveticaNeue-Light;
+  font-size: 18px;
+  color: #5f6062;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 24px;
 }
 
 // Input styles

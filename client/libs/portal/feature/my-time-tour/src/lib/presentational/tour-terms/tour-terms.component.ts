@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { TourStepData } from '../../interfaces/tour-step.interface';
 
 @Component({
   selector: 'brookfield-tour-terms',
@@ -7,6 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TourTermsComponent implements OnInit {
   constructor() {}
+  data: TourStepData;
+  accept: boolean;
+  @Output() nextStep = new EventEmitter<string>();
+  ngOnInit() {
+    this.data = {
+      step: 2,
+      stepsCount: 5,
+      title: 'Terms and Conditions'
+    };
+  }
 
-  ngOnInit() {}
+  acceptClick() {
+    this.nextStep.emit();
+  }
 }
