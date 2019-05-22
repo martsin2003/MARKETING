@@ -8,8 +8,9 @@ describe('TourCreatePasswordComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [TourCreatePasswordComponent]
-    }).compileComponents();
+      declarations: [ TourCreatePasswordComponent ]
+    })
+    .compileComponents();
   }));
 
   beforeEach(() => {
