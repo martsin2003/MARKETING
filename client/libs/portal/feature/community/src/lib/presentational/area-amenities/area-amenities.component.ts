@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {} from 'googlemaps';
-import { CommunitiesView } from '../../../../../communities/src/lib/view-model/communities';
 
 @Component({
   selector: 'brookfield-area-amenities',
