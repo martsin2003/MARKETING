@@ -28,183 +28,25 @@
     width: 100%;
     padding-bottom: 10px;
   }
-  .content-title {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    span {
-      display: block;
-      font-size: 18px;
-      font-weight: bold;
-      font-family: 'Helvetica Neue';
-      &.sub-title {
-        color: $dark-gray;
-      }
-      &.price {
-        color: $primary;
-      }
-    }
-    .home-name {
-      font-size: 36px;
-      color: $primary;
-    }
-    .title-buttons {
-      display: flex;
-      align-items: center;
-      img:first-child {
-        margin-right: 20px;
-        cursor: pointer;
-      }
-      button {
-        line-height: 1;
-        width: 260px;
-      }
-    }
+
+  .get-empowered-container {
+    margin-top: 30px;
+    padding: 30px 0px 5px;
+    background: $bg-primary-light;
   }
-  .content-details {
-    width: 100%;
+  .button-back-container {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    padding: 15px 0px;
-    .item {
-      display: flex;
-      align-items: center;
-      color: rgb(83, 83, 83);
-      &:not(:last-child) {
-        margin-right: 25px;
-      }
-      span {
-        font-family: 'Helvetica Neue', sans-serif;
-        margin-left: 10px;
-        font-size: 14px;
-      }
-    }
-  }
-  .wrp-description {
-    display: flex;
-    flex-direction: row;
-    &__description-text {
-      p {
-        font-family: 'Helvetica-Neue-Regular', sans-serif;
-        color: $dark-gray;
-      }
-    }
-    &__buttons {
-      padding-left: 30px;
-      margin-top: 16px;
-      .button {
-        width: 260px;
-        margin-bottom: 7px;
-      }
-    }
-  }
-  .mob-key-home {
-    display: none;
-  }
-  .wrapper-of-form {
-    height: auto;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.03);
-    .title {
-      text-align: center;
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 600;
-      font-size: 30px;
-      padding-top: 40px;
-    }
-    .sub-title {
-      text-align: center;
-      color: $primary-light;
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 600;
-      font-size: 30px;
-      padding-bottom: 20px;
-    }
-    .form {
-      width: 480px;
-      max-width: 480px;
-      height: auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      .item {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        mat-form-field {
-          width: 230px;
-        }
-      }
-      .radio-buttons {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 10px 0px;
-        padding-bottom: 30px;
-        mat-radio-button {
-          font-family: 'Open Sans', sans-serif;
-          font-weight: 100;
-          color: rgb(94, 94, 94);
-          margin-left: 20px;
-          /deep/.mat-radio-outer-circle {
-            border-width: 1px !important;
-          }
-        }
-      }
-      .wrp-comments {
-        width: 100%;
-        height: auto;
-        mat-form-field {
-          width: 100%;
-        }
-      }
-      .requests {
-        width: 100%;
-        display: flex;
-        div {
-          width: 50%;
-          display: flex;
-          justify-content: flex-start;
-          /deep/mat-checkbox {
-            font-weight: 100;
-            /deep/.mat-checkbox-frame {
-              border-width: 1px;
-            }
-          }
-        }
-      }
-      .btn-submit {
-        margin-top: 20px;
-        width: 220px;
-      }
-    }
-    .get-empowered-container {
-      margin-top: 30px;
-      padding: 30px 0px 5px;
-      background: $bg-primary-light;
-    }
-    .button-back-container {
-      display: flex;
-      justify-content: center;
-      padding: 15px 0px;
-      background: $bg-primary-light;
-      button {
-        width: 220px;
-        color: $dark-gray;
-        border-color: $dark-gray;
-        border-width: 2px;
-        &:hover {
-          color: white;
-          background: $dark-gray;
-        }
+    padding: 15px 0px;
+    background: $bg-primary-light;
+    button {
+      width: 220px;
+      color: $dark-gray;
+      border-color: $dark-gray;
+      border-width: 2px;
+      &:hover {
+        color: white;
+        background: $dark-gray;
       }
     }
   }
