@@ -7,6 +7,7 @@ import { MaterialModule } from '@brookfield/material';
 import { InteractiveFloorPlanComponent } from './containers/interactive-floor-plan/interactive-floor-plan.component';
 import { ElevationSelectComponent } from './presentational/elevation-select/elevation-select.component';
 import { FloorPlanComponent } from './presentational/floor-plan/floor-plan.component';
+import { HomeDetailInfoComponent } from './presentational/home-detail-info/home-detail-info.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import { FloorPlanComponent } from './presentational/floor-plan/floor-plan.compo
     HomePlanDetailComponent,
     InteractiveFloorPlanComponent,
     ElevationSelectComponent,
-    FloorPlanComponent
+    FloorPlanComponent,
+    HomeDetailInfoComponent
   ]
 })
 export class PortalFeatureHomePlanDetailModule {}

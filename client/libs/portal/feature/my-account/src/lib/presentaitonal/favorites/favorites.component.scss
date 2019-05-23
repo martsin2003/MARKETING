@@ -15,8 +15,8 @@
   border: none;
 }
 .mat-background-color {
-  background-color: $gray-bg;
-  border: 1px solid $gray-bg;
+  background-color: $bg-primary-light;
+  border: 1px solid $bg-primary-light;
 }
 .div-full-width {
   display: block;
@@ -32,7 +32,7 @@
 .block--color--blue {
   display: flex;
   background-color: $primary-dark;
-  color: $white;
+  color: $pure-white;
   justify-content: center;
   align-items: center;
   flex-direction: column;

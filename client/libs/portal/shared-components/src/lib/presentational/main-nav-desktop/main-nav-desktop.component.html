@@ -10,12 +10,14 @@
       <span class="font-36 d-block label-text-1">Brookfield</span>
       <span class="font-24 d-block label-text-2">Residential</span>
     </a>
-    <div class="main-navigation">
+    <div class="main-navigation d-inline-flex">
       <button mat-button class="nav-item" (mouseenter)="openMenu('findMyHome')">
-        <mat-icon class="expand-arrow" [ngClass]="{ expanded: openedMenu === 'findMyHome' }">
-          expand_more
-        </mat-icon>
-        FIND MY HOME
+        <span class="btn-border-bottom">
+          <mat-icon class="expand-arrow" [ngClass]="{ expanded: openedMenu === 'findMyHome' }">
+            expand_more
+          </mat-icon>
+          FIND MY HOME
+        </span>
       </button>
 
       <button
@@ -24,10 +26,12 @@
         (mouseenter)="openMenu('homePlans')"
         (click)="navigateTo('/home-plans')"
       >
-        <mat-icon class="expand-arrow" [ngClass]="{ expanded: openedMenu === 'homePlans' }">
-          expand_more
-        </mat-icon>
-        HOME PLANS
+        <span class="btn-border-bottom">
+          <mat-icon class="expand-arrow" [ngClass]="{ expanded: openedMenu === 'homePlans' }">
+            expand_more
+          </mat-icon>
+          HOME PLANS
+        </span>
       </button>
 
       <button
@@ -36,16 +40,18 @@
         (mouseenter)="openMenu('empowerInnovations')"
         (click)="navigateTo('/empower')"
       >
-        <mat-icon
-          class="expand-arrow"
-          [ngClass]="{ expanded: openedMenu === 'empowerInnovations' }"
-        >
-          expand_more
-        </mat-icon>
-        EMPOWER INNOVATIONS
+        <span class="btn-border-bottom">
+          <mat-icon
+            class="expand-arrow"
+            [ngClass]="{ expanded: openedMenu === 'empowerInnovations' }"
+          >
+            expand_more
+          </mat-icon>
+          EMPOWER INNOVATIONS
+        </span>
       </button>
       <button class="nav-item" mat-button>
-        <span class="font-16">WHY BROOKFIELD?</span>
+        <span class="font-16 btn-border-bottom">WHY BROOKFIELD?</span>
       </button>
     </div>
   </div>
@@ -53,8 +59,10 @@
     <mat-card *ngIf="openedMenu === 'findMyHome'" class="main-nav-menu">
       <div class="main-nav-menu-wrapper">
         <mat-list>
-          <img src="http://placehold.it/400x200/333333" />
-
+          <div class="fixed-img">
+            <img src="assets/icons/state-va.svg" />
+            <p class="image-txt">VIRGINIA</p>
+          </div>
           <mat-list-item>
             <button class="main-nav-list-button">
               Frederick County, VA
@@ -75,7 +83,10 @@
         </mat-list>
 
         <mat-list>
-          <img src="http://placehold.it/400x200/333333" />
+          <div class="fixed-img">
+            <img src="assets/icons/state-md.svg" />
+            <p class="image-txt">MARYLAND</p>
+          </div>
           <mat-list-item>
             <button class="main-nav-list-button">
               Anne Arundel County, MD
@@ -96,7 +107,10 @@
         </mat-list>
 
         <mat-list>
-          <img src="http://placehold.it/400x200/333333" />
+          <div class="fixed-img">
+            <img src="assets/icons/state-de.svg" />
+            <p class="image-txt">DELAWARE</p>
+          </div>
           <mat-list-item>
             <button class="main-nav-list-button">
               Sussex County, DE

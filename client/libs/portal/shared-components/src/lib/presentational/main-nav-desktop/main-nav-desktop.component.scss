@@ -4,10 +4,10 @@
   cursor: pointer;
 }
 .label-text-1 {
-  color: $primary-dark;
+  color: $primary;
 }
 .label-text-2 {
-  color: $yellow;
+  color: $dark-yellow;
 }
 .main-navigation {
   margin-left: auto;
@@ -17,11 +17,11 @@
 }
 .main-navigation-container {
   background-color: transparent;
-  color: $white;
+  color: $pure-white;
   &.opened,
   &:not(.absolute-nav) {
     background-color: white;
-    color: $primary-accent !important;
+    color: $primary !important;
   }
   &.absolute-nav {
     &:not(.opened) {
@@ -29,7 +29,7 @@
       .label-text-1,
       .label-text-2,
       .menu-toggle {
-        color: $white !important;
+        color: $pure-white !important;
       }
     }
   }
@@ -117,7 +117,38 @@ mat-card {
 .main-nav-empower-innovations-card {
   width: 340px;
 }
-
 .main-nav-empower-innovations-text {
   width: 70%;
+}
+
+.fixed-img {
+  background-color: #eef1f4;
+  height: 150px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+}
+.image-txt {
+  position: absolute;
+  bottom: 0;
+  padding-left: 23px;
+  color: $primary;
+}
+.btn-border-bottom {
+  display: flex;
+  align-items: center;
+  border-bottom: 5px solid rgba(0, 0, 0, 0);
+}
+.btn-border-bottom:hover {
+  border-bottom: 5px solid $primary-light;
+  color: $primary-light;
+}
+.btn-border-bottom:active {
+  border-bottom: 5px solid $primary-light;
+  color: $primary-light;
 }

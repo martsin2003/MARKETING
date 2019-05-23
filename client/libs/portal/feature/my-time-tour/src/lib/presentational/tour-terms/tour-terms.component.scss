@@ -1,0 +1,64 @@
+@import 'variables.scss';
+.tour-terms {
+  &__text {
+    display: flex;
+    font-family: HelveticaNeue-Light !important;
+    font-size: 18px;
+    color: #404042;
+    letter-spacing: 0;
+    line-height: 24px;
+    &--bold {
+      font-family: HelveticaNeue-Medium !important;
+    }
+    &--centered {
+      padding: 0 50px;
+      justify-content: center;
+      text-align: center;
+    }
+    &--underline {
+      text-decoration: underline;
+    }
+    &--primary {
+      color: $primary-light;
+    }
+  }
+  &__bottom {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+  }
+  &__left {
+    padding: 0 50px;
+  }
+}
+::ng-deep .mat-checkbox-label {
+  font-family: HelveticaNeue-Light !important;
+}
+
+.home-brochure {
+  background: $primary-light;
+  width: 300px;
+  height: 100%;
+  &__image {
+    max-width: 300px;
+  }
+  &__info {
+    padding: 10px;
+    color: #fff;
+  }
+  &__text {
+    display: flex;
+    align-items: center;
+    font-family: HelveticaNeue-Light;
+    font-size: 18px;
+    line-height: 22px;
+    &--primary {
+      font-family: HelveticaNeue-Bold;
+      font-size: 28px;
+      color: #0f2d4f;
+    }
+    &--bold {
+      font-family: HelveticaNeue-Bold;
+    }
+  }
+}

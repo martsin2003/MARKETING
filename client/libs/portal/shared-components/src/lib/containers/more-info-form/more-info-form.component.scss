@@ -1,0 +1,97 @@
+@import 'variables.scss';
+
+.wrapper-of-form {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 30px;
+  .title {
+    text-align: center;
+    font-family: 'Helvetica-Neue-Bold';
+    font-size: 36px;
+    padding: 40px 0px;
+    color: $primary;
+  }
+  .home-name {
+    font-family: 'Helvetica-Neue-Bold';
+    font-size: 36px;
+    color: $primary;
+    padding: 0px 0px 30px;
+  }
+  .form {
+    width: 540px;
+    max-width: 540px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .item {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      mat-form-field {
+        width: 258px;
+      }
+    }
+    .radio-buttons {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0px 0px 25px;
+      ::ng-deep mat-radio-button {
+        font-family: 'Helvetica Neue';
+        font-weight: 100;
+        color: rgb(94, 94, 94);
+        margin-left: 20px;
+        ::ng-deep .mat-radio-outer-circle {
+          border-width: 1px !important;
+        }
+      }
+    }
+    .wrp-comments {
+      width: 100%;
+      height: auto;
+      mat-form-field {
+        width: 100%;
+      }
+    }
+    .requests {
+      width: 100%;
+      display: flex;
+      div {
+        width: 50%;
+        display: flex;
+        justify-content: flex-start;
+        ::ng-deep mat-checkbox {
+          .mat-checkbox-label {
+            font-family: 'Helvetica Neue';
+          }
+          .mat-checkbox-frame {
+            border-width: 1px;
+            border-radius: 0px;
+          }
+          .mat-checkbox-inner-container {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+    }
+    .btn-submit {
+      margin-top: 30px;
+      width: 220px;
+    }
+    ::ng-deep mat-form-field {
+      ::ng-deep .mat-form-field-outline {
+        * {
+          border-radius: 0px !important;
+        }
+      }
+    }
+  }
+}

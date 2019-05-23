@@ -1,0 +1,305 @@
+@import 'variables.scss';
+
+// Text
+
+.br-text-primary-dark {
+  color: $primary-dark;
+}
+.br-text-primary {
+  color: $primary;
+}
+.br-text-primary-light {
+  color: $primary-light;
+}
+.br-text-error {
+  color: $error;
+}
+.br-text-error-pale {
+  color: $error-pale;
+}
+.br-text-turquoise {
+  color: $turquoise;
+}
+.br-text-turquoise-pale {
+  color: $turquoise-pale;
+}
+.br-text-dark-yellow {
+  color: $dark-yellow;
+}
+.br-text-dark-orange {
+  color: $dark-orange;
+}
+.br-text-light-blue {
+  color: $light-blue;
+}
+.br-text-purple-pale {
+  color: $purple-pale;
+}
+.br-text-dark-gray {
+  color: $dark-gray;
+}
+.br-text-pure-white {
+  color: $pure-white;
+}
+
+// Background
+
+.br-background-primary {
+  background-color: $bg-primary-light;
+}
+
+// Carousel images
+
+.carousel-title {
+  font-family: $helvetica-bold;
+  font-size: 44px;
+  line-height: 48px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.carousel-description {
+  font-family: $helvetica-bold;
+  font-size: 28px;
+  line-height: 24px;
+}
+
+// Navigation
+
+.nav-item-primary-desktop {
+  font-family: $helvetica;
+  font-size: 15px;
+  color: $primary-dark;
+
+  &--active {
+    color: $primary-light;
+    font-family: $helvetica-bold;
+    border-bottom: 4px solid $primary-light;
+  }
+}
+
+.nav-item-primary-desktop-arrow {
+  width: 2px;
+  height: 6px;
+}
+
+.nav-item-secondary-desktop {
+  font-family: $helvetica;
+  font-size: 14px;
+  color: $primary-dark;
+}
+
+.secondary-nav {
+  height: 40px;
+}
+
+.primary-nav {
+  height: 70px;
+}
+
+// Buttons
+
+.br-button {
+  border: none;
+  cursor: pointer;
+  height: 60px;
+  min-width: 220px;
+  font-family: $helvetica;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px;
+  transition: all 0.2s;
+  outline: none;
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &--primary-blue {
+    background-color: $primary-light;
+    color: $pure-white;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $primary-light-hover;
+    }
+  }
+
+  &--primary-white {
+    background-color: $pure-white;
+    color: $primary-light;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: transparent;
+      border: 2px solid $primary-light;
+    }
+  }
+
+  &--secondary-blue {
+    border: 2px solid $primary-light;
+    color: $primary-light;
+    background-color: transparent;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $primary-light;
+      color: $pure-white;
+    }
+  }
+
+  &--secondary-gray {
+    border: 2px solid $dark-gray;
+    color: $dark-gray;
+    background-color: $pure-white;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $dark-gray;
+      color: $pure-white;
+    }
+  }
+
+  &--secondary-white {
+    border: 2px solid $pure-white;
+    color: $pure-white;
+    background-color: transparent;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $pure-white;
+      color: transparent;
+    }
+  }
+
+  &--tertiary {
+    background-color: $primary-light-hover;
+    color: $pure-white;
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 0.8;
+    }
+  }
+}
+
+// Common text types
+
+.br-header-text {
+  &--large {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  &--medium {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  &--small-lg {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  &--small {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.br-content-text {
+  &--small {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  &--medium {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  &--large {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.br-homepage-icon {
+  height: 53px;
+}
+
+.br-icon {
+  &--large {
+    height: 36px;
+  }
+  &--medium {
+    height: 30px;
+  }
+  &--small {
+    height: 24px;
+  }
+}
+
+.br-checkbox,
+.br-radio {
+  height: 24px;
+  width: 24px;
+}
+
+// Input styles
+.br-input {
+  border: 1px solid $form-field-border;
+  padding: 0 10px;
+  height: 60px;
+  background-color: $pure-white !important;
+  font-size: 16px;
+  outline: 0;
+}
+
+.br-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+}
+
+.br-input-label {
+  height: 22px;
+  font-family: HelveticaNeue-Light;
+  font-size: 16px;
+  margin-bottom: 2px;
+  color: #5f6062;
+}
+
+.br-textarea {
+  min-height: 120px;
+  border: 1px solid $form-field-border;
+  color: $dark-gray;
+  font-size: 18px;
+}
+
+// Helpers for fonts
+
+.helvetica-medium {
+  font-family: 'Helvetica-Neue-Medium' !important;
+}
+
+.helvetica-light {
+  font-family: 'Helvetica-Neue-Light' !important;
+}
+
+.helvetica-bold {
+  font-family: 'Helvetica-Neue-Bold' !important;
+}
+
+.helvetica-italic {
+  font-family: 'Helvetica-Neue-Italic' !important;
+}
+
+// Other
+
+.no-underline {
+  text-decoration: none;
+}

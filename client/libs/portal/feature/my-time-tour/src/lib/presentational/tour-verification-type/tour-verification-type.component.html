@@ -1,0 +1,38 @@
+<div class="tour-verification-type">
+  <div class="tour-verification-type__text tour-verification-type__text--centered">
+    My Time Home Tours are free of charge. However, we need one of the following to confirm your
+    appointment:
+  </div>
+  <div class="tour-verification-type__cards">
+    <div class="verification-type-card">
+      <div class="verification-type-card__content">
+        <div class="verification-type-card__icons">
+          <img class="m-2" src="assets/icons/gi-photo.svg" />
+
+          <img class="m-2" src="assets/icons/your-photo.svg" />
+        </div>
+        <div class="verification-type-card__text my-3">
+          Your Government-Issued Photo ID and Your Photo
+        </div>
+        <button class="br-button br-button--primary" (click)="verify('photo')">
+          VERIFY WITH PHOTO ID
+        </button>
+      </div>
+      <div class="verification-type-card__text"></div>
+    </div>
+    <div class="verification-type-card">
+      <div class="verification-type-card__content">
+        <div class="verification-type-card__icons">
+          <img class="m-2" src="assets/icons/credit-card.svg" />
+        </div>
+        <div class="verification-type-card__text my-3">Your Credit Card*</div>
+        <button class="br-button br-button--primary" (click)="verify('cc')">
+          VERIFY WITH CREDIT CARD
+        </button>
+      </div>
+      <div class="verification-type-card__text my-3">
+        Your credit card will not be charged.
+      </div>
+    </div>
+  </div>
+</div>

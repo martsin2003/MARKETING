@@ -39,7 +39,7 @@
   .image-container {
     position: relative;
     text-align: center;
-    color: $white;
+    color: $pure-white;
 
     .top-left {
       position: absolute;
@@ -53,7 +53,7 @@
   }
 
   mat-toolbar {
-    background-color: $primary;
+    background-color: $primary-light;
   }
 
   .mat-raised-button {
@@ -62,13 +62,13 @@
   }
 
   .gray-background {
-    background-color: $gray-bg;
+    background-color: $bg-primary-light;
   }
 
   ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
     height: 50px;
     border-radius: 5px;
-    background-color: $white !important;
+    background-color: $pure-white !important;
     padding: 0px;
   }
 
@@ -83,7 +83,7 @@
 }
 .big-head {
   font-size: 28px;
-  color: $primary-dark;
+  color: $primary;
 }
 .big-button {
   width: 40%;

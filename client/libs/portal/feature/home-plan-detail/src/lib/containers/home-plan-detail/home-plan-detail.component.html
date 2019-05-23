@@ -1,172 +1,19 @@
 <div class="main-wrapper">
   <div class="container">
-    <div class="mob-items">
-      <span class="home-name">Beckner</span>
-      <span class="place">
-        <mat-icon>place</mat-icon>
-        See Available Location
-      </span>
-      <div class="buttons">
-        <button class="br-button br-button--primary">
-          <mat-icon>mail_outline</mat-icon>
-          <span>REQUEST MORE INFO</span>
-        </button>
-      </div>
-    </div>
     <div class="wrapper-for-slider">
       <brookfield-carousel [images]="images" [fullWidth]="false"></brookfield-carousel>
     </div>
-    <div class="content-title">
-      <div>
-        <span class="home-name">Beckner</span>
-        <span class="place">
-          <mat-icon>place</mat-icon>
-          See Available Location
-        </span>
-      </div>
-      <div class="title-buttons">
-        <button class="br-button br-button--secondary">
-          <mat-icon>mail_outline</mat-icon>
-          <span>Request More Info</span>
-        </button>
-      </div>
+
+    <brookfield-home-detail-info [detailInfo]="homeDetailInfo"></brookfield-home-detail-info>
+
+    <div class="get-empowered-container">
+      <brookfield-empowered-slider></brookfield-empowered-slider>
     </div>
-    <div class="content-details">
-      <div class="item">
-        <mat-icon>home</mat-icon>
-        <span>Single-Family Home</span>
-      </div>
-      <div class="item">
-        <mat-icon>hotel</mat-icon>
-        <span>4 - 6 Beds</span>
-      </div>
-      <div class="item">
-        <mat-icon>hot_tub</mat-icon>
-        <span>2.5 - 5.5 Baths</span>
-      </div>
-      <div class="item">
-        <mat-icon>straighten</mat-icon>
-        <span>3,247 = 4,548 sq. ft.</span>
-      </div>
-    </div>
-    <div class="wrp-description">
-      <div class="wrp-description__description-text">
-        <p>
-          Your family will be immediately at home once they step inside the spacious and stylish
-          Beckner. It's got room for everyone and all your favorite things. You'll open the door
-          into a grand foyer with a formal dining room or living room to your right. Follow the hall
-          as the home opens up into the grand room, the breakfast area, and the kitchen. The open
-          design means your family can stay connectd while you enjoy the home's most popular rooms.
-        </p>
-        <p>
-          The second level features four large bedrooms, but none more impressive than the owner's
-          suite. It's complete with dual walk-in closets and a spacious bathroom with double
-          vanities.
-        </p>
-        <p>
-          The lower level is what you make it. There's space for an oversized recreation room, a
-          game room, or a place for a big-screen television and all your favorite movies.
-        </p>
-      </div>
-      <div class="wrp-description__buttons">
-        <button
-          class="br-button br-button--primary button"
-          [routerLink]="['/find/home-plan-detail/interactive-floorplan']"
-          routerLinkActive="router-link-active"
-        >
-          INTERACTIVE FLOORPLAN
-        </button>
-        <button class="br-button br-button--primary button">VIRTUAL TOUR</button>
-        <button class="br-button br-button--primary button">VIDEO TOUR</button>
-      </div>
-    </div>
-    <div class="key-home-wrapper">
-      <span class="title">Key Home Features</span>
-      <ul>
-        <li>
-          Large, Open Kitchen, Breakfast and Grand Room
-        </li>
-        <li>
-          Owner's Suite with Impressive Ensuite Bath
-        </li>
-        <li>Spacious Secondary Bedrooms</li>
-      </ul>
-    </div>
-    <div class="mob-key-home">
-      <mat-accordion hideToggle displayMode="flat">
-        <mat-expansion-panel class="mobile-expansion-panel">
-          <mat-expansion-panel-header class="primary-dark-text">
-            <span class="pr-1">
-              <mat-icon class="expand-arrow" [ngClass]="{ expanded: menuOpened }">
-                expand_more
-              </mat-icon>
-            </span>
-            <span>Key Home Features</span>
-          </mat-expansion-panel-header>
-          <ul>
-            <li>
-              Large, Open Kitchen, Breakfast and Grand Room
-            </li>
-            <li>
-              Owner's Suite with Impressive Ensuite Bath
-            </li>
-            <li>Spacious Secondary Bedrooms</li>
-          </ul>
-        </mat-expansion-panel>
-      </mat-accordion>
-    </div>
-    <div class="wrapper-of-form">
-      <span class="title">Request More Info About</span>
-      <span class="sub-title">The Torrington II</span>
-      <form class="form">
-        <div class="item">
-          <mat-form-field appearance="outline">
-            <mat-label>First Name</mat-label>
-            <input matInput required placeholder="First Name" />
-          </mat-form-field>
-          <mat-form-field appearance="outline">
-            <mat-label>Last Name</mat-label>
-            <input matInput required placeholder="Last Name" />
-          </mat-form-field>
-        </div>
-        <div class="item">
-          <mat-form-field appearance="outline">
-            <mat-label>Email</mat-label>
-            <input matInput required placeholder="Email" />
-          </mat-form-field>
-          <mat-form-field appearance="outline">
-            <mat-label>Phone</mat-label>
-            <input matInput required placeholder="Phone" />
-          </mat-form-field>
-        </div>
-        <div class="radio-buttons">
-          <mat-radio-group>
-            <mat-radio-button value="1">Mobile</mat-radio-button>
-            <mat-radio-button value="2">Home</mat-radio-button>
-            <mat-radio-button value="3">Work</mat-radio-button>
-          </mat-radio-group>
-        </div>
-        <div class="wrp-comments">
-          <mat-form-field appearance="outline" class="example-full-width">
-            <mat-label>Comments</mat-label>
-            <textarea matInput rows="3" placeholder="Comments"></textarea>
-          </mat-form-field>
-        </div>
-        <div class="requests">
-          <div>
-            <mat-checkbox>Request a Private Tour</mat-checkbox>
-          </div>
-          <div>
-            <mat-checkbox>Request Promotions</mat-checkbox>
-          </div>
-        </div>
-        <button type="submit" class="br-button br-button--primary btn-submit">
-          GET INFO
-        </button>
-      </form>
-    </div>
-    <div class="button-back-wrapper">
-      <button class="br-button br-button--secondary btn-back">BACK</button>
+
+    <brookfield-more-info-form [containerHomeDesignDetail]="homeDetail"></brookfield-more-info-form>
+
+    <div class="button-back-container">
+      <button class="br-button br-button--secondary">BACK</button>
     </div>
   </div>
 </div>

@@ -7,14 +7,24 @@ import { MyTimeHomeToursComponent } from './presentaitonal/my-time-home-tours/my
 import { ProfileComponent } from './presentaitonal/profile/profile.component';
 import { MaterialModule } from '@brookfield/material';
 import { PortalSharedComponentsModule } from '@brookfield/portal/shared-components';
+import { ResetPasswordComponent } from './presentational/reset-password/reset-password.component';
 
 @NgModule({
   imports: [
     CommonModule,
     MaterialModule,
     PortalSharedComponentsModule,
-    RouterModule.forChild([{ path: '', pathMatch: 'full', component: MyAccountComponent }])
+    RouterModule.forChild([
+      { path: '', pathMatch: 'full', component: MyAccountComponent },
+      { path: 'reset-password', component: ResetPasswordComponent }
+    ])
   ],
-  declarations: [MyAccountComponent, FavoritesComponent, MyTimeHomeToursComponent, ProfileComponent]
+  declarations: [
+    MyAccountComponent,
+    FavoritesComponent,
+    MyTimeHomeToursComponent,
+    ProfileComponent,
+    ResetPasswordComponent
+  ]
 })
 export class PortalFeatureMyAccountModule {}

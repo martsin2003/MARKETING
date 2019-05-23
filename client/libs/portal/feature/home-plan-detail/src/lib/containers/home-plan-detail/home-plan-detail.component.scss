@@ -8,7 +8,7 @@
     .home-name {
       font-size: 25px;
       font-weight: 600;
-      color: $primary-dark;
+      color: $primary;
     }
     .place {
       display: flex;
@@ -28,303 +28,73 @@
     width: 100%;
     padding-bottom: 10px;
   }
-  .content-title {
+
+  .get-empowered-container {
+    margin-top: 30px;
+    padding: 30px 0px 5px;
+    background: $bg-primary-light;
+  }
+  .button-back-container {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    .home-name {
-      font-size: 25px;
-      font-weight: 600;
-      color: $primary-dark;
-    }
-    .place {
-      display: flex;
-      align-items: center;
-      padding-top: 5px;
-      font-size: 18px;
-      font-weight: 400;
-    }
-    .title-buttons {
-      display: flex;
-      align-items: center;
-    }
-  }
-  .content-details {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    padding: 25px 0px;
-    .item {
-      display: flex;
-      align-items: center;
-      color: rgb(83, 83, 83);
-      &:not(:last-child) {
-        margin-right: 25px;
-      }
-      span {
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 100;
-        margin-left: 10px;
-        font-size: 14px;
-      }
-    }
-  }
-  .wrp-description {
-    display: flex;
-    flex-direction: row;
-    &__description-text {
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 100;
-      color: rgb(83, 83, 83);
-    }
-    &__buttons {
-      padding-left: 30px;
-      margin-top: 16px;
-      .button {
-        width: 250px;
-        margin-bottom: 7px;
-      }
-    }
-  }
-  .key-home-wrapper {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 100;
-    color: rgb(56, 56, 56);
-    .title {
-      color: black;
-      font-size: 25px;
-    }
-  }
-  ul {
-    padding-left: 18px;
-    margin-top: 10px;
-    li {
-      margin: 5px 0px;
-      font-size: 17px;
-      font-weight: 100;
-    }
-  }
-  .mob-key-home {
-    display: none;
-  }
-  .wrapper-of-form {
-    height: auto;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.03);
-    .title {
-      text-align: center;
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 600;
-      font-size: 30px;
-      padding-top: 40px;
+    padding: 15px 0px;
+    background: $bg-primary-light;
+    button {
+      width: 220px;
+      color: $dark-gray;
+      border-color: $dark-gray;
+      border-width: 2px;
+      &:hover {
+        color: white;
+        background: $dark-gray;
+      }
     }
-    .sub-title {
-      text-align: center;
-      color: $primary;
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 600;
-      font-size: 30px;
-      padding-bottom: 20px;
-    }
-    .form {
-      width: 480px;
-      max-width: 480px;
-      height: auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      .item {
-        width: 100%;
+  }
+
+  @media screen and (max-width: 500px) {
+    .container {
+      .mob-items {
+        padding: 15px;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        mat-form-field {
-          width: 230px;
-        }
-      }
-      .radio-buttons {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 10px 0px;
-        padding-bottom: 30px;
-        mat-radio-button {
-          font-family: 'Open Sans', sans-serif;
-          font-weight: 100;
-          color: rgb(94, 94, 94);
-          margin-left: 20px;
-          /deep/.mat-radio-outer-circle {
-            border-width: 1px !important;
-          }
-        }
-      }
-      .wrp-comments {
-        width: 100%;
-        height: auto;
-        mat-form-field {
-          width: 100%;
-        }
-      }
-      .requests {
-        width: 100%;
-        display: flex;
-        div {
-          width: 50%;
-          display: flex;
-          justify-content: flex-start;
-          /deep/mat-checkbox {
-            font-weight: 100;
-            /deep/.mat-checkbox-frame {
-              border-width: 1px;
+        justify-content: flex-start;
+        flex-direction: column;
+        .buttons {
+          button {
+            width: 100%;
+            mat-icon {
+              display: none;
             }
           }
         }
       }
-      .btn-submit {
-        margin-top: 20px;
-        width: 220px;
+      .wrapper-for-slider {
+        padding: 0px 15px;
       }
-    }
-  }
-  .button-back-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .btn-back {
-      margin-top: 20px;
-      width: 220px;
-    }
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .container {
-    .mob-items {
-      padding: 15px;
-      display: flex;
-      justify-content: flex-start;
-      flex-direction: column;
-      .buttons {
-        button {
-          width: 100%;
-          mat-icon {
-            display: none;
-          }
-        }
-      }
-    }
-    .wrapper-for-slider {
-      padding: 0px 15px;
-    }
-    .content-title {
-      display: none;
-    }
-    .content-details {
-      align-items: flex-start;
-      justify-content: flex-start;
-      flex-direction: column;
-      padding: 15px;
-      .item {
-        margin: 10px 0px;
-      }
-    }
-    .wrp-description {
-      padding: 0px 15px;
-      &__description-text {
+      .content-title {
         display: none;
       }
-      &__buttons {
-        width: 100%;
-        padding: 0px;
-        .button {
-          width: 100%;
-        }
-      }
-    }
-    .key-home-wrapper {
-      display: none;
-    }
-    .mob-key-home {
-      padding: 15px;
-      display: block;
-    }
-    .mob-key-home {
-      mat-expansion-panel {
-        border: none;
-        mat-expansion-panel-header {
-          padding: 0px;
-        }
-        /deep/.mat-expansion-panel-body {
-          padding-left: 20px !important;
-        }
-        mat-icon {
-          margin-top: 5px;
-        }
-      }
-    }
-    .wrapper-of-form {
-      padding: 15px;
-      .title {
-        font-size: 22px;
-        text-align: start;
-      }
-      .sub-title {
-        font-size: 19px;
-        text-align: start;
-      }
-      .form {
-        width: 100%;
+      .content-details {
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 15px;
         .item {
-          flex-direction: column;
-          justify-content: center;
-          mat-form-field {
+          margin: 10px 0px;
+        }
+      }
+      .wrp-description {
+        padding: 0px 15px;
+        &__description-text {
+          display: none;
+        }
+        &__buttons {
+          width: 100%;
+          padding: 0px;
+          .button {
             width: 100%;
-          }
-        }
-        .radio-buttons {
-          width: 100%;
-          justify-content: center;
-          align-items: center;
-          font-size: 14px;
-          padding-bottom: 30px;
-          mat-radio-group {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-          }
-          mat-radio-button {
-            margin-left: 0px;
-          }
-        }
-        .wrp-comments {
-          width: 100%;
-        }
-        .requests {
-          width: 100%;
-          word-wrap: all;
-          justify-content: flex-start;
-          flex-direction: column;
-          padding-bottom: 10px;
-          div {
-            width: auto !important;
-            font-size: 14px;
           }
         }
       }
     }
-  }
-}
-
-.slide {
-  img {
-    height: 500px;
   }
 }

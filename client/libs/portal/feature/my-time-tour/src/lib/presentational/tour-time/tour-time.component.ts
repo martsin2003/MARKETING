@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { TourStepData } from '../../view-model/tour-step.interface';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'brookfield-tour-time',
@@ -7,6 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TourTimeComponent implements OnInit {
   constructor() {}
+  data: TourStepData;
+  @Output() timeStepCompleted = new EventEmitter<string>();
+  ngOnInit() {
+    this.data = {
+      step: 1,
+      stepsCount: 5,
+      title: 'The Torrington',
+      subTitle: 'Select a Date and Time to See'
+    };
+  }
 
-  ngOnInit() {}
+  continue() {
+    this.timeStepCompleted.emit();
+  }
 }

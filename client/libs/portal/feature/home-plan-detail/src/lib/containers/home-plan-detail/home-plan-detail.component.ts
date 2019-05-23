@@ -1,17 +1,44 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { DetailInfo } from '../../models/home-detail-info.interface';
 
 @Component({
   selector: 'brookfield-home-plan-detail',
   templateUrl: './home-plan-detail.component.html',
-  styleUrls: ['./home-plan-detail.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrls: ['./home-plan-detail.component.scss']
 })
 export class HomePlanDetailComponent implements OnInit {
   images = [
-    'https://images.pexels.com/photos/237018/pexels-photo-237018.jpeg?cs=srgb&dl=asphalt-beauty-colorful-237018.jpg&fm=jpg',
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzTsCjUXQ8TFyfM3l4IOf6su-orwP7YGicEMn8ba4rRGAMFUBv',
-    'https://images.pexels.com/photos/730218/pexels-photo-730218.jpeg?cs=srgb&dl=asfalt-barvy-cesta-730218.jpg&fm=jpg'
+    'assets/images/desktop/home-detail-slider-first-img.png',
+    'assets/images/desktop/home-detail-slider-second-img.png'
   ];
+
+  homeDetail = {
+    title: 'Request More Info About',
+    homeName: 'The Torrington II'
+  };
+
+  homeDetailInfo: DetailInfo = {
+    homeName: 'Torrington II',
+    homeDetails: 'Homesite 0105  |  Available 02/10/19',
+    communityName: 'The Bluffs at Sleeter Lake',
+    startingPrice: 'Strarting Price $554,990',
+    location: '18140 Ridgewood Place Round Hill, VA 20141',
+    homeType: 'Single-Family Home',
+    beds: '4 - 6 Beds',
+    baths: '2.5 - 5.5 Baths',
+    square: '3,247 = 4,548 sq. ft.',
+    description: [
+      'Your new home will be stunning, stylish and convenient for daily living with the Torrington II. Featuring a main-level owner’s suite and three more bedrooms on the upper level, this home gives you all the space your family needs for the life you want to live.',
+      'There are plenty of opportunities to personalize your space. Choose between a formal living room or a library on the main level. You can also add a conservatory. On the lower level, you can add a recreation room, a den, a media room or game area. And you’ll still have space for plenty of storage.'
+    ],
+    keyHomeFeatures: [
+      'Your Choice of Counters, Cabinets and Flooring',
+      'Stainless Steel Appliances',
+      'Volume Ceilings in Great Room',
+      'Gas Fireplace',
+      'Finished Rec Room and Full Bath'
+    ]
+  };
 
   constructor() {}
 

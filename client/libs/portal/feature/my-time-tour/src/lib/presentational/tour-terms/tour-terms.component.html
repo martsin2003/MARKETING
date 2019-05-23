@@ -1,3 +1,74 @@
-<p>
-  tour-terms works!
-</p>
+<div class="tour-terms">
+  <brookfield-tour-step [data]="data"></brookfield-tour-step>
+  <div class="tour-terms__text tour-terms__text--centered">
+    Thank you for your interest in scheduling a My Time Home Tour.
+  </div>
+  <div class="tour-terms__text tour-terms__text--centered  tour-terms__text--bold">
+    By selecting "Accept & Continue," you agree to the full Terms & Conditions linked below. On the
+    following screens, you can register and schedule your private tour.
+  </div>
+  <div class="tour-terms__bottom">
+    <div class="tour-terms__left">
+      <div class="tour-terms__text my-3">
+        To make touring homes safe and easy for everyone, you agree to:
+      </div>
+      <div class="tour-terms__text my-3">
+        1. Complete your tour within one hour of your scheduled start time.
+      </div>
+      <div class="tour-terms__text my-3">
+        2. Leave the home in the same condition you found it.
+      </div>
+      <div class="tour-terms__text my-3">
+        3. Ensure all doors are locked when you leave the home.
+      </div>
+      <div class="tour-terms__text my-3">
+        4. Absolve Brookfield Residential from any liability related to your My Time Home Tour.
+      </div>
+      <div
+        class="tour-terms__text my-4 tour-terms__text--bold tour-terms__text--primary tour-terms__text--underline"
+      >
+        View Full Terms & Conditions.
+      </div>
+      <div class="tour-terms__text my-4">
+        <mat-checkbox [(ngModel)]="accept">I accept the Terms & Conditions.</mat-checkbox>
+      </div>
+      <button
+        class="tour-type__button br-button br-button--primary-blue br-button--light"
+        [disabled]="!accept"
+        (click)="acceptClick()"
+      >
+        ACCEPT & CONTINUE
+      </button>
+    </div>
+    <div class="tour-terms__right">
+      <div class="home-brochure">
+        <div class="home-brochure__image">
+          <img
+            src="https://www.brookfielddc.com/uploads/galleryCommunity/full/910E9D40-B5EF-744C-7350F20E63B49AE1.jpg"
+            class="home-brochure__image"
+          />
+        </div>
+        <div class="home-brochure__info">
+          <div class="home-brochure__text home-brochure__text--bold my-2">
+            My Time Home Tour Details:
+          </div>
+
+          <div class="home-brochure__text home-brochure__text--primary">Torrington</div>
+
+          <div class="home-brochure__text my-3">
+            <img src="assets/icons/location.svg" class="mr-2" />
+            18140 Ridgewood Place Round Hill, VA 20141
+          </div>
+          <div class="home-brochure__text my-3">
+            <img src="assets/icons/calendar.svg" class="mr-2" />
+            01/03/2019
+          </div>
+          <div class="home-brochure__text my-3">
+            <img src="assets/icons/clock.svg" class="mr-2" />
+            6:45am - 7:45am EST
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

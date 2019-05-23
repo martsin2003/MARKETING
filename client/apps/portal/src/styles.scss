@@ -8,9 +8,6 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
-//Import bootstrap utilities.
-@import '~bootstrap-utilities';
-
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
@@ -30,6 +27,7 @@ $portal-theme: mat-light-theme($portal-primary, $portal-accent, $portal-warn);
 @import 'styles/theme.scss';
 @import 'styles/utils.scss';
 @import 'styles/fonts.scss';
+@import 'styles/common.scss';
 
 html {
   box-sizing: border-box;
@@ -42,10 +40,8 @@ html {
 }
 
 body {
-  //   display: flex;
-  //   justify-content: center;
   margin: 0;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  font-family: 'Helvetica-Neue-Medium', sans-serif !important;
 }
 
 .container {
@@ -58,91 +54,6 @@ body {
 
 .mobile-expansion-panel .mat-expansion-panel-body {
   padding: 0px;
-}
-
-//FONT COLORS
-.primary-text {
-  color: $primary;
-}
-
-.primary-accent-text {
-  color: $primary-accent;
-}
-
-.primary-dark-text {
-  color: $primary-dark;
-}
-
-.secondary-text {
-  color: $secondary;
-}
-
-.white-text {
-  color: white;
-}
-
-.yellow-text {
-  color: $yellow;
-}
-
-//BUTTON STYLING
-.br-button {
-  height: 55px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: franklin-gothic-urw-cond, sans-serif;
-  font-size: 16px;
-  font-weight: 800;
-  line-height: 1;
-  padding: 0px 20px;
-  outline: none;
-  border: 1px solid;
-  transition: color 0.1s;
-  transition: 0.25s;
-  cursor: pointer;
-
-  mat-icon,
-  img {
-    margin-right: 10px;
-  }
-
-  &--accent {
-    color: $lightgray;
-    border-color: $primary-accent;
-    background-color: $primary-accent;
-  }
-  &--primary {
-    color: $white;
-    border-color: $primary;
-    background-color: $primary;
-    &:hover {
-      background: $primary-accent;
-    }
-  }
-  &--secondary {
-    color: $primary;
-    border-color: $primary;
-    background-color: transparent;
-    &:hover {
-      background: $primary;
-      color: white;
-    }
-  }
-}
-
-// Input styles
-.br-input {
-  border: 1px solid $white;
-  padding: 0;
-  height: 55px;
-  background-color: $white !important;
-  font-size: 16px;
-}
-
-// A link helper styles
-.no-underline {
-  text-decoration: none;
 }
 
 // Expand/collapse arrow animation
@@ -175,3 +86,81 @@ body {
     }
   }
 }
+
+//BUTTON STYLING
+
+// START - OLD STYLING - DO NOT USE - WILL BE MIGRATED TO CLASSES IN common.scss AND REMOVED
+
+.br-button {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Helvetica-Neue-Medium', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1;
+  padding: 0px 20px;
+  outline: none;
+  border: 1px solid;
+  transition: color 0.1s;
+  transition: 0.25s;
+  cursor: pointer;
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  mat-icon,
+  img {
+    margin-right: 10px;
+  }
+
+  &--tertiary {
+    color: transparent;
+    background-color: $primary-light;
+  }
+  &--primary {
+    color: $pure-white;
+    border-color: $primary-light;
+    background-color: $primary-light;
+    &:hover {
+      background: $primary;
+    }
+  }
+  &--secondary-blue {
+    color: $primary-light;
+    border-color: $primary-light;
+    background-color: transparent;
+    &:hover {
+      background: $primary-light;
+      color: white;
+    }
+  }
+  &--light {
+    font-family: HelveticaNeue-Light;
+    font-weight: 100;
+  }
+}
+
+// header style
+.br-header {
+  font-family: HelveticaNeue-Bold;
+  font-size: 28px;
+  color: #0f2d4f;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 32px;
+}
+
+// header style
+.br-description {
+  font-family: HelveticaNeue-Light;
+  font-size: 18px;
+  color: #5f6062;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 24px;
+}
+
+// END OLD STYLING

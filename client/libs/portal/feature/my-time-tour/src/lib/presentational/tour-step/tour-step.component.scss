@@ -1,0 +1,65 @@
+@import 'variables.scss';
+
+.tour-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  &--white {
+    color: #fff;
+  }
+  &__text {
+    font-family: HelveticaNeue-Medium;
+    .tour-step--white & {
+      color: #ffffff;
+    }
+    color: $primary-light;
+    letter-spacing: 0;
+    text-align: center;
+    font-size: 18px;
+    &--large {
+      font-size: 28px;
+      color: $primary-light;
+      .tour-step--white & {
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.stepper {
+  color: $primary-light;
+  display: flex;
+  &__line {
+    width: 40px;
+    height: 2px;
+    background: $primary-light;
+    .stepper--white & {
+      background: #fff;
+    }
+  }
+  &__step {
+    display: flex;
+    align-items: center;
+  }
+  &__circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 36px;
+    color: $primary-light;
+    border: 2px solid $primary-light;
+    .stepper--white & {
+      color: #fff;
+      border: 2px solid #fff;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    &--filled {
+      background: $primary-light;
+      border: 2px solid $primary-light !important;
+      color: #fff;
+    }
+  }
+}

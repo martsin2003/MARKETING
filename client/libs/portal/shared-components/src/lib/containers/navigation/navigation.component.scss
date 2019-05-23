@@ -5,13 +5,13 @@
     border-bottom: 1px solid $divider;
   }
   .label-text-1 {
-    color: $primary-dark;
+    color: $primary;
   }
   .label-text-2 {
-    color: $yellow;
+    color: $dark-yellow;
   }
   .menu-toggle {
-    color: $primary-dark;
+    color: $primary;
     background-color: transparent;
     box-shadow: none;
     outline: none;
@@ -28,7 +28,7 @@
     width: 100%;
     overflow: scroll;
     height: 100%;
-    background-color: $white;
+    background-color: $pure-white;
     border-bottom: none;
   }
   &.absolute-nav {
@@ -40,7 +40,7 @@
       .label-text-1,
       .label-text-2,
       .menu-toggle {
-        color: $white !important;
+        color: $pure-white !important;
       }
     }
   }
@@ -54,7 +54,7 @@
 }
 
 .navigation-menu {
-  background-color: $white;
+  background-color: $pure-white;
   position: absolute;
   top: 89px;
   left: 0;
@@ -87,7 +87,7 @@
       }
 
       &[disabled] .mat-expansion-panel-header {
-        color: $primary-dark;
+        color: $primary;
       }
       .mat-expansion-panel-header {
         font-size: 18px;
