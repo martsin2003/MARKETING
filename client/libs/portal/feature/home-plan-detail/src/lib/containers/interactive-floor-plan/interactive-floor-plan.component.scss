@@ -1,0 +1,27 @@
+@import 'variables.scss';
+
+.interective-container {
+  .title {
+    padding: 20px;
+    font-family: 'Helvetica-Neue-Bold';
+    &__home-name {
+      font-size: 28px;
+      color: $primary-dark;
+    }
+    &__subtitle {
+      font-size: 18px;
+      color: $darkgray;
+    }
+  }
+  .floor-plan-container {
+    height: 60vh;
+    background: $gray-bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    brookfield-elevation-select {
+      display: block;
+      width: 80%;
+    }
+  }
+}

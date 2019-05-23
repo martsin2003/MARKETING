@@ -1,7 +1,17 @@
-<p>
-  interactive-floor-plan works!
-</p>
+<div class="interective-container">
+  <div class="title">
+    <div class="title__home-name">
+      Torrington II
+    </div>
+    <div class="title__subtitle">
+      The Bluffs at Sleeter Lake
+    </div>
+  </div>
+  <div class="floor-plan-container">
+    <brookfield-elevation-select
+      *ngIf="showContent === 'elevation-select'"
+    ></brookfield-elevation-select>
 
-<brookfield-elevation-select></brookfield-elevation-select>
-
-<brookfield-floor-plan></brookfield-floor-plan>
+    <brookfield-floor-plan *ngIf="showContent !== 'elevation-select'"></brookfield-floor-plan>
+  </div>
+</div>

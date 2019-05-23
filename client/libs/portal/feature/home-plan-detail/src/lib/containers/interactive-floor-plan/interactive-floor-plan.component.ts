@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./interactive-floor-plan.component.scss']
 })
 export class InteractiveFloorPlanComponent implements OnInit {
+  showContent = 'elevation-select';
+
   constructor() {}
 
   ngOnInit() {}

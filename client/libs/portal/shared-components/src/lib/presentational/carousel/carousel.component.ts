@@ -161,7 +161,6 @@ export class CarouselComponent implements OnInit, AfterContentInit, AfterViewIni
     });
     this.wrapper.nativeElement.style.transform =
       'translateX(-' + this.slides[this.selectedSlide].translate + 'px)';
-    const img: any = this.mainImage || this.onlyImage;
     this.wrapper.nativeElement.childNodes[1].childNodes.forEach((elem: HTMLDivElement) => {
       if (elem.style) {
         elem.style.width = this.slideWidth + 'px';
@@ -170,7 +169,7 @@ export class CarouselComponent implements OnInit, AfterContentInit, AfterViewIni
     this.setDisabled();
     this.wrapper.nativeElement.style.animationDuration = '0s';
     this.wrapper.nativeElement.style.transitionDuration = '0s';
-    this.container.nativeElement.style.height = img.nativeElement.clientHeight - 3 + 'px';
+    this.container.nativeElement.style.height = this.wrapper.nativeElement.clientHeight - 3 + 'px';
     this.wrapper.nativeElement.style.animationTimingFunction = 'easy-in-out';
   }
 
