@@ -113,6 +113,11 @@
   outline: none;
   min-width: 136px;
 
+  mat-icon,
+  img {
+    margin-right: 10px;
+  }
+
   &--desktop {
     min-width: 220px;
   }
