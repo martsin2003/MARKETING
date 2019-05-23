@@ -4,13 +4,13 @@
   align-items: center;
 
   padding: 0 50px;
-  &__text {
+  &__text{
     text-align: center;
-    &--bold {
+    &--bold{
       font-weight: bold;
     }
   }
-  &__form {
+  &__form{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
