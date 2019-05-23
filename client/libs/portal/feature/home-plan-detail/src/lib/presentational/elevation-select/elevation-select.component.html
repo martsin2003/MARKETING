@@ -1,3 +1,29 @@
-<p>
-  elevation-select works!
-</p>
+<div class="elevation-select-container">
+  <div class="title">
+    To open a new plan, select the elevation you are interested in.
+  </div>
+  <brookfield-carousel [quantitySlides]="1" [fullWidth]="true">
+    <div class="carousel-content" #insertedContent>
+      <div class="slide">
+        <div class="slide-content">
+          <button class="slide-button">
+            <img #mainImage src="assets/images/desktop/elevation_1.png" alt="" srcset="" />
+            <div class="slide-button__btn-title">Elevation 1</div>
+          </button>
+          <button class="slide-button">
+            <img src="assets/images/desktop/elevation_2.png" alt="" srcset="" />
+            <div class="slide-button__btn-title">Elevation 2</div>
+          </button>
+          <button class="slide-button">
+            <img src="assets/images/desktop/elevation_3.png" alt="" srcset="" />
+            <div class="slide-button__btn-title">Elevation 3</div>
+          </button>
+          <button class="slide-button">
+            <img src="assets/images/desktop/elevation_4.png" alt="" srcset="" />
+            <div class="slide-button__btn-title">Elevation 4</div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </brookfield-carousel>
+</div>
