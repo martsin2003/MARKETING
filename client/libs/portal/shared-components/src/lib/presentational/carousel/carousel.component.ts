@@ -18,6 +18,7 @@ import { fromEvent } from 'rxjs';
 export class CarouselComponent implements OnInit, AfterContentInit, AfterViewInit {
   @Input() quantitySlides: number;
   @Input() fullWidth: boolean;
+  @Input() fullHight: boolean;
   @Input() images: string[];
 
   @ContentChild('insertedContent') insertedContent: ElementRef<HTMLDivElement>;
@@ -114,7 +115,19 @@ export class CarouselComponent implements OnInit, AfterContentInit, AfterViewIni
 
   ngAfterViewInit() {
     this.setGeneralStyles();
+    if (this.fullHight) {
+      this.slides = [];
+      for (let i = 0; i < this.images.length; i++) {
+        this.slides.push({
+          translate: 0
+        });
+      }
+      setTimeout(() => {
+        this.initializationCarousel();
+      }, 0);
+    }
     if (this.images) {
+      this.slides = [];
       for (let i = 0; i < this.images.length; i++) {
         this.slides.push({
           translate: 0
@@ -131,6 +144,7 @@ export class CarouselComponent implements OnInit, AfterContentInit, AfterViewIni
   ngAfterContentInit() {
     this.setGeneralStyles();
     if (this.insertedContent) {
+      this.slides = [];
       for (let i = 0; i < this.quantitySlides; i++) {
         this.slides.push({
           translate: 0
@@ -166,10 +180,20 @@ export class CarouselComponent implements OnInit, AfterContentInit, AfterViewIni
         elem.style.width = this.slideWidth + 'px';
       }
     });
+    if (this.fullHight) {
+      this.wrapper.nativeElement.childNodes[2].childNodes.forEach((elem: HTMLDivElement) => {
+        if (elem.style) {
+          elem.style.width = this.slideWidth + 'px';
+        }
+      });
+    }
     this.setDisabled();
     this.wrapper.nativeElement.style.animationDuration = '0s';
     this.wrapper.nativeElement.style.transitionDuration = '0s';
-    this.container.nativeElement.style.height = this.wrapper.nativeElement.clientHeight - 3 + 'px';
+    if (!this.fullHight) {
+      this.container.nativeElement.style.height =
+        this.wrapper.nativeElement.clientHeight - 3 + 'px';
+    }
     this.wrapper.nativeElement.style.animationTimingFunction = 'easy-in-out';
   }
 

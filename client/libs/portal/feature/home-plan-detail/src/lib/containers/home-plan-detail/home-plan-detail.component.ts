@@ -1,11 +1,10 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DetailInfo } from '../../models/home-detail-info.interface';
 
 @Component({
   selector: 'brookfield-home-plan-detail',
   templateUrl: './home-plan-detail.component.html',
-  styleUrls: ['./home-plan-detail.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrls: ['./home-plan-detail.component.scss']
 })
 export class HomePlanDetailComponent implements OnInit {
   images = [

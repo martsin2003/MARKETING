@@ -1,13 +1,12 @@
 import { DetectMobileViewService } from '@brookfield/common/utilities';
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { withLatestFrom } from 'rxjs/operators';
 
 @Component({
   selector: 'brookfield-homepage',
   templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent implements OnInit {
   isMobileScreen$: Observable<boolean>;
