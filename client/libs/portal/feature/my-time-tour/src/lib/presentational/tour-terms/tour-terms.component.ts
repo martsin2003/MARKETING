@@ -1,5 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { TourStepData } from '../../interfaces/tour-step.interface';
+import { TourStepData } from '../../view-model/tour-step.interface';
 
 @Component({
   selector: 'brookfield-tour-terms',

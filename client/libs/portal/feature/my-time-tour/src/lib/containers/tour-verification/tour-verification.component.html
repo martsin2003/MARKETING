@@ -1,9 +1,22 @@
 <div class="tour-verification">
-  <brookfield-tour-step [data]="data"></brookfield-tour-step>
+  <brookfield-tour-step *ngIf="verificationStep !== 'thanks'" [data]="data"></brookfield-tour-step>
 
-  <ng-container [ngSwitch]="step">
-    <ng-container *ngSwitchCase="'selectType'">
-      <brookfield-tour-verification-type></brookfield-tour-verification-type>
+  <ng-container [ngSwitch]="verificationStep">
+    <ng-container *ngIf="!verificationStep">
+      <brookfield-tour-verification-type
+        (verificationSelected)="verificationSelected($event)"
+      ></brookfield-tour-verification-type>
+    </ng-container>
+    <ng-container *ngSwitchCase="'cc'">
+      <brookfield-tour-verification-cc (nextStep)="next($event)"></brookfield-tour-verification-cc>
+    </ng-container>
+    <ng-container *ngSwitchCase="'photo'">
+      <brookfield-tour-verification-dl
+        (takePhotos)="takePhotos()"
+      ></brookfield-tour-verification-dl>
+    </ng-container>
+    <ng-container *ngSwitchCase="'thanks'">
+      <brookfield-tour-verification-thanks (next)="next()"></brookfield-tour-verification-thanks>
     </ng-container>
   </ng-container>
 </div>
