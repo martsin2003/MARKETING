@@ -1,6 +1,5 @@
 <div>
   <mat-accordion hideToggle displayMode="flat">
-    <!-- First section -->
     <mat-expansion-panel #findMyHomePanel="matExpansionPanel" class="mat-background-color">
       <mat-expansion-panel-header class="primary-dark-text">
         <span class="mat-content">
@@ -19,7 +18,6 @@
         <brookfield-home-card></brookfield-home-card>
       </div>
     </mat-expansion-panel>
-    <!-- second section -->
     <mat-expansion-panel class="mobile-expansion-panel" #homePlansPanel="matExpansionPanel">
       <mat-expansion-panel-header class="primary-dark-text">
         <span class="mat-content">
@@ -40,7 +38,6 @@
         </div>
       </div>
     </mat-expansion-panel>
-    <!-- Third section -->
     <mat-expansion-panel
       class="mobile-expansion-panel"
       #homePlansPanel="matExpansionPanel"
@@ -65,7 +62,6 @@
         </div>
       </div>
     </mat-expansion-panel>
-    <!-- fourth section -->
     <mat-expansion-panel class="mobile-expansion-panel" #homePlansPanel="matExpansionPanel">
       <mat-expansion-panel-header class="primary-dark-text">
         <span class="mat-content">
@@ -85,6 +81,39 @@
         </div>
       </div>
     </mat-expansion-panel>
-    <!-- closing accordion -->
   </mat-accordion>
 </div>
+<!-- <div *ngIf="condition; else elseBlock"> -->
+<!-- delete the div below and uncomment the div above for *ngif setup -->
+<div>
+  <mat-card class="d-flex flex-column justify-content-center">
+    <mat-card-actions class="d-flex justify-content-end"
+      ><img src="assets/icons/times.svg"
+    /></mat-card-actions>
+    <div class="align-self-center">
+      <p class="span-color-set m-0">Looks like one of your favorite Move-In-Now Homes,</p>
+      <div>
+        <p class="span-color-set m-0">
+          <span class="span-color-different">Kensington - Homesite 0025,</span> is no longer
+          available.
+        </p>
+      </div>
+      <p class="text-center font-18">Don't worry, we have plenty more!</p>
+      <div class="text-center">
+        <mat-card-actions>
+          <div class="community-card__explore">
+            <button class="community-card__explore-button mb-3">
+              See All Move-In-Now Homes
+            </button>
+          </div>
+          <div class="community-card__explore">
+            <button class="community-card__explore-button">
+              Back To My Favorites
+            </button>
+          </div>
+        </mat-card-actions>
+      </div>
+    </div>
+  </mat-card>
+</div>
+<!-- <ng-template #elseBlock></ng-template> -->

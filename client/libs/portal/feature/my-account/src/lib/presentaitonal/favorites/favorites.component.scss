@@ -51,3 +51,21 @@
 .svg-fix-breakpoint img {
   flex-basis: 1;
 }
+mat-card {
+  max-width: 80%;
+  margin: 0 auto;
+  .span-color-set {
+    color: $primary-dark;
+    font-size: 26px;
+  }
+  .span-color-different {
+    color: $primary;
+  }
+  .community-card__explore-button {
+    color: #6295ba;
+    border: 2px solid #6295ba;
+    padding: 18px;
+    width: 40%;
+    font-size: 16px;
+  }
+}
