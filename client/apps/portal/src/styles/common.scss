@@ -189,6 +189,10 @@
       opacity: 0.8;
     }
   }
+
+  &--bigger {
+    width: 100%;
+  }
 }
 
 // Common text types
@@ -278,6 +282,11 @@
   border: 1px solid $form-field-border;
   color: $dark-gray;
   font-size: 18px;
+}
+
+.br-input-width {
+  width: 300px;
+  min-width: 100%;
 }
 
 // Helpers for fonts
