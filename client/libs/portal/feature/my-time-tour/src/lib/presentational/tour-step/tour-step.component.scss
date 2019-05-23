@@ -13,13 +13,13 @@
     .tour-step--white & {
       color: #ffffff;
     }
-    color: $primary;
+    color: $primary-light;
     letter-spacing: 0;
     text-align: center;
     font-size: 18px;
     &--large {
       font-size: 28px;
-      color: $primary-accent;
+      color: $primary-light;
       .tour-step--white & {
         color: #ffffff;
       }
@@ -28,12 +28,12 @@
 }
 
 .stepper {
-  color: $primary;
+  color: $primary-light;
   display: flex;
   &__line {
     width: 40px;
     height: 2px;
-    background: $primary;
+    background: $primary-light;
     .stepper--white & {
       background: #fff;
     }
@@ -46,8 +46,8 @@
     width: 36px;
     height: 36px;
     border-radius: 36px;
-    color: $primary;
-    border: 2px solid $primary;
+    color: $primary-light;
+    border: 2px solid $primary-light;
     .stepper--white & {
       color: #fff;
       border: 2px solid #fff;
@@ -57,7 +57,7 @@
     justify-content: center;
     font-size: 20px;
     &--filled {
-      background: $primary;
+      background: $primary-light;
       border: 2px solid $primary !important;
       color: #fff;
     }

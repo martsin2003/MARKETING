@@ -1,5 +1,8 @@
 <div class="wrapper-of-form">
-  <span class="title">Request More Info</span>
+  <span class="title">{{
+    containerHomeDesignDetail ? containerHomeDesignDetail.title : 'Request More Info'
+  }}</span>
+  <span class="home-name">{{ containerHomeDesignDetail?.homeName }}</span>
   <form class="form">
     <div class="item">
       <mat-form-field appearance="outline">
@@ -42,7 +45,7 @@
         <mat-checkbox>Request Promotions</mat-checkbox>
       </div>
     </div>
-    <button type="submit" class="br-button br-button--primary btn-submit">
+    <button type="submit" class="bk-button bk-button--primary-blue btn-submit">
       GET INFO
     </button>
   </form>

@@ -31,6 +31,40 @@ export class CommunityMicrositeComponent implements OnInit, OnDestroy {
   desrciptionText: string;
   readLess: boolean;
   isMobileView$: Observable<boolean>;
+  menuItems = [
+    {
+      title: 'Overview',
+      id: 'overview'
+    },
+    {
+      title: 'Area Amenities',
+      id: 'area-amenities'
+    },
+    {
+      title: 'Empower Features',
+      id: 'empower-features'
+    },
+    {
+      title: 'See The Homes',
+      id: 'see-the-homes'
+    },
+    {
+      title: 'Site Plan',
+      id: 'site-plan'
+    },
+    {
+      title: 'Reviews',
+      id: 'reviews'
+    },
+    {
+      title: 'Sales Center Info',
+      id: 'sales-center-info'
+    },
+    {
+      title: 'Request More Info',
+      id: 'request-more-info'
+    }
+  ];
 
   constructor(private detectMobileViewService: DetectMobileViewService) {}
 
@@ -61,5 +95,15 @@ export class CommunityMicrositeComponent implements OnInit, OnDestroy {
   readMore() {
     this.readLess = !this.readLess;
     this.desrciptionText = this.readLess ? this.fullDesrciptionText : this.trimmedDescriptionText;
+  }
+
+  scrollTo(component: string) {
+    const element = document.getElementById(component);
+    const coords = element.getBoundingClientRect();
+    window.scrollTo({
+      top: coords.top + window.pageYOffset - 50,
+      left: coords.left + window.pageXOffset,
+      behavior: 'smooth'
+    });
   }
 }
