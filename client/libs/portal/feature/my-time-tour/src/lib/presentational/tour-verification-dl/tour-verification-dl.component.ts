@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'brookfield-tour-verification-dl',
@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tour-verification-dl.component.scss']
 })
 export class TourVerificationDlComponent implements OnInit {
+  @Output() takePhotos = new EventEmitter<string>();
   constructor() {}
 
   ngOnInit() {}
+
+  takePhotosClick() {
+    this.takePhotos.emit();
+  }
 }
