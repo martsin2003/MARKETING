@@ -34,12 +34,12 @@
     }
     &__title {
       font-size: 18px;
-      color: $primary-dark;
+      color: $primary;
     }
     .favorite-button {
       flex-basis: 17%;
       height: 100%;
-      background: $primary;
+      background: $primary-light;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -51,7 +51,7 @@
     .more-info-button {
       flex-basis: 83%;
       height: 100%;
-      background: $primary;
+      background: $primary-light;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -68,7 +68,7 @@
     display: flex;
     &__overview-button {
       flex-basis: 100%;
-      background: $primary-dark;
+      background: $primary;
       display: flex;
       align-items: center;
       justify-content: flex-start;

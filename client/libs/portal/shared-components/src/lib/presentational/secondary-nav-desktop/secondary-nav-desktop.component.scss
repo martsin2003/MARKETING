@@ -1,18 +1,18 @@
 @import 'variables.scss';
 
 .secondary-nav {
-  border-bottom: 1px solid $white;
+  border-bottom: 1px solid $pure-white;
   &.opened,
   &:not(.absolute-nav) {
     background-color: #f0f3f5;
     .nav-item {
-      color: $primary-accent;
+      color: $primary-light;
     }
   }
 }
 .nav-item {
   padding: 8px 16px;
-  color: $white;
+  color: $pure-white;
   display: flex;
   align-items: center;
   font-size: 14px;
@@ -21,6 +21,6 @@
   border-bottom: 5px solid rgba(0, 0, 0, 0);
 }
 .nav-item:hover {
-  border-bottom: 5px solid $secondary;
-  color: $secondary !important;
+  border-bottom: 5px solid $primary-light;
+  color: $primary-light !important;
 }

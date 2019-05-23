@@ -8,9 +8,6 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
-//Import bootstrap utilities.
-@import '~bootstrap-utilities';
-
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
@@ -42,8 +39,6 @@ html {
 }
 
 body {
-  //   display: flex;
-  //   justify-content: center;
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
@@ -61,28 +56,16 @@ body {
 }
 
 //FONT COLORS
-.primary-text {
+.text-primary-light {
+  color: $primary-light;
+}
+
+.text-primary {
   color: $primary;
-}
-
-.primary-accent-text {
-  color: $primary-accent;
-}
-
-.primary-dark-text {
-  color: $primary-dark;
-}
-
-.secondary-text {
-  color: $secondary;
 }
 
 .white-text {
   color: white;
-}
-
-.yellow-text {
-  color: $yellow;
 }
 
 //BUTTON STYLING
@@ -111,25 +94,24 @@ body {
     margin-right: 10px;
   }
 
-  &--accent {
-    color: $lightgray;
-    border-color: $primary-accent;
-    background-color: $primary-accent;
+  &--tertiary {
+    color: transparent;
+    background-color: $primary-light;
   }
   &--primary {
-    color: $white;
-    border-color: $primary;
-    background-color: $primary;
-    &:hover {
-      background: $primary-accent;
-    }
-  }
-  &--secondary {
-    color: $primary;
-    border-color: $primary;
-    background-color: transparent;
+    color: $pure-white;
+    border-color: $primary-light;
+    background-color: $primary-light;
     &:hover {
       background: $primary;
+    }
+  }
+  &--secondary-blue {
+    color: $primary-light;
+    border-color: $primary-light;
+    background-color: transparent;
+    &:hover {
+      background: $primary-light;
       color: white;
     }
   }
@@ -161,10 +143,10 @@ body {
 
 // Input styles
 .br-input {
-  border: 1px solid $white;
+  border: 1px solid $pure-white;
   padding: 0;
   height: 55px;
-  background-color: $white !important;
+  background-color: $pure-white !important;
   font-size: 16px;
 }
 
