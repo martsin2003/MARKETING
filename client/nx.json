@@ -55,6 +55,9 @@
     },
     "portal-feature-my-time-tour": {
       "tags": ["scope:my-time-tour", "type:feature"]
+    },
+    "portal-feature-my-account": {
+      "tags": ["scope:my-account", "type:feature"]
     }
   }
 }

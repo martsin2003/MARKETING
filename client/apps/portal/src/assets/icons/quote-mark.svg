@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="112px" height="108px" viewBox="0 0 112 108" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>quote mark</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-11.5%" y="-12.0%" width="123.1%" height="124.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.2">
+        <g id="FMH---Community-Microsite" transform="translate(-440.000000, -4670.000000)" fill="#FFFFFF">
+            <g id="review" transform="translate(0.000000, 4612.000000)">
+                <g id="quote-mark" filter="url(#filter-1)" transform="translate(444.000000, 60.000000)">
+                    <path d="M59.0288103,100 L59.0288103,52.3379803 C58.8136025,45.480849 59.8043703,39.0405277 61.9909621,33.0190397 C64.1795843,26.9995751 67.2574611,21.7004229 71.2124109,17.1256298 C75.169391,12.5609534 79.9141127,8.77121988 85.4323641,5.75440584 C90.954676,2.75175526 96.95816,0.823503227 103.418453,0 L103.418453,20.5592538 C95.4943412,23.2604253 90.0755727,27.2524938 87.1621471,32.551646 C84.2385702,37.8487749 82.7889633,44.3396799 82.7889633,52.0203144 L103.418453,52.0203144 L103.418453,100 L59.0288103,100 Z M0.0258936994,100 L0.0258936994,52.3379803 C-0.177132474,45.480849 0.813635252,39.0405277 3.0022574,33.0190397 C5.19087955,26.9995751 8.2545445,21.7004229 12.2237062,17.1256298 C16.178656,12.5609534 20.9111961,8.77121988 26.4436594,5.75440584 C31.963941,2.75175526 37.9532131,0.823503227 44.4155362,0 L44.4155362,20.5592538 C36.4914247,23.2604253 31.0726561,27.2524938 28.1612608,32.551646 C25.2356536,37.8487749 23.7860468,44.3396799 23.7860468,52.0203144 L44.4155362,52.0203144 L44.4155362,100 L0.0258936994,100 Z" id="Fill-1"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

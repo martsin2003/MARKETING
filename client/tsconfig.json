@@ -28,7 +28,8 @@
         "libs/portal/core-data/data-services/src/index.ts"
       ],
       "@brookfield/portal/shared-components": ["libs/portal/shared-components/src/index.ts"],
-      "@brookfield/portal/feature/my-time-tour": ["libs/portal/feature/my-time-tour/src/index.ts"]
+      "@brookfield/portal/feature/my-time-tour": ["libs/portal/feature/my-time-tour/src/index.ts"],
+      "@brookfield/portal/feature/my-account": ["libs/portal/feature/my-account/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

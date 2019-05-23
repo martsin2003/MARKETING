@@ -1,6 +1,6 @@
 import { map, takeUntil } from 'rxjs/operators';
 import { DetectMobileViewService } from '@brookfield/common/utilities';
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 
 @Component({

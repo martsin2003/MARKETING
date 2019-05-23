@@ -1,0 +1,49 @@
+<div class="wrapper-of-form">
+  <span class="title">Request More Info</span>
+  <form class="form">
+    <div class="item">
+      <mat-form-field appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input matInput required placeholder="First Name" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input matInput required placeholder="Last Name" />
+      </mat-form-field>
+    </div>
+    <div class="item">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput required placeholder="Email" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Phone</mat-label>
+        <input matInput required placeholder="Phone" />
+      </mat-form-field>
+    </div>
+    <div class="radio-buttons">
+      <mat-radio-group>
+        <mat-radio-button value="1">Mobile</mat-radio-button>
+        <mat-radio-button value="2">Home</mat-radio-button>
+        <mat-radio-button value="3">Work</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div class="wrp-comments">
+      <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>Comments</mat-label>
+        <textarea matInput rows="3" placeholder="Comments"></textarea>
+      </mat-form-field>
+    </div>
+    <div class="requests">
+      <div class="checkbox-container">
+        <mat-checkbox>Request a Private Tour</mat-checkbox>
+      </div>
+      <div class="checkbox-container">
+        <mat-checkbox>Request Promotions</mat-checkbox>
+      </div>
+    </div>
+    <button type="submit" class="br-button br-button--primary btn-submit">
+      GET INFO
+    </button>
+  </form>
+</div>

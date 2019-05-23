@@ -17,6 +17,8 @@
 
     "../../libs/portal/feature/communities/src/index.ts",
 
-    "../../libs/portal/feature/my-time-tour/src/index.ts"
+    "../../libs/portal/feature/my-time-tour/src/index.ts",
+
+    "../../libs/portal/feature/my-account/src/index.ts"
   ]
 }

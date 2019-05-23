@@ -6,6 +6,10 @@ import { CommunityMicrositeComponent } from './containers/community-microsite/co
 import { MaterialModule } from '@brookfield/material';
 import { AreaAmenitiesComponent } from './presentational/area-amenities/area-amenities.component';
 import { ViewHomesComponent } from './presentational/view-homes/view-homes.component';
+import { SitePlanComponent } from './presentational/site-plan/site-plan.component';
+import { ResidentReviewsComponent } from './presentational/resident-reviews/resident-reviews.component';
+import { SalesCenterComponent } from './presentational/sales-center/sales-center.component';
+import { CommunityHeaderComponent } from './presentational/community-header/community-header.component';
 
 @NgModule({
   imports: [
@@ -14,6 +18,14 @@ import { ViewHomesComponent } from './presentational/view-homes/view-homes.compo
     MaterialModule,
     RouterModule.forChild([{ path: '', pathMatch: 'full', component: CommunityMicrositeComponent }])
   ],
-  declarations: [CommunityMicrositeComponent, AreaAmenitiesComponent, ViewHomesComponent]
+  declarations: [
+    CommunityMicrositeComponent,
+    AreaAmenitiesComponent,
+    ViewHomesComponent,
+    SitePlanComponent,
+    ResidentReviewsComponent,
+    SalesCenterComponent,
+    CommunityHeaderComponent
+  ]
 })
 export class PortalFeatureCommunityModule {}
