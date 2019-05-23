@@ -1,14 +1,14 @@
 <div>
   <mat-accordion hideToggle displayMode="flat">
     <!-- First section -->
-    <mat-expansion-panel #findMyHomePanel="matExpansionPanel">
+    <mat-expansion-panel #findMyHomePanel="matExpansionPanel" class="mat-background-color">
       <mat-expansion-panel-header class="primary-dark-text">
-        <span class="pr-1">
-          <mat-icon class="expand-arrow" [ngClass]="{ expanded: findMyHomePanel.expanded }">
-            expand_more
-          </mat-icon>
+        <span class="mat-content">
+          <span class="mr-5">My Customized Floorplans</span>
+          <span class="pr-1">
+            <img src="assets/icons/plus.svg" class="element-icon-style" />
+          </span>
         </span>
-        <span>My Customized Floorplans</span>
       </mat-expansion-panel-header>
       <div class="block--color--blue">
         <p class="font-18 mb-1 p__style">Loudoun County | Round Hill,VA</p>
@@ -22,33 +22,37 @@
     <!-- second section -->
     <mat-expansion-panel class="mobile-expansion-panel" #homePlansPanel="matExpansionPanel">
       <mat-expansion-panel-header class="primary-dark-text">
-        <span class="pr-1">
-          <mat-icon class="expand-arrow" [ngClass]="{ expanded: homePlansPanel.expanded }">
-            expand_more
-          </mat-icon>
+        <span class="mat-content">
+          <span class="mr-5">My Favorite Home Plans</span>
+          <span class="pr-1">
+            <img src="assets/icons/plus.svg" class="element-icon-style" />
+          </span>
         </span>
-        <span>My Favorite Home Plans</span>
       </mat-expansion-panel-header>
       <div class="block--color--blue">
         <p class="font-18 mb-1 p__style">Loudoun County | Round Hill,VA</p>
         <p class="font-18 mt-1">the Bluffs at Sleeter Lake Single-Family Homes</p>
       </div>
-      <div class="cards-container">
+      <div class="cards-container community-card__explore-button">
         <brookfield-home-card></brookfield-home-card>
         <div class="div-full-width full-svg-width">
-          <img src="assets/icons/favorites-people.svg" />
+          <img src="assets/icons/favorites-people.svg" class="svg-fix-breakpoint" />
         </div>
       </div>
     </mat-expansion-panel>
     <!-- Third section -->
-    <mat-expansion-panel class="mobile-expansion-panel" #homePlansPanel="matExpansionPanel">
+    <mat-expansion-panel
+      class="mobile-expansion-panel"
+      #homePlansPanel="matExpansionPanel"
+      class="mat-background-color"
+    >
       <mat-expansion-panel-header class="primary-dark-text">
-        <span class="pr-1">
-          <mat-icon class="expand-arrow" [ngClass]="{ expanded: homePlansPanel.expanded }">
-            expand_more
-          </mat-icon>
+        <span class="mat-content">
+          <span class="mr-5">My Favorite Move-In-Now Homes</span>
+          <span class="pr-1">
+            <img src="assets/icons/plus.svg" class="element-icon-style" />
+          </span>
         </span>
-        <span>My Favorite Move-In-Now Homes</span>
       </mat-expansion-panel-header>
       <div class="block--color--blue">
         <p class="font-18 mb-1 p__style">Loudoun County | Round Hill,VA</p>
@@ -64,12 +68,12 @@
     <!-- fourth section -->
     <mat-expansion-panel class="mobile-expansion-panel" #homePlansPanel="matExpansionPanel">
       <mat-expansion-panel-header class="primary-dark-text">
-        <span class="pr-1">
-          <mat-icon class="expand-arrow" [ngClass]="{ expanded: homePlansPanel.expanded }">
-            expand_more
-          </mat-icon>
+        <span class="mat-content">
+          <span class="mr-5">My Favorite Communities</span>
+          <span class="pr-1">
+            <img src="assets/icons/plus.svg" class="element-icon-style" />
+          </span>
         </span>
-        <span>My Favorite Communities</span>
       </mat-expansion-panel-header>
       <div class="block--color--blue">
         <p class="font-18">Loudoun County</p>

@@ -11,15 +11,24 @@
     overflow: auto;
   }
 }
+.mat-accordion .mat-expansion-panel {
+  border: none;
+}
+.mat-background-color {
+  background-color: $gray-bg;
+  border: 1px solid $gray-bg;
+}
 .div-full-width {
   display: block;
   margin: 10px;
   flex-basis: calc(50% - 20px);
 }
 .full-svg-width img {
+  width: 100%;
   height: 100%;
+  max-height: 405px;
+  object-fit: contain;
 }
-
 .block--color--blue {
   display: flex;
   background-color: $primary-dark;
@@ -30,4 +39,15 @@
 }
 .p__style {
   font-weight: bolder;
+}
+.mat-content {
+  justify-content: center;
+}
+.element-icon-style {
+  box-sizing: border-box;
+  padding: 0 16px;
+  vertical-align: middle;
+}
+.svg-fix-breakpoint img {
+  flex-basis: 1;
 }
