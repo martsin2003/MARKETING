@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'brookfield-more-info-form',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./more-info-form.component.scss']
 })
 export class MoreInfoFormComponent implements OnInit {
+  @Input() containerHomeDesignDetail: { title: string; homeName: string };
+
   constructor() {}
 
   ngOnInit() {}
