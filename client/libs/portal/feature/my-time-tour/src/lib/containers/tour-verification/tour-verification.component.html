@@ -8,9 +8,7 @@
       ></brookfield-tour-verification-type>
     </ng-container>
     <ng-container *ngSwitchCase="'cc'">
-      <brookfield-tour-verification-cc
-        (verificationSelected)="verificationSelected($event)"
-      ></brookfield-tour-verification-cc>
+      <brookfield-tour-verification-cc (nextStep)="next($event)"></brookfield-tour-verification-cc>
     </ng-container>
     <ng-container *ngSwitchCase="'photo'">
       <brookfield-tour-verification-dl

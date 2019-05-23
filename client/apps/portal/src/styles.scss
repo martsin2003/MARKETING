@@ -165,11 +165,26 @@ body {
 
 // Input styles
 .br-input {
-  border: 1px solid $pure-white;
-  padding: 0;
+  border: 1px solid $form-field-border;
+  padding: 0 10px;
   height: 55px;
   background-color: $pure-white !important;
   font-size: 16px;
+  outline: 0;
+}
+
+.br-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+}
+
+.br-input-label {
+  height: 22px;
+  font-family: HelveticaNeue-Light;
+  font-size: 16px;
+  margin-bottom: 2px;
+  color: #5f6062;
 }
 
 // END OLD STYLING

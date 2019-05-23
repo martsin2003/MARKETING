@@ -10,12 +10,12 @@
     }
     &__subtitle {
       font-size: 18px;
-      color: $darkgray;
+      color: $dark-gray;
     }
   }
   .floor-plan-container {
     height: 60vh;
-    background: $gray-bg;
+    background: $bg-primary-light;
     display: flex;
     align-items: center;
     justify-content: center;
