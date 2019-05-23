@@ -249,11 +249,28 @@
   width: 24px;
 }
 
+// Input styles
 .br-input {
-  height: 60px;
   border: 1px solid $form-field-border;
-  color: $dark-gray;
-  font-size: 18px;
+  padding: 0 10px;
+  height: 60px;
+  background-color: $pure-white !important;
+  font-size: 16px;
+  outline: 0;
+}
+
+.br-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+}
+
+.br-input-label {
+  height: 22px;
+  font-family: HelveticaNeue-Light;
+  font-size: 16px;
+  margin-bottom: 2px;
+  color: #5f6062;
 }
 
 .br-textarea {
