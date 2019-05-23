@@ -1,0 +1,20 @@
+@import 'variables.scss';
+
+.key-home-wrapper {
+  color: $darkgray;
+  .title {
+    font-family: 'Helvetica-Neue-Light', sans-serif;
+    color: $primary;
+    font-size: 25px;
+  }
+  ul {
+    padding-left: 18px;
+    margin-top: 10px;
+    li {
+      font-family: 'Helvetica-Neue-Regular', sans-serif;
+      margin: 10px 0px;
+      font-size: 18px;
+      color: $darkgray;
+    }
+  }
+}

@@ -8,10 +8,22 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class HomePlanDetailComponent implements OnInit {
   images = [
-    'https://images.pexels.com/photos/237018/pexels-photo-237018.jpeg?cs=srgb&dl=asphalt-beauty-colorful-237018.jpg&fm=jpg',
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzTsCjUXQ8TFyfM3l4IOf6su-orwP7YGicEMn8ba4rRGAMFUBv',
-    'https://images.pexels.com/photos/730218/pexels-photo-730218.jpeg?cs=srgb&dl=asfalt-barvy-cesta-730218.jpg&fm=jpg'
+    'assets/images/desktop/home-detail-slider-first-img.png',
+    'assets/images/desktop/home-detail-slider-second-img.png'
   ];
+
+  featureKeys = [
+    'Your Choice of Counters, Cabinets and Flooring',
+    'Stainless Steel Appliances',
+    'Volume Ceilings in Great Room',
+    'Gas Fireplace',
+    'Finished Rec Room and Full Bath'
+  ];
+
+  homeDetail = {
+    title: 'Request More Info About',
+    homeName: 'The Torrington II'
+  };
 
   constructor() {}
 
