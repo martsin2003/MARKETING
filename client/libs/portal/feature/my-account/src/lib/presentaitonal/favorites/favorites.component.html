@@ -1,3 +1,119 @@
-<p>
-  favorites works!
-</p>
+<div>
+  <mat-accordion hideToggle displayMode="flat">
+    <mat-expansion-panel #findMyHomePanel="matExpansionPanel" class="mat-background-color">
+      <mat-expansion-panel-header class="primary-dark-text">
+        <span class="mat-content">
+          <span class="mr-5">My Customized Floorplans</span>
+          <span class="pr-1">
+            <img src="assets/icons/plus.svg" class="element-icon-style" />
+          </span>
+        </span>
+      </mat-expansion-panel-header>
+      <div class="block--color--blue">
+        <p class="font-18 mb-1 p__style">Loudoun County | Round Hill,VA</p>
+        <p class="font-18 mt-1">the Bluffs at Sleeter Lake Single-Family Homes</p>
+      </div>
+      <div class="cards-container">
+        <brookfield-home-card></brookfield-home-card>
+        <brookfield-home-card></brookfield-home-card>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel class="mobile-expansion-panel" #homePlansPanel="matExpansionPanel">
+      <mat-expansion-panel-header class="primary-dark-text">
+        <span class="mat-content">
+          <span class="mr-5">My Favorite Home Plans</span>
+          <span class="pr-1">
+            <img src="assets/icons/plus.svg" class="element-icon-style" />
+          </span>
+        </span>
+      </mat-expansion-panel-header>
+      <div class="block--color--blue">
+        <p class="font-18 mb-1 p__style">Loudoun County | Round Hill,VA</p>
+        <p class="font-18 mt-1">the Bluffs at Sleeter Lake Single-Family Homes</p>
+      </div>
+      <div class="cards-container community-card__explore-button">
+        <brookfield-home-card></brookfield-home-card>
+        <div class="div-full-width full-svg-width">
+          <img src="assets/icons/favorites-people.svg" class="svg-fix-breakpoint" />
+        </div>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel
+      class="mobile-expansion-panel"
+      #homePlansPanel="matExpansionPanel"
+      class="mat-background-color"
+    >
+      <mat-expansion-panel-header class="primary-dark-text">
+        <span class="mat-content">
+          <span class="mr-5">My Favorite Move-In-Now Homes</span>
+          <span class="pr-1">
+            <img src="assets/icons/plus.svg" class="element-icon-style" />
+          </span>
+        </span>
+      </mat-expansion-panel-header>
+      <div class="block--color--blue">
+        <p class="font-18 mb-1 p__style">Loudoun County | Round Hill,VA</p>
+        <p class="font-18 mt-1">the Bluffs at Sleeter Lake Single-Family Homes</p>
+      </div>
+      <div class="cards-container">
+        <brookfield-home-card></brookfield-home-card>
+        <div class="div-full-width full-svg-width">
+          <img src="assets/icons/favorites-people.svg" />
+        </div>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel class="mobile-expansion-panel" #homePlansPanel="matExpansionPanel">
+      <mat-expansion-panel-header class="primary-dark-text">
+        <span class="mat-content">
+          <span class="mr-5">My Favorite Communities</span>
+          <span class="pr-1">
+            <img src="assets/icons/plus.svg" class="element-icon-style" />
+          </span>
+        </span>
+      </mat-expansion-panel-header>
+      <div class="block--color--blue">
+        <p class="font-18">Loudoun County</p>
+      </div>
+      <div class="cards-container">
+        <brookfield-home-card></brookfield-home-card>
+        <div class="div-full-width full-svg-width">
+          <img src="assets/icons/favorites-people.svg" />
+        </div>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+<!-- <div *ngIf="condition; else elseBlock"> -->
+<!-- delete the div below and uncomment the div above for *ngif setup -->
+<div>
+  <mat-card class="d-flex flex-column justify-content-center">
+    <mat-card-actions class="d-flex justify-content-end"
+      ><img src="assets/icons/times.svg"
+    /></mat-card-actions>
+    <div class="align-self-center">
+      <p class="span-color-set m-0">Looks like one of your favorite Move-In-Now Homes,</p>
+      <div>
+        <p class="span-color-set m-0">
+          <span class="span-color-different">Kensington - Homesite 0025,</span> is no longer
+          available.
+        </p>
+      </div>
+      <p class="text-center font-18">Don't worry, we have plenty more!</p>
+      <div class="text-center">
+        <mat-card-actions>
+          <div class="community-card__explore">
+            <button class="community-card__explore-button mb-3">
+              See All Move-In-Now Homes
+            </button>
+          </div>
+          <div class="community-card__explore">
+            <button class="community-card__explore-button">
+              Back To My Favorites
+            </button>
+          </div>
+        </mat-card-actions>
+      </div>
+    </div>
+  </mat-card>
+</div>
+<!-- <ng-template #elseBlock></ng-template> -->

@@ -1,0 +1,71 @@
+@import 'variables.scss';
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  brookfield-home-card {
+    display: block;
+    margin: 10px;
+    flex-basis: calc(50% - 20px);
+    overflow: auto;
+  }
+}
+.mat-accordion .mat-expansion-panel {
+  border: none;
+}
+.mat-background-color {
+  background-color: $bg-primary-light;
+  border: 1px solid $bg-primary-light;
+}
+.div-full-width {
+  display: block;
+  margin: 10px;
+  flex-basis: calc(50% - 20px);
+}
+.full-svg-width img {
+  width: 100%;
+  height: 100%;
+  max-height: 405px;
+  object-fit: contain;
+}
+.block--color--blue {
+  display: flex;
+  background-color: $primary-dark;
+  color: $pure-white;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.p__style {
+  font-weight: bolder;
+}
+.mat-content {
+  justify-content: center;
+}
+.element-icon-style {
+  box-sizing: border-box;
+  padding: 0 16px;
+  vertical-align: middle;
+}
+.svg-fix-breakpoint img {
+  flex-basis: 1;
+}
+mat-card {
+  max-width: 80%;
+  margin: 0 auto;
+  .span-color-set {
+    color: $primary-dark;
+    font-size: 26px;
+  }
+  .span-color-different {
+    color: $primary;
+  }
+  .community-card__explore-button {
+    color: #6295ba;
+    border: 2px solid #6295ba;
+    padding: 18px;
+    width: 40%;
+    font-size: 16px;
+  }
+}
