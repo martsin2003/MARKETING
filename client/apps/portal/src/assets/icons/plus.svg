@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55 (78076) - https://sketchapp.com -->
+    <title>Icons/Accordian/Plus</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icons/Accordian/Plus" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Group-5" stroke="#6295BA" stroke-width="2">
+            <path d="M9,0 L9,18" id="Stroke-1"></path>
+            <path d="M0,9 L18,9" id="Stroke-3"></path>
+        </g>
+    </g>
+</svg>
