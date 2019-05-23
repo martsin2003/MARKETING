@@ -24,14 +24,4 @@
     right: 0;
     position: absolute;
   }
-  &__compare-button {
-    color: #fff;
-    background: #6295ba;
-    padding: 10px;
-    border: none;
-    font-size: 14px;
-    &:disabled {
-      opacity: 0.5;
-    }
-  }
 }
