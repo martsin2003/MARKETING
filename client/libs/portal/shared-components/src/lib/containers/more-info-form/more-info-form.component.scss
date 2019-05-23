@@ -9,11 +9,16 @@
   padding-bottom: 30px;
   .title {
     text-align: center;
-    font-family: 'Helvetica Neue';
-    font-weight: 600;
+    font-family: 'Helvetica-Neue-Bold';
     font-size: 36px;
     padding: 40px 0px;
     color: $primary;
+  }
+  .home-name {
+    font-family: 'Helvetica-Neue-Bold';
+    font-size: 36px;
+    color: $primary;
+    padding: 0px 0px 30px;
   }
   .form {
     width: 540px;

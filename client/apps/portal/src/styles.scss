@@ -27,6 +27,7 @@ $portal-theme: mat-light-theme($portal-primary, $portal-accent, $portal-warn);
 @import 'styles/theme.scss';
 @import 'styles/utils.scss';
 @import 'styles/fonts.scss';
+@import 'styles/common.scss';
 
 html {
   box-sizing: border-box;
@@ -40,7 +41,7 @@ html {
 
 body {
   margin: 0;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  font-family: 'Helvetica-Neue-Medium', sans-serif !important;
 }
 
 .container {
@@ -55,26 +56,47 @@ body {
   padding: 0px;
 }
 
-//FONT COLORS
-.text-primary-light {
-  color: $primary-light;
+// Expand/collapse arrow animation
+.expand-arrow {
+  transform-origin: center center;
+  transition: transform ease-in-out 0.4s;
+  &.expanded {
+    transform: rotate(180deg);
+  }
 }
 
-.text-primary {
-  color: $primary;
-}
-
-.white-text {
-  color: white;
+// Bottom Sheet
+::ng-deep mat-bottom-sheet-container {
+  padding: 0px !important;
+  /deep/mat-list {
+    padding: 0px !important;
+    background: black;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    mat-icon {
+      margin-right: 5px;
+    }
+    .mat-list-item-content {
+      color: white !important;
+      font-weight: 100;
+    }
+    mat-divider {
+      border-color: rgb(204, 204, 204) !important;
+    }
+  }
 }
 
 //BUTTON STYLING
+
+// START - OLD STYLING - DO NOT USE - WILL BE MIGRATED TO CLASSES IN common.scss AND REMOVED
+
 .br-button {
   height: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: franklin-gothic-urw-cond, sans-serif;
+  font-family: 'Helvetica-Neue-Medium', sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: 1;
@@ -150,38 +172,4 @@ body {
   font-size: 16px;
 }
 
-// A link helper styles
-.no-underline {
-  text-decoration: none;
-}
-
-// Expand/collapse arrow animation
-.expand-arrow {
-  transform-origin: center center;
-  transition: transform ease-in-out 0.4s;
-  &.expanded {
-    transform: rotate(180deg);
-  }
-}
-
-// Bottom Sheet
-::ng-deep mat-bottom-sheet-container {
-  padding: 0px !important;
-  /deep/mat-list {
-    padding: 0px !important;
-    background: black;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    mat-icon {
-      margin-right: 5px;
-    }
-    .mat-list-item-content {
-      color: white !important;
-      font-weight: 100;
-    }
-    mat-divider {
-      border-color: rgb(204, 204, 204) !important;
-    }
-  }
-}
+// END OLD STYLING
