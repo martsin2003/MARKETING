@@ -2,49 +2,49 @@
 
 // Text
 
-.bk-text-primary-dark {
+.br-text-primary-dark {
   color: $primary-dark;
 }
-.bk-text-primary {
+.br-text-primary {
   color: $primary;
 }
-.bk-text-primary-light {
+.br-text-primary-light {
   color: $primary-light;
 }
-.bk-text-error {
+.br-text-error {
   color: $error;
 }
-.bk-text-error-pale {
+.br-text-error-pale {
   color: $error-pale;
 }
-.bk-text-turquoise {
+.br-text-turquoise {
   color: $turquoise;
 }
-.bk-text-turquoise-pale {
+.br-text-turquoise-pale {
   color: $turquoise-pale;
 }
-.bk-text-dark-yellow {
+.br-text-dark-yellow {
   color: $dark-yellow;
 }
-.bk-text-dark-orange {
+.br-text-dark-orange {
   color: $dark-orange;
 }
-.bk-text-light-blue {
+.br-text-light-blue {
   color: $light-blue;
 }
-.bk-text-purple-pale {
+.br-text-purple-pale {
   color: $purple-pale;
 }
-.bk-text-dark-gray {
+.br-text-dark-gray {
   color: $dark-gray;
 }
-.bk-text-pure-white {
+.br-text-pure-white {
   color: $pure-white;
 }
 
 // Background
 
-.bk-background-primary {
+.br-background-primary {
   background-color: $bg-primary-light;
 }
 
@@ -97,7 +97,7 @@
 
 // Buttons
 
-.bk-button {
+.br-button {
   border: none;
   cursor: pointer;
   height: 60px;
@@ -193,7 +193,7 @@
 
 // Common text types
 
-.bk-header-text {
+.br-header-text {
   &--large {
     font-size: 36px;
     line-height: 42px;
@@ -212,7 +212,7 @@
   }
 }
 
-.bk-content-text {
+.br-content-text {
   &--small {
     font-size: 14px;
     line-height: 20px;
@@ -227,11 +227,11 @@
   }
 }
 
-.bk-homepage-icon {
+.br-homepage-icon {
   height: 53px;
 }
 
-.bk-icon {
+.br-icon {
   &--large {
     height: 36px;
   }
@@ -243,20 +243,37 @@
   }
 }
 
-.bk-checkbox,
-.bk-radio {
+.br-checkbox,
+.br-radio {
   height: 24px;
   width: 24px;
 }
 
-.bk-input {
-  height: 60px;
+// Input styles
+.br-input {
   border: 1px solid $form-field-border;
-  color: $dark-gray;
-  font-size: 18px;
+  padding: 0 10px;
+  height: 60px;
+  background-color: $pure-white !important;
+  font-size: 16px;
+  outline: 0;
 }
 
-.bk-textarea {
+.br-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+}
+
+.br-input-label {
+  height: 22px;
+  font-family: HelveticaNeue-Light;
+  font-size: 16px;
+  margin-bottom: 2px;
+  color: #5f6062;
+}
+
+.br-textarea {
   min-height: 120px;
   border: 1px solid $form-field-border;
   color: $dark-gray;

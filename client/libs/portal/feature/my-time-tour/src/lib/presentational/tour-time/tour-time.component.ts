@@ -1,4 +1,4 @@
-import { TourStepData } from './../../interfaces/tour-step.interface';
+import { TourStepData } from '../../view-model/tour-step.interface';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({

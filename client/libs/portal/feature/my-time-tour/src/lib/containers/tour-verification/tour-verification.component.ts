@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { TourStepData } from '../../interfaces/tour-step.interface';
+import { TourStepData } from '../../view-model/tour-step.interface';
+import { TourVerificationStep } from '../../view-model/tour-verification.types';
 
 @Component({
   selector: 'brookfield-tour-verification',
@@ -10,7 +11,7 @@ export class TourVerificationComponent implements OnInit {
   constructor() {}
   data: TourStepData;
   accept: boolean;
-  step: string = 'selectType';
+  verificationStep: TourVerificationStep = TourVerificationStep.cc;
   @Output() nextStep = new EventEmitter<string>();
   ngOnInit() {
     this.data = {
@@ -18,5 +19,25 @@ export class TourVerificationComponent implements OnInit {
       stepsCount: 5,
       title: 'Verification'
     };
+  }
+
+  verificationSelected(step: TourVerificationStep) {
+    if (step === TourVerificationStep.cc) {
+      this.data = Object.assign({}, this.data, { title: 'Credit Card Verification' });
+    } else if (step === TourVerificationStep.photo) {
+      this.data = Object.assign({}, this.data, {
+        title: 'Identity Verification: Your Driver’s License'
+      });
+    }
+    console.log('step: ', step);
+    this.verificationStep = step;
+  }
+
+  takePhotos() {
+    this.verificationStep = TourVerificationStep.thanks;
+  }
+
+  next() {
+    this.nextStep.emit();
   }
 }
