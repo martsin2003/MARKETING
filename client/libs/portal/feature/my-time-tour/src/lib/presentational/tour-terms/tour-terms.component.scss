@@ -19,7 +19,7 @@
       text-decoration: underline;
     }
     &--primary {
-      color: $primary-accent;
+      color: $primary-light;
     }
   }
   &__bottom {
@@ -36,7 +36,7 @@
 }
 
 .home-brochure {
-  background: $primary;
+  background: $primary-light;
   width: 300px;
   height: 100%;
   &__image {

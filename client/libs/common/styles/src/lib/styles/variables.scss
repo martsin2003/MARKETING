@@ -1,19 +1,28 @@
-$primary-accent: rgb(43, 77, 113);
-$secondary: rgb(162, 190, 212);
-$yellow: rgb(215, 152, 30);
-$white: #ffffff;
-$lightgray: lightgray;
-$divider: #dadce9;
-$gray-bg: rgb(237, 240, 242);
+$primary-dark: #002a4e;
+$primary: #0f2d4f;
+$primary-light: #6295ba;
+$primary-light-hover: #4c7da3;
+$bg-primary-light: #f0f3f5;
 
-$primary: #6295ba;
-$primary-dark: #0f2d4f;
-$purple: #7b6cb0;
-$lightblue: #50c1e2;
-$pale-red: #e14f4f;
-$darkorange: #e0822c;
+$error: #d60010;
+$error-pale: #e14f4f;
+
+$turquoise: #22adb1;
+$turquoise-pale: #70aa8e;
+
 $dark-yellow: #dfa61b;
-$pale-green: #70aa8e;
-$darkblue: #22adb1;
-$darkgray: #404042;
-$warn: red;
+$dark-orange: #e0822c;
+
+$light-blue: #50c1e2;
+$purple-pale: #7b6cb0;
+
+$pure-white: #ffffff;
+
+$dark-gray: #404042;
+$form-field-border: #b2b2b2;
+$divider: #c0c7cb;
+
+$helvetica: 'Helvetica-Neue-Medium' !important;
+$helvetica-light: 'Helvetica-Neue-Light' !important;
+$helvetica-bold: 'Helvetica-Neue-Bold' !important;
+$helvetica-italic: 'Helvetica-Neue-Italic' !important;
