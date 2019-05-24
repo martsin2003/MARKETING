@@ -17,6 +17,7 @@ import { TourCreatePasswordComponent } from './presentational/tour-create-passwo
 import { TourConfirmComponent } from './presentational/tour-confirm/tour-confirm.component';
 import { FormsModule } from '@angular/forms';
 import { TourVerificationTypeComponent } from './presentational/tour-verification-type/tour-verification-type.component';
+import { TourBackButtonComponent } from './presentational/tour-back-button/tour-back-button.component';
 
 @NgModule({
   imports: [
@@ -39,7 +40,8 @@ import { TourVerificationTypeComponent } from './presentational/tour-verificatio
     TourReasonComponent,
     TourCreatePasswordComponent,
     TourConfirmComponent,
-    TourVerificationTypeComponent
+    TourVerificationTypeComponent,
+    TourBackButtonComponent
   ]
 })
 export class PortalFeatureMyTimeTourModule {}

@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -7,11 +8,15 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class TourTypeComponent implements OnInit {
   @Output() nextStep = new EventEmitter<string>();
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {}
 
   continue() {
     this.nextStep.emit();
+  }
+
+  back() {
+    this.router.navigateByUrl('/find/home-plan-detail');
   }
 }

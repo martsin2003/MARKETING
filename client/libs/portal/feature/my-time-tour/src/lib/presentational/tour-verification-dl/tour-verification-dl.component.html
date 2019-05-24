@@ -13,13 +13,14 @@
       Don’t have a webcam? Please complete your identity verification on your smart phone.
     </div>
     <div class="tour-verification-dl__form">
-      <div class="tour-verification-dl__input-wrapper">
-        <label>Phone Number</label>
-        <input matInput type="text" />
+      <div class="br-input-wrapper fb-50">
+        <label class="br-input-label">Phone Number</label>
+        <input class="br-input" type="text" />
       </div>
       <button class="ml-4 br-button br-button--secondary-blue br-button--desktop">
         SEND ME A TEXT LINK
       </button>
     </div>
   </div>
+  <brookfield-tour-back-button [color]="'grey'" (goBack)="back()"></brookfield-tour-back-button>
 </div>

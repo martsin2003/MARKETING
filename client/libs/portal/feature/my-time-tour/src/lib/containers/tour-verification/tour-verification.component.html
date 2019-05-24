@@ -4,14 +4,19 @@
   <ng-container [ngSwitch]="verificationStep">
     <ng-container *ngIf="!verificationStep">
       <brookfield-tour-verification-type
+        (goBack)="back()"
         (verificationSelected)="verificationSelected($event)"
       ></brookfield-tour-verification-type>
     </ng-container>
     <ng-container *ngSwitchCase="'cc'">
-      <brookfield-tour-verification-cc (nextStep)="next($event)"></brookfield-tour-verification-cc>
+      <brookfield-tour-verification-cc
+        (goBack)="backToType()"
+        (nextStep)="next($event)"
+      ></brookfield-tour-verification-cc>
     </ng-container>
     <ng-container *ngSwitchCase="'photo'">
       <brookfield-tour-verification-dl
+        (goBack)="backToType()"
         (takePhotos)="takePhotos()"
       ></brookfield-tour-verification-dl>
     </ng-container>

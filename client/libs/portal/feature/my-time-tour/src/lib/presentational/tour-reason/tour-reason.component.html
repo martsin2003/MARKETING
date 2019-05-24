@@ -49,5 +49,9 @@
       </div>
     </div>
   </mat-radio-group>
-  <div class="br-button br-button--primary" (click)="continue()">Continue</div>
+  <button class="br-button br-button--primary-blue br-button--desktop mb-5" (click)="continue()">
+    Continue
+  </button>
+
+  <brookfield-tour-back-button (goBack)="back()"></brookfield-tour-back-button>
 </div>

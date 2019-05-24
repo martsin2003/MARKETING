@@ -22,4 +22,8 @@ export class MyTimeTourComponent implements OnInit {
   back() {
     this.step--;
   }
+
+  cancelAppointment() {
+    this.step = 0;
+  }
 }
