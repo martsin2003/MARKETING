@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'brookfield-home-tour-card',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-tour-card.component.scss']
 })
 export class HomeTourCardComponent implements OnInit {
+  @Input() previus: boolean;
+
   constructor() {}
 
   ngOnInit() {}
