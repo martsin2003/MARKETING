@@ -342,6 +342,10 @@
   }
 }
 
+::ng-deep mat-dialog-container {
+  position: relative;
+}
+
 ::ng-deep .mat-menu-content:not(:empty) {
   padding: 0 !important;
 }
