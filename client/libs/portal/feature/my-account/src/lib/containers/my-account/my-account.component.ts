@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-account.component.scss']
 })
 export class MyAccountComponent implements OnInit {
-  selectedOption = 'my-profile';
+  selectedOption = 'my-favorites';
 
   constructor() {}
 
