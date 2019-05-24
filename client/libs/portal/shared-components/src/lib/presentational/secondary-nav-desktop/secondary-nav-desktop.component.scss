@@ -7,39 +7,7 @@
 
   &.opened,
   &:not(.absolute-nav) {
+    border-bottom: 1px solid $divider;
     background-color: $bg-primary-light;
-    .nav-item {
-      color: $primary;
-      &:hover,
-      &.active {
-        color: $primary-light;
-        &::after {
-          border-bottom: 4px solid $primary-light;
-        }
-      }
-    }
-  }
-}
-.nav-item {
-  background: transparent;
-  border: none;
-  margin: 0 10px;
-  color: $pure-white;
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-
-  &:hover,
-  &.active {
-    position: relative;
-    font-family: $helvetica-bold;
-    &::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      bottom: 0;
-      left: 0;
-      border-bottom: 4px solid $pure-white;
-    }
   }
 }

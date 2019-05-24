@@ -1,37 +1,28 @@
 @import 'variables.scss';
-
-.label-text {
-  cursor: pointer;
-}
-.label-text-1 {
-  color: $primary;
-}
-.label-text-2 {
-  color: $dark-yellow;
-}
-.main-navigation {
-  margin-left: auto;
-  .nav-item {
-    height: 100%;
-  }
-}
 .main-navigation-container {
   background-color: transparent;
-  color: $pure-white;
+  height: 70px;
+
   &.opened,
   &:not(.absolute-nav) {
-    background-color: white;
-    color: $primary !important;
+    background-color: $pure-white;
   }
-  &.absolute-nav {
-    &:not(.opened) {
-      .label-text,
-      .label-text-1,
-      .label-text-2,
-      .menu-toggle {
-        color: $pure-white !important;
-      }
-    }
+  .desktop-nav-item {
+    height: 100%;
+    padding: 0 5px;
+  }
+
+  .main-navigation {
+    margin-left: auto;
+  }
+}
+
+.nav-item-container {
+  height: 100%;
+  padding: 12px 0;
+  margin: 0 8px;
+  &:last-child {
+    margin-right: 0 !important;
   }
 }
 
@@ -138,17 +129,4 @@ img {
   bottom: 0;
   padding-left: 23px;
   color: $primary;
-}
-.btn-border-bottom {
-  display: flex;
-  align-items: center;
-  border-bottom: 5px solid rgba(0, 0, 0, 0);
-}
-.btn-border-bottom:hover {
-  border-bottom: 5px solid $primary-light;
-  color: $primary-light;
-}
-.btn-border-bottom:active {
-  border-bottom: 5px solid $primary-light;
-  color: $primary-light;
 }

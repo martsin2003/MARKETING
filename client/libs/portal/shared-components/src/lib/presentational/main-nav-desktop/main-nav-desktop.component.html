@@ -3,55 +3,52 @@
     class="main-navigation-container d-flex align-items-stretch opened"
     [ngClass]="{ opened: menuIsOpened, 'absolute-nav': absoluteNav }"
   >
-    <a
-      (click)="navigateTo('home')"
-      class="no-underline text-right font-weight-bold label-text pl-3 py-2"
-    >
-      <span class="font-36 d-block label-text-1">Brookfield</span>
-      <span class="font-24 d-block label-text-2">Residential</span>
+    <a (click)="navigateTo('home')" class="no-underline text-right font-weight-bold pl-3 py-2">
+      <img
+        [src]="
+          menuIsOpened || !absoluteNav
+            ? 'assets/logos/color_brookfield_logo.svg'
+            : 'assets/logos/white_brookfield_logo.svg'
+        "
+        alt=""
+      />
     </a>
     <div class="main-navigation d-inline-flex">
-      <button mat-button class="nav-item" (mouseenter)="openMenu('findMyHome')">
-        <span class="btn-border-bottom">
+      <button class="nav-item-container" (mouseenter)="openMenu('findMyHome')">
+        <div class="desktop-nav-item">
           <mat-icon class="expand-arrow" [ngClass]="{ expanded: openedMenu === 'findMyHome' }">
             expand_more
           </mat-icon>
           FIND MY HOME
-        </span>
+        </div>
       </button>
 
-      <button
-        mat-button
-        class="nav-item"
-        (mouseenter)="openMenu('homePlans')"
-        (click)="navigateTo('/home-plans')"
-      >
-        <span class="btn-border-bottom">
-          <mat-icon class="expand-arrow" [ngClass]="{ expanded: openedMenu === 'homePlans' }">
+      <!-- (mouseenter)="openMenu('homePlans')"
+      (click)="navigateTo('/home-plans')" -->
+      <button class="nav-item-container">
+        <div class="desktop-nav-item">
+          <!-- <mat-icon class="expand-arrow" [ngClass]="{ expanded: openedMenu === 'homePlans' }">
             expand_more
-          </mat-icon>
+          </mat-icon> -->
           HOME PLANS
-        </span>
+        </div>
       </button>
 
-      <button
-        mat-button
-        class="nav-item"
-        (mouseenter)="openMenu('empowerInnovations')"
-        (click)="navigateTo('/empower')"
-      >
-        <span class="btn-border-bottom">
-          <mat-icon
+      <!-- (mouseenter)="openMenu('empowerInnovations')"
+      (click)="navigateTo('/empower')" -->
+      <button class="nav-item-container">
+        <div class="desktop-nav-item">
+          <!-- <mat-icon
             class="expand-arrow"
             [ngClass]="{ expanded: openedMenu === 'empowerInnovations' }"
           >
             expand_more
-          </mat-icon>
+          </mat-icon> -->
           EMPOWER INNOVATIONS
-        </span>
+        </div>
       </button>
-      <button class="nav-item" mat-button>
-        <span class="font-16 btn-border-bottom">WHY BROOKFIELD?</span>
+      <button class="nav-item-container">
+        <div class="desktop-nav-item">WHY BROOKFIELD?</div>
       </button>
     </div>
   </div>
@@ -135,22 +132,22 @@
 
     <mat-card *ngIf="openedMenu === 'homePlans'" class="main-nav-menu">
       <div class="d-flex flex-row justify-content-between px-5">
-        <button mat-button class="d-flex flex-column align-items-center main-nav-home-plans-button">
+        <button class="d-flex flex-column align-items-center main-nav-home-plans-button">
           <img src="http://placehold.it/200x200/333333" />
           <div class="text-center font-weight-bold">SINGLE-FAMILY<br />HOMES</div>
         </button>
 
-        <button mat-button class="d-flex flex-column align-items-center main-nav-home-plans-button">
+        <button class="d-flex flex-column align-items-center main-nav-home-plans-button">
           <img src="http://placehold.it/200x200/333333" />
           <div class="text-center font-weight-bold">TOWNHOMES</div>
         </button>
 
-        <button mat-button class="d-flex flex-column align-items-center main-nav-home-plans-button">
+        <button class="d-flex flex-column align-items-center main-nav-home-plans-button">
           <img src="http://placehold.it/200x200/333333" />
           <div class="text-center font-weight-bold">CONDOS</div>
         </button>
 
-        <button mat-button class="d-flex flex-column align-items-center main-nav-home-plans-button">
+        <button class="d-flex flex-column align-items-center main-nav-home-plans-button">
           <img src="http://placehold.it/200x200/333333" />
           <div class="text-center font-weight-bold">VIEW ALL<br />HOME PLANS</div>
         </button>
@@ -161,7 +158,7 @@
       <div class="d-flex flex-column align-items-center">
         <div class="d-flex flex-row mb-3">
           <div class="d-flex flex-column align-items-center main-nav-empower-innovations-card">
-            <button mat-button>
+            <button>
               <img src="http://placehold.it/200x200/333333" />
             </button>
             <div class="text-center main-nav-empower-innovations-text">
@@ -170,7 +167,7 @@
           </div>
 
           <div class="d-flex flex-column align-items-center main-nav-empower-innovations-card">
-            <button mat-button>
+            <button>
               <img src="http://placehold.it/200x200/333333" />
             </button>
             <div class="text-center main-nav-empower-innovations-text">
@@ -180,7 +177,7 @@
           </div>
 
           <div class="d-flex flex-column align-items-center main-nav-empower-innovations-card">
-            <button mat-button>
+            <button>
               <img src="http://placehold.it/200x200/333333" />
             </button>
             <div class="text-center main-nav-empower-innovations-text">
@@ -192,7 +189,7 @@
 
         <div class="d-flex flex-row">
           <div class="d-flex flex-column align-items-center main-nav-empower-innovations-card">
-            <button mat-button>
+            <button>
               <img src="http://placehold.it/200x200/333333" />
             </button>
             <div class="text-center main-nav-empower-innovations-text">
@@ -202,7 +199,7 @@
           </div>
 
           <div class="d-flex flex-column align-items-center main-nav-empower-innovations-card">
-            <button mat-button>
+            <button>
               <img src="http://placehold.it/200x200/333333" />
             </button>
             <div class="text-center main-nav-empower-innovations-text">
@@ -212,7 +209,7 @@
           </div>
 
           <div class="d-flex flex-column align-items-center main-nav-empower-innovations-card">
-            <button mat-button>
+            <button>
               <img src="http://placehold.it/200x200/333333" />
             </button>
             <div class="text-center main-nav-empower-innovations-text">
