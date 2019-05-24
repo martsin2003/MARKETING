@@ -6,7 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-time-home-tours.component.scss']
 })
 export class MyTimeHomeToursComponent implements OnInit {
+  openedExpansion: boolean;
+  isUncomigTours: boolean;
+
   constructor() {}
 
   ngOnInit() {}
+
+  openExpansion() {
+    this.openedExpansion = true;
+  }
 }

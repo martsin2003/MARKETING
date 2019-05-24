@@ -1,3 +1,36 @@
-<p>
-  my-time-home-tours works!
-</p>
+<div class="my-time-container">
+  <div class="upcoming-homes-container" *ngIf="isUncomigTours">
+    <h2 class="br-header-text br-header-text--medium br-text-primary-dark py-4 m-0 text-center">
+      Upcoming Home Tours
+    </h2>
+
+    <brookfield-home-tour-card></brookfield-home-tour-card>
+  </div>
+  <div class="message-container d-flex align-items-center" *ngIf="!isUncomigTours">
+    <div class="br-header-text br-header-text--medium br-text-primary-dark py-1 text-center">
+      You Have No Upcoming
+    </div>
+    <div class="br-header-text br-header-text--medium br-text-primary-dark py-1 text-center">
+      My Time Home Tours
+    </div>
+    <button class="br-button br-button--primary-blue">FIND A MY TIME HOME TOUR</button>
+  </div>
+  <mat-accordion hideToggle displayMode="flat">
+    <mat-expansion-panel
+      #findMyHomePanel="matExpansionPanel"
+      class="mat-background-color my-account-expansion"
+      (opened)="openExpansion('my-customized')"
+      (closed)="openedExpansion = false"
+    >
+      <mat-expansion-panel-header class="primary-dark-text">
+        <span class="mat-content">
+          <span class="br-header-text br-header-text--medium">Previous Home Tours</span>
+          <img
+            [src]="openedExpansion ? '/assets/icons/blue-minus.svg' : '/assets/icons/plus.svg'"
+            class="plus-icon"
+          />
+        </span>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
