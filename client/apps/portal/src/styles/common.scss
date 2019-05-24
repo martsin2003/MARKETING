@@ -351,3 +351,7 @@
     padding: 0px 16px 16px !important;
   }
 }
+
+::ng-deep mat-dialog-container {
+  position: relative;
+}
