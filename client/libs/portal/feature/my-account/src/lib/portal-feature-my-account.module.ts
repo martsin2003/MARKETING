@@ -9,6 +9,7 @@ import { MaterialModule } from '@brookfield/material';
 import { PortalSharedComponentsModule } from '@brookfield/portal/shared-components';
 import { ResetPasswordComponent } from './presentational/reset-password/reset-password.component';
 import { FavoritesDialogComponent } from './presentational/favorites-dialog/favorites-dialog.component';
+import { HomeTourCardComponent } from './presentational/home-tour-card/home-tour-card.component';
 
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import { FavoritesDialogComponent } from './presentational/favorites-dialog/favo
     MyTimeHomeToursComponent,
     ProfileComponent,
     ResetPasswordComponent,
-    FavoritesDialogComponent
+    FavoritesDialogComponent,
+    HomeTourCardComponent
   ],
   entryComponents: [FavoritesDialogComponent]
 })

@@ -1,0 +1,23 @@
+@import 'variables.scss';
+
+.upcoming-homes-container {
+  background: $bg-primary-light;
+  padding-bottom: 25px;
+}
+
+.message-container {
+  background: $bg-primary-light;
+  padding: 25px 0px 25px;
+  flex-direction: column;
+  .br-button {
+    margin: 25px 0px 5px;
+  }
+}
+
+.my-account-expansion {
+  background: white;
+  .mat-content {
+    display: flex;
+    justify-content: center;
+  }
+}
