@@ -12,7 +12,7 @@ pipelines:
           script:
             - cd client
             - yarn install
-            - yarn build
+            - yarn build --prod --aot=false --buildOptimizer=false
             - apt-get update && apt-get install -y python-dev
             - curl -O https://bootstrap.pypa.io/get-pip.py
             - python get-pip.py

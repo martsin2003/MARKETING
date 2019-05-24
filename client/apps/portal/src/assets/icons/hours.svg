@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39px" height="39px" viewBox="0 0 39 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Icons/Hours</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-0.8%" y="-3.6%" width="101.7%" height="107.3%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="My-Account---My-Time" transform="translate(-259.000000, -508.000000)" fill="#6295BA" stroke="#6295BA">
+            <g id="Upcoming-Home-Tours" transform="translate(0.000000, 257.000000)">
+                <g id="Home-Tour-Listing" filter="url(#filter-1)" transform="translate(15.000000, 81.000000)">
+                    <g id="Hours" transform="translate(249.000000, 175.000000)">
+                        <g id="Icons/Hours">
+                            <g id="Group-6">
+                                <path d="M14.645175,27.9591 C7.304925,27.9591 1.333425,21.9861 1.333425,14.6451 C1.333425,7.30335 7.304925,1.33035 14.645175,1.33035 C21.985425,1.33035 27.956925,7.30335 27.956925,14.6451 C27.956925,21.9861 21.985425,27.9591 14.645175,27.9591 M14.645175,-0.00015 C6.569925,-0.00015 -7.50000008e-05,6.5691 -7.50000008e-05,14.6451 C-7.50000008e-05,22.72035 6.569925,29.2896 14.645175,29.2896 C22.720425,29.2896 29.289675,22.72035 29.289675,14.6451 C29.289675,6.5691 22.720425,-0.00015 14.645175,-0.00015" id="Fill-1" stroke-width="0.5"></path>
+                                <path d="M13.9746,6.492525 L13.9746,14.648025 C13.9746,15.016275 14.27385,15.315525 14.64285,15.315525 L22.8171,15.315525 C23.1741,15.315525 23.4651,15.017775 23.4651,14.651775 C23.4651,14.286525 23.1741,13.988775 22.81635,13.988775 L15.31035,13.988775 L15.31035,6.492525 C15.31035,6.124275 15.01035,5.825025 14.64285,5.825025 C14.27385,5.825025 13.9746,6.124275 13.9746,6.492525" id="Fill-4" stroke-width="0.5"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -9,16 +9,14 @@
     <div class="tour-type__text br-description my-5">
       Select an option below to get started scheduling your tour.
     </div>
-    <div class="tour-type__actions col-12">
-      <button class="tour-type__button br-button br-button--primary-blue">
+    <div class="tour-type__actions">
+      <button class="tour-type__button br-button br-button--primary-blue" (click)="continue()">
         TOUR ON MY OWN TIME
       </button>
-      <button
-        class="tour-type__button br-button br-button--primary-blue col-12
-      "
-      >
+      <button class="tour-type__button br-button br-button--primary-blue" (click)="continue()">
         TOUR DURING BUSINESS HOURS
       </button>
     </div>
   </div>
+  <brookfield-tour-back-button (goBack)="back()"></brookfield-tour-back-button>
 </div>

@@ -7,11 +7,15 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class TourVerificationCcComponent implements OnInit {
   @Output() nextStep = new EventEmitter<string>();
+  @Output() goBack = new EventEmitter<string>();
   constructor() {}
 
   ngOnInit() {}
 
   continue() {
     this.nextStep.emit();
+  }
+  back() {
+    this.goBack.emit();
   }
 }

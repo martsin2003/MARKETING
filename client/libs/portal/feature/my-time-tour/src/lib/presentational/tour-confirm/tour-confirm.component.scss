@@ -1,0 +1,23 @@
+@import 'variables.scss';
+
+.tour-confirm {
+  padding: 0 0 100px;
+  background: $bg-primary-light;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 600px;
+  }
+  &__button {
+    flex-basis: 48%;
+  }
+}

@@ -2,6 +2,7 @@
 
 .navigation {
   &:not(.absolute-nav) {
+    box-shadow: $box-shadow;
     border-bottom: 1px solid $divider;
   }
   .label-text-1 {
@@ -75,31 +76,42 @@
 }
 
 ::ng-deep {
-  .mat-accordion {
-    .mat-expansion-panel {
-      border-radius: 0 !important;
-      border-bottom: 1px solid $divider;
-      box-shadow: none;
-      min-height: 50px;
-
-      &:first-child {
-        border-top: 1px solid $divider;
-      }
-
-      &[disabled] .mat-expansion-panel-header {
+  .secondary-nav,
+  .main-navigation-container {
+    &.opened,
+    &:not(.absolute-nav) {
+      .desktop-nav-item {
         color: $primary;
-      }
-      .mat-expansion-panel-header {
-        font-size: 18px;
-        padding: 0 16px;
-        .mat-content {
-          align-items: center;
-          .expand-arrow {
-            height: 40px;
-            width: 40px;
-            font-size: 40px;
+        &:hover,
+        &.active {
+          color: $primary-light;
+          &::after {
+            border-bottom: 4px solid $primary-light;
           }
         }
+      }
+    }
+  }
+  .desktop-nav-item {
+    background: transparent;
+    border: none;
+    margin: 0 10px;
+    color: $pure-white;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+
+    &:hover,
+    &.active {
+      position: relative;
+      font-family: $helvetica-bold;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        border-bottom: 4px solid $pure-white;
       }
     }
   }

@@ -11,11 +11,20 @@ export class TourReasonComponent implements OnInit {
   data: TourStepData;
   accept: boolean;
   @Output() nextStep = new EventEmitter<string>();
+  @Output() goBack = new EventEmitter<string>();
   ngOnInit() {
     this.data = {
       step: 4,
       stepsCount: 5,
       title: 'Select the Reason for Your Tour'
     };
+  }
+
+  continue() {
+    this.nextStep.emit();
+  }
+
+  back() {
+    this.goBack.emit();
   }
 }
