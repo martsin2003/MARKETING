@@ -7,11 +7,16 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class TourVerificationDlComponent implements OnInit {
   @Output() takePhotos = new EventEmitter<string>();
+  @Output() goBack = new EventEmitter<string>();
   constructor() {}
 
   ngOnInit() {}
 
   takePhotosClick() {
     this.takePhotos.emit();
+  }
+
+  back() {
+    this.goBack.emit();
   }
 }

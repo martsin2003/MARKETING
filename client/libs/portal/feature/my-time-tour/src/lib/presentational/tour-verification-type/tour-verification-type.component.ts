@@ -8,11 +8,16 @@ import { TourVerificationStep } from '../../view-model/tour-verification.types';
 })
 export class TourVerificationTypeComponent implements OnInit {
   @Output() verificationSelected = new EventEmitter<string>();
+  @Output() goBack = new EventEmitter<string>();
   constructor() {}
 
   ngOnInit() {}
 
   verify(type: TourVerificationStep) {
     this.verificationSelected.emit(type);
+  }
+
+  back() {
+    this.goBack.emit();
   }
 }
