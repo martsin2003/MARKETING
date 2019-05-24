@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="25px" viewBox="0 0 28 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Icons/Heart</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="My-Account---My-Favs---IFP" transform="translate(-570.000000, -274.000000)" fill="#6295BA" stroke="#6295BA">
+            <g id="remove-a-fav" transform="translate(307.000000, 275.000000)">
+                <g id="text">
+                    <g id="Icons/Heart/FillColor" transform="translate(264.000000, 0.000000)">
+                        <path d="M13,23 L12.5648536,22.6148325 C2.66527197,14.4712919 0,11.6100478 0,6.93301435 C0,3.08133971 3.10041841,0 6.85355649,0 C10.0083682,0 11.8033473,1.81578947 13,3.19138756 C14.1966527,1.81578947 15.9916318,0 19.1464435,0 C22.9539749,0 26,3.13636364 26,6.93301435 C26,11.6100478 23.334728,14.4712919 13.4351464,22.6148325 L13,23 Z" id="Fill-1"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
