@@ -8,8 +8,9 @@ describe('TourBackButtonComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [TourBackButtonComponent]
-    }).compileComponents();
+      declarations: [ TourBackButtonComponent ]
+    })
+    .compileComponents();
   }));
 
   beforeEach(() => {
