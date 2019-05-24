@@ -342,6 +342,10 @@
   }
 }
 
+::ng-deep .mat-menu-content:not(:empty) {
+  padding: 0 !important;
+}
+
 // Expand/collapse arrow animation
 .expand-arrow {
   transform-origin: center center;
