@@ -1,14 +1,15 @@
 @import 'variables.scss';
+
 .tour-terms {
   &__text {
     display: flex;
-    font-family: HelveticaNeue-Light !important;
+    font-family: $helvetica-light;
     font-size: 18px;
     color: #404042;
     letter-spacing: 0;
     line-height: 24px;
     &--bold {
-      font-family: HelveticaNeue-Medium !important;
+      font-family: $helvetica;
     }
     &--centered {
       padding: 0 50px;
@@ -32,7 +33,7 @@
   }
 }
 ::ng-deep .mat-checkbox-label {
-  font-family: HelveticaNeue-Light !important;
+  font-family: $helvetica-light;
 }
 
 .home-brochure {
@@ -49,16 +50,16 @@
   &__text {
     display: flex;
     align-items: center;
-    font-family: HelveticaNeue-Light;
+    font-family: $helvetica-light;
     font-size: 18px;
     line-height: 22px;
     &--primary {
-      font-family: HelveticaNeue-Bold;
+      font-family: $helvetica-bold;
       font-size: 28px;
       color: #0f2d4f;
     }
     &--bold {
-      font-family: HelveticaNeue-Bold;
+      font-family: $helvetica-bold;
     }
   }
 }
