@@ -1,26 +1,45 @@
 @import 'variables.scss';
 
 .secondary-nav {
+  height: 40px;
   border-bottom: 1px solid $pure-white;
+  background-color: $bg-semi-transparent;
+
   &.opened,
   &:not(.absolute-nav) {
-    background-color: #f0f3f5;
+    background-color: $bg-primary-light;
     .nav-item {
-      color: $primary-light;
+      color: $primary;
+      &:hover,
+      &.active {
+        color: $primary-light;
+        &::after {
+          border-bottom: 4px solid $primary-light;
+        }
+      }
     }
   }
 }
 .nav-item {
-  padding: 0 16px;
+  background: transparent;
+  border: none;
+  margin: 0 10px;
   color: $pure-white;
   display: flex;
   align-items: center;
   font-size: 14px;
-}
-.nav-item {
-  border-bottom: 5px solid rgba(0, 0, 0, 0);
-}
-.nav-item:hover {
-  border-bottom: 5px solid $primary-light;
-  color: $primary-light !important;
+
+  &:hover,
+  &.active {
+    position: relative;
+    font-family: $helvetica-bold;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      border-bottom: 4px solid $pure-white;
+    }
+  }
 }
