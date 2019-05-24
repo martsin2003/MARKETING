@@ -10,6 +10,7 @@ import { PortalSharedComponentsModule } from '@brookfield/portal/shared-componen
 import { ResetPasswordComponent } from './presentational/reset-password/reset-password.component';
 import { FavoritesDialogComponent } from './presentational/favorites-dialog/favorites-dialog.component';
 import { HomeTourCardComponent } from './presentational/home-tour-card/home-tour-card.component';
+import { SignInComponent } from './presentational/sign-in/sign-in.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { HomeTourCardComponent } from './presentational/home-tour-card/home-tour
     PortalSharedComponentsModule,
     RouterModule.forChild([
       { path: '', pathMatch: 'full', component: MyAccountComponent },
-      { path: 'reset-password', component: ResetPasswordComponent }
+      { path: 'reset-password', component: ResetPasswordComponent },
+      { path: 'sing-in', component: SignInComponent }
     ])
   ],
   declarations: [
@@ -28,7 +30,8 @@ import { HomeTourCardComponent } from './presentational/home-tour-card/home-tour
     ProfileComponent,
     ResetPasswordComponent,
     FavoritesDialogComponent,
-    HomeTourCardComponent
+    HomeTourCardComponent,
+    SignInComponent
   ],
   entryComponents: [FavoritesDialogComponent]
 })
