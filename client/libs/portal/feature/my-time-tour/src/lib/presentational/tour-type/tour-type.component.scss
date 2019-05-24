@@ -18,7 +18,7 @@
 }
 
 @media (max-width: 575.98px) {
-  img.m-5 {
+  img.img-main-mobile {
     margin: 20px 30px 20px 30px !important;
     width: 250px;
   }
@@ -32,20 +32,13 @@
       margin: 10px;
     }
   }
-  .temp {
-    flex-direction: column !important;
-  }
-  div.mb-5 {
+  div.tour-mobile-content-heading {
     margin: 0px 0px 20px 0px !important;
     text-align: left;
   }
-  div.my-5 {
+  div.tour-mobile-content-text {
     margin: 0px 0px 20px 0px !important;
     padding-left: 16px;
     text-align: left;
-  }
-
-  div.justify-content-center {
-    flex-direction: column;
   }
 }
