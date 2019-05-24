@@ -1,0 +1,92 @@
+<div class="content-title">
+  <div>
+    <span class="home-name br-header-text br-header-text--large">{{ detailInfo?.homeName }}</span>
+    <span class="home-d br-content-text br-content-text--large" *ngIf="detailInfo?.homeDetails">
+      {{ detailInfo?.homeDetails }}
+    </span>
+    <span class="sub-title br-content-text br-content-text--large">
+      {{ detailInfo?.communityName }}
+    </span>
+    <span class="price br-content-text br-content-text--large">
+      {{ detailInfo?.startingPrice }}
+    </span>
+  </div>
+  <div class="title-buttons">
+    <img src="assets/icons/heart-icon.svg" alt="" />
+    <button class="br-button br-button--primary-blue br-button--desktop">
+      <img src="assets/icons/Mail.svg" alt="" />
+      <span>Request More Info</span>
+    </button>
+  </div>
+</div>
+<div class="content-details">
+  <div class="item" *ngIf="detailInfo?.location">
+    <img src="assets/icons/place-blue.svg" alt="" />
+    <span>{{ detailInfo?.location }}</span>
+  </div>
+  <div class="item">
+    <img src="assets/icons/cm-home-type.svg" alt="" />
+    <span>{{ detailInfo?.homeType }}</span>
+  </div>
+  <div class="item">
+    <img src="assets/icons/cm-bed.svg" alt="" />
+    <span>{{ detailInfo?.beds }}</span>
+  </div>
+  <div class="item">
+    <img src="assets/icons/cm-bath.svg" alt="" />
+    <span>{{ detailInfo?.baths }}</span>
+  </div>
+  <div class="item">
+    <img src="assets/icons/cm-sq.svg" alt="" />
+    <span>{{ detailInfo?.square }}</span>
+  </div>
+</div>
+<div class="wrp-description">
+  <div class="wrp-description__description-text br-content-text br-content-text--large">
+    <p *ngFor="let text of detailInfo?.description">
+      {{ text }}
+    </p>
+  </div>
+  <div class="wrp-description__buttons">
+    <button
+      class="br-button br-button--secondary-blue br-button--desktop"
+      [routerLink]="['/find/home-plan-detail/interactive-floorplan']"
+      routerLinkActive="router-link-active"
+      *ngIf="!detailInfo?.location"
+    >
+      INTERACTIVE FLOORPLAN
+    </button>
+    <button
+      class="br-button br-button--secondary-blue br-button--desktop"
+      *ngIf="!detailInfo?.location"
+    >
+      VIRTUAL TOUR
+    </button>
+    <button
+      class="br-button br-button--secondary-blue br-button--desktop"
+      *ngIf="!detailInfo?.location"
+    >
+      VIDEO TOUR
+    </button>
+    <button
+      class="br-button br-button--secondary-blue br-button--desktop"
+      *ngIf="detailInfo?.location"
+    >
+      DOWNLOAD FLOORPLAN
+    </button>
+    <button
+      class="br-button br-button--secondary-blue br-button--desktop"
+      *ngIf="detailInfo?.location"
+    >
+      DOWNLOAD BROCHURE
+    </button>
+  </div>
+</div>
+<div class="key-home-wrapper" *ngIf="detailInfo?.keyHomeFeatures">
+  <span class="title br-header-text br-header-text--medium">Key Home Features</span>
+  <ul>
+    <li *ngFor="let key of detailInfo?.keyHomeFeatures">
+      {{ key }}
+    </li>
+  </ul>
+</div>

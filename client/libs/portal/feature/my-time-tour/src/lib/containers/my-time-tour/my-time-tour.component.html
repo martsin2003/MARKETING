@@ -25,8 +25,18 @@
       <brookfield-tour-confirm></brookfield-tour-confirm>
     </ng-container>
   </ng-container>
-  <div class="temp">
-    <button (click)="step = step - 1">back</button>
-    <button (click)="step = step + 1">next</button>
+  <div class="temp d-flex justify-content-center">
+    <button
+      class="br-button br-button--secondary-gray br-button--desktop m-2"
+      (click)="step = step - 1"
+    >
+      back
+    </button>
+    <button
+      class="br-button br-button--secondary-gray br-button--desktop m-2"
+      (click)="step = step + 1"
+    >
+      next
+    </button>
   </div>
 </div>

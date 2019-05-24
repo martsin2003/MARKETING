@@ -1,0 +1,12 @@
+@import 'variables.scss';
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0.5;
+  cursor: pointer;
+  &.selected {
+    opacity: 1;
+  }
+}

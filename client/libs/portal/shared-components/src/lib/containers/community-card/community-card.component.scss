@@ -60,12 +60,6 @@
         margin-left: 20px;
       }
     }
-    .button {
-      width: 100%;
-      button {
-        width: 100%;
-      }
-    }
     .place {
       display: none;
       align-items: center;
@@ -156,13 +150,6 @@
       flex-direction: column;
       align-items: flex-start;
     }
-  }
-  &__explore-button {
-    color: #6295ba;
-    border: 1px solid #6295ba;
-    padding: 10px;
-    width: 100%;
-    font-size: 14px;
   }
   &__compare {
     flex: 1;

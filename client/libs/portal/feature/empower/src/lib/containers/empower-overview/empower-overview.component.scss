@@ -31,8 +31,6 @@
       }
       button {
         position: absolute;
-        color: white;
-        border-color: white;
       }
     }
     &__text-description {
@@ -89,11 +87,6 @@
         font-weight: 600;
         color: white;
       }
-    }
-    button {
-      color: white;
-      border-color: white;
-      background: transparent;
     }
     &__secondary-subtitles {
       display: flex;

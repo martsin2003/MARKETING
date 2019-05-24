@@ -1,4 +1,8 @@
-<brookfield-carousel [images]="carouselImages$ | async" [fullWidth]="true"></brookfield-carousel>
+<brookfield-carousel
+  [images]="carouselImages$ | async"
+  [fullWidth]="true"
+  [fullHight]="true"
+></brookfield-carousel>
 <div class="home-container">
   <brookfield-search-homes></brookfield-search-homes>
 </div>
@@ -18,7 +22,7 @@
         personalize your design and enjoy life in your new home each day.
       </b>
     </p>
-    <button class="long-button br-button br-button--primary-blue my-3">
+    <button class="long-button br-button br-button--primary-blue br-button--desktop my-3">
       DISCOVER EMPOWER
     </button>
   </div>
@@ -39,7 +43,7 @@
           floorplan that fits exactly what you're looking for.
         </p>
         <button
-          class="big-button br-button br-button--secondary-blue align-self-start br-text-primary-light mt-4"
+          class="br-button br-button--secondary-blue br-button--desktop align-self-start mt-4"
         >
           SEE ALL HOMES
         </button>
@@ -65,9 +69,7 @@
         Tap our latest innovation features to enhance your home shopping experience. You'll discover
         new ways to find, tour, and personalize new homes in a smooth, enjoyable process.
       </p>
-      <button
-        class="big-button br-button br-button--secondary-blue align-self-start br-text-primary-light mt-4"
-      >
+      <button class="br-button br-button--secondary-blue br-button--desktop align-self-start mt-4">
         GET EMPOWERED
       </button>
     </div>
