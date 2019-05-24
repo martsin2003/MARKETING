@@ -1,12 +1,22 @@
 <div>
   <mat-accordion hideToggle displayMode="flat">
-    <mat-expansion-panel #findMyHomePanel="matExpansionPanel" class="mat-background-color">
+    <mat-expansion-panel
+      #findMyHomePanel="matExpansionPanel"
+      class="mat-background-color my-account-expansion"
+      (opened)="openExpansion('my-customized')"
+      (closed)="openedExpansion = ''"
+    >
       <mat-expansion-panel-header class="primary-dark-text">
         <span class="mat-content">
-          <span class="mr-5">My Customized Floorplans</span>
-          <span class="pr-1">
-            <img src="assets/icons/plus.svg" class="element-icon-style" />
-          </span>
+          <span class="br-header-text br-header-text--medium">My Customized Floorplans</span>
+          <img
+            [src]="
+              openedExpansion === 'my-customized'
+                ? '/assets/icons/blue-minus.svg'
+                : '/assets/icons/plus.svg'
+            "
+            class="plus-icon"
+          />
         </span>
       </mat-expansion-panel-header>
       <div class="block--color--blue">
@@ -18,13 +28,23 @@
         <brookfield-home-card></brookfield-home-card>
       </div>
     </mat-expansion-panel>
-    <mat-expansion-panel class="mobile-expansion-panel" #homePlansPanel="matExpansionPanel">
+    <mat-expansion-panel
+      class="mobile-expansion-panel my-account-expansion"
+      #homePlansPanel="matExpansionPanel"
+      (opened)="openExpansion('my-favorite')"
+      (closed)="openedExpansion = ''"
+    >
       <mat-expansion-panel-header class="primary-dark-text">
         <span class="mat-content">
-          <span class="mr-5">My Favorite Home Plans</span>
-          <span class="pr-1">
-            <img src="assets/icons/plus.svg" class="element-icon-style" />
-          </span>
+          <span class="br-header-text br-header-text--medium">My Favorite Home Plans</span>
+          <img
+            [src]="
+              openedExpansion === 'my-favorite'
+                ? '/assets/icons/blue-minus.svg'
+                : '/assets/icons/plus.svg'
+            "
+            class="plus-icon"
+          />
         </span>
       </mat-expansion-panel-header>
       <div class="block--color--blue">
@@ -33,22 +53,28 @@
       </div>
       <div class="cards-container community-card__explore-button">
         <brookfield-home-card></brookfield-home-card>
-        <div class="div-full-width full-svg-width">
+        <div class="card-image">
           <img src="assets/icons/favorites-people.svg" class="svg-fix-breakpoint" />
         </div>
       </div>
     </mat-expansion-panel>
     <mat-expansion-panel
-      class="mobile-expansion-panel"
       #homePlansPanel="matExpansionPanel"
-      class="mat-background-color"
+      class="mobile-expansion-panel my-account-expansion"
+      (opened)="openExpansion('my-favorite-move')"
+      (closed)="openedExpansion = ''"
     >
       <mat-expansion-panel-header class="primary-dark-text">
         <span class="mat-content">
-          <span class="mr-5">My Favorite Move-In-Now Homes</span>
-          <span class="pr-1">
-            <img src="assets/icons/plus.svg" class="element-icon-style" />
-          </span>
+          <span class="br-header-text br-header-text--medium">My Favorite Move-In-Now Homes</span>
+          <img
+            [src]="
+              openedExpansion === 'my-favorite-move'
+                ? '/assets/icons/blue-minus.svg'
+                : '/assets/icons/plus.svg'
+            "
+            class="plus-icon"
+          />
         </span>
       </mat-expansion-panel-header>
       <div class="block--color--blue">
@@ -57,18 +83,28 @@
       </div>
       <div class="cards-container">
         <brookfield-home-card></brookfield-home-card>
-        <div class="div-full-width full-svg-width">
+        <div class="card-image">
           <img src="assets/icons/favorites-people.svg" />
         </div>
       </div>
     </mat-expansion-panel>
-    <mat-expansion-panel class="mobile-expansion-panel" #homePlansPanel="matExpansionPanel">
+    <mat-expansion-panel
+      class="mobile-expansion-panel my-account-expansion"
+      #homePlansPanel="matExpansionPanel"
+      (opened)="openExpansion('my-favorite-communities')"
+      (closed)="openedExpansion = ''"
+    >
       <mat-expansion-panel-header class="primary-dark-text">
         <span class="mat-content">
-          <span class="mr-5">My Favorite Communities</span>
-          <span class="pr-1">
-            <img src="assets/icons/plus.svg" class="element-icon-style" />
-          </span>
+          <span class="br-header-text br-header-text--medium">My Favorite Communities</span>
+          <img
+            [src]="
+              openedExpansion === 'my-favorite-communities'
+                ? '/assets/icons/blue-minus.svg'
+                : '/assets/icons/plus.svg'
+            "
+            class="plus-icon"
+          />
         </span>
       </mat-expansion-panel-header>
       <div class="block--color--blue">
@@ -76,7 +112,7 @@
       </div>
       <div class="cards-container">
         <brookfield-home-card></brookfield-home-card>
-        <div class="div-full-width full-svg-width">
+        <div class="card-image">
           <img src="assets/icons/favorites-people.svg" />
         </div>
       </div>
@@ -85,7 +121,7 @@
 </div>
 <!-- <div *ngIf="condition; else elseBlock"> -->
 <!-- delete the div below and uncomment the div above for *ngif setup -->
-<div>
+<!-- <div>
   <mat-card class="d-flex flex-column justify-content-center">
     <mat-card-actions class="d-flex justify-content-end"
       ><img src="assets/icons/times.svg"
@@ -115,5 +151,5 @@
       </div>
     </div>
   </mat-card>
-</div>
+</div> -->
 <!-- <ng-template #elseBlock></ng-template> -->

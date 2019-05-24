@@ -6,7 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./favorites.component.scss']
 })
 export class FavoritesComponent implements OnInit {
+  openedExpansion: string;
+
   constructor() {}
 
   ngOnInit() {}
+
+  openExpansion(option: string) {
+    this.openedExpansion = option;
+  }
 }

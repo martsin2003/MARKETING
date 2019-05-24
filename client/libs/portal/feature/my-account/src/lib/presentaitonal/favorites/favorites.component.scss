@@ -2,13 +2,21 @@
 
 .cards-container {
   display: flex;
-  flex-wrap: wrap;
-  overflow: auto;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
   brookfield-home-card {
     display: block;
-    margin: 10px;
-    flex-basis: calc(50% - 20px);
-    overflow: auto;
+    width: calc(50% - 10px);
+    margin: 20px 0px 0px;
+    box-shadow: 0px 0px 4px -1px rgb(155, 155, 155);
+  }
+  .card-image {
+    width: calc(50% - 10px);
+    img {
+      width: 100%;
+      margin: 20px 0px 0px;
+    }
   }
 }
 .mat-accordion .mat-expansion-panel {
@@ -17,17 +25,6 @@
 .mat-background-color {
   background-color: $bg-primary-light;
   border: 1px solid $bg-primary-light;
-}
-.div-full-width {
-  display: block;
-  margin: 10px;
-  flex-basis: calc(50% - 20px);
-}
-.full-svg-width img {
-  width: 100%;
-  height: 100%;
-  max-height: 405px;
-  object-fit: contain;
 }
 .block--color--blue {
   display: flex;
