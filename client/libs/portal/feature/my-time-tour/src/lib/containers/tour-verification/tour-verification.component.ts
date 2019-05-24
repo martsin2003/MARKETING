@@ -11,7 +11,7 @@ export class TourVerificationComponent implements OnInit {
   constructor() {}
   data: TourStepData;
   accept: boolean;
-  verificationStep: TourVerificationStep = TourVerificationStep.cc;
+  verificationStep: TourVerificationStep;
   @Output() nextStep = new EventEmitter<string>();
   ngOnInit() {
     this.data = {

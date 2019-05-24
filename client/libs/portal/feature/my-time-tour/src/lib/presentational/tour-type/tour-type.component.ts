@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'brookfield-tour-type',
@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tour-type.component.scss']
 })
 export class TourTypeComponent implements OnInit {
+  @Output() nextStep = new EventEmitter<string>();
   constructor() {}
 
   ngOnInit() {}
+
+  continue() {
+    this.nextStep.emit();
+  }
 }

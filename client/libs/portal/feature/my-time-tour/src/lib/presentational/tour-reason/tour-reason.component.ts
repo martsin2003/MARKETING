@@ -18,4 +18,8 @@ export class TourReasonComponent implements OnInit {
       title: 'Select the Reason for Your Tour'
     };
   }
+
+  continue() {
+    this.nextStep.emit();
+  }
 }

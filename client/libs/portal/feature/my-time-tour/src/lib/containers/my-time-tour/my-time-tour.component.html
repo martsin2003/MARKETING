@@ -1,10 +1,13 @@
 <div class="my-time-tour">
   <ng-container [ngSwitch]="step">
     <ng-container *ngSwitchCase="0">
-      <brookfield-tour-type></brookfield-tour-type>
+      <brookfield-tour-type (nextStep)="nextStep()"></brookfield-tour-type>
     </ng-container>
     <ng-container *ngSwitchCase="1">
-      <brookfield-tour-time (timeStepCompleted)="timeStepCompleted()"></brookfield-tour-time>
+      <brookfield-tour-time
+        (goBack)="back()"
+        (timeStepCompleted)="timeStepCompleted()"
+      ></brookfield-tour-time>
     </ng-container>
     <ng-container *ngSwitchCase="2">
       <brookfield-tour-terms (nextStep)="nextStep()"></brookfield-tour-terms>
@@ -13,10 +16,13 @@
       <brookfield-tour-verification (nextStep)="nextStep()"></brookfield-tour-verification>
     </ng-container>
     <ng-container *ngSwitchCase="4">
-      <brookfield-tour-reason></brookfield-tour-reason>
+      <brookfield-tour-reason (nextStep)="nextStep()"></brookfield-tour-reason>
     </ng-container>
     <ng-container *ngSwitchCase="5">
-      <brookfield-tour-create-password></brookfield-tour-create-password>
+      <brookfield-tour-create-password (nextStep)="nextStep()"></brookfield-tour-create-password>
+    </ng-container>
+    <ng-container *ngSwitchCase="6">
+      <brookfield-tour-confirm></brookfield-tour-confirm>
     </ng-container>
   </ng-container>
   <div class="temp">
