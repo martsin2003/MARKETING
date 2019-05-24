@@ -327,3 +327,24 @@
 .no-underline {
   text-decoration: none;
 }
+
+::ng-deep .my-account-expansion {
+  position: relative;
+  ::ng-deep mat-expansion-panel-header {
+    padding: 10px 0px !important;
+    .mat-content {
+      color: $primary;
+      font-family: $helvetica-bold;
+    }
+  }
+  &:nth-child(odd) {
+    background-color: $bg-primary-light;
+  }
+  .plus-icon {
+    position: absolute;
+    right: 20%;
+  }
+  ::ng-deep .mat-expansion-panel-body {
+    padding: 0px 16px 16px !important;
+  }
+}
