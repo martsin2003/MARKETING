@@ -1,17 +1,12 @@
 <div
   class="secondary-nav d-flex justify-content-end"
-  [ngClass]="{ opened: desktopMenuOpened, 'abolute-nav': absoluteNav }"
+  [ngClass]="{ opened: desktopMenuOpened, 'absolute-nav': absoluteNav }"
 >
-  <button mat-button class="nav-item">
+  <button class="nav-item">
     Homeowner Reviews
   </button>
 
-  <button
-    mat-button
-    class="nav-item"
-    [matMenuTriggerFor]="resourcesMenu"
-    #resourcesTrigger="matMenuTrigger"
-  >
+  <button class="nav-item" [matMenuTriggerFor]="resourcesMenu" #resourcesTrigger="matMenuTrigger">
     <mat-icon class="expand-arrow" [ngClass]="{ expanded: resourcesTrigger.menuOpen }"
       >expand_more</mat-icon
     >
@@ -36,16 +31,11 @@
     <button mat-menu-item>FAQs</button>
   </mat-menu>
 
-  <button mat-button class="nav-item">
+  <button class="nav-item">
     For Owners
   </button>
 
-  <button
-    mat-button
-    class="nav-item"
-    [matMenuTriggerFor]="forRealtorsMenu"
-    #realtorsTrigger="matMenuTrigger"
-  >
+  <button class="nav-item" [matMenuTriggerFor]="forRealtorsMenu" #realtorsTrigger="matMenuTrigger">
     <mat-icon class="expand-arrow" [ngClass]="{ expanded: realtorsTrigger.menuOpen }"
       >expand_more</mat-icon
     >
@@ -66,16 +56,11 @@
     <button mat-menu-item>Sign Out</button>
   </mat-menu>
 
-  <button mat-button class="nav-item">
+  <button class="nav-item">
     Blog
   </button>
 
-  <button
-    mat-button
-    class="nav-item"
-    [matMenuTriggerFor]="contactUsMenu"
-    #contactUsTrigger="matMenuTrigger"
-  >
+  <button class="nav-item" [matMenuTriggerFor]="contactUsMenu" #contactUsTrigger="matMenuTrigger">
     <mat-icon class="expand-arrow" [ngClass]="{ expanded: contactUsTrigger.menuOpen }"
       >expand_more</mat-icon
     >
@@ -88,13 +73,13 @@
     <button mat-menu-item>Service Request</button>
   </mat-menu>
 
-  <button mat-button class="nav-item" (click)="navigateTo('my-account')">
+  <button class="nav-item" (click)="navigateTo('my-account')">
     My Account
   </button>
   <!-- The layout below will be for logged in user - commenting out during UI work -->
   <!-- TODO - connect section below when doing login funcitonaliy - ~RG -->
   <!-- <button
-    mat-button
+  
     class="nav-item"
     [matMenuTriggerFor]="myAccountMenu"
     #myAccountTrigger="matMenuTrigger"
