@@ -1,9 +1,32 @@
 <div class="d-flex justify-content-around my-4 mx-5 ">
-  <img src="assets/icons/active_my_favorites.svg" alt="" />
-  <img src="assets/icons/active_my_favorites.svg" alt="" />
-  <img src="assets/icons/active_my_favorites.svg" alt="" />
+  <div
+    class="icon-wrapper"
+    [ngClass]="{ selected: selectedOption === 'my-favorites' }"
+    (click)="selectOption('my-favorites')"
+  >
+    <img src="assets/icons/active_my_favorites.svg" />
+    <span class="py-3 br-text-primary br-content-text br-content-text--large">My Favorites</span>
+  </div>
+  <div
+    class="icon-wrapper"
+    [ngClass]="{ selected: selectedOption === 'my-time' }"
+    (click)="selectOption('my-time')"
+  >
+    <img src="assets/icons/my-time-blue.svg" />
+    <span class="py-3 br-text-primary br-content-text br-content-text--large"
+      >My Time Home Tours</span
+    >
+  </div>
+  <div
+    class="icon-wrapper"
+    [ngClass]="{ selected: selectedOption === 'my-profile' }"
+    (click)="selectOption('my-profile')"
+  >
+    <img src="assets/icons/my-profile-blue.svg" />
+    <span class="py-3 br-text-primary br-content-text br-content-text--large">My Profile</span>
+  </div>
 </div>
 
-<brookfield-favorites></brookfield-favorites>
-<brookfield-my-time-home-tours></brookfield-my-time-home-tours>
-<brookfield-profile></brookfield-profile>
+<brookfield-favorites *ngIf="selectedOption === 'my-favorites'"></brookfield-favorites>
+<brookfield-my-time-home-tours *ngIf="selectedOption === 'my-time'"></brookfield-my-time-home-tours>
+<brookfield-profile *ngIf="selectedOption === 'my-profile'"></brookfield-profile>
