@@ -1,0 +1,16 @@
+@import 'variables.scss';
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0.5;
+  cursor: pointer;
+  &__title {
+    padding: 15px 0px;
+    color: $primary;
+  }
+  &.selected {
+    opacity: 1;
+  }
+}
