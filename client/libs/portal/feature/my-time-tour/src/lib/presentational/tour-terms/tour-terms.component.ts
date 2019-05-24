@@ -11,6 +11,7 @@ export class TourTermsComponent implements OnInit {
   data: TourStepData;
   accept: boolean;
   @Output() nextStep = new EventEmitter<string>();
+  @Output() goBack = new EventEmitter<string>();
   ngOnInit() {
     this.data = {
       step: 2,
@@ -21,5 +22,9 @@ export class TourTermsComponent implements OnInit {
 
   acceptClick() {
     this.nextStep.emit();
+  }
+
+  back() {
+    this.goBack.emit();
   }
 }

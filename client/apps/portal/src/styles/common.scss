@@ -324,7 +324,7 @@
 ::ng-deep .my-account-expansion {
   position: relative;
   ::ng-deep mat-expansion-panel-header {
-    padding: 10px 0px !important;
+    padding: 17px 0px !important;
     .mat-content {
       color: $primary;
       font-family: $helvetica-bold;
@@ -340,6 +340,10 @@
   ::ng-deep .mat-expansion-panel-body {
     padding: 0px 16px 16px !important;
   }
+}
+
+::ng-deep mat-dialog-container {
+  position: relative;
 }
 
 ::ng-deep .mat-menu-content:not(:empty) {

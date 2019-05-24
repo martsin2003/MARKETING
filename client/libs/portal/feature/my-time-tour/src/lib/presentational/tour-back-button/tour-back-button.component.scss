@@ -1,0 +1,18 @@
+@import 'variables.scss';
+
+::ng-deep brookfield-tour-back-button {
+  height: 90px;
+  width: 100%;
+}
+
+.tour-back-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  &--grey {
+    background: $bg-primary-light;
+  }
+}

@@ -10,6 +10,7 @@ export class TourTimeComponent implements OnInit {
   constructor() {}
   data: TourStepData;
   @Output() timeStepCompleted = new EventEmitter<string>();
+  @Output() goBack = new EventEmitter<string>();
   ngOnInit() {
     this.data = {
       step: 1,
@@ -21,5 +22,9 @@ export class TourTimeComponent implements OnInit {
 
   continue() {
     this.timeStepCompleted.emit();
+  }
+
+  back() {
+    this.goBack.emit();
   }
 }

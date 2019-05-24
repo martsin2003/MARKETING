@@ -1,10 +1,57 @@
 <div class="tour-reason">
   <brookfield-tour-step [data]="data"></brookfield-tour-step>
-  <div class="br-description">
+  <div class="helvetica-bold br-text-primary-light mb-3">
     You’re almost there!
   </div>
-  <div class="br-description">
+  <div class="br-description mx-5">
     After selecting the reason for your tour, select “Continue” below to view your appointment
     confirmation and pin code to unlock the front door.
   </div>
+  <mat-radio-group>
+    <div class="tour-reason__form">
+      <div class="tour-reason__block fb-50">
+        <mat-radio-button value="1">
+          <span class="my-2 tour-reason__radio-text br-text-dark-gray">
+            I am shopping for a Move-In-Now Home at
+          </span>
+        </mat-radio-button>
+        <div class="my-2 br-input"></div>
+        <div class="my-2 br-input"></div>
+      </div>
+      <div class="tour-reason__block fb-50">
+        <mat-radio-button value="1">
+          <span class="my-2 tour-reason__radio-text br-text-dark-gray"
+            >I am shopping for a to-be-built home at
+          </span>
+        </mat-radio-button>
+        <div class="my-2 br-input"></div>
+        <div class="my-2 br-input"></div>
+      </div>
+      <div class="tour-reason__block fb-50">
+        <mat-radio-button value="1">
+          <span class="my-2 tour-reason__radio-text br-text-dark-gray"
+            >I recently purchased a Brookfield Residential home at</span
+          ></mat-radio-button
+        >
+        <div class="my-2 br-input"></div>
+      </div>
+      <div class="tour-reason__block fb-50">
+        <mat-radio-button class="my-2" value="2">
+          <span class="tour-reason__radio-text br-text-dark-gray"
+            >I am just browsing and not in the market for a new home</span
+          ></mat-radio-button
+        >
+        <mat-radio-button class="my-2" value="3">
+          <span class="tour-reason__radio-text br-text-dark-gray"
+            >I an a Realtor</span
+          ></mat-radio-button
+        >
+      </div>
+    </div>
+  </mat-radio-group>
+  <button class="br-button br-button--primary-blue br-button--desktop mb-5" (click)="continue()">
+    Continue
+  </button>
+
+  <brookfield-tour-back-button (goBack)="back()"></brookfield-tour-back-button>
 </div>
