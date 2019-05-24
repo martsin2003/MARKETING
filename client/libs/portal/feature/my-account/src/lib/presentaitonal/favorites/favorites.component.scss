@@ -40,3 +40,22 @@
 .mat-content {
   justify-content: center;
 }
+.element-icon-style {
+  box-sizing: border-box;
+  padding: 0 16px;
+  vertical-align: middle;
+}
+.svg-fix-breakpoint img {
+  flex-basis: 1;
+}
+mat-card {
+  max-width: 80%;
+  margin: 0 auto;
+  .span-color-set {
+    color: $primary-dark;
+    font-size: 26px;
+  }
+  .span-color-different {
+    color: $primary;
+  }
+}
