@@ -3,7 +3,7 @@ export interface DetailInfo {
   homeDetails: string;
   communityName: string;
   startingPrice: string;
-  location: string;
+  location?: string;
   homeType: string;
   beds: string;
   baths: string;

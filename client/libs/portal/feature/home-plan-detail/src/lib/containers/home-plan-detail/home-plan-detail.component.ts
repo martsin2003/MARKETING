@@ -22,7 +22,7 @@ export class HomePlanDetailComponent implements OnInit {
     homeDetails: 'Homesite 0105  |  Available 02/10/19',
     communityName: 'The Bluffs at Sleeter Lake',
     startingPrice: 'Strarting Price $554,990',
-    location: '18140 Ridgewood Place Round Hill, VA 20141',
+    // location: '18140 Ridgewood Place Round Hill, VA 20141',
     homeType: 'Single-Family Home',
     beds: '4 - 6 Beds',
     baths: '2.5 - 5.5 Baths',
