@@ -61,9 +61,12 @@ i {
   font-family: 'Helvetica-Neue-Medium', sans-serif !important;
 }
 
-button {
+button,
+a {
   outline: none;
   cursor: pointer;
+  background: transparent;
+  border: none;
 }
 
 .mobile-expansion-panel .mat-expansion-panel-body {
