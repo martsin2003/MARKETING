@@ -13,7 +13,7 @@
   </div>
   <div class="title-buttons">
     <img src="assets/icons/heart-icon.svg" alt="" />
-    <button class="br-button br-button--primary-blue">
+    <button class="br-button br-button--primary-blue br-button--desktop">
       <img src="assets/icons/Mail.svg" alt="" />
       <span>Request More Info</span>
     </button>
@@ -49,23 +49,35 @@
   </div>
   <div class="wrp-description__buttons">
     <button
-      class="br-button br-button--secondary-blue button"
+      class="br-button br-button--secondary-blue br-button--desktop"
       [routerLink]="['/find/home-plan-detail/interactive-floorplan']"
       routerLinkActive="router-link-active"
       *ngIf="!detailInfo?.location"
     >
       INTERACTIVE FLOORPLAN
     </button>
-    <button class="br-button br-button--secondary-blue button" *ngIf="!detailInfo?.location">
+    <button
+      class="br-button br-button--secondary-blue br-button--desktop"
+      *ngIf="!detailInfo?.location"
+    >
       VIRTUAL TOUR
     </button>
-    <button class="br-button br-button--secondary-blue button" *ngIf="!detailInfo?.location">
+    <button
+      class="br-button br-button--secondary-blue br-button--desktop"
+      *ngIf="!detailInfo?.location"
+    >
       VIDEO TOUR
     </button>
-    <button class="br-button br-button--secondary-blue button" *ngIf="detailInfo?.location">
+    <button
+      class="br-button br-button--secondary-blue br-button--desktop"
+      *ngIf="detailInfo?.location"
+    >
       DOWNLOAD FLOORPLAN
     </button>
-    <button class="br-button br-button--secondary-blue button" *ngIf="detailInfo?.location">
+    <button
+      class="br-button br-button--secondary-blue br-button--desktop"
+      *ngIf="detailInfo?.location"
+    >
       DOWNLOAD BROCHURE
     </button>
   </div>

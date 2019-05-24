@@ -38,17 +38,6 @@
     display: flex;
     justify-content: center;
     padding: 15px 0px;
-    background: $bg-primary-light;
-    button {
-      width: 220px;
-      color: $dark-gray;
-      border-color: $dark-gray;
-      border-width: 2px;
-      &:hover {
-        color: white;
-        background: $dark-gray;
-      }
-    }
   }
 
   @media screen and (max-width: 500px) {
