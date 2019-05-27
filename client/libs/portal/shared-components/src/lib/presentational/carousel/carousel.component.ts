@@ -175,11 +175,13 @@ export class CarouselComponent implements OnInit, AfterContentInit, AfterViewIni
     });
     this.wrapper.nativeElement.style.transform =
       'translateX(-' + this.slides[this.selectedSlide].translate + 'px)';
-    this.wrapper.nativeElement.childNodes[1].childNodes.forEach((elem: HTMLDivElement) => {
-      if (elem.style) {
-        elem.style.width = this.slideWidth + 'px';
+    this.wrapper.nativeElement.childNodes[this.images ? 1 : 2].childNodes.forEach(
+      (elem: HTMLDivElement) => {
+        if (elem.style) {
+          elem.style.width = this.slideWidth + 'px';
+        }
       }
-    });
+    );
     if (this.fullHight) {
       this.wrapper.nativeElement.childNodes[2].childNodes.forEach((elem: HTMLDivElement) => {
         if (elem.style) {

@@ -52,6 +52,9 @@
           }
         }
       }
+      &.buttons-after-keys {
+        padding-bottom: 30px;
+      }
     }
     @media screen and (max-width: 780px) {
       &.mobile-header {
