@@ -1,3 +1,5 @@
+@import 'variables.scss';
+
 .my-time-tour-container {
   width: 100%;
   padding: 0 0 100px;
@@ -5,6 +7,9 @@
     URL('../assets/images/desktop/sign_in_to_my_time_3x.png');
   background-size: 100% auto;
   background-repeat: no-repeat;
+  @media screen and (max-width: $mobile-view) {
+    background: none;
+  }
 }
 
 .image {
