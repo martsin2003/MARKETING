@@ -1,7 +1,6 @@
 @import 'variables.scss';
 
 .container {
-  max-width: 960px;
   margin: 0 auto;
   .mob-items {
     display: none;
@@ -27,6 +26,13 @@
   .wrapper-for-slider {
     width: 100%;
     padding-bottom: 10px;
+  }
+
+  brookfield-home-detail-info {
+    display: block;
+    @media screen and (min-width: 500px) {
+      padding: 0px 15px;
+    }
   }
 
   .get-empowered-container {

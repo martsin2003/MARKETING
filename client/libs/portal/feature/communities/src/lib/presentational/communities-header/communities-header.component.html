@@ -24,9 +24,12 @@
       />
     </div>
 
-    <div class="communities-header__filter">
-      <img src="assets/icons/filter-icon.svg" (click)="openFilter()" />
+    <div class="communities-header__filter" (click)="openFilter()">
+      <img src="assets/icons/filter-icon.svg" />
       <span class="communities-header__filter-text">Filters</span>
     </div>
+  </div>
+  <div class="filter-container">
+    <brookfield-view-filter [openFilter]="filter"></brookfield-view-filter>
   </div>
 </div>
