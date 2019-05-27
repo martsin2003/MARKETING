@@ -1,14 +1,17 @@
-<div class="search-homes-container px-3 pb-3 pt-1">
-  <h2 class="search-heading font-20 br-text-pure-white text-center my-2 px-3">
+<div class="search-homes--container br-background-blue">
+  <h2
+    class="search-homes--item search-homes--search-heading br-text-pure-white text-center px-4 helvetica-bold"
+    [ngClass]="isMobileView ? 'br-content-text--large' : 'br-header-text--medium-sm'"
+  >
     Search for homes in Virginia, Maryland, or Delaware
   </h2>
-  <div class="search-box my-2">
+  <div class="search-homes--item search-homes--search-box">
     <input
-      class="search-box__item search-box__item--input br-input"
+      class="search-homes--search-box__item search-homes--search-box__input br-input br-input--no-border"
       type="text"
       placeholder="Enter a county, city, or community"
     />
-    <button class="br-button br-button--tertiary br-button--desktop ml-3">
+    <button class="br-button br-button--tertiary br-button--desktop search-homes--search-box__item">
       <mat-icon>search</mat-icon>
       FIND MY NEW HOME
     </button>
