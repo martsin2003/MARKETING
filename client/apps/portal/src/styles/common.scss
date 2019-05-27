@@ -141,19 +141,6 @@
     }
   }
 
-  &--primary-white-border-blue {
-    background-color: $pure-white;
-    color: $primary-light;
-    background-color: transparent;
-    border: 2px solid $primary-light;
-
-    &:hover,
-    &:active {
-      background-color: transparent;
-      border: 2px solid $primary-light;
-    }
-  }
-
   &--secondary-blue {
     border: 2px solid $primary-light;
     color: $primary-light;
