@@ -1,11 +1,13 @@
+@import 'variables.scss';
+
 .carousel {
   width: 100%;
   height: auto;
   overflow: hidden;
   user-select: none;
   position: relative;
-  animation-duration: 4s;
-  transition-duration: 4s;
+  animation-duration: 2.5s;
+  transition-duration: 2.5s;
   box-sizing: border-box;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -74,7 +76,12 @@
   }
 }
 .full-hight {
-  height: calc(100vh - 140px);
+  height: calc(100vh - 134px);
+
+  @media screen and (max-width: $mobile-view) {
+    height: calc(100vh - 260px);
+  }
+
   .container {
     height: 100%;
   }

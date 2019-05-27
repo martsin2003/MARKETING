@@ -4,7 +4,7 @@
   [fullHight]="true"
 ></brookfield-carousel>
 <div class="home-container">
-  <brookfield-search-homes></brookfield-search-homes>
+  <brookfield-search-homes [isMobileView]="isMobileScreen$ | async"></brookfield-search-homes>
 </div>
 
 <div class="d-flex flex-column align-items-center home">
