@@ -1,0 +1,18 @@
+form {
+  ::ng-deep mat-form-field {
+    ::ng-deep .mat-form-field-outline {
+      * {
+        border-radius: 0px !important;
+      }
+    }
+  }
+}
+
+li {
+  margin: 14px 0px;
+}
+
+.create-account-image-mobile {
+  width: 100%;
+  height: auto;
+}

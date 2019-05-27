@@ -11,6 +11,7 @@ import { ResetPasswordComponent } from './presentational/reset-password/reset-pa
 import { FavoritesDialogComponent } from './presentational/favorites-dialog/favorites-dialog.component';
 import { HomeTourCardComponent } from './presentational/home-tour-card/home-tour-card.component';
 import { SignInComponent } from './presentational/sign-in/sign-in.component';
+import { CreateAccountComponent } from './presentational/create-account/create-account.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { SignInComponent } from './presentational/sign-in/sign-in.component';
     RouterModule.forChild([
       { path: '', pathMatch: 'full', component: MyAccountComponent },
       { path: 'reset-password', component: ResetPasswordComponent },
-      { path: 'sing-in', component: SignInComponent }
+      { path: 'sing-in', component: SignInComponent },
+      { path: 'create-account', component: CreateAccountComponent }
     ])
   ],
   declarations: [
@@ -31,7 +33,8 @@ import { SignInComponent } from './presentational/sign-in/sign-in.component';
     ResetPasswordComponent,
     FavoritesDialogComponent,
     HomeTourCardComponent,
-    SignInComponent
+    SignInComponent,
+    CreateAccountComponent
   ],
   entryComponents: [FavoritesDialogComponent]
 })
