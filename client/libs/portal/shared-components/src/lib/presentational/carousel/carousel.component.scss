@@ -76,10 +76,10 @@
   }
 }
 .full-hight {
-  height: calc(100vh - 134px);
+  height: calc(100vh - #{$home-search-desktop-height});
 
   @media screen and (max-width: $mobile-view) {
-    height: calc(100vh - 260px);
+    height: calc(100vh - #{$home-search-mobile-height});
   }
 
   .container {

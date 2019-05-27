@@ -2,7 +2,7 @@
 
 .search-homes {
   &--container {
-    height: 134px;
+    height: $home-search-desktop-height;
     padding: 10px 15px;
     display: flex;
     flex-direction: column;
@@ -10,7 +10,7 @@
     justify-content: space-around;
     @media screen and (max-width: $mobile-view) {
       padding: 0 15px 10px;
-      height: 260px;
+      height: $home-search-mobile-height;
     }
   }
 
