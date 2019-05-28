@@ -1,15 +1,19 @@
 .community-list {
   &__content {
     display: flex;
+    height: 100vh;
+    overflow: hidden;
   }
   &__communities {
     width: 100%;
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
     flex: 1;
+    overflow: auto;
   }
   &__map-block {
-    height: 70vh;
+    height: 100vh;
   }
   &__community {
     flex-basis: 50%;
