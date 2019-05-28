@@ -5,7 +5,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 1000;
   background: white;
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
   display: flex;
@@ -47,6 +47,9 @@
       img {
         width: 30px;
       }
+      @media screen and (max-width: $mobile-view) {
+        flex: 1;
+      }
     }
     .more-info-button {
       flex-basis: 83%;
@@ -59,6 +62,18 @@
       font-size: 16px;
       img {
         margin: 0px 10px;
+      }
+      @media screen and (max-width: $mobile-view) {
+        flex: 1;
+      }
+    }
+    @media screen and (max-width: $mobile-view) {
+      flex-basis: 40%;
+      &:first-child {
+        display: none;
+      }
+      .image-title {
+        display: none;
       }
     }
   }
@@ -93,6 +108,7 @@
       font-family: 'Helvetica Neue', 'Medium';
       transform: translateY(-450px);
       transition-duration: 0.3s;
+      z-index: 1000;
       .menu-item,
       .close-menu {
         height: 50px;
@@ -112,10 +128,28 @@
       }
       &.hide {
         transform: translateY(-450px);
+        @media screen and (max-width: $mobile-view) {
+          transform: translateY(500px);
+        }
       }
       &.show {
         transform: translateY(0px);
+        @media screen and (max-width: $mobile-view) {
+          transform: translateY(0px);
+        }
+      }
+      @media screen and (max-width: $mobile-view) {
+        position: fixed;
+        top: unset;
+        bottom: 0;
       }
     }
+    @media screen and (max-width: $mobile-view) {
+      flex-basis: 60%;
+    }
+  }
+  @media screen and (max-width: $mobile-view) {
+    top: unset;
+    bottom: 0;
   }
 }

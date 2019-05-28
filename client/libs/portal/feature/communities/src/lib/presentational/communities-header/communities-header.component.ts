@@ -9,7 +9,11 @@ import { CommunitiesView } from '../../view-model/communities';
 export class CommunitiesHeaderComponent implements OnInit {
   @Output() viewChanged = new EventEmitter<string>();
   @Input() view: CommunitiesView;
+
+  filter: { open: true };
+
   constructor() {}
+
   ngOnInit() {}
 
   changeView(view: CommunitiesView) {
@@ -17,6 +21,6 @@ export class CommunitiesHeaderComponent implements OnInit {
   }
 
   openFilter() {
-    // todo implement this
+    this.filter = { open: true };
   }
 }

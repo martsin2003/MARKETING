@@ -11,6 +11,9 @@
       padding: 20px;
       color: #0f2d4f;
       font-family: 'Helvetica Neue', 'Bold';
+      @media screen and (max-width: $mobile-view) {
+        padding: 15px;
+      }
     }
     &__small-discription {
       padding-bottom: 20px;
@@ -18,6 +21,9 @@
       font-size: 18px;
       color: white;
       font-family: 'Helvetica Neue', 'Regular';
+      @media screen and (max-width: $mobile-view) {
+        padding: 0px 15px 15px;
+      }
     }
     &__places {
       display: flex;
@@ -33,9 +39,38 @@
           opacity: 1;
         }
       }
+      @media screen and (max-width: $mobile-view) {
+        display: none;
+      }
     }
     .selected {
       opacity: 1;
+    }
+    @media screen and (max-width: $mobile-view) {
+      text-align: start;
+    }
+  }
+  &__mobile-panel {
+    display: none;
+    padding: 15px;
+    .slide {
+      height: 100%;
+      .slide-content {
+        height: 135px;
+        background: $pure-white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: auto !important;
+          height: 100px !important;
+        }
+        box-shadow: 0px 4px 4px -1px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    @media screen and (max-width: $mobile-view) {
+      display: block;
     }
   }
   &__map-block {

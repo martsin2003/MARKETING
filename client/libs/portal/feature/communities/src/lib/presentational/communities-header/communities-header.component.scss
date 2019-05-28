@@ -17,8 +17,16 @@
     margin-left: 15px;
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
   &__filter-text {
     margin-left: 10px;
+  }
+  .filter-container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
   }
 }
