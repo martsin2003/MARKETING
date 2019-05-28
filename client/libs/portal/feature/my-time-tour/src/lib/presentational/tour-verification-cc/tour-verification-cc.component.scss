@@ -1,9 +1,13 @@
+@import 'variables.scss';
 .tour-verification-cc {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   padding: 0 50px;
+  @media screen and(max-width: $mobile-view) {
+    padding: 0 20px;
+  }
   margin-bottom: 50px;
   &__text {
     text-align: center;
@@ -12,9 +16,24 @@
     }
   }
   &__form {
-    width: 500px;
+    max-width: 500px;
     display: flex;
     flex-wrap: wrap;
     padding: 50px 0 30px;
+  }
+  &__fb-50 {
+    flex-basis: 50%;
+    @media screen and(max-width: $mobile-view) {
+      flex-basis: 100%;
+    }
+  }
+  &__fb-25 {
+    flex-basis: 25%;
+    @media screen and(max-width: $mobile-view) {
+      flex-basis: 50%;
+    }
+  }
+  &__fb-100 {
+    flex-basis: 100%;
   }
 }

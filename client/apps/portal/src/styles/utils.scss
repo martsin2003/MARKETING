@@ -566,6 +566,36 @@
   padding: 3rem !important;
 }
 
+.pd-1 {
+  @media screen and(min-width: $mobile-view) {
+    padding: 0.25rem !important;
+  }
+}
+
+.pd-2 {
+  @media screen and(min-width: $mobile-view) {
+    padding: 0.5rem !important;
+  }
+}
+
+.pd-3 {
+  @media screen and(min-width: $mobile-view) {
+    padding: 1rem !important;
+  }
+}
+
+.pd-4 {
+  @media screen and(min-width: $mobile-view) {
+    padding: 1.5rem !important;
+  }
+}
+
+.pd-5 {
+  @media screen and(min-width: $mobile-view) {
+    padding: 3rem !important;
+  }
+}
+
 .pb-auto {
   padding-bottom: auto !important;
 }

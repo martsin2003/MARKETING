@@ -14,6 +14,21 @@
   -moz-user-select: none;
   -o-user-select: none;
   user-select: none;
+  position: relative;
+  .background-img {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 40vh;
+    min-height: 400px;
+    &.hideBackgroundImage {
+      display: none;
+    }
+  }
   .arrow {
     width: auto;
     height: 100%;
@@ -21,7 +36,7 @@
     top: 0;
     outline: none;
     box-sizing: border-box;
-    z-index: 999;
+    z-index: 1000;
     padding: 0px 20px;
     display: flex;
     align-items: center;
@@ -51,6 +66,7 @@
     position: relative;
     overflow: hidden;
     margin: 0px;
+    z-index: 999;
   }
   .wrapper-of-slider {
     height: auto;
@@ -62,7 +78,6 @@
     ::ng-deep .carousel-content {
       width: 100%;
       display: flex;
-      align-items: center;
       flex-direction: row;
       ::ng-deep .slide {
         img {
@@ -73,6 +88,9 @@
         }
       }
     }
+  }
+  ::ng-deep .custom-size {
+    height: 100%;
   }
 }
 .full-hight {

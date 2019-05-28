@@ -17,7 +17,7 @@
   }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: $mobile-view) {
   img.img-main-mobile {
     margin: 20px 30px 20px 30px !important;
     width: 250px;

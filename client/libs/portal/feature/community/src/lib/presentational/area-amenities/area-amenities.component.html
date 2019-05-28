@@ -13,8 +13,19 @@
         [ngClass]="{ selected: place === places[this.selectedPlace] }"
         (click)="selectPlace(places.indexOf(place))"
       >
-        <img [src]="place" alt="" />
+        <img [src]="'assets/icons/' + place" alt="" />
       </div>
+    </div>
+    <div class="area-container__mobile-panel">
+      <brookfield-carousel [quantitySlides]="places.length">
+        <div class="carousel-content" #insertedContent>
+          <div class="slide part-width" *ngFor="let place of places">
+            <div class="slide-content">
+              <img #mainImage [src]="'assets/icons/blue-' + place" />
+            </div>
+          </div>
+        </div>
+      </brookfield-carousel>
     </div>
   </div>
   <div class="area-container__map-block" #map></div>

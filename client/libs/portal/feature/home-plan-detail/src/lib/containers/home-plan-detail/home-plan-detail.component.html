@@ -1,5 +1,33 @@
 <div class="main-wrapper">
   <div class="container">
+    <div class="mobile-header">
+      <div class="header-text">
+        <span class="home-name br-header-text br-header-text--medium">{{
+          homeDetailInfo.homeName
+        }}</span>
+        <span
+          class="br-content-text br-content-text--large place"
+          *ngIf="homeDetailInfo.homeDetails"
+        >
+          {{ homeDetailInfo.homeDetails }}
+        </span>
+        <span class="br-content-text br-content-text--large">
+          {{ homeDetailInfo.communityName }}
+        </span>
+        <span class="price br-content-text br-content-text--large">
+          {{ homeDetailInfo.startingPrice }}
+        </span>
+      </div>
+      <div class="d-flex mt-2">
+        <button class="br-button br-button--primary-blue">
+          <span>CALL NOW</span>
+        </button>
+        <button class="br-button br-button--primary-blue">
+          <span>REQUEST MORE</span>
+        </button>
+      </div>
+    </div>
+
     <div class="wrapper-for-slider">
       <brookfield-carousel [images]="images" [fullWidth]="false"></brookfield-carousel>
     </div>

@@ -1,4 +1,5 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { TourStepData } from '../../view-model/tour-step.interface';
 
 @Component({
@@ -10,6 +11,7 @@ export class TourTermsComponent implements OnInit {
   constructor() {}
   data: TourStepData;
   accept: boolean;
+  @Input() isMobileView$: Observable<boolean>;
   @Output() nextStep = new EventEmitter<string>();
   @Output() goBack = new EventEmitter<string>();
   ngOnInit() {

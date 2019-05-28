@@ -1,5 +1,5 @@
 <div class="wrapper-of-form">
-  <span class="title">{{
+  <span class="title" [ngClass]="{ 'pb-0': containerHomeDesignDetail?.homeName }">{{
     containerHomeDesignDetail ? containerHomeDesignDetail.title : 'Request More Info'
   }}</span>
   <span class="home-name">{{ containerHomeDesignDetail?.homeName }}</span>

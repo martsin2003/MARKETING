@@ -18,12 +18,17 @@ import { TourConfirmComponent } from './presentational/tour-confirm/tour-confirm
 import { FormsModule } from '@angular/forms';
 import { TourVerificationTypeComponent } from './presentational/tour-verification-type/tour-verification-type.component';
 import { TourBackButtonComponent } from './presentational/tour-back-button/tour-back-button.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material';
+import { HomeBrochureComponent } from './presentational/home-brochure/home-brochure.component';
 
 @NgModule({
   imports: [
     CommonModule,
     MaterialModule,
     FormsModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
     RouterModule.forChild([{ path: '', pathMatch: 'full', component: MyTimeTourComponent }])
   ],
   declarations: [
@@ -41,7 +46,8 @@ import { TourBackButtonComponent } from './presentational/tour-back-button/tour-
     TourCreatePasswordComponent,
     TourConfirmComponent,
     TourVerificationTypeComponent,
-    TourBackButtonComponent
+    TourBackButtonComponent,
+    HomeBrochureComponent
   ]
 })
 export class PortalFeatureMyTimeTourModule {}
