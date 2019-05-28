@@ -6,7 +6,9 @@ import {
   Input,
   ContentChild,
   AfterContentInit,
-  AfterViewInit
+  AfterViewInit,
+  OnChanges,
+  SimpleChanges
 } from '@angular/core';
 import { fromEvent } from 'rxjs';
 
@@ -15,11 +17,14 @@ import { fromEvent } from 'rxjs';
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss']
 })
-export class CarouselComponent implements OnInit, AfterContentInit, AfterViewInit {
+export class CarouselComponent implements OnInit, AfterContentInit, AfterViewInit, OnChanges {
   @Input() quantitySlides: number;
   @Input() fullWidth: boolean;
   @Input() fullHight: boolean;
   @Input() images: string[];
+  @Input() margins = 0;
+  @Input() customSize: boolean;
+  @Input() startInit: { start: boolean };
 
   @ContentChild('insertedContent') insertedContent: ElementRef<HTMLDivElement>;
   @ContentChild('mainImage') mainImage: ElementRef<HTMLImageElement>;
@@ -28,6 +33,7 @@ export class CarouselComponent implements OnInit, AfterContentInit, AfterViewIni
   @ViewChild('container') container: ElementRef<HTMLDivElement>;
   @ViewChild('wrapper') wrapper: ElementRef<HTMLDivElement>;
   @ViewChild('onlyImage') onlyImage: ElementRef<HTMLImageElement>;
+  @ViewChild('backgroundImage') backgroundImage: ElementRef<HTMLImageElement>;
 
   swiping: boolean;
   startedPos = 0;
@@ -42,6 +48,7 @@ export class CarouselComponent implements OnInit, AfterContentInit, AfterViewIni
   slideWidth: number;
   slides: { translate: number }[] | any = [];
   clickOnButton: boolean;
+  hideBackgroundImage = true;
 
   constructor() {}
 
@@ -113,6 +120,36 @@ export class CarouselComponent implements OnInit, AfterContentInit, AfterViewIni
     });
   }
 
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.customSize && changes.customSize.currentValue) {
+      if (this.customSize) {
+        this.slides = [];
+        for (let i = 0; i < this.quantitySlides; i++) {
+          this.slides.push({
+            translate: 0
+          });
+        }
+        setTimeout(() => {
+          this.initializationCarousel();
+        }, 0);
+        this.hideBackgroundImage = false;
+      }
+    }
+    if (changes.startInit && changes.startInit.currentValue) {
+      if (this.startInit.start) {
+        this.slides = [];
+        for (let i = 0; i < this.quantitySlides; i++) {
+          this.slides.push({
+            translate: 0
+          });
+        }
+        setTimeout(() => {
+          this.initializationCarousel();
+        }, 0);
+      }
+    }
+  }
+
   ngAfterViewInit() {
     this.setGeneralStyles();
     if (this.fullHight) {
@@ -164,7 +201,7 @@ export class CarouselComponent implements OnInit, AfterContentInit, AfterViewIni
     this.slideWidth = this.fullWidth ? carouselWidth : carouselWidth - (carouselWidth * 20) / 100;
     let index = 0;
     this.slides.forEach((obj, i, arr) => {
-      const slideOffset = this.fullWidth ? index : 10 * index;
+      const slideOffset = this.fullWidth ? index : (10 + this.margins) * index;
       if (i === arr.length - 1) {
         const carouselOffset = this.fullWidth ? 0 : carouselWidth - (carouselWidth * 80) / 100;
         obj.translate = this.slideWidth * index + slideOffset - carouselOffset;
@@ -193,8 +230,16 @@ export class CarouselComponent implements OnInit, AfterContentInit, AfterViewIni
     this.wrapper.nativeElement.style.animationDuration = '0s';
     this.wrapper.nativeElement.style.transitionDuration = '0s';
     if (!this.fullHight) {
-      this.container.nativeElement.style.height =
-        this.wrapper.nativeElement.clientHeight - 3 + 'px';
+      if (this.customSize) {
+        this.container.nativeElement.style.height =
+          this.wrapper.nativeElement.clientHeight - 3 + 'px';
+      } else {
+        this.container.nativeElement.style.height =
+          (this.wrapper.nativeElement.clientHeight ||
+            this.backgroundImage.nativeElement.clientHeight) -
+          3 +
+          'px';
+      }
     }
     this.wrapper.nativeElement.style.animationTimingFunction = 'easy-in-out';
   }

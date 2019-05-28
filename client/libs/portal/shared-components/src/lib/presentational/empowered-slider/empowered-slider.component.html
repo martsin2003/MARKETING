@@ -1,5 +1,5 @@
 <div class="get-empowered-container">
-  <img src="assets/images/desktop/get-empowered.svg" />
+  <img class="logo-img" src="assets/images/desktop/get-empowered.svg" />
   <div class="get-empowered-container__small-description">
     <span>Our Empower innovation features let you take control of your new home experience.</span
     ><br />
@@ -9,8 +9,15 @@
     <brookfield-carousel [quantitySlides]="4" [fullWidth]="false">
       <div class="carousel-content" #insertedContent>
         <div class="slide part-width">
-          <div class="slide-content">
-            <img #mainImage src="assets/images/desktop/get_empowered_my_time_slider.png" />
+          <div
+            class="slide-content"
+            [style.backgroundImage]="'url(/assets/images/desktop/get_empowered_my_time_slider.png)'"
+          >
+            <img
+              #mainImage
+              class="main-image"
+              src="assets/images/desktop/get_empowered_my_time_slider.png"
+            />
             <div class="slide-description">
               <img src="assets/icons/my-time-icon.svg" alt="" srcset="" />
               <div class="slide-text">
@@ -28,8 +35,17 @@
           </div>
         </div>
         <div class="slide part-width">
-          <div class="slide-content">
-            <img #mainImage src="assets/images/desktop/get_empowered_my_style_slider.png" />
+          <div
+            class="slide-content"
+            [style.backgroundImage]="
+              'url(/assets/images/desktop/get_empowered_my_style_slider.png)'
+            "
+          >
+            <img
+              #mainImage
+              class="main-image"
+              src="assets/images/desktop/get_empowered_my_style_slider.png"
+            />
             <div class="slide-description">
               <img src="assets/icons/my-style-icon.svg" alt="" srcset="" />
               <div class="slide-text">
@@ -48,9 +64,15 @@
           </div>
         </div>
         <div class="slide part-width">
-          <div class="slide-content">
+          <div
+            class="slide-content"
+            [style.backgroundImage]="
+              'url(/assets/images/desktop/get_empowered_my_vision_slider.png)'
+            "
+          >
             <img
               #mainImage
+              class="main-image"
               draggable="false"
               src="assets/images/desktop/get_empowered_my_vision_slider.png"
             />
@@ -72,8 +94,17 @@
           </div>
         </div>
         <div class="slide part-width">
-          <div class="slide-content">
-            <img #mainImage src="assets/images/desktop/get-empowered-my-command-slider.png" />
+          <div
+            class="slide-content"
+            [style.backgroundImage]="
+              'url(/assets/images/desktop/get-empowered-my-command-slider.png)'
+            "
+          >
+            <img
+              #mainImage
+              class="main-image"
+              src="assets/images/desktop/get-empowered-my-command-slider.png"
+            />
             <div class="slide-description">
               <img src="assets/icons/my-command-icon.svg" alt="" srcset="" />
               <div class="slide-text">
