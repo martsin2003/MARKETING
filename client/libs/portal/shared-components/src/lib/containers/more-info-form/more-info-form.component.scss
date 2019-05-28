@@ -9,13 +9,14 @@
   padding-bottom: 30px;
   box-sizing: border-box;
   .title {
-    text-align: center;
     font-family: 'Helvetica-Neue-Bold';
     font-size: 36px;
     padding: 40px 0px;
     color: $primary;
     @media screen and (max-width: $mobile-view) {
-      padding-bottom: 0px;
+      width: 90%;
+      padding: 30px 0px 0px;
+      font-size: 28px;
     }
   }
   .home-name {
@@ -23,6 +24,12 @@
     font-size: 36px;
     color: $primary;
     padding: 0px 0px 30px;
+    color: $primary-light;
+    @media screen and (max-width: $mobile-view) {
+      width: 90%;
+      padding: 0px 0px 30px;
+      font-size: 28px;
+    }
   }
   .form {
     width: 540px;
@@ -114,6 +121,7 @@
     }
     @media screen and (max-width: $mobile-view) {
       width: 90%;
+      max-width: none;
     }
   }
 }
