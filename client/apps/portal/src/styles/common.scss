@@ -113,6 +113,9 @@
     &-lg {
       min-width: 300px;
     }
+    @media screen and (max-width: $mobile-view) {
+      width: 100%;
+    }
   }
 
   &:disabled {
@@ -203,6 +206,13 @@
   }
 }
 
+.br-button-wrapper {
+  @media screen and(max-width: $mobile-view) {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
 // Common text types
 
 .br-header-text {
@@ -241,6 +251,14 @@
 
 .br-homepage-icon {
   height: 53px;
+}
+
+::ng-deep .mat-checkbox-inner-container {
+  @media screen and(max-width: $mobile-view) {
+    height: 22px !important;
+    width: 22px !important;
+    background: #fff !important;
+  }
 }
 
 .br-icon {

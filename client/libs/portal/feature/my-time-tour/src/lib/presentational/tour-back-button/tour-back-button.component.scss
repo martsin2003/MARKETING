@@ -12,6 +12,12 @@
   height: 100%;
   width: 100%;
   background: #fff;
+  button {
+    margin: 20px;
+    @media screen and(max-width: $mobile-view) {
+      width: 100%;
+    }
+  }
   &--grey {
     background: $bg-primary-light;
   }

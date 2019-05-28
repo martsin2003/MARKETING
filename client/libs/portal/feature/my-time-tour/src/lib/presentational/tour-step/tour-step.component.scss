@@ -25,6 +25,11 @@
       }
     }
   }
+  &__text-title {
+    @media screen and (max-width: $mobile-view) {
+      color: $primary;
+    }
+  }
 }
 
 .stepper {

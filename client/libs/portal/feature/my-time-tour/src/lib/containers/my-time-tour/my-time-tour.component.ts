@@ -1,3 +1,5 @@
+import { DetectMobileViewService } from '@brookfield/common/utilities';
+import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-time-tour.component.scss']
 })
 export class MyTimeTourComponent implements OnInit {
-  step = 0;
-  constructor() {}
+  step = 6;
+  isMobileView$: Observable<boolean>;
+  constructor(private detectMobileViewService: DetectMobileViewService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.isMobileView$ = this.detectMobileViewService.isMobileView();
+  }
 
   timeStepCompleted() {
     this.step++;

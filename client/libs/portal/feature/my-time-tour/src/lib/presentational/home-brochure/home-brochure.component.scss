@@ -1,0 +1,35 @@
+@import 'variables.scss';
+.home-brochure {
+  background: $primary-light;
+  width: 300px;
+  height: 100%;
+  @media screen and(max-width: $mobile-view) {
+    width: 100%;
+    height: auto;
+  }
+  &__image {
+    max-width: 300px;
+    @media screen and(max-width: $mobile-view) {
+      display: none;
+    }
+  }
+  &__info {
+    padding: 10px;
+    color: #fff;
+  }
+  &__text {
+    display: flex;
+    align-items: center;
+    font-family: $helvetica-light;
+    font-size: 18px;
+    line-height: 22px;
+    &--primary {
+      font-family: $helvetica-bold;
+      font-size: 28px;
+      color: #0f2d4f;
+    }
+    &--bold {
+      font-family: $helvetica-bold;
+    }
+  }
+}

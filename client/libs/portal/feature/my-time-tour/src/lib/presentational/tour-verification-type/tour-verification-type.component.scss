@@ -1,22 +1,43 @@
+@import 'variables.scss';
+
 .tour-verification-type {
   &__text {
     text-align: center;
+    @media screen and(max-width: $mobile-view) {
+      font-family: $helvetica-light;
+      margin: 20px;
+    }
     &--centered {
       display: flex;
       justify-content: center;
+      @media screen and(max-width: $mobile-view) {
+        justify-content: flex-start;
+        text-align: start;
+      }
     }
   }
   &__cards {
     margin-top: 30px;
     display: flex;
     justify-content: center;
+    @media screen and(max-width: $mobile-view) {
+      flex-direction: column;
+      margin: 0 20px;
+    }
   }
 }
 .verification-type-card {
   display: flex;
   flex-direction: column;
   width: 400px;
-  margin: 0 30px;
+  margin: 0 20px;
+  @media screen and(max-width: $mobile-view) {
+    width: 100%;
+    margin: 0;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
   &__text {
     text-align: center;
   }

@@ -3,32 +3,53 @@
     <img class="m-5" src="assets/logos/my_time.svg" />
   </div>
   <div class="tour-confirm__content">
-    <div class="tour-confirm__title br-header mb-5">
+    <div class="tour-confirm__title br-header mb-4">
       Your Appointment Has Been Confirmed!
     </div>
-    <div class="tour-confirm__text br-description helvetica-bold w-75">
+    <div class="tour-confirm__icons">
+      <div class="tour-confirm__icon">
+        <img src="assets/icons/calendar-blue.svg" class="tour-confirm__icon-image" />
+
+        <div class="tour-confirm__icon-text br-text-primary">
+          <div class="tour-confirm__icon-text--top helvetica-light">Thursday, January 3rd</div>
+
+          <div class="tour-confirm__icon-text--bottom helvetica-light">6:45am – 7:45am EST</div>
+        </div>
+      </div>
+      <div class="tour-confirm__icon">
+        <img src="assets/icons/pin.svg" class="tour-confirm__icon-image" />
+
+        <div class="tour-confirm__icon-text br-text-primary">
+          <div class="tour-confirm__icon-text--top helvetica-light">Your Pin Code</div>
+
+          <div class="tour-confirm__icon-text--bottom helvetica-bold">XXXXXXX</div>
+        </div>
+      </div>
+    </div>
+    <div class="tour-confirm__text br-description helvetica-bold">
       Your code will expire one hour after your scheduled start time.
     </div>
-    <div class="tour-confirm__text br-description mb-5 w-75">
+
+    <div class="tour-confirm__text br-description mb-5">
       Please complete your tour within your allotted hour to ensure access and privacy for home
       shoppers who may be touring the home after you.
     </div>
     <div class="tour-confirm__actions">
-      <button class="f-1 m-2 br-button br-button--primary-blue">
+      <button class="tour-confirm__button br-button br-button--primary-blue">
         BACK TO HOME DETAILS
       </button>
-      <button class="f-1 m-2 br-button br-button--primary-blue">
+      <button class="tour-confirm__button br-button br-button--primary-blue">
         BACK TO COMMUNITY
       </button>
     </div>
     <div class="tour-confirm__actions">
       <button
-        class="f-1 m-2 br-button br-button--secondary-gray"
+        class="tour-confirm__button br-button br-button--secondary-gray"
         (click)="cancelAppointmentClick()"
       >
         CANCEL APPOINTMENT
       </button>
-      <button class="f-1 m-2 br-button br-button--secondary-gray">
+      <button class="tour-confirm__button br-button br-button--secondary-gray">
         RESCHEDULE APPOINTMENT
       </button>
     </div>
