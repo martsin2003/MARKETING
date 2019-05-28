@@ -1,7 +1,12 @@
 <div class="view-homes-container">
-  <h1 class="view-homes-container__title">
-    See The Homes
-  </h1>
+  <div class="title-conteiner">
+    <h1 class="view-homes-container__title">
+      See The Homes
+    </h1>
+    <div class="button-filter" (click)="openFilter()">
+      <img src="assets/icons/filter-icon.svg" />
+    </div>
+  </div>
 
   <div class="view-homes-container__tools-panel">
     <div class="view-homes-container__toggle-buttons">
@@ -33,6 +38,21 @@
     <brookfield-home-card></brookfield-home-card>
     <brookfield-home-card></brookfield-home-card>
     <brookfield-home-card></brookfield-home-card>
+  </div>
+
+  <div class="mobile-card-conteiner">
+    <brookfield-carousel
+      [quantitySlides]="8"
+      [fullHight]="false"
+      [margins]="5"
+      [startInit]="startCarouselInit"
+    >
+      <div class="carousel-content" #insertedContent>
+        <div class="slide part-width" *ngFor="let slide of [1, 2, 3, 4, 5, 6, 7, 8]">
+          <brookfield-home-card #homeCard></brookfield-home-card>
+        </div>
+      </div>
+    </brookfield-carousel>
   </div>
 
   <div class="filter-container">

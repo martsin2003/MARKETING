@@ -8,12 +8,12 @@ import {} from 'googlemaps';
 })
 export class AreaAmenitiesComponent implements OnInit {
   places = [
-    'assets/icons/shopping.svg',
-    'assets/icons/dining.svg',
-    'assets/icons/recreation.svg',
-    'assets/icons/schools.svg',
-    'assets/icons/hospitals.svg',
-    'assets/icons/transportation.svg'
+    'shopping.svg',
+    'dining.svg',
+    'recreation.svg',
+    'schools.svg',
+    'hospitals.svg',
+    'transportation.svg'
   ];
   selectedPlace = 0;
 

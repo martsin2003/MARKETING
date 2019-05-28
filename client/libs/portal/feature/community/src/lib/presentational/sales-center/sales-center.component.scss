@@ -28,15 +28,34 @@
         color: white;
         span {
           display: block;
-          font-family: 'Helvetica Neue', 'Regular';
+          font-family: $helvetica-light;
           font-size: 18px;
         }
         .place-name,
         .phone {
-          font-family: 'Helvetica Neue';
-          font-weight: 600;
+          font-family: $helvetica-light;
+          display: flex;
+          span {
+            display: none;
+          }
         }
       }
+      @media screen and (max-width: $mobile-view) {
+        &:last-child {
+          margin-top: 15px;
+          border: 1px solid white;
+          justify-content: center;
+          .phone {
+            span {
+              display: block;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: $mobile-view) {
+      flex-basis: 100%;
     }
   }
   &__map-container {
@@ -45,6 +64,9 @@
       &__map-block {
         height: 40vh;
       }
+    }
+    @media screen and (max-width: $mobile-view) {
+      display: none;
     }
   }
 }

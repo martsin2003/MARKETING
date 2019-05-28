@@ -1,4 +1,9 @@
 <div #carousel class="carousel" [ngClass]="{ 'full-hight': fullHight }">
+  <div
+    class="background-img"
+    #backgroundImage
+    [ngClass]="{ hideBackgroundImage: hideBackgroundImage }"
+  ></div>
   <button class="prev arrow" [disabled]="prevDisabled" (click)="[(duration = '1s'), prev()]">
     <mat-icon>arrow_back_ios</mat-icon>
   </button>

@@ -1,8 +1,35 @@
-<brookfield-carousel [quantitySlides]="1" [fullWidth]="true">
-  <div class="carousel-content" #insertedContent>
+<brookfield-carousel [quantitySlides]="3" [fullWidth]="true" [customSize]="true">
+  <div class="carousel-content custom-size" #insertedContent>
     <div class="slide">
       <div class="slide-content">
-        <img #mainImage src="assets/images/desktop/review_photo_background.png" />
+        <div class="slide-text">
+          <img src="assets/icons/quote-mark.svg" />
+          <div class="slide-text__title">
+            Dee Keene and Tyler Sutherland were<br />
+            awesome to work with!”
+          </div>
+          <div class="slide-text__sub-title">
+            Firstname L., Month XX, 2019
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-content custom-size" #insertedContent>
+        <div class="slide-text">
+          <img src="assets/icons/quote-mark.svg" />
+          <div class="slide-text__title">
+            Dee Keene and Tyler Sutherland were<br />
+            awesome to work with!”
+          </div>
+          <div class="slide-text__sub-title">
+            Firstname L., Month XX, 2019
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-content custom-size" #insertedContent>
         <div class="slide-text">
           <img src="assets/icons/quote-mark.svg" />
           <div class="slide-text__title">
