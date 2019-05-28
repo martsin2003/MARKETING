@@ -1,12 +1,26 @@
-<div class="tour-step" [ngClass]="{ 'tour-step--white': whiteBackground }">
+<div
+  class="tour-step"
+  [ngClass]="{ 'tour-step--white': whiteBackground && !(isMobileScreen$ | async) }"
+>
   <div class="tour-step__image">
-    <img *ngIf="whiteBackground" class="m-5" src="assets/logos/my_time_white.svg" />
-    <img *ngIf="!whiteBackground" class="m-5" src="assets/logos/my_time.svg" />
+    <img
+      *ngIf="whiteBackground && !(isMobileScreen$ | async)"
+      class="m-5"
+      src="assets/logos/my_time_white.svg"
+    />
+    <img
+      *ngIf="!whiteBackground || (whiteBackground && (isMobileScreen$ | async))"
+      class="m-5"
+      src="assets/logos/my_time.svg"
+    />
   </div>
   <div class="tour-step__text">Step {{ data.step }} of {{ data.stepsCount }}:</div>
-  <div class="tour-step__text">{{ data.subTitle }}</div>
-  <div class="tour-step__text tour-step__text--large">{{ data.title }}</div>
-  <div class="stepper my-4" [ngClass]="{ 'stepper--white': whiteBackground }">
+  <div class="tour-step__text tour-step__text-title">{{ data.subTitle }}</div>
+  <div class="tour-step__text tour-step__text-title tour-step__text--large">{{ data.title }}</div>
+  <div
+    class="stepper my-4"
+    [ngClass]="{ 'stepper--white': whiteBackground && !(isMobileScreen$ | async) }"
+  >
     <div class="stepper__step" *ngFor="let step of steps; let i = index; let last = last">
       <div [ngClass]="{ 'stepper__circle--filled': i + 1 <= data.step }" class="stepper__circle">
         {{ i + 1 }}

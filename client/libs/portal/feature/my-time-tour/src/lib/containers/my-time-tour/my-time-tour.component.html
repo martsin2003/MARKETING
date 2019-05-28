@@ -10,7 +10,11 @@
       ></brookfield-tour-time>
     </ng-container>
     <ng-container *ngSwitchCase="2">
-      <brookfield-tour-terms (goBack)="back()" (nextStep)="nextStep()"></brookfield-tour-terms>
+      <brookfield-tour-terms
+        [isMobileView$]="isMobileView$"
+        (goBack)="back()"
+        (nextStep)="nextStep()"
+      ></brookfield-tour-terms>
     </ng-container>
     <ng-container *ngSwitchCase="3">
       <brookfield-tour-verification

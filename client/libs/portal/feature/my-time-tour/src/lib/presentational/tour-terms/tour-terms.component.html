@@ -24,51 +24,27 @@
       <div class="tour-terms__text my-3">
         4. Absolve Brookfield Residential from any liability related to your My Time Home Tour.
       </div>
+      <brookfield-home-brochure *ngIf="isMobileView$ | async"></brookfield-home-brochure>
       <div
-        class="tour-terms__text my-4 tour-terms__text--bold tour-terms__text--primary tour-terms__text--underline"
+        class="tour-terms__text my-4 tour-terms__text--bold tour-terms__text--primary tour-terms__text--underline tour-terms__text--terms"
       >
         View Full Terms & Conditions.
       </div>
       <div class="tour-terms__text my-4">
         <mat-checkbox [(ngModel)]="accept">I accept the Terms & Conditions.</mat-checkbox>
       </div>
-      <button
-        class="br-button br-button--primary-blue br-button--desktop"
-        [disabled]="!accept"
-        (click)="acceptClick()"
-      >
-        ACCEPT & CONTINUE
-      </button>
-    </div>
-    <div class="tour-terms__right">
-      <div class="home-brochure">
-        <div class="home-brochure__image">
-          <img
-            src="https://www.brookfielddc.com/uploads/galleryCommunity/full/910E9D40-B5EF-744C-7350F20E63B49AE1.jpg"
-            class="home-brochure__image"
-          />
-        </div>
-        <div class="home-brochure__info">
-          <div class="home-brochure__text home-brochure__text--bold my-2">
-            My Time Home Tour Details:
-          </div>
-
-          <div class="home-brochure__text home-brochure__text--primary">Torrington</div>
-
-          <div class="home-brochure__text my-3">
-            <img src="assets/icons/location.svg" class="mr-2" />
-            18140 Ridgewood Place Round Hill, VA 20141
-          </div>
-          <div class="home-brochure__text my-3">
-            <img src="assets/icons/calendar.svg" class="mr-2" />
-            01/03/2019
-          </div>
-          <div class="home-brochure__text my-3">
-            <img src="assets/icons/clock.svg" class="mr-2" />
-            6:45am - 7:45am EST
-          </div>
-        </div>
+      <div class="tour-terms__button-wrapper">
+        <button
+          class="tour-terms__button br-button br-button--primary-blue br-button--desktop "
+          [disabled]="!accept"
+          (click)="acceptClick()"
+        >
+          ACCEPT & CONTINUE
+        </button>
       </div>
+    </div>
+    <div class="tour-terms__right" *ngIf="!(isMobileView$ | async)">
+      <brookfield-home-brochure></brookfield-home-brochure>
     </div>
   </div>
 
