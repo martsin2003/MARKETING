@@ -2,35 +2,43 @@
 
 .container {
   margin: 0 auto;
-  .mob-items {
-    display: none;
-    .home-name {
-      font-size: 25px;
-      font-weight: 600;
-      color: $primary;
+
+  .mobile-header {
+    padding: 15px;
+    box-sizing: border-box;
+    .header-text {
+      span {
+        display: block;
+        color: $dark-gray;
+        &.place {
+          padding-bottom: 10px;
+        }
+        &.home-name {
+          color: $primary;
+        }
+        &.price {
+          color: $primary-light;
+        }
+      }
     }
-    .place {
-      display: flex;
-      align-items: center;
-      padding-top: 5px;
-      font-size: 18px;
-      font-weight: 400;
+    .br-button {
+      flex: 1;
+      margin-left: 7.5px;
+      &:first-child {
+        margin-right: 7.5px;
+        margin-left: 0px;
+      }
     }
-    .buttons {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 15px 0px;
+    @media screen and (min-width: $mobile-view) {
+      display: none;
     }
   }
+
   .wrapper-for-slider {
     width: 100%;
     padding-bottom: 10px;
-  }
-
-  brookfield-home-detail-info {
-    display: block;
-    @media screen and (min-width: 500px) {
+    box-sizing: border-box;
+    @media screen and (max-width: $mobile-view) {
       padding: 0px 15px;
     }
   }
@@ -39,57 +47,13 @@
     margin-top: 30px;
     padding: 30px 0px 5px;
     background: $bg-primary-light;
+    @media screen and (max-width: $mobile-view) {
+      margin-top: 0px;
+    }
   }
   .button-back-container {
     display: flex;
     justify-content: center;
     padding: 15px 0px;
-  }
-
-  @media screen and (max-width: 500px) {
-    .container {
-      .mob-items {
-        padding: 15px;
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-        .buttons {
-          button {
-            width: 100%;
-            mat-icon {
-              display: none;
-            }
-          }
-        }
-      }
-      .wrapper-for-slider {
-        padding: 0px 15px;
-      }
-      .content-title {
-        display: none;
-      }
-      .content-details {
-        align-items: flex-start;
-        justify-content: flex-start;
-        flex-direction: column;
-        padding: 15px;
-        .item {
-          margin: 10px 0px;
-        }
-      }
-      .wrp-description {
-        padding: 0px 15px;
-        &__description-text {
-          display: none;
-        }
-        &__buttons {
-          width: 100%;
-          padding: 0px;
-          .button {
-            width: 100%;
-          }
-        }
-      }
-    }
   }
 }
