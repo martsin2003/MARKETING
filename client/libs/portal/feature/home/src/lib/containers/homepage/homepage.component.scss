@@ -73,3 +73,37 @@
     }
   }
 }
+
+::ng-deep .image-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  * {
+    padding-left: 20px;
+    color: white;
+  }
+  &:last-child {
+    padding-bottom: 20px;
+  }
+  &__content-title {
+    margin: 0;
+    font-size: 44px;
+    line-height: 48px;
+    font-family: $helvetica-bold;
+    @media only screen and (max-width: $mobile-view) {
+      font-size: 26px;
+      line-height: 30px;
+    }
+  }
+  &__subtitle {
+    margin: 15px 0 25px;
+    font-size: 28px;
+    line-height: 24px;
+    font-family: $helvetica-bold;
+    @media only screen and (max-width: $mobile-view) {
+      display: none;
+    }
+  }
+}
