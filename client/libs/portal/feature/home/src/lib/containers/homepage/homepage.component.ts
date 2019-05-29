@@ -21,6 +21,17 @@ export class HomepageComponent implements OnInit {
     '../assets/images/desktop/header_slider_2_3x.png',
     '../assets/images/desktop/header_slider_3_3x.png'
   ];
+  imageTitles = [
+    {
+      texts: ['The Home You Want.', 'Easier Than You Imagined.', 'Make the Connection']
+    },
+    {
+      texts: ['The Right Home.', 'The Perfect Place.', 'Enjoy Home Shopping Made Easy']
+    },
+    {
+      texts: ['More Freedom.', 'More Control.', 'Discover Empower Innovation Features']
+    }
+  ];
   constructor(private detectMobileViewService: DetectMobileViewService) {}
 
   ngOnInit() {

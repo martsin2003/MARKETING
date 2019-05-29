@@ -18,9 +18,15 @@
         <div
           class="slide"
           [ngClass]="{ 'part-width': !fullWidth }"
-          *ngFor="let image of images"
+          *ngFor="let image of images; let i = index"
           [style.backgroundImage]="'url(' + image + ')'"
-        ></div>
+        >
+          <div class="image-content">
+            <p class="br-header-text br-header-text--large">{{ imageTitles[i].texts[0] }}</p>
+            <p class="br-header-text br-header-text--large">{{ imageTitles[i].texts[1] }}</p>
+            <p class="br-header-text br-header-text--medium-sm">{{ imageTitles[i].texts[2] }}</p>
+          </div>
+        </div>
       </div>
       <ng-content select=".carousel-content"></ng-content>
     </div>
