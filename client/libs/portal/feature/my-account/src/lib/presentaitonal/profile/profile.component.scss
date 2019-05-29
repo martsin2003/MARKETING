@@ -13,6 +13,10 @@
     max-width: 600px;
     width: 600px;
     margin-top: 30px;
+    @media screen and (max-width: $mobile-view) {
+      width: 100%;
+      max-width: unset;
+    }
   }
   .form-section {
     display: flex;
@@ -28,10 +32,20 @@
         font-family: $helvetica-light;
       }
     }
+    @media screen and (max-width: $mobile-view) {
+      flex-direction: column;
+      .input-wrapper {
+        width: 100%;
+      }
+    }
   }
   .button-wrapper {
     display: flex;
     justify-content: center;
     margin-top: 30px;
+  }
+  @media screen and (max-width: $mobile-view) {
+    padding: 30px 15px;
+    align-items: flex-start;
   }
 }

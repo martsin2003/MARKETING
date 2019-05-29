@@ -4,6 +4,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  br {
+    display: none;
+  }
+  @media screen and (max-width: $mobile-view) {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    br {
+      display: block;
+    }
+  }
 }
 
 .cards-container {
@@ -16,6 +27,9 @@
     width: calc(50% - 10px);
     margin: 20px 0px 0px;
     box-shadow: 0px 0px 4px -1px rgb(155, 155, 155);
+    @media screen and (max-width: $mobile-view) {
+      width: 100%;
+    }
   }
   .card-image {
     width: calc(50% - 10px);
@@ -23,6 +37,12 @@
       width: 100%;
       margin: 20px 0px 0px;
     }
+    @media screen and (max-width: $mobile-view) {
+      display: none;
+    }
+  }
+  @media screen and (max-width: $mobile-view) {
+    flex-direction: column;
   }
 }
 .mat-accordion .mat-expansion-panel {
@@ -45,6 +65,10 @@
 }
 .mat-content {
   justify-content: center;
+  @media screen and (max-width: $mobile-view) {
+    justify-content: flex-start;
+    padding: 0px 40px 0px 15px;
+  }
 }
 .element-icon-style {
   box-sizing: border-box;

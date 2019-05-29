@@ -19,3 +19,11 @@
 .align-self-center {
   margin-top: 30px;
 }
+
+@media screen and (max-width: $mobile-view) {
+  ::ng-deep .favorites-dialog {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+  }
+}

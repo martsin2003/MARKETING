@@ -10,3 +10,9 @@
     opacity: 1;
   }
 }
+
+.option-buttons {
+  @media screen and (max-width: $mobile-view) {
+    display: none !important;
+  }
+}
