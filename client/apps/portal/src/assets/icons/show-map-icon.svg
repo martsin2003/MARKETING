@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="30px" viewBox="0 0 32 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-3.2%" y="-24.0%" width="106.4%" height="148.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="-2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ToggleButtons/MapSelected" transform="translate(-29.000000, -8.000000)">
+            <g id="Map-and-Filter-Buttons" filter="url(#filter-1)">
+                <g id="Map">
+                    <g id="Group-3" transform="translate(33.000000, 14.000000)">
+                        <polygon id="Clip-2" points="0 -0.0001 23.75 -0.0001 23.75 21.7509 0 21.7509"></polygon>
+                        <path d="M8.75,2.2905 L15,5.4155 L15,19.4585 L8.75,16.3335 L8.75,2.2905 Z M16.75,5.3815 L16.813,5.3465 L22,2.3825 L22,16.3675 L21.937,16.4025 L16.75,19.3675 L16.75,5.3815 Z M7,16.3675 L6.937,16.4025 L1.75,19.3655 L1.75,5.3815 L1.813,5.3465 L7,2.3825 L7,16.3675 Z M7.504,0.0895 L7.467,0.1045 L0.441,4.1155 C0.169,4.2705 0,4.5615 0,4.8745 L0,20.8745 C0,21.1855 0.167,21.4755 0.436,21.6315 C0.706,21.7875 1.041,21.7885 1.309,21.6345 L7.902,17.8675 L15.468,21.6495 L15.506,21.6615 C15.729,21.7655 15.912,21.7845 16.176,21.6885 L16.252,21.6575 C16.259,21.6535 16.274,21.6475 16.29,21.6425 L23.309,17.6345 C23.581,17.4795 23.75,17.1885 23.75,16.8745 L23.75,0.8745 C23.75,0.5625 23.583,0.2735 23.314,0.1185 L23.314,0.1175 C23.044,-0.0385 22.71,-0.0395 22.441,0.1155 L15.848,3.8825 L8.267,0.0925 C8.254,0.0895 8.241,0.0845 8.229,0.0785 L8.178,0.0615 C8.083,0.0255 7.991,0.0075 7.897,0.0045 L7.871,0.0015 L7.865,0.0015 C7.773,0.0025 7.675,0.0225 7.568,0.0625 C7.546,0.0705 7.525,0.0805 7.504,0.0895 L7.504,0.0895 Z" id="Fill-1" fill="#FFFFFF"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

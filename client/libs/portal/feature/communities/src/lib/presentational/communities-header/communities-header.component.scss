@@ -1,3 +1,5 @@
+@import 'variables.scss';
+
 .communities-header {
   display: flex;
   justify-content: space-between;
@@ -12,6 +14,9 @@
   }
   &__actions {
     display: flex;
+    @media screen and (max-width: $mobile-view) {
+      display: none;
+    }
   }
   &__filter {
     margin-left: 15px;
@@ -27,6 +32,6 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 1000;
   }
 }
