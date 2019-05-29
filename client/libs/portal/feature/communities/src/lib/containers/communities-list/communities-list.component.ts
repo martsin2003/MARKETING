@@ -1,28 +1,58 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
 import {} from 'googlemaps';
 import { CommunitiesView } from '../../view-model/communities';
-import { ReplaySubject } from 'rxjs';
-import { take, filter, map } from 'rxjs/operators';
+import { ReplaySubject, Observable, Subject } from 'rxjs';
+import { take, filter, map, takeUntil } from 'rxjs/operators';
 import { Community } from '@brookfield/portal/core-data/data-services';
 import { CommunitiesFacade } from '@brookfield/portal/core-state';
+import { DetectMobileViewService } from '@brookfield/common/utilities';
 
 @Component({
   selector: 'brookfield-communities-list',
   templateUrl: './communities-list.component.html',
   styleUrls: ['./communities-list.component.scss']
 })
-export class CommunitiesListComponent implements OnInit {
+export class CommunitiesListComponent implements OnInit, OnDestroy {
   communities$: ReplaySubject<Community[]> = new ReplaySubject(1);
   communitiesForCompare = [];
   view: CommunitiesView = CommunitiesView.listMap;
+  filter: { open: boolean };
+  isMobileView$: Observable<boolean>;
+  switchedViewType: boolean;
+
+  private destroy$: Subject<boolean> = new Subject<boolean>();
 
   @ViewChild('map') mapElement: any;
   map: google.maps.Map;
-  constructor(private communitiesFacade: CommunitiesFacade) {}
+  constructor(
+    private communitiesFacade: CommunitiesFacade,
+    private detectMobileViewService: DetectMobileViewService
+  ) {}
 
   ngOnInit() {
+    this.isMobileView$ = this.detectMobileViewService.isMobileView();
+    this.setUpDescriptionChange();
     this.loadCommunities();
     this.initGoogleMaps();
+  }
+
+  ngOnDestroy() {
+    this.destroy$.next(true);
+    this.destroy$.complete();
+  }
+
+  private setUpDescriptionChange() {
+    return this.isMobileView$
+      .pipe(
+        map(viewIsMobile => {
+          if (viewIsMobile) {
+            if (!this.switchedViewType || this.view === 'listMap') {
+              this.viewChanged(CommunitiesView.list);
+            }
+          }
+        }, takeUntil(this.destroy$))
+      )
+      .subscribe();
   }
 
   loadCommunities() {
@@ -46,6 +76,8 @@ export class CommunitiesListComponent implements OnInit {
 
   viewChanged(view: CommunitiesView) {
     this.view = view;
+    this.switchedViewType = true;
+    console.log(this.view);
   }
 
   communitySelected(id: string) {
