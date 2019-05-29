@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { DetectMobileViewService } from '@brookfield/common/utilities';
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
@@ -10,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class MyTimeTourComponent implements OnInit {
   step = 0;
   isMobileView$: Observable<boolean>;
-  constructor(private detectMobileViewService: DetectMobileViewService) {}
+  constructor(private detectMobileViewService: DetectMobileViewService, private router: Router) {}
 
   ngOnInit() {
     this.isMobileView$ = this.detectMobileViewService.isMobileView();
@@ -30,5 +31,9 @@ export class MyTimeTourComponent implements OnInit {
 
   cancelAppointment() {
     this.step = 0;
+  }
+
+  routeToUrl(url: string) {
+    this.router.navigateByUrl(url);
   }
 }

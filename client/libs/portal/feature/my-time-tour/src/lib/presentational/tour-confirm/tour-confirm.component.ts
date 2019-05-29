@@ -7,11 +7,16 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class TourConfirmComponent implements OnInit {
   @Output() cancelAppointment = new EventEmitter<string>();
-  constructor() {}
+  @Output() navigate = new EventEmitter<string>();
 
+  constructor() {}
   ngOnInit() {}
 
   cancelAppointmentClick() {
     this.cancelAppointment.emit();
+  }
+
+  navigateTo(url: string) {
+    this.navigate.emit(url);
   }
 }

@@ -35,10 +35,16 @@
       shoppers who may be touring the home after you.
     </div>
     <div class="tour-confirm__actions">
-      <button class="tour-confirm__button br-button br-button--primary-blue">
+      <button
+        class="tour-confirm__button br-button br-button--primary-blue"
+        (click)="navigateTo('/find/home-plan-detail')"
+      >
         BACK TO HOME DETAILS
       </button>
-      <button class="tour-confirm__button br-button br-button--primary-blue">
+      <button
+        class="tour-confirm__button br-button br-button--primary-blue"
+        (click)="navigateTo('/find/community-microsite')"
+      >
         BACK TO COMMUNITY
       </button>
     </div>
