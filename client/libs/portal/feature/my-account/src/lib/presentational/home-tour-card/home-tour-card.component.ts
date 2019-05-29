@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HomeTourCardComponent implements OnInit {
   @Input() previus: boolean;
+  @Input() moveInNow: boolean;
 
   constructor() {}
 

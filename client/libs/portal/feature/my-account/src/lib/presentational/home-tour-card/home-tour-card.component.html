@@ -5,8 +5,16 @@
     />
   </div>
   <div class="second-content">
-    <div class="br-text-primary-dark br-header-text br-header-text--small-lg">
+    <div
+      class="br-text-primary-dark br-header-text br-header-text--small-lg house-name-text-desktop"
+    >
       Torrington II – Homesite 0105
+    </div>
+    <div
+      class="br-text-primary-dark br-header-text br-header-text--small-lg house-name-text-mobile"
+    >
+      Torrington II <br />
+      Homesite 0105
     </div>
     <div class="br-text-dark-gray br-header-text br-header-text--small-lg">
       The Bluffs at Sleeter Lake Single-Family Homes
@@ -33,6 +41,9 @@
     </div>
   </div>
   <div class="third-content" *ngIf="!previus">
+    <button *ngIf="moveInNow" class="br-button br-button--primary-blue">
+      SEE MOVE-IN-NOW HOME
+    </button>
     <button class="br-button br-button--primary-blue">RESCHEDULE</button>
     <button class="br-button br-button--secondary-blue">CANCEL</button>
   </div>
