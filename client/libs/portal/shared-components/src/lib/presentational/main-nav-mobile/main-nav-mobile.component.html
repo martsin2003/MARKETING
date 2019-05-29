@@ -1,139 +1,143 @@
 <div>
   <mat-accordion hideToggle displayMode="flat">
     <mat-expansion-panel class="mobile-expansion-panel" #findMyHomePanel="matExpansionPanel">
-      <mat-expansion-panel-header class="br-text-primary">
+      <mat-expansion-panel-header class="parent-menu">
         <span class="pr-1">
           <mat-icon class="expand-arrow" [ngClass]="{ expanded: findMyHomePanel.expanded }">
             expand_more
           </mat-icon>
         </span>
-        <span>FIND MY HOME</span>
+        <span class="mobile-nav__title">FIND MY HOME</span>
       </mat-expansion-panel-header>
-      <div class="d-flex flex-column mobile-list-background">
-        <span class="pl-2 pt-2 font-weight-bold text-left">VIRGINIA</span>
-        <mat-list>
-          <mat-list-item class="font-weight-bold">
-            <span class="ml-5">Frederick County, VA</span>
+      <div class="br-background-primary">
+        <div class="mobile-nav__title mobile-nav__title--sub">VIRGINIA</div>
+        <mat-list class="mobile-nav-list">
+          <mat-list-item>
+            <span class="ml-5 mobile-nav__item">Frederick County, VA</span>
           </mat-list-item>
           <mat-divider></mat-divider>
-          <mat-list-item class="font-weight-bold">
-            <span class="ml-5">Loudoun County, VA</span>
+          <mat-list-item>
+            <span class="ml-5 mobile-nav__item">Loudoun County, VA</span>
           </mat-list-item>
           <mat-divider></mat-divider>
-          <mat-list-item class="font-weight-bold">
-            <span class="ml-5">Prince William County, VA</span>
+          <mat-list-item>
+            <span class="ml-5 mobile-nav__item">Prince William County, VA</span>
           </mat-list-item>
         </mat-list>
       </div>
-      <div class="d-flex flex-column">
-        <span class="pl-2 pt-2 font-weight-bold text-left">MARYLAND</span>
+      <div>
+        <div class="mobile-nav__title mobile-nav__title--sub">MARYLAND</div>
         <mat-list>
-          <mat-list-item class="font-weight-bold">
-            <span class="ml-5">Anne Arundel County, MD</span>
+          <mat-list-item>
+            <span class="ml-5 mobile-nav__item">Anne Arundel County, MD</span>
           </mat-list-item>
           <mat-divider></mat-divider>
-          <mat-list-item class="font-weight-bold">
-            <span class="ml-5">Montgomery County, MD</span>
+          <mat-list-item>
+            <span class="ml-5 mobile-nav__item">Montgomery County, MD</span>
           </mat-list-item>
           <mat-divider></mat-divider>
-          <mat-list-item class="font-weight-bold">
-            <span class="ml-5">Talbot County, MD</span>
+          <mat-list-item>
+            <span class="ml-5 mobile-nav__item">Talbot County, MD</span>
           </mat-list-item>
         </mat-list>
       </div>
-      <div class="d-flex flex-column mobile-list-background">
-        <span class="pl-2 pt-2  font-weight-bold text-left">DELAWARE</span>
+      <div class="br-background-primary">
+        <div class="mobile-nav__title mobile-nav__title--sub">DELAWARE</div>
         <mat-list>
-          <mat-list-item class="font-weight-bold">
-            <span class="ml-5">Sussex County, DE</span>
+          <mat-list-item>
+            <span class="ml-5 mobile-nav__item">Sussex County, DE</span>
           </mat-list-item>
         </mat-list>
       </div>
-      <div class="d-flex flex-column">
+      <div>
         <mat-list>
-          <mat-list-item class="font-weight-bold">
-            <span class="ml-5" (click)="navigateTo('/find/communities')">View All Communities</span>
+          <mat-list-item>
+            <span class="ml-5 mobile-nav__item" (click)="navigateTo('/find/communities')"
+              >View All Communities</span
+            >
           </mat-list-item>
           <mat-divider></mat-divider>
-          <mat-list-item class="font-weight-bold">
-            <span class="ml-5">View All Move-In-Now Homes</span>
+          <mat-list-item>
+            <span class="ml-5 mobile-nav__item">View All Move-In-Now Homes</span>
           </mat-list-item>
         </mat-list>
       </div>
     </mat-expansion-panel>
     <mat-expansion-panel class="mobile-expansion-panel" #homePlansPanel="matExpansionPanel">
-      <mat-expansion-panel-header class="br-text-primary">
+      <mat-expansion-panel-header class="parent-menu">
         <span class="pr-1">
           <mat-icon class="expand-arrow" [ngClass]="{ expanded: homePlansPanel.expanded }">
             expand_more
           </mat-icon>
         </span>
-        <span (click)="navigateTo('/home-plans')">HOME PLANS</span>
+        <!-- (click)="navigateTo('/home-plans')" -->
+        <span class="mobile-nav__title">HOME PLANS</span>
       </mat-expansion-panel-header>
-      <div class="d-flex flex-column mobile-list-background">
+      <div class="br-background-primary">
         <mat-list>
-          <mat-list-item class="font-weight-bold">
-            <span class="ml-5">Single-Family Homes</span>
+          <mat-list-item>
+            <span class="ml-5 mobile-nav__item">Single-Family Homes</span>
           </mat-list-item>
           <mat-divider></mat-divider>
-          <mat-list-item class="font-weight-bold">
-            <span class="ml-5">Townhomes</span>
+          <mat-list-item>
+            <span class="ml-5 mobile-nav__item">Townhomes</span>
           </mat-list-item>
           <mat-divider></mat-divider>
-          <mat-list-item class="font-weight-bold">
-            <span class="ml-5">Condos</span>
+          <mat-list-item>
+            <span class="ml-5 mobile-nav__item">Condos</span>
           </mat-list-item>
           <mat-divider></mat-divider>
-          <mat-list-item class="font-weight-bold">
-            <span class="ml-5">See All Home Plans</span>
+          <mat-list-item>
+            <span class="ml-5 mobile-nav__item">See All Home Plans</span>
           </mat-list-item>
         </mat-list>
       </div>
     </mat-expansion-panel>
     <mat-expansion-panel class="mobile-expansion-panel" #innovationsPanel="matExpansionPanel">
-      <mat-expansion-panel-header class="br-text-primary">
+      <mat-expansion-panel-header class="parent-menu">
         <span class="pr-1">
           <mat-icon class="expand-arrow" [ngClass]="{ expanded: innovationsPanel.expanded }">
             expand_more
           </mat-icon>
         </span>
-        <span>EMPOWER INNOVATIONS</span>
+        <span class="mobile-nav__title">EMPOWER INNOVATIONS</span>
       </mat-expansion-panel-header>
-      <div class="d-flex flex-column mobile-list-background">
-        <mat-list>
-          <mat-list-item class="font-weight-bold" (click)="navigateTo('/empower')">
-            <span class="ml-5">Overview</span>
+      <div class="br-background-primary">
+        <mat-list class="mobile-nav-list">
+          <!-- (click)="navigateTo('/empower')" -->
+          <mat-list-item>
+            <span class="ml-5 mobile-nav__item">Overview</span>
           </mat-list-item>
           <mat-divider></mat-divider>
-          <mat-list-item class="font-weight-bold">
-            <span class="ml-5">My Time Home Hours</span>
+          <mat-list-item>
+            <span class="ml-5 mobile-nav__item">My Time Home Hours</span>
           </mat-list-item>
           <mat-divider></mat-divider>
-          <mat-list-item class="font-weight-bold">
-            <span class="ml-5">My Style Quick-Move Homes</span>
+          <mat-list-item>
+            <span class="ml-5 mobile-nav__item">My Style Quick-Move Homes</span>
           </mat-list-item>
           <mat-divider></mat-divider>
-          <mat-list-item class="font-weight-bold">
-            <span class="ml-5">My Vision Virtual Design</span>
+          <mat-list-item>
+            <span class="ml-5 mobile-nav__item">My Vision Virtual Design</span>
           </mat-list-item>
           <mat-divider></mat-divider>
-          <mat-list-item class="font-weight-bold">
-            <span class="ml-5 text-left">My Command Smart Home Automation</span>
+          <mat-list-item>
+            <span class="ml-5 mobile-nav__item">My Command Smart Home Automation</span>
           </mat-list-item>
           <mat-divider></mat-divider>
-          <mat-list-item class="font-weight-bold">
-            <span class="ml-5">My Apps 24/7 Connection</span>
+          <mat-list-item>
+            <span class="ml-5 mobile-nav__item">My Apps 24/7 Connection</span>
           </mat-list-item>
           <mat-divider></mat-divider>
-          <mat-list-item class="font-weight-bold">
-            <span class="ml-5 text-left">My Energy Efficiency and Sustainability</span>
+          <mat-list-item>
+            <span class="ml-5 mobile-nav__item">My Energy Efficiency and Sustainability</span>
           </mat-list-item>
         </mat-list>
       </div>
     </mat-expansion-panel>
     <mat-expansion-panel disabled>
-      <mat-expansion-panel-header class="br-text-primary">
-        <span>WHY BROOKFIELD?</span>
+      <mat-expansion-panel-header>
+        <span class="mobile-nav__title">WHY BROOKFIELD?</span>
       </mat-expansion-panel-header>
     </mat-expansion-panel>
   </mat-accordion>

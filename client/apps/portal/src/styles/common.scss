@@ -52,6 +52,10 @@
   background-color: $primary-light;
 }
 
+.br-background-primary-dark {
+  background-color: $primary-dark;
+}
+
 // Carousel images
 
 .carousel-title {
@@ -178,20 +182,22 @@
     background-color: transparent;
     position: relative;
 
-    &:hover,
-    &:active {
-      background: none;
-      color: black;
-      mix-blend-mode: lighten;
-      &::before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background-color: white;
-        mix-blend-mode: color;
+    &:not(.br-button--no-hover) {
+      &:hover,
+      &:active {
+        background: none;
+        color: black;
+        mix-blend-mode: lighten;
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: white;
+          mix-blend-mode: color;
+        }
       }
     }
   }
@@ -243,6 +249,10 @@
 }
 
 .br-content-text {
+  &--x-small {
+    font-size: 13px;
+    line-height: 17px;
+  }
   &--small {
     font-size: 14px;
     line-height: 20px;
@@ -258,7 +268,7 @@
 }
 
 .br-homepage-icon {
-  height: 53px;
+  height: 50px;
 }
 
 ::ng-deep .mat-checkbox-inner-container {
@@ -330,8 +340,8 @@
 
 // Helpers for fonts
 
-.helvetica-medium {
-  font-family: 'Helvetica-Neue-Medium' !important;
+.helvetica-regular {
+  font-family: 'Helvetica-Neue-Regular' !important;
 }
 
 .helvetica-light {
@@ -432,7 +442,6 @@
         color: $primary;
       }
       .mat-expansion-panel-header {
-        font-size: 18px;
         padding: 0 16px;
         .mat-content {
           align-items: center;

@@ -5,73 +5,69 @@
   [fullHight]="true"
 >
 </brookfield-carousel>
-<div class="home-container">
-  <brookfield-search-homes [isMobileView]="isMobileScreen$ | async"></brookfield-search-homes>
+
+<brookfield-search-homes [isMobileView]="isMobileScreen$ | async"></brookfield-search-homes>
+
+<div class="about-brookfield px-3 py-4">
+  <h1 class="about-brookfield__title helvetica-bold br-text-primary mt-0 mb-3">
+    The Mid-Atlantic's Most Innovative Homebuilder
+  </h1>
+  <p class="my-4 about-brookfield__praise-text w-100 helvetica br-content-text--large">
+    Brookfield Residential makes finding the home you want easier than you ever imagined.<br />Together,
+    we'll create a home that is everything you dreamed.
+  </p>
+  <p class="my-4 about-brookfield__praise-text w-100 helvetica-bold br-content-text--large">
+    Our Empower innovation features redefine how you shop for your new home,<br />
+    personalize your design and enjoy life in your new home each day.
+  </p>
+  <button
+    class="about-brookfield__discover-btn long-button br-button br-button--primary-blue br-button--desktop my-4"
+  >
+    DISCOVER EMPOWER
+  </button>
 </div>
 
-<div class="d-flex flex-column align-items-center home">
-  <div class="d-flex flex-column align-items-center text-center px-3 py-4">
-    <h1 class="praise-heading br-text-primary mt-0 mb-3">
-      The Mid-Atlantic's Most Innovative Homebuilder
-    </h1>
-    <p class="my-2 praise-text w-100">
-      Brookfield Residential makes finding the home you want easier than you ever imagined.<br />Together,
-      we'll create a home that is everything you dreamed.
-    </p>
-    <p class="my-2 praise-text w-100">
-      <b>
-        Our Empower innovation features redefine how you shop for your new home,<br />
-        personalize your design and enjoy life in your new home each day.
-      </b>
-    </p>
-    <button class="long-button br-button br-button--primary-blue br-button--desktop my-3">
-      DISCOVER EMPOWER
-    </button>
-  </div>
-
-  <div class="w-100 info-cards">
-    <div
-      class="info-cards--item d-flex flex-column justify-content-center align-items-left gray-background"
-    >
-      <div class="p-5">
-        <div class="d-flex flex-row align-self-center justify-content-between w-100">
-          <img src="assets/icons/group.svg" class="bigger-logo" />
-          <img src="assets/icons/color.svg" class="bigger-logo" />
-          <img src="assets/icons/th.svg" class="bigger-logo" />
-        </div>
-        <h2 class="pt-2 big-head">Search All Home Plans</h2>
-        <p class="font-18 m-0">
-          From condos and townhomes to the most luxurious single-family homes, you'll find a
-          floorplan that fits exactly what you're looking for.
-        </p>
-        <button
-          class="br-button br-button--secondary-blue br-button--desktop align-self-start mt-4"
-        >
-          SEE ALL HOMES
-        </button>
+<div class="info-cards">
+  <div class="info-cards__info-container br-background-primary">
+    <div class="info-cards__info">
+      <div class="d-flex justify-content-between">
+        <img src="assets/icons/group.svg" class="br-homepage-icon" />
+        <img src="assets/icons/color.svg" class="br-homepage-icon" />
+        <img src="assets/icons/th.svg" class="br-homepage-icon" />
       </div>
-    </div>
-    <div class="info-cards--item">
-      <img src="assets/images/desktop/couch.png" class="w-100 h-100 fitted-correctly-img" />
+      <h2 class="br-header-text--medium helvetica-bold br-text-primary">Search All Home Plans</h2>
+      <p class="br-content-text--large m-0">
+        From condos and townhomes to the most luxurious single-family homes, you'll find a floorplan
+        that fits exactly what you're looking for.
+      </p>
+      <button class="br-button br-button--secondary-blue br-button--desktop mt-4">
+        SEE ALL HOMES
+      </button>
     </div>
   </div>
 
-  <div class="info-cards w-100">
-    <div class="info-cards--item info-cards--order-1">
-      <img src="assets/images/desktop/people.png" class="w-100 h-100 fitted-correctly-img" />
-    </div>
-    <div
-      class="info-cards--item d-flex flex-column justify-content-center align-items-left p-5 gray-background"
-    >
-      <h4 class="m-0 br-text-primary-light font-16">
+  <div class="info-cards__image">
+    <img src="assets/images/desktop/couch.png" class="w-100 h-100" />
+  </div>
+</div>
+
+<div class="info-cards">
+  <div class="info-cards__image info-cards--order-1">
+    <img src="assets/images/desktop/people.png" class="w-100 h-100" />
+  </div>
+  <div class="info-cards__info-container br-background-primary">
+    <div class="info-cards__info">
+      <h4 class="helvetica-bold br-header-text--small br-text-primary-light my-2">
         TAKE CONTROL OF YOUR SEARCH
       </h4>
-      <h2 class="mt-0 big-head">Empower Innovations</h2>
-      <p class="font-18 m-0">
+      <h2 class="br-header-text--medium helvetica-bold br-text-primary mt-2">
+        Empower Innovations
+      </h2>
+      <p class="br-content-text--large m-0">
         Tap our latest innovation features to enhance your home shopping experience. You'll discover
         new ways to find, tour, and personalize new homes in a smooth, enjoyable process.
       </p>
-      <button class="br-button br-button--secondary-blue br-button--desktop align-self-start mt-4">
+      <button class="br-button br-button--secondary-blue br-button--desktop mt-4">
         GET EMPOWERED
       </button>
     </div>

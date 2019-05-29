@@ -41,7 +41,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Helvetica-Neue-Medium', sans-serif !important;
+  font-family: 'Helvetica-Neue-Regular', sans-serif !important;
 }
 
 div,
@@ -58,7 +58,7 @@ a,
 strong,
 b,
 i {
-  font-family: 'Helvetica-Neue-Medium', sans-serif !important;
+  font-family: 'Helvetica-Neue-Regular', sans-serif !important;
 }
 
 button,
@@ -72,62 +72,6 @@ a {
 .mobile-expansion-panel .mat-expansion-panel-body {
   padding: 0px;
 }
-
-//BUTTON STYLING
-
-// START - OLD STYLING - DO NOT USE - WILL BE MIGRATED TO CLASSES IN common.scss AND REMOVED
-
-// .br-button {
-//   height: 55px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   font-family: 'Helvetica-Neue-Medium', sans-serif;
-//   font-size: 16px;
-//   font-weight: 800;
-//   line-height: 1;
-//   padding: 0px 20px;
-//   outline: none;
-//   border: 1px solid;
-//   transition: color 0.1s;
-//   transition: 0.25s;
-//   cursor: pointer;
-//   &:disabled {
-//     opacity: 0.5;
-//     pointer-events: none;
-//   }
-
-//   mat-icon,
-//   img {
-//     margin-right: 10px;
-//   }
-
-//   &--tertiary {
-//     color: transparent;
-//     background-color: $primary-light;
-//   }
-//   &--primary {
-//     color: $pure-white;
-//     border-color: $primary-light;
-//     background-color: $primary-light;
-//     &:hover {
-//       background: $primary;
-//     }
-//   }
-//   &--secondary-blue {
-//     color: $primary-light;
-//     border-color: $primary-light;
-//     background-color: transparent;
-//     &:hover {
-//       background: $primary-light;
-//       color: white;
-//     }
-//   }
-//   &--light {
-//     font-family: HelveticaNeue-Light;
-//     font-weight: 100;
-//   }
-// }
 
 // header style
 .br-header {
