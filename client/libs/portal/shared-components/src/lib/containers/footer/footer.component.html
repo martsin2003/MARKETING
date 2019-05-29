@@ -1,4 +1,8 @@
-<div class="footer-container">
+<div class="br-background-primary-dark br-text-pure-white p-3">
+  <a (click)="navigateTo('home')" class="footer__br-logo">
+    <img src="assets/logos/white_brookfield_logo.svg" alt="" />
+  </a>
+
   <ng-container *ngIf="isMobileScreen$ | async; else desktopFooter">
     <brookfield-footer-mobile></brookfield-footer-mobile>
   </ng-container>

@@ -1,10 +1,14 @@
 @import 'variables.scss';
 
-.footer-container {
-  background-color: $primary;
-  color: $pure-white;
-
-  .label-text {
-    color: $pure-white;
+.footer {
+  &__br-logo {
+    height: 100%;
+    display: inline-block;
+    img {
+      height: 70px;
+      @media screen and (min-width: $mobile-view) {
+        height: 60px;
+      }
+    }
   }
 }

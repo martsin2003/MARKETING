@@ -1,12 +1,26 @@
 @import 'variables.scss';
 
-.footer {
-  background-color: $primary;
+.footer-desktop {
+  &__middle-col {
+    margin: 0 80px;
+    @media screen and (max-width: $tablet-view) {
+      margin: 0 60px;
+    }
+    @media screen and (max-width: 830px) {
+      margin: 0 30px;
+    }
+  }
 
-  .mat-flat-button.mat-accent,
-  .mat-raised-button.mat-accent,
-  .mat-fab.mat-accent,
-  .mat-mini-fab.mat-accent {
-    background-color: white;
+  &__address {
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  &__menu-items {
+    font-size: 14px;
+    line-height: 24px;
+    a {
+      font-family: $helvetica-bold;
+    }
   }
 }
