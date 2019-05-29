@@ -377,6 +377,9 @@
   .plus-icon {
     position: absolute;
     right: 20%;
+    @media screen and (max-width: 900px) {
+      right: 15px;
+    }
   }
   ::ng-deep .mat-expansion-panel-body {
     padding: 0px 16px 16px !important;
