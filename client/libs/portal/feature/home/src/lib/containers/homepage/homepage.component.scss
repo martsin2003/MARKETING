@@ -10,6 +10,7 @@
     @media only screen and (max-width: $mobile-view) {
       font-size: 28px;
       line-height: 30px;
+      text-align: left;
     }
   }
 
@@ -31,41 +32,44 @@
 .info-cards {
   max-height: 400px;
   display: flex;
-  flex-direction: column-reverse;
-  @media only screen and (min-width: 769px) {
-    flex-direction: row;
+  flex-direction: row;
+  @media only screen and (max-width: $mobile-view) {
+    flex-direction: column-reverse;
+    max-height: 100%;
   }
 
   &__image {
-    @media only screen and (min-width: 769px) {
-      flex: 1 0 50%;
+    flex: 1 1 50%;
+    @media only screen and (max-width: $mobile-view) {
+      flex: 1 1 100%;
+    }
+    img {
+      display: block;
+      object-fit: cover;
+    }
+  }
+
+  &__info-container {
+    padding: 45px;
+    flex: 1 1 50%;
+    @media screen and (max-width: $tablet-view) {
+      padding: 35px;
+    }
+    @media only screen and (max-width: $mobile-view) {
+      padding: 20px;
+      flex: 1 1 100%;
     }
   }
 
   &__info {
-    max-width: 80%;
-    @media screen and (max-width: $tablet-view) {
+    max-width: 350px;
+    @media only screen and (max-width: $mobile-view) {
       max-width: 100%;
     }
   }
   &--order-1 {
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: $mobile-view) {
       order: 1;
     }
   }
-}
-
-.bigger-logo {
-  width: 75px;
-  height: 75px;
-}
-.big-head {
-  font-size: 28px;
-  color: $primary;
-}
-.big-button {
-  width: 40%;
-}
-.fitted-correctly-img {
-  object-fit: cover;
 }
