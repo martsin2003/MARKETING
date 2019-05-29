@@ -23,13 +23,31 @@ export class HomepageComponent implements OnInit {
   ];
   imageTitles = [
     {
-      texts: ['The Home You Want.', 'Easier Than You Imagined.', 'Make the Connection']
+      content: `
+        <div class="image-content">
+          <p class="image-content__content-title">The Home You Want.</p>
+          <p class="image-content__content-title">Easier Than You Imagined.</p>
+          <p class="image-content__subtitle">Make the Connection</p>
+        </div>
+      `
     },
     {
-      texts: ['The Right Home.', 'The Perfect Place.', 'Enjoy Home Shopping Made Easy']
+      content: `
+        <div class="image-content">
+          <p class="image-content__content-title">The Right Home.</p>
+          <p class="image-content__content-title">The Perfect Place.</p>
+          <p class="image-content__subtitle">Enjoy Home Shopping Made Easy</p>
+        </div>
+      `
     },
     {
-      texts: ['More Freedom.', 'More Control.', 'Discover Empower Innovation Features']
+      content: `
+        <div class="image-content">
+          <p class="image-content__content-title">More Freedom.</p>
+          <p class="image-content__content-title">More Control.</p>
+          <p class="image-content__subtitle">Discover Empower Innovation Features</p>
+        </div>
+      `
     }
   ];
   constructor(private detectMobileViewService: DetectMobileViewService) {}
