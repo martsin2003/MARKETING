@@ -9,9 +9,10 @@
   <brookfield-communities-header
     [view]="view"
     (viewChanged)="viewChanged($event)"
+    [parentFilter]="filter"
   ></brookfield-communities-header>
   <div class="community-list__content">
-    <div class="community-list__communities">
+    <div class="community-list__communities" *ngIf="view !== 'map'">
       <ng-container *ngIf="communities$ | async as communities">
         <div class="community-list__community" *ngFor="let community of communities">
           <brookfield-community-card
@@ -28,5 +29,23 @@
     <brookfield-communities-selected
       [communities]="communitiesForCompare"
     ></brookfield-communities-selected>
+  </div>
+
+  <div class="footer-menu">
+    <div
+      class="footer-menu__button-show-map"
+      (click)="viewChanged(view === 'list' ? 'map' : 'list')"
+    >
+      <img
+        [src]="
+          view === 'list' ? 'assets/icons/show-map-icon.svg' : 'assets/icons/show-list-icon.svg'
+        "
+      />
+      {{ view === 'list' ? 'Show Map' : 'Show list' }}
+    </div>
+    <div class="footer-menu__button-filter" (click)="filter = { open: true }">
+      <img src="assets/icons/filter-icon.svg" />
+      <span class="communities-header__filter-text">Filters</span>
+    </div>
   </div>
 </div>
