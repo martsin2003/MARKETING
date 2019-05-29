@@ -1,8 +1,10 @@
 <brookfield-carousel
   [images]="carouselImages$ | async"
+  [imageTitles]="imageTitles"
   [fullWidth]="true"
   [fullHight]="true"
-></brookfield-carousel>
+>
+</brookfield-carousel>
 <div class="home-container">
   <brookfield-search-homes [isMobileView]="isMobileScreen$ | async"></brookfield-search-homes>
 </div>

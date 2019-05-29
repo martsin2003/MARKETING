@@ -21,6 +21,7 @@ export class CarouselComponent implements OnInit, AfterContentInit, AfterViewIni
   @Input() quantitySlides: number;
   @Input() fullWidth: boolean;
   @Input() fullHight: boolean;
+  @Input() imageTitles: { texts: string[] }[];
   @Input() images: string[];
   @Input() margins = 0;
   @Input() customSize: boolean;
