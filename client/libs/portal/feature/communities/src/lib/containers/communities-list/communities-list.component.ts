@@ -77,7 +77,6 @@ export class CommunitiesListComponent implements OnInit, OnDestroy {
   viewChanged(view: CommunitiesView) {
     this.view = view;
     this.switchedViewType = true;
-    console.log(this.view);
   }
 
   communitySelected(id: string) {
