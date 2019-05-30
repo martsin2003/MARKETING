@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyTimeHomeToursComponent implements OnInit {
   openedExpansion: boolean;
-  isUncomigTours: boolean;
+  isUncomigTours: boolean = true;
 
   constructor() {}
 

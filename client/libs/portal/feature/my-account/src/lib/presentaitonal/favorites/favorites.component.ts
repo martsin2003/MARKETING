@@ -23,7 +23,8 @@ export class FavoritesComponent implements OnInit {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(FavoritesDialogComponent, {
-      width: '80%'
+      width: '80%',
+      panelClass: 'favorites-dialog'
     });
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');

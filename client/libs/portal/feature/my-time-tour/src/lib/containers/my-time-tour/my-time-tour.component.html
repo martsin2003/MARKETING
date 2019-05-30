@@ -32,7 +32,10 @@
       ></brookfield-tour-create-password>
     </ng-container>
     <ng-container *ngSwitchCase="6">
-      <brookfield-tour-confirm (cancelAppointment)="cancelAppointment()"></brookfield-tour-confirm>
+      <brookfield-tour-confirm
+        (navigate)="routeToUrl($event)"
+        (cancelAppointment)="cancelAppointment()"
+      ></brookfield-tour-confirm>
     </ng-container>
   </ng-container>
 </div>

@@ -1,12 +1,16 @@
 <div class="navigation" [ngClass]="{ active: menuOpened, 'absolute-nav': absoluteHeader }">
   <ng-container *ngIf="showMobileHeader$ | async; else desktopNav">
     <div class="d-flex justify-content-between align-items-center p-2">
-      <a
-        (click)="routeToUrl('home')"
-        class="no-underline text-right font-weight-bold label-text pl-1 home-link"
-      >
-        <span class="font-36 d-block label-text-1">Brookfield</span>
-        <span class="font-24 d-block label-text-2">Residential</span>
+      <a (click)="routeToUrl('home')" class="mt-2">
+        <img
+          class="navigation__mobile-logo"
+          [src]="
+            menuOpened || !absoluteHeader
+              ? 'assets/logos/color_brookfield_logo.svg'
+              : 'assets/logos/white_brookfield_logo.svg'
+          "
+          alt=""
+        />
       </a>
       <button class="menu-toggle p-0" type="button" (click)="toggleMenuOpen()">
         <mat-icon *ngIf="menuOpened; else hamburger">close</mat-icon>
@@ -27,13 +31,13 @@
 
       <div class="line-box empty"></div>
       <div class="line-box">
-        <span>Privacy Policy</span>
+        <span class="mobile-nav__title">Privacy Policy</span>
       </div>
       <div class="line-box">
-        <span>Terms & Legal</span>
+        <span class="mobile-nav__title">Terms & Legal</span>
       </div>
       <div class="line-box">
-        <span>Equal Housing</span>
+        <span class="mobile-nav__title">Equal Housing</span>
       </div>
     </div>
   </ng-container>

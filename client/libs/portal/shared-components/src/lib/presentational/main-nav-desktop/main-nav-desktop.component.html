@@ -3,7 +3,7 @@
     class="main-navigation-container d-flex align-items-stretch opened"
     [ngClass]="{ opened: menuIsOpened, 'absolute-nav': absoluteNav }"
   >
-    <a (click)="navigateTo('home')" class="no-underline text-right font-weight-bold pl-3 py-2">
+    <a (click)="navigateTo('home')" class="pl-3 py-2">
       <img
         [src]="
           menuIsOpened || !absoluteNav

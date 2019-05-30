@@ -9,7 +9,7 @@
     color: #fff;
   }
   &__text {
-    font-family: HelveticaNeue-Medium;
+    font-family: $helvetica;
     .tour-step--white & {
       color: #ffffff;
     }

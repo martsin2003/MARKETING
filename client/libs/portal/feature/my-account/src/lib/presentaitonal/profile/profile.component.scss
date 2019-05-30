@@ -6,32 +6,61 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+
   .br-header-text {
     font-family: $helvetica-bold;
+
+    @media screen and (max-width: $mobile-view) {
+      font-family: $helvetica-light;
+    }
   }
+
   form {
     max-width: 600px;
     width: 600px;
     margin-top: 30px;
+
+    @media screen and (max-width: $mobile-view) {
+      width: 100%;
+      max-width: unset;
+      margin-top: 16px;
+    }
   }
+
   .form-section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 5px 0px;
+
     .input-wrapper {
       width: 47.5%;
       display: flex;
       flex-direction: column;
+
       label {
         padding: 10px 0px;
         font-family: $helvetica-light;
       }
     }
+
+    @media screen and (max-width: $mobile-view) {
+      flex-direction: column;
+
+      .input-wrapper {
+        width: 100%;
+      }
+    }
   }
+
   .button-wrapper {
     display: flex;
     justify-content: center;
     margin-top: 30px;
+  }
+
+  @media screen and (max-width: $mobile-view) {
+    padding: 30px 15px;
+    align-items: flex-start;
   }
 }

@@ -1,15 +1,27 @@
+@import 'variables.scss';
+
 .community-list {
   &__content {
     display: flex;
+    height: calc(100vh - 183px);
+    overflow: hidden;
+    @media screen and (max-width: $mobile-view) {
+      height: auto;
+    }
   }
   &__communities {
     width: 100%;
+    height: calc(100vh - 183px);
     display: flex;
     flex-wrap: wrap;
     flex: 1;
+    overflow: auto;
+    @media screen and (max-width: $mobile-view) {
+      height: auto;
+    }
   }
   &__map-block {
-    height: 70vh;
+    height: calc(100vh - 183px);
   }
   &__community {
     flex-basis: 50%;
@@ -23,6 +35,54 @@
   &__community-card {
     width: 100%;
   }
+  .footer-menu {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    box-shadow: 0px -2px 2px 0px rgba(0, 0, 0, 0.15);
+    &__button-show-map {
+      flex-basis: 50%;
+      padding: 10px 0px;
+      background: $primary;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      color: white;
+      cursor: pointer;
+      img {
+        margin-right: 10px;
+      }
+    }
+    &__button-filter {
+      flex-basis: 50%;
+      padding: 10px 0px;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      color: $primary;
+      cursor: pointer;
+      img {
+        margin-right: 10px;
+      }
+    }
+    @media screen and (min-width: $mobile-view) {
+      display: none;
+    }
+  }
+}
+
+.filter-container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
 }
 
 .community-list__list-map {

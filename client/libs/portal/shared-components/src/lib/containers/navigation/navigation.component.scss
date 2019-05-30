@@ -5,12 +5,6 @@
     box-shadow: $box-shadow;
     border-bottom: 1px solid $divider;
   }
-  .label-text-1 {
-    color: $primary;
-  }
-  .label-text-2 {
-    color: $dark-yellow;
-  }
   .menu-toggle {
     color: $primary;
     background-color: transparent;
@@ -21,13 +15,15 @@
   .home-link {
     cursor: pointer;
   }
+  &__mobile-logo {
+    height: 60px;
+  }
 
   &.active {
     position: fixed;
     top: 0;
     z-index: 10000;
     width: 100%;
-    overflow: scroll;
     height: 100%;
     background-color: $pure-white;
     border-bottom: none;
@@ -35,7 +31,7 @@
   &.absolute-nav {
     position: absolute;
     width: 100%;
-    z-index: 1000;
+    z-index: 10000;
     &:not(.active) {
       .label-text,
       .label-text-1,
@@ -112,6 +108,67 @@
         bottom: 0;
         left: 0;
         border-bottom: 4px solid $pure-white;
+      }
+    }
+  }
+}
+
+// Mobile nav shared styles
+::ng-deep {
+  .mobile-nav {
+    &__title {
+      font-size: 16px;
+      line-height: 19px;
+      text-align: left;
+      color: $primary;
+      &:hover {
+        cursor: pointer;
+      }
+      &--sub {
+        padding: 8px 16px;
+      }
+    }
+    &__item {
+      font-size: 18px;
+      line-height: 22px;
+      font-family: $helvetica-bold;
+      color: $dark-gray;
+      padding: 14px 0;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .mat-list.mobile-nav-list {
+    padding: 0;
+    .mat-list-item {
+      height: unset !important;
+    }
+  }
+
+  .mat-accordion {
+    .mat-expansion-panel {
+      &.mobile-expansion-panel {
+        .mat-expansion-panel-header {
+          min-height: 50px !important;
+          &.parent-menu {
+            padding-left: 6px;
+          }
+          &.mat-expanded {
+            .mobile-nav__title {
+              color: $primary-light;
+            }
+            .expand-arrow {
+              color: $primary-light;
+            }
+          }
+        }
+      }
+      .mat-expansion-panel-header {
+        &.parent-menu {
+          padding-left: 6px;
+        }
       }
     }
   }

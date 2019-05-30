@@ -1,93 +1,109 @@
 @import 'variables.scss';
 
-.praise-text {
-  text-align: left;
-  @media only screen and (min-width: 769px) {
-    text-align: center;
-    font-size: 18px;
-  }
-}
+.about-brookfield {
+  text-align: center;
 
-.praise-heading {
-  font-size: 24px;
-  @media only screen and (min-width: 769px) {
+  &__title {
     font-size: 36px;
+    line-height: 42px;
+    margin: 0 auto;
+    @media only screen and (max-width: $mobile-view) {
+      font-size: 28px;
+      line-height: 30px;
+      text-align: left;
+    }
+  }
+
+  &__discover-btn {
+    margin: 0 auto;
+    @media only screen and (max-width: $mobile-view) {
+      width: 100%;
+    }
+  }
+
+  &__praise-text {
+    text-align: center;
+    @media only screen and (max-width: $mobile-view) {
+      text-align: left;
+    }
   }
 }
 
 .info-cards {
+  max-height: 400px;
   display: flex;
-  flex-direction: column-reverse;
-  @media only screen and (min-width: 769px) {
-    flex-direction: row;
+  flex-direction: row;
+  @media only screen and (max-width: $mobile-view) {
+    flex-direction: column-reverse;
+    max-height: 100%;
   }
-  &--item {
-    @media only screen and (min-width: 769px) {
-      flex: 1 0 50%;
+
+  &__image {
+    flex: 1 1 50%;
+    @media only screen and (max-width: $mobile-view) {
+      flex: 1 1 100%;
+    }
+    img {
+      display: block;
+      object-fit: cover;
+    }
+  }
+
+  &__info-container {
+    padding: 45px;
+    flex: 1 1 50%;
+    @media screen and (max-width: $tablet-view) {
+      padding: 35px;
+    }
+    @media only screen and (max-width: $mobile-view) {
+      padding: 20px;
+      flex: 1 1 100%;
+    }
+  }
+
+  &__info {
+    max-width: 350px;
+    @media only screen and (max-width: $mobile-view) {
+      max-width: 100%;
     }
   }
   &--order-1 {
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: $mobile-view) {
       order: 1;
     }
   }
 }
 
-// OLD CSS - remove when complete
-// @import '../../styles.scss';
-.home {
-  .image-container {
-    position: relative;
-    text-align: center;
-    color: $pure-white;
-
-    .top-left {
-      position: absolute;
+::ng-deep .image-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  * {
+    padding-left: 20px;
+    color: white;
+  }
+  &:last-child {
+    padding-bottom: 20px;
+  }
+  &__content-title {
+    margin: 0;
+    font-size: 44px;
+    line-height: 48px;
+    font-family: $helvetica-bold;
+    @media only screen and (max-width: $mobile-view) {
+      font-size: 26px;
+      line-height: 30px;
     }
-
-    .bottom-left {
-      position: absolute;
-      bottom: 30px;
-      left: 30px;
+  }
+  &__subtitle {
+    margin: 15px 0 25px;
+    font-size: 28px;
+    line-height: 24px;
+    font-family: $helvetica-bold;
+    @media only screen and (max-width: $mobile-view) {
+      display: none;
     }
   }
-
-  mat-toolbar {
-    background-color: $primary-light;
-  }
-
-  .mat-raised-button {
-    min-width: 215px;
-    height: 50px;
-  }
-
-  .gray-background {
-    background-color: $bg-primary-light;
-  }
-
-  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
-    height: 50px;
-    border-radius: 5px;
-    background-color: $pure-white !important;
-    padding: 0px;
-  }
-
-  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix {
-    padding: 0px !important;
-  }
-}
-// Changes by David
-.bigger-logo {
-  width: 75px;
-  height: 75px;
-}
-.big-head {
-  font-size: 28px;
-  color: $primary;
-}
-.big-button {
-  width: 40%;
-}
-.fitted-correctly-img {
-  object-fit: cover;
 }

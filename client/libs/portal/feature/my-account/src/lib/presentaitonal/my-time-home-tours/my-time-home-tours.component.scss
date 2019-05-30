@@ -3,12 +3,26 @@
 .upcoming-homes-container {
   background: $bg-primary-light;
   padding-bottom: 25px;
+
+  .header-text {
+    text-align: center;
+
+    @media screen and (max-width: $mobile-view) {
+      text-align: start;
+      padding: 0px 8px;
+    }
+  }
+}
+
+.upcoming-homes-card-container {
+  padding: 0px 16px;
 }
 
 .message-container {
   background: $bg-primary-light;
   padding: 25px 0px 25px;
   flex-direction: column;
+
   .br-button {
     margin: 25px 0px 5px;
   }
@@ -16,8 +30,14 @@
 
 .my-account-expansion {
   background: white;
+
   .mat-content {
     display: flex;
     justify-content: center;
+
+    @media screen and (max-width: $mobile-view) {
+      justify-content: space-between;
+      padding: 0 0.5rem;
+    }
   }
 }
