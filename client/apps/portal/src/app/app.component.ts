@@ -8,6 +8,6 @@ import { ScrollToPageTopService } from '@brookfield/common/utilities';
 })
 export class AppComponent {
   constructor(private scrollToPageTopService: ScrollToPageTopService) {
-    this.scrollToPageTopService.scrollTopOnNavtigation();
+    this.scrollToPageTopService.scrollTopOnNavigation();
   }
 }

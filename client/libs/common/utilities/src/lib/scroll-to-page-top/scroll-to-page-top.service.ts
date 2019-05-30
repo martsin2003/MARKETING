@@ -9,7 +9,7 @@ import { ViewportScroller } from '@angular/common';
 export class ScrollToPageTopService {
   constructor(private router: Router, private viewportScroller: ViewportScroller) {}
 
-  scrollTopOnNavtigation() {
+  scrollTopOnNavigation() {
     this.router.events.pipe(filter((e: Event): e is Scroll => e instanceof Scroll)).subscribe(e => {
       if (e.position) {
         // backward navigation
