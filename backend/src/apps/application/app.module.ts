@@ -1,3 +1,4 @@
+import { CommunitiesModule } from './communities/communities.module';
 import { AuthModule } from './auth/auth.module';
 import { PostgraphileService } from './../../core/postgraphile/postgraphile.service';
 import { PostgraphileModule } from './../../core/postgraphile/postgraphile.module';
@@ -25,7 +26,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       keepConnectionAlive: true
     }),
     GraphQLModule.forRootAsync({
-      imports: [PostgraphileModule, AuthModule],
+      imports: [PostgraphileModule, AuthModule, CommunitiesModule],
       useFactory: (postgraphileService: PostgraphileService, moduleRef: ModuleRef) => {
         return {
           context: ({ req }) => ({ req }),
