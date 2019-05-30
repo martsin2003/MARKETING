@@ -21,13 +21,13 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngOnInit() {
-    this.subscribeOnWindowResize();
+    this.subscribeToWindowResize();
   }
 
   ngAfterViewInit() {
     setTimeout(() => {
-      this.setMinHeightOfMeinAppContainer();
-    }, 400);
+      this.setMinHeightOfMainAppContainer();
+    }, 700);
   }
 
   ngOnDestroy() {
@@ -35,19 +35,19 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
     this.destroy$.complete();
   }
 
-  subscribeOnWindowResize() {
-    const lastScrollEvent = fromEvent(window, 'resize').pipe(debounceTime(400));
+  subscribeToWindowResize() {
+    const lastResizeEvent = fromEvent(window, 'resize').pipe(debounceTime(400));
 
-    const throttledScrollEvents = fromEvent(window, 'resize').pipe(throttleTime(400));
+    const throttledResizeEvents = fromEvent(window, 'resize').pipe(throttleTime(400));
 
-    combineLatest(lastScrollEvent, throttledScrollEvents)
+    combineLatest(lastResizeEvent, throttledResizeEvents)
       .pipe(takeUntil(this.destroy$))
       .subscribe(values => {
-        this.setMinHeightOfMeinAppContainer();
+        this.setMinHeightOfMainAppContainer();
       });
   }
 
-  setMinHeightOfMeinAppContainer() {
+  setMinHeightOfMainAppContainer() {
     const newMinHeight =
       window.innerHeight -
       this.footer.nativeElement.clientHeight -
