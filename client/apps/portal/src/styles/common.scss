@@ -5,39 +5,51 @@
 .br-text-primary-dark {
   color: $primary-dark;
 }
+
 .br-text-primary {
   color: $primary;
 }
+
 .br-text-primary-light {
   color: $primary-light;
 }
+
 .br-text-error {
   color: $error;
 }
+
 .br-text-error-pale {
   color: $error-pale;
 }
+
 .br-text-turquoise {
   color: $turquoise;
 }
+
 .br-text-turquoise-pale {
   color: $turquoise-pale;
 }
+
 .br-text-dark-yellow {
   color: $dark-yellow;
 }
+
 .br-text-dark-orange {
   color: $dark-orange;
 }
+
 .br-text-light-blue {
   color: $light-blue;
 }
+
 .br-text-purple-pale {
   color: $purple-pale;
 }
+
 .br-text-dark-gray {
   color: $dark-gray;
 }
+
 .br-text-pure-white {
   color: $pure-white;
 }
@@ -64,6 +76,7 @@
   line-height: 48px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
+
 .carousel-description {
   font-family: $helvetica-bold;
   font-size: 28px;
@@ -118,9 +131,11 @@
 
   &--desktop {
     min-width: 226px;
+
     &-lg {
       min-width: 300px;
     }
+
     @media screen and (max-width: $mobile-view) {
       width: 100%;
     }
@@ -188,6 +203,7 @@
         background: none;
         color: black;
         mix-blend-mode: lighten;
+
         &::before {
           content: '';
           position: absolute;
@@ -205,6 +221,7 @@
   &--tertiary {
     background-color: $primary-light-hover;
     color: $pure-white;
+
     &:hover,
     &:active {
       opacity: 0.8;
@@ -230,18 +247,22 @@
     font-size: 36px;
     line-height: 42px;
   }
+
   &--medium {
     font-size: 28px;
     line-height: 30px;
   }
+
   &--medium-sm {
     font-size: 20px;
     line-height: 24px;
   }
+
   &--small-lg {
     font-size: 18px;
     line-height: 22px;
   }
+
   &--small {
     font-size: 16px;
     line-height: 20px;
@@ -253,14 +274,17 @@
     font-size: 13px;
     line-height: 17px;
   }
+
   &--small {
     font-size: 14px;
     line-height: 20px;
   }
+
   &--medium {
     font-size: 16px;
     line-height: 20px;
   }
+
   &--large {
     font-size: 18px;
     line-height: 24px;
@@ -283,9 +307,11 @@
   &--large {
     height: 36px;
   }
+
   &--medium {
     height: 30px;
   }
+
   &--small {
     height: 24px;
   }
@@ -307,8 +333,17 @@
   outline: 0;
   text-align: left;
   color: $dark-gray;
+
   &--no-border {
     border: none;
+  }
+
+  &--desktop {
+    min-width: 226px;
+
+    &-lg {
+      min-width: 300px;
+    }
   }
 }
 
@@ -364,23 +399,29 @@
 
 ::ng-deep .my-account-expansion {
   position: relative;
+
   ::ng-deep mat-expansion-panel-header {
     padding: 17px 0px !important;
+
     .mat-content {
       color: $primary;
       font-family: $helvetica-bold;
     }
   }
+
   &:nth-child(odd) {
     background-color: $bg-primary-light;
   }
+
   .plus-icon {
     position: absolute;
     right: 20%;
+
     @media screen and (max-width: 900px) {
       right: 15px;
     }
   }
+
   ::ng-deep .mat-expansion-panel-body {
     padding: 0px 16px 16px !important;
   }
@@ -399,6 +440,7 @@
 .expand-arrow {
   transform-origin: center center;
   transition: transform ease-in-out 0.4s;
+
   &.expanded {
     transform: rotate(180deg);
   }
@@ -408,19 +450,23 @@
 
 ::ng-deep mat-bottom-sheet-container {
   padding: 0px !important;
+
   /deep/mat-list {
     padding: 0px !important;
     background: black;
     display: flex;
     align-items: center;
     cursor: pointer;
+
     mat-icon {
       margin-right: 5px;
     }
+
     .mat-list-item-content {
       color: white !important;
       font-weight: 100;
     }
+
     mat-divider {
       border-color: rgb(204, 204, 204) !important;
     }
@@ -444,10 +490,13 @@
       &[disabled] .mat-expansion-panel-header {
         color: $primary;
       }
+
       .mat-expansion-panel-header {
         padding: 0 16px;
+
         .mat-content {
           align-items: center;
+
           .expand-arrow {
             height: 40px;
             width: 40px;
