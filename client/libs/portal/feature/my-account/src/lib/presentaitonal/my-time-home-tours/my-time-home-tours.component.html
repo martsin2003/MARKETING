@@ -1,10 +1,12 @@
 <div class="my-time-container">
   <div class="upcoming-homes-container" *ngIf="isUncomigTours">
-    <h2 class="br-header-text br-header-text--medium br-text-primary-dark py-4 m-0 text-center">
+    <div class="br-header-text br-header-text--medium br-text-primary-dark py-4 m-0 header-text">
       Upcoming Home Tours
-    </h2>
+    </div>
 
-    <brookfield-home-tour-card></brookfield-home-tour-card>
+    <div class="upcoming-homes-card-container">
+      <brookfield-home-tour-card></brookfield-home-tour-card>
+    </div>
   </div>
   <div class="message-container d-flex align-items-center" *ngIf="!isUncomigTours">
     <div class="br-header-text br-header-text--medium br-text-primary-dark py-1 text-center">
@@ -31,7 +33,7 @@
           />
         </span>
       </mat-expansion-panel-header>
-      <brookfield-home-tour-card [previus]="true"></brookfield-home-tour-card>
+      <brookfield-home-tour-card [previus]="true" [moveInNow]="true"></brookfield-home-tour-card>
     </mat-expansion-panel>
   </mat-accordion>
 </div>
