@@ -1,16 +1,16 @@
 <div class="d-flex justify-content-around my-4 mx-5 option-buttons">
   <div
     class="icon-wrapper"
-    [ngClass]="{ selected: selectedOption === 'my-favorites' }"
-    (click)="selectOption('my-favorites')"
+    [ngClass]="{ selected: selectedOption === bottomSheetOptions[0] }"
+    (click)="selectOption(bottomSheetOptions[0])"
   >
     <img src="assets/icons/active_my_favorites.svg" />
     <span class="py-3 br-text-primary br-content-text br-content-text--large">My Favorites</span>
   </div>
   <div
     class="icon-wrapper"
-    [ngClass]="{ selected: selectedOption === 'my-time' }"
-    (click)="selectOption('my-time')"
+    [ngClass]="{ selected: selectedOption === bottomSheetOptions[1] }"
+    (click)="selectOption(bottomSheetOptions[1])"
   >
     <img src="assets/icons/my-time-blue.svg" />
     <span class="py-3 br-text-primary br-content-text br-content-text--large"
@@ -19,14 +19,23 @@
   </div>
   <div
     class="icon-wrapper"
-    [ngClass]="{ selected: selectedOption === 'my-profile' }"
-    (click)="selectOption('my-profile')"
+    [ngClass]="{ selected: selectedOption === bottomSheetOptions[2] }"
+    (click)="selectOption(bottomSheetOptions[2])"
   >
     <img src="assets/icons/my-profile-blue.svg" />
     <span class="py-3 br-text-primary br-content-text br-content-text--large">My Profile</span>
   </div>
 </div>
 
-<brookfield-favorites *ngIf="selectedOption === 'my-favorites'"></brookfield-favorites>
-<brookfield-my-time-home-tours *ngIf="selectedOption === 'my-time'"></brookfield-my-time-home-tours>
-<brookfield-profile *ngIf="selectedOption === 'my-profile'"></brookfield-profile>
+<div class="ma-footer-menu">
+  <button class="ma-footer-menu__button" (click)="openBottomSheet()">
+    <img src="assets/icons/burger-icon.svg" alt="" />
+    {{ selectedOption.title }}
+  </button>
+</div>
+
+<brookfield-favorites *ngIf="selectedOption === bottomSheetOptions[0]"></brookfield-favorites>
+<brookfield-my-time-home-tours
+  *ngIf="selectedOption === bottomSheetOptions[1]"
+></brookfield-my-time-home-tours>
+<brookfield-profile *ngIf="selectedOption === bottomSheetOptions[2]"></brookfield-profile>
