@@ -1,4 +1,6 @@
+@import 'variables.scss';
+
 .bottom-sheet {
-  background: black;
-  color: white;
+  color: $pure-white;
+  background: $pure-black;
 }
