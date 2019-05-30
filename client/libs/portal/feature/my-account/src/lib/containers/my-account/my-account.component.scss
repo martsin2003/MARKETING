@@ -16,3 +16,27 @@
     display: none !important;
   }
 }
+
+.ma-footer-menu {
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  width: 100%;
+  &__button {
+    width: 100%;
+    padding: 10px 15px;
+    color: $pure-white;
+    background: $pure-black;
+    font-size: 16px;
+    font-family: $helvetica;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    img {
+      margin: 3px 5px 0px 0px;
+    }
+  }
+  @media screen and (min-width: $mobile-view) {
+    display: none;
+  }
+}
