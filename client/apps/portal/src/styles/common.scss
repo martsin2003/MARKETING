@@ -376,9 +376,6 @@
   }
   .plus-icon {
     position: absolute;
-    @media screen and (max-width: $mobile-view) {
-      position: inherit;
-    }
     right: 20%;
     @media screen and (max-width: 900px) {
       right: 15px;
