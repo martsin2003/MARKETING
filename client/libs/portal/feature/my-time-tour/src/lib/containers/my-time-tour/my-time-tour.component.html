@@ -1,9 +1,9 @@
 <div class="my-time-tour">
   <ng-container [ngSwitch]="step">
-    <ng-container *ngSwitchCase="0">
+    <ng-container *ngSwitchCase="1">
       <brookfield-tour-type (nextStep)="nextStep()"></brookfield-tour-type>
     </ng-container>
-    <ng-container *ngSwitchCase="1">
+    <ng-container *ngSwitchCase="0">
       <brookfield-tour-time
         (goBack)="back()"
         (timeStepCompleted)="timeStepCompleted()"

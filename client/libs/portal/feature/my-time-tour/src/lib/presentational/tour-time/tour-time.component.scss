@@ -22,4 +22,54 @@
       display: none !important;
     }
   }
+  &__select-date-field {
+    width: 300px;
+    position: relative;
+  }
+  .toggle-icon {
+    position: absolute;
+    bottom: 12px;
+    left: 3px;
+  }
+}
+
+::ng-deep {
+  .my-date-picker {
+    border-radius: none;
+    .mat-calendar-header {
+      padding: 8px !important;
+    }
+    .mat-calendar-header,
+    .mat-calendar-table-header {
+      background-color: $bg-primary-light;
+    }
+    .mat-calendar-body-selected {
+      background-color: $primary-light;
+    }
+    .mat-calendar-controls {
+      margin: 5px;
+    }
+    .mat-calendar-content {
+      padding: 0;
+    }
+    .mat-calendar-body {
+      padding: 0 8px 8px;
+    }
+    .mat-calendar-table-header-divider {
+      display: none;
+    }
+    .mat-calendar-period-button .mat-button-wrapper,
+    .mat-calendar-table-header,
+    .mat-calendar-next-button,
+    .mat-calendar-previous-button {
+      color: $primary !important;
+      font-family: $helvetica-bold;
+    }
+    .mat-calendar-arrow {
+      border-top-color: $primary;
+    }
+    .mat-calendar-body-today:not(.mat-calendar-body-selected) {
+      border-color: $primary;
+    }
+  }
 }
