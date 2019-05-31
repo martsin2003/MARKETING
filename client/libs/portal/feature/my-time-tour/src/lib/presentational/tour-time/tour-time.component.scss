@@ -17,14 +17,13 @@
 }
 
 .tour-time {
-  &__hide-mobile {
-    @media screen and (max-width: $mobile-view) {
-      display: none !important;
-    }
-  }
   &__select-date-field {
     width: 300px;
     position: relative;
+    @media screen and (max-width: $mobile-view) {
+      flex-basis: 100%;
+      margin: 0 10px;
+    }
   }
   .toggle-icon {
     position: absolute;

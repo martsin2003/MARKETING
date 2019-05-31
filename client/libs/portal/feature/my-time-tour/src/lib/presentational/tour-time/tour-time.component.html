@@ -1,7 +1,7 @@
 <div class="d-flex flex-column align-items-center tour-time">
   <div class="d-flex flex-column my-time-tour-container align-items-center">
     <brookfield-tour-step [data]="data" [whiteBackground]="true"></brookfield-tour-step>
-    <form class="d-flex flex-row justify-content-center tour-time__hide-mobile" autocomplete="off">
+    <form class="d-flex flex-row justify-content-center flex-wrap" autocomplete="off">
       <div class="br-input-wrapper tour-time__select-date-field">
         <label class="br-input-label br-input-label--white">Date:</label>
         <input
@@ -13,7 +13,11 @@
         <mat-datepicker-toggle matSuffix [for]="picker" class="toggle-icon" [disableRipple]="true">
           <img src="assets/icons/calendar-blue.svg" matDatepickerToggleIcon alt="" />
         </mat-datepicker-toggle>
-        <mat-datepicker #picker panelClass="my-date-picker"></mat-datepicker>
+        <mat-datepicker
+          #picker
+          panelClass="my-date-picker"
+          [touchUi]="isMobileView ? true : false"
+        ></mat-datepicker>
       </div>
 
       <div class="ml-2 d-flex flex-column tour-time__select-date-field">

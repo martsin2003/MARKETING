@@ -5,6 +5,7 @@
     </ng-container>
     <ng-container *ngSwitchCase="0">
       <brookfield-tour-time
+        [isMobileView]="isMobileView$ | async"
         (goBack)="back()"
         (timeStepCompleted)="timeStepCompleted()"
       ></brookfield-tour-time>
