@@ -14,7 +14,6 @@ export class SignInComponent implements OnInit {
 
   forgotPasswordDialog(): void {
     const dialogRef = this.dialog.open(ForgotPasswordComponent, {
-      width: '26%',
       panelClass: 'forgot-password-dialog'
     });
     dialogRef.afterClosed().subscribe(result => {
