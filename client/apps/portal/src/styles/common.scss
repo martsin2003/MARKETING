@@ -394,7 +394,7 @@
 // Other
 
 .fixed-width-container {
-  max-width: $max-width-container;
+  max-width: $max-width-container !important;
   margin: 0 auto;
 }
 
