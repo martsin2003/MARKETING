@@ -1,9 +1,11 @@
 @import 'variables.scss';
 
 .communities-selected {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: $pure-white;
   padding: 15px;
   &__items {
     display: flex;
@@ -27,12 +29,6 @@
     position: absolute;
   }
   @media screen and (max-width: $mobile-view) {
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-    background: white;
     flex-direction: column;
     align-items: unset;
     .community-selected-title,
