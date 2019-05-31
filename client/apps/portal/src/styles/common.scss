@@ -393,6 +393,11 @@
 
 // Other
 
+.fixed-width-container {
+  max-width: $max-width-container;
+  margin: 0 auto;
+}
+
 .no-underline {
   text-decoration: none;
 }
