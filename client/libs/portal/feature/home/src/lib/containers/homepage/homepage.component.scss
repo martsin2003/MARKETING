@@ -62,7 +62,13 @@
     }
     @media screen and (min-width: $max-width-container) {
       position: absolute;
-      left: 10%;
+      opacity: 0.9;
+      &:nth-child(odd) {
+        left: 10%;
+      }
+      &:nth-child(even) {
+        right: 10%;
+      }
     }
   }
 
@@ -80,6 +86,11 @@
   @media screen and (min-width: $max-width-container) {
     max-height: none;
     align-items: center;
+    &__image {
+      img {
+        max-height: 780px;
+      }
+    }
   }
 }
 
