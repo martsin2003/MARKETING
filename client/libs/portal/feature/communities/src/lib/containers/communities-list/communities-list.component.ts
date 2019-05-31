@@ -19,6 +19,7 @@ export class CommunitiesListComponent implements OnInit, OnDestroy {
   filter: { open: boolean };
   isMobileView$: Observable<boolean>;
   switchedViewType: boolean;
+  showPanelCompare: boolean;
 
   private destroy$: Subject<boolean> = new Subject<boolean>();
 
@@ -100,6 +101,11 @@ export class CommunitiesListComponent implements OnInit, OnDestroy {
       this.communitiesForCompare.pop();
     } else {
       this.communitiesForCompare.push(id);
+    }
+    if (this.communitiesForCompare.length) {
+      this.showPanelCompare = true;
+    } else {
+      this.showPanelCompare = false;
     }
   }
 }

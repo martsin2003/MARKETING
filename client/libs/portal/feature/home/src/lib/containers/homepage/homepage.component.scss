@@ -33,6 +33,7 @@
   max-height: 400px;
   display: flex;
   flex-direction: row;
+  position: relative;
   @media only screen and (max-width: $mobile-view) {
     flex-direction: column-reverse;
     max-height: 100%;
@@ -59,6 +60,16 @@
       padding: 20px;
       flex: 1 1 100%;
     }
+    @media screen and (min-width: $max-width-container) {
+      position: absolute;
+      opacity: 0.9;
+      &:nth-child(odd) {
+        left: 10%;
+      }
+      &:nth-child(even) {
+        right: 10%;
+      }
+    }
   }
 
   &__info {
@@ -70,6 +81,15 @@
   &--order-1 {
     @media only screen and (max-width: $mobile-view) {
       order: 1;
+    }
+  }
+  @media screen and (min-width: $max-width-container) {
+    max-height: none;
+    align-items: center;
+    &__image {
+      img {
+        max-height: 780px;
+      }
     }
   }
 }

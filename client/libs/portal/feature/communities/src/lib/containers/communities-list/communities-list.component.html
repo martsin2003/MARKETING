@@ -31,7 +31,7 @@
     </div>
     <div [hidden]="view === 'list'" class="community-list__map-block" #map></div>
   </div>
-  <div class="community-list__compare-comunities" *ngIf="communitiesForCompare?.length">
+  <div class="community-list__compare-comunities" [ngClass]="{ 'show-panel': showPanelCompare }">
     <brookfield-communities-selected
       [communities]="communitiesForCompare"
     ></brookfield-communities-selected>

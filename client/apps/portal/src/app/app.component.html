@@ -1,5 +1,11 @@
 <div class="main-app">
-  <brookfield-navigation></brookfield-navigation>
-  <router-outlet></router-outlet>
-  <brookfield-footer></brookfield-footer>
+  <div class="navigation-container" #navigation>
+    <brookfield-navigation></brookfield-navigation>
+  </div>
+  <div class="main-app-content" #mainAppContianer>
+    <router-outlet></router-outlet>
+  </div>
+  <div class="footer-contianer" #footer>
+    <brookfield-footer></brookfield-footer>
+  </div>
 </div>
