@@ -11,7 +11,7 @@
     (viewChanged)="viewChanged($event)"
     [parentFilter]="filter"
   ></brookfield-communities-header>
-  <div class="community-list__content">
+  <div class="community-list__content fixed-width-container">
     <div class="community-list__communities" *ngIf="view !== 'map'">
       <ng-container *ngIf="communities$ | async as communities">
         <div class="community-list__community" *ngFor="let community of communities">
