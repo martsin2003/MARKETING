@@ -1,0 +1,50 @@
+@import 'variables.scss';
+
+.button-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+}
+
+.sub-title {
+  font-family: $helvetica-light;
+}
+
+.helvetica-bold {
+  font-size: 26px;
+  font-size: 26px;
+}
+
+.align-self-center {
+  margin-top: 30px;
+}
+.div-max-width {
+  max-width: 500px;
+  margin: 0 auto;
+}
+h3 {
+  overflow: hidden;
+  text-align: center;
+}
+h3:before,
+h3:after {
+  background-color: #333;
+  content: '';
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 40%;
+}
+h3:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+h3:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+.text-lines {
+  max-width: 300px;
+}

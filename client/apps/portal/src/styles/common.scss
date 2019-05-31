@@ -310,6 +310,10 @@
   &--no-border {
     border: none;
   }
+  &--a-little-longer {
+    width: 300px;
+    min-width: auto;
+  }
 }
 
 .br-input-wrapper {
