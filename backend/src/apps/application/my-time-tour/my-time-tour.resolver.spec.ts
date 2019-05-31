@@ -6,7 +6,7 @@ describe('MyTimeTourResolver', () => {
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [MyTimeTourResolver]
+      providers: [MyTimeTourResolver],
     }).compile();
 
     resolver = module.get<MyTimeTourResolver>(MyTimeTourResolver);
