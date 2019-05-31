@@ -12,6 +12,7 @@ import { FavoritesDialogComponent } from './presentational/favorites-dialog/favo
 import { HomeTourCardComponent } from './presentational/home-tour-card/home-tour-card.component';
 import { SignInComponent } from './presentational/sign-in/sign-in.component';
 import { CreateAccountComponent } from './presentational/create-account/create-account.component';
+import { ForgotPasswordComponent } from './presentational/forgot-password/forgot-password.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,7 @@ import { CreateAccountComponent } from './presentational/create-account/create-a
     RouterModule.forChild([
       { path: '', pathMatch: 'full', component: MyAccountComponent },
       { path: 'reset-password', component: ResetPasswordComponent },
-      { path: 'sing-in', component: SignInComponent },
+      { path: 'sign-in', component: SignInComponent },
       { path: 'create-account', component: CreateAccountComponent }
     ])
   ],
@@ -34,8 +35,9 @@ import { CreateAccountComponent } from './presentational/create-account/create-a
     FavoritesDialogComponent,
     HomeTourCardComponent,
     SignInComponent,
-    CreateAccountComponent
+    CreateAccountComponent,
+    ForgotPasswordComponent
   ],
-  entryComponents: [FavoritesDialogComponent]
+  entryComponents: [FavoritesDialogComponent, ForgotPasswordComponent]
 })
 export class PortalFeatureMyAccountModule {}

@@ -1,18 +1,22 @@
 .sign-in-ol-mobile {
   margin-left: 16px;
 }
+
 ol li {
   line-height: 20px;
   margin-top: 20px;
 }
+
 .div-max-width {
   max-width: 500px;
   margin: 0 auto;
 }
+
 h3 {
   overflow: hidden;
   text-align: center;
 }
+
 h3:before,
 h3:after {
   background-color: #333;
@@ -23,14 +27,17 @@ h3:after {
   vertical-align: middle;
   width: 40%;
 }
+
 h3:before {
   right: 0.5em;
   margin-left: -50%;
 }
+
 h3:after {
   left: 0.5em;
   margin-right: -50%;
 }
+
 .display-none {
   display: none;
 }
