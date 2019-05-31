@@ -1,4 +1,4 @@
-import { MaterialModule } from './../../../../../material/src/lib/material/material.module';
+import { MaterialModule } from '@brookfield/material';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';

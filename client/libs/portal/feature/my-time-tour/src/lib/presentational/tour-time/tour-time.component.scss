@@ -2,13 +2,14 @@
 
 .my-time-tour-container {
   width: 100%;
-  padding: 0 0 100px;
+  height: 730px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     URL('../assets/images/desktop/sign_in_to_my_time_3x.png');
   background-size: 100% auto;
   background-repeat: no-repeat;
   @media screen and (max-width: $mobile-view) {
     background: none;
+    height: auto;
   }
 }
 
@@ -17,9 +18,107 @@
 }
 
 .tour-time {
-  &__hide-mobile {
+  &__main-container {
     @media screen and (max-width: $mobile-view) {
+      padding: 0 20px;
+    }
+  }
+  &__select-date-field {
+    width: 300px;
+    position: relative;
+    @media screen and (max-width: $mobile-view) {
+      flex-basis: 100%;
+    }
+  }
+  .toggle-icon {
+    position: absolute;
+    bottom: 12px;
+    left: 6px;
+    height: 40px;
+    img {
+      height: 40px;
+    }
+  }
+  &__select-time {
+    margin-left: 20px;
+    @media screen and (max-width: $mobile-view) {
+      margin-left: 0;
+    }
+  }
+  .br-input-label {
+    @media screen and (min-width: $mobile-view) {
+      color: $pure-white;
+    }
+  }
+  .br-input {
+    @media screen and (min-width: $mobile-view) {
+      border: none;
+    }
+  }
+}
+
+::ng-deep {
+  .my-date-picker {
+    border-radius: none;
+    .mat-calendar-header {
+      padding: 8px !important;
+    }
+    .mat-calendar-header,
+    .mat-calendar-table-header {
+      background-color: $bg-primary-light;
+    }
+    .mat-calendar-body-selected {
+      background-color: $primary-light;
+    }
+    .mat-calendar-controls {
+      margin: 5px;
+    }
+    .mat-calendar-content {
+      padding: 0;
+    }
+    .mat-calendar-body {
+      padding: 0 8px 8px;
+    }
+    .mat-calendar-table-header-divider {
+      display: none;
+    }
+    .mat-calendar-period-button .mat-button-wrapper,
+    .mat-calendar-table-header,
+    .mat-calendar-next-button,
+    .mat-calendar-previous-button {
+      color: $primary !important;
+      font-family: $helvetica-bold;
+    }
+    .mat-calendar-arrow {
+      border-top-color: $primary;
+    }
+    .mat-calendar-body-today:not(.mat-calendar-body-selected) {
+      border-color: $primary;
+    }
+  }
+
+  .mat-datepicker-toggle {
+    .mat-button-focus-overlay,
+    .mat-button-ripple.mat-ripple {
       display: none !important;
+    }
+  }
+
+  .br-my-time-select {
+    .mat-select-trigger {
+      height: 100%;
+    }
+    .mat-select-placeholder {
+      line-height: 60px;
+    }
+    .mat-select-arrow-wrapper .mat-select-arrow {
+      border: none;
+
+      background-image: url(/assets/icons/arrow_down_dark-blue.svg);
+      width: 24px;
+      height: 12px;
+      background-repeat: no-repeat;
+      background-size: contain;
     }
   }
 }

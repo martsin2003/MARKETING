@@ -1,5 +1,5 @@
 import { TourStepData } from '../../view-model/tour-step.interface';
-import { Component, OnInit, Output, EventEmitter, ViewChild } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ViewChild, Input } from '@angular/core';
 import { MatDatepicker } from '@angular/material';
 
 @Component({
@@ -8,11 +8,14 @@ import { MatDatepicker } from '@angular/material';
   styleUrls: ['./tour-time.component.scss']
 })
 export class TourTimeComponent implements OnInit {
-  constructor() {}
-  data: TourStepData;
-  @ViewChild('picker') picker: MatDatepicker<any>;
   @Output() timeStepCompleted = new EventEmitter<string>();
   @Output() goBack = new EventEmitter<string>();
+  @Input() isMobileView: boolean;
+
+  data: TourStepData;
+
+  constructor() {}
+
   ngOnInit() {
     this.data = {
       step: 1,
@@ -20,7 +23,6 @@ export class TourTimeComponent implements OnInit {
       title: 'The Torrington',
       subTitle: 'Select a Date and Time to See'
     };
-    // this.picker.open();
   }
 
   continue() {
