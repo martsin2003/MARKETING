@@ -10,5 +10,10 @@
   },
   "postgraphile": {
     "internalPort": 9999
+  },
+  "netverify": {
+    "initiateUrl": "https://netverify.com/api/v4/initiate/",
+    "apiToken": "5baeaafd-86a5-4709-a097-5698ac1e1c9d",
+    "apiSecret": "2px7hmkAf22HGg4Ass81fcnGs5pKU3e3"
   }
 }

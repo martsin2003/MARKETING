@@ -11,9 +11,11 @@ import { mergeSchemas } from 'graphql-tools';
 import { ModuleRef } from '@nestjs/core';
 import * as config from 'config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { MyTimeTourModule } from './my-time-tour/my-time-tour.module';
 
 @Module({
   imports: [
+    MyTimeTourModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: config.get<string>('database.host'),

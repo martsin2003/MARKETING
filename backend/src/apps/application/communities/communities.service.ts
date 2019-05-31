@@ -2,15 +2,16 @@ import { DB_CONNECTION_TOKEN } from './../../../core/typeorm/constants';
 import { tblZipCodes } from './../../../core/model/entities/tblZipCodes';
 import { Injectable, Inject } from '@nestjs/common';
 import { Repository, Connection } from 'typeorm';
+import { tblCommunity } from 'src/core/model/entities/tblCommunity';
 
 @Injectable()
 export class CommunitiesService {
-  zipCodeRepository: Repository<tblZipCodes>;
+  communityRepository: Repository<tblCommunity>;
   constructor(private connection: Connection) {
-    this.zipCodeRepository = this.connection.getRepository(tblZipCodes);
+    this.communityRepository = this.connection.getRepository(tblCommunity);
   }
   async getCommunities(username, password) {
-    const zipCode = await this.zipCodeRepository.findOne();
+    const zipCode = await this.communityRepository.findOne();
     console.log('zipCode: ', zipCode);
     return 'success';
   }
