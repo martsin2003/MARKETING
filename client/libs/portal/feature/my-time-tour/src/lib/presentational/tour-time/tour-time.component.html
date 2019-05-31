@@ -10,7 +10,7 @@
           (focus)="picker.open()"
           class="br-input br-input--no-border pl-5"
         />
-        <mat-datepicker-toggle matSuffix [for]="picker" class="toggle-icon">
+        <mat-datepicker-toggle matSuffix [for]="picker" class="toggle-icon" [disableRipple]="true">
           <img src="assets/icons/calendar-blue.svg" matDatepickerToggleIcon alt="" />
         </mat-datepicker-toggle>
         <mat-datepicker #picker panelClass="my-date-picker"></mat-datepicker>

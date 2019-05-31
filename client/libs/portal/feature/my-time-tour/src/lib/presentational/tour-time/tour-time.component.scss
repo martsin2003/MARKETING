@@ -72,4 +72,10 @@
       border-color: $primary;
     }
   }
+  .mat-datepicker-toggle {
+    .mat-button-focus-overlay,
+    .mat-button-ripple.mat-ripple {
+      display: none !important;
+    }
+  }
 }
