@@ -17,7 +17,7 @@
 
   <brookfield-carousel [images]="communityImages" id="overview"></brookfield-carousel>
 
-  <div class="cm-container__header desktop-header">
+  <div class="cm-container__header desktop-header fixed-width-container">
     <div class="cm-container__header__details">
       <span class="home-type">The Bluffs at Sleeter Lake</span>
       <span class="place-detail">Loudoun County | Round Hill, VA</span>
@@ -32,7 +32,7 @@
     </div>
   </div>
 
-  <div class="cm-container__home-services">
+  <div class="cm-container__home-services fixed-width-container">
     <div class="service-detail">
       <img src="assets/icons/cm-home-type.svg" />
       <span>Single-Family Homes</span>
@@ -51,7 +51,7 @@
     </div>
   </div>
 
-  <div class="cm-container__description">{{ desrciptionText }}</div>
+  <div class="cm-container__description fixed-width-container">{{ desrciptionText }}</div>
   <div class="more-info-container" (click)="readMore()">
     <img src="assets/icons/bottom-arrow.svg" [ngClass]="{ 'read-less': readLess }" />
     <span>Read {{ readLess ? 'Less' : 'More' }}</span>
@@ -82,7 +82,7 @@
     </div>
   </div>
 
-  <div class="cm-container__key-features-container">
+  <div class="cm-container__key-features-container fixed-width-container">
     <div class="cm-container__key-features-container__option">
       <span class="cm-container__key-features-container__title">
         Nearby Schools

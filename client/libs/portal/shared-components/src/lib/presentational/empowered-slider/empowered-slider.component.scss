@@ -5,7 +5,6 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  padding: 15px 0px;
 
   .logo-img {
     @media screen and (max-width: $mobile-view) {
@@ -26,7 +25,6 @@
   &__carousel-container {
     width: 100%;
     box-sizing: border-box;
-    padding: 0px 15px;
   }
   .slide-content {
     position: relative;
@@ -43,6 +41,8 @@
     }
     img {
       width: 100%;
+      object-fit: cover;
+      max-height: 830px;
     }
     .slide-description {
       max-width: 280px;
