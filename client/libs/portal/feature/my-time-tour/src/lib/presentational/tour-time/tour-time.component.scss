@@ -29,6 +29,10 @@
     position: absolute;
     bottom: 12px;
     left: 3px;
+    height: 40px;
+    img {
+      height: 40px;
+    }
   }
 }
 
@@ -71,10 +75,20 @@
       border-color: $primary;
     }
   }
+
   .mat-datepicker-toggle {
     .mat-button-focus-overlay,
     .mat-button-ripple.mat-ripple {
       display: none !important;
+    }
+  }
+
+  .br-my-time-select {
+    .mat-select-trigger {
+      height: 100%;
+    }
+    .mat-select-placeholder {
+      line-height: 60px;
     }
   }
 }

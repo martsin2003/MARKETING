@@ -22,12 +22,17 @@
 
       <div class="ml-2 d-flex flex-column tour-time__select-date-field">
         <label class="br-input-label br-input-label--white">Time:</label>
-        <mat-select class="br-input br-input--no-border" placeholder="TIME">
+        <mat-select
+          class="br-input br-input--no-border br-my-time-select pl-5"
+          placeholder="TIME"
+          panelClass="my-time-picker"
+        >
           <mat-option>10:00 AM</mat-option>
           <mat-option>11:30 AM</mat-option>
           <mat-option>1:00 PM</mat-option>
           <mat-option>2:30 PM</mat-option>
         </mat-select>
+        <img class="toggle-icon" src="assets/icons/my-time-clock.svg" alt="" />
       </div>
     </form>
 
