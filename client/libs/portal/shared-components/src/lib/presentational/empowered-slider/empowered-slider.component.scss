@@ -26,7 +26,6 @@
   &__carousel-container {
     width: 100%;
     box-sizing: border-box;
-    padding: 0px 15px;
   }
   .slide-content {
     position: relative;
@@ -43,6 +42,8 @@
     }
     img {
       width: 100%;
+      object-fit: cover;
+      max-height: 830px;
     }
     .slide-description {
       max-width: 280px;

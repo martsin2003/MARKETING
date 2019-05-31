@@ -1,9 +1,9 @@
 @import 'variables.scss';
 
 .area-container {
-  padding-bottom: 20px;
+  margin-bottom: 20px;
+  background: $primary-light;
   &__panel-tools {
-    background: $primary-light;
     text-align: center;
     &__title {
       font-size: 36px;

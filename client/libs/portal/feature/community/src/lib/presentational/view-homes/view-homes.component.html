@@ -1,5 +1,5 @@
-<div class="view-homes-container fixed-width-container">
-  <div class="title-conteiner">
+<div class="view-homes-container">
+  <div class="title-conteiner fixed-width-container">
     <h1 class="view-homes-container__title">
       See The Homes
     </h1>
@@ -8,7 +8,7 @@
     </div>
   </div>
 
-  <div class="view-homes-container__tools-panel">
+  <div class="view-homes-container__tools-panel fixed-width-container">
     <div class="view-homes-container__toggle-buttons">
       <button
         [ngClass]="{ 'selected-button': selectedOption === 'home-plans' }"
@@ -29,7 +29,7 @@
     </div>
   </div>
 
-  <div class="cards-container">
+  <div class="cards-container fixed-width-container">
     <brookfield-home-card></brookfield-home-card>
     <brookfield-home-card></brookfield-home-card>
     <brookfield-home-card></brookfield-home-card>
