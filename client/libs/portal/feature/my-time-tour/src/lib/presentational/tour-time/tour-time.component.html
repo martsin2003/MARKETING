@@ -1,14 +1,16 @@
 <div class="d-flex flex-column align-items-center tour-time">
-  <div class="d-flex flex-column my-time-tour-container align-items-center">
+  <div
+    class="d-flex flex-column my-time-tour-container align-items-center tour-time__main-container"
+  >
     <brookfield-tour-step [data]="data" [whiteBackground]="true"></brookfield-tour-step>
     <form class="d-flex flex-row justify-content-center flex-wrap" autocomplete="off">
-      <div class="br-input-wrapper tour-time__select-date-field">
-        <label class="br-input-label br-input-label--white">Date:</label>
+      <div class="br-input-wrapper tour-time__select-date-field my-2">
+        <label class="br-input-label">Date:</label>
         <input
           [matDatepicker]="picker"
           placeholder="Choose a date"
           (focus)="picker.open()"
-          class="br-input br-input--no-border pl-5"
+          class="br-input pl-6"
         />
         <mat-datepicker-toggle matSuffix [for]="picker" class="toggle-icon" [disableRipple]="true">
           <img src="assets/icons/calendar-blue.svg" matDatepickerToggleIcon alt="" />
@@ -20,10 +22,10 @@
         ></mat-datepicker>
       </div>
 
-      <div class="ml-2 d-flex flex-column tour-time__select-date-field">
-        <label class="br-input-label br-input-label--white">Time:</label>
+      <div class="d-flex flex-column tour-time__select-date-field tour-time__select-time my-2">
+        <label class="br-input-label">Time:</label>
         <mat-select
-          class="br-input br-input--no-border br-my-time-select pl-5"
+          class="br-input br-my-time-select pl-6"
           placeholder="TIME"
           panelClass="my-time-picker"
         >
@@ -36,7 +38,10 @@
       </div>
     </form>
 
-    <button class="br-button br-button--primary-blue br-button--desktop my-3" (click)="continue()">
+    <button
+      class="br-button br-button--primary-blue br-button--desktop mb-3 mt-4"
+      (click)="continue()"
+    >
       CONTINUE
     </button>
   </div>

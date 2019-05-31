@@ -2,13 +2,14 @@
 
 .my-time-tour-container {
   width: 100%;
-  padding: 0 0 100px;
+  height: 730px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     URL('../assets/images/desktop/sign_in_to_my_time_3x.png');
   background-size: 100% auto;
   background-repeat: no-repeat;
   @media screen and (max-width: $mobile-view) {
     background: none;
+    height: auto;
   }
 }
 
@@ -17,21 +18,41 @@
 }
 
 .tour-time {
+  &__main-container {
+    @media screen and (max-width: $mobile-view) {
+      padding: 0 20px;
+    }
+  }
   &__select-date-field {
     width: 300px;
     position: relative;
     @media screen and (max-width: $mobile-view) {
       flex-basis: 100%;
-      margin: 0 10px;
     }
   }
   .toggle-icon {
     position: absolute;
     bottom: 12px;
-    left: 3px;
+    left: 6px;
     height: 40px;
     img {
       height: 40px;
+    }
+  }
+  &__select-time {
+    margin-left: 20px;
+    @media screen and (max-width: $mobile-view) {
+      margin-left: 0;
+    }
+  }
+  .br-input-label {
+    @media screen and (min-width: $mobile-view) {
+      color: $pure-white;
+    }
+  }
+  .br-input {
+    @media screen and (min-width: $mobile-view) {
+      border: none;
     }
   }
 }
@@ -89,6 +110,15 @@
     }
     .mat-select-placeholder {
       line-height: 60px;
+    }
+    .mat-select-arrow-wrapper .mat-select-arrow {
+      border: none;
+
+      background-image: url(/assets/icons/arrow_down_dark-blue.svg);
+      width: 24px;
+      height: 12px;
+      background-repeat: no-repeat;
+      background-size: contain;
     }
   }
 }
