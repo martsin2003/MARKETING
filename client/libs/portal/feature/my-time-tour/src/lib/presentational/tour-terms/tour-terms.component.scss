@@ -14,7 +14,7 @@
       justify-content: flex-start !important;
     }
     &--bold {
-      font-family: $helvetica;
+      font-family: $helvetica-bold;
     }
     &--centered {
       padding: 0 50px;
@@ -28,7 +28,7 @@
       text-decoration: underline;
     }
     &--primary {
-      color: $primary-light;
+      color: $primary-dark;
     }
     &--terms {
       @media screen and(max-width: $mobile-view) {

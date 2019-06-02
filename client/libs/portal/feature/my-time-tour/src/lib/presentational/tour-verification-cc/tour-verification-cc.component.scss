@@ -33,6 +33,12 @@
       flex-basis: 50%;
     }
   }
+  &__fb-33 {
+    flex-basis: 33.33%;
+    @media screen and(max-width: $mobile-view) {
+      flex-basis: 50%;
+    }
+  }
   &__fb-100 {
     flex-basis: 100%;
   }
