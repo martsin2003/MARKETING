@@ -32,13 +32,19 @@
       <brookfield-carousel [images]="images" [fullWidth]="false"></brookfield-carousel>
     </div>
 
-    <brookfield-home-detail-info [detailInfo]="homeDetailInfo"></brookfield-home-detail-info>
+    <div class="fixed-width-container">
+      <brookfield-home-detail-info [detailInfo]="homeDetailInfo"></brookfield-home-detail-info>
+    </div>
 
     <div class="get-empowered-container">
       <brookfield-empowered-slider></brookfield-empowered-slider>
     </div>
 
-    <brookfield-more-info-form [containerHomeDesignDetail]="homeDetail"></brookfield-more-info-form>
+    <div class="fixed-width-container">
+      <brookfield-more-info-form
+        [containerHomeDesignDetail]="homeDetail"
+      ></brookfield-more-info-form>
+    </div>
 
     <div class="button-back-container">
       <button class="br-button br-button--secondary-gray br-button--desktop">BACK</button>

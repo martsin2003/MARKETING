@@ -1,6 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { CreateAnAccountDialogComponent } from '../create-an-account-dialog/create-an-account-dialog.component';
 
 @Component({
   selector: 'brookfield-sign-in-dialog',
@@ -9,17 +8,16 @@ import { CreateAnAccountDialogComponent } from '../create-an-account-dialog/crea
 })
 export class SignInDialogComponent implements OnInit {
   constructor(
-    public SignInDialog: MatDialogRef<SignInDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
-    public createDialog: MatDialogRef<CreateAnAccountDialogComponent>
+    public dialogRef: MatDialogRef<SignInDialogComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any
   ) {}
 
   onNoClick(): void {
-    this.SignInDialog.close();
+    this.dialogRef.close();
   }
 
-  onNoClick(): void {
-    this.createDialog.close();
+  onOpenForgotPassword(): void {
+    this.dialogRef.close('forgot_password');
   }
 
   ngOnInit() {}

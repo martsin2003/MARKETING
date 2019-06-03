@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FavoritesDialogComponent } from '../../presentational/favorites-dialog/favorites-dialog.component';
 import { MatDialog } from '@angular/material';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'brookfield-favorites',
@@ -26,8 +27,11 @@ export class FavoritesComponent implements OnInit {
       width: '80%',
       panelClass: 'favorites-dialog'
     });
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
+    dialogRef
+      .afterClosed()
+      .pipe(take(1))
+      .subscribe(result => {
+        console.log('The dialog was closed');
+      });
   }
 }

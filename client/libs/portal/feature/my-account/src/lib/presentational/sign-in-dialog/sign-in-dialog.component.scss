@@ -48,3 +48,9 @@ h3:after {
 .text-lines {
   max-width: 300px;
 }
+.br-input {
+  &--a-little-longer {
+    width: 300px;
+    min-width: auto;
+  }
+}

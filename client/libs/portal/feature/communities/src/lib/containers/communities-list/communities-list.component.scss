@@ -20,6 +20,15 @@
       height: auto;
     }
   }
+  &__compare-comunities {
+    transition: bottom ease-in-out 0.4s;
+    width: 100%;
+    position: fixed;
+    bottom: -200px;
+    z-index: 1000;
+    background: $pure-white;
+    box-shadow: 0px -2px 2px -1px rgba(0, 0, 0, 0.15);
+  }
   &__map-block {
     height: calc(100vh - 183px);
   }
@@ -75,6 +84,10 @@
       display: none;
     }
   }
+}
+
+.show-panel {
+  bottom: 0;
 }
 
 .filter-container {

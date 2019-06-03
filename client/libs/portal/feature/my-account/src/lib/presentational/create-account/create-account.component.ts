@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { CreateAnAccountDialogComponent } from '../create-an-account-dialog/create-an-account-dialog.component';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'brookfield-create-account',
@@ -15,9 +16,12 @@ export class CreateAccountComponent implements OnInit {
       width: '800px'
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+    dialogRef
+      .afterClosed()
+      .pipe(take(1))
+      .subscribe(result => {
+        console.log(`Dialog result: ${result}`);
+      });
   }
 
   ngOnInit() {}

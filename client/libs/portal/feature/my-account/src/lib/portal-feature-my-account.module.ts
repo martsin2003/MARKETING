@@ -14,6 +14,7 @@ import { SignInComponent } from './presentational/sign-in/sign-in.component';
 import { CreateAccountComponent } from './presentational/create-account/create-account.component';
 import { SignInDialogComponent } from './presentational/sign-in-dialog/sign-in-dialog.component';
 import { CreateAnAccountDialogComponent } from './presentational/create-an-account-dialog/create-an-account-dialog.component';
+import { ForgotPasswordComponent } from './presentational/forgot-password/forgot-password.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,7 @@ import { CreateAnAccountDialogComponent } from './presentational/create-an-accou
     RouterModule.forChild([
       { path: '', pathMatch: 'full', component: MyAccountComponent },
       { path: 'reset-password', component: ResetPasswordComponent },
-      { path: 'sing-in', component: SignInComponent },
+      { path: 'sign-in', component: SignInComponent },
       { path: 'create-account', component: CreateAccountComponent }
     ])
   ],
@@ -38,8 +39,14 @@ import { CreateAnAccountDialogComponent } from './presentational/create-an-accou
     SignInComponent,
     CreateAccountComponent,
     SignInDialogComponent,
-    CreateAnAccountDialogComponent
+    CreateAnAccountDialogComponent,
+    ForgotPasswordComponent
   ],
-  entryComponents: [FavoritesDialogComponent, SignInDialogComponent, CreateAnAccountDialogComponent]
+  entryComponents: [
+    FavoritesDialogComponent,
+    SignInDialogComponent,
+    CreateAnAccountDialogComponent,
+    ForgotPasswordComponent
+  ]
 })
 export class PortalFeatureMyAccountModule {}
