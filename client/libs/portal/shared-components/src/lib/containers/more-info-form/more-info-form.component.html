@@ -1,8 +1,8 @@
 <div class="wrapper-of-form">
-  <span class="title" [ngClass]="{ 'pb-0': containerHomeDesignDetail?.homeName }">{{
+  <span class="title helvetica-bold" [ngClass]="{ 'pb-0': containerHomeDesignDetail?.homeName }">{{
     containerHomeDesignDetail ? containerHomeDesignDetail.title : 'Request More Info'
   }}</span>
-  <span class="home-name">{{ containerHomeDesignDetail?.homeName }}</span>
+  <span class="home-name helvetica-bold">{{ containerHomeDesignDetail?.homeName }}</span>
   <form class="form">
     <div class="item">
       <mat-form-field appearance="outline">
@@ -39,10 +39,16 @@
     </div>
     <div class="requests">
       <div class="checkbox-container">
-        <mat-checkbox>Request a Private Tour</mat-checkbox>
+        <mat-checkbox
+          ><span class="helvetica-bold br-text-dark-gray"
+            >Request a Private Tour</span
+          ></mat-checkbox
+        >
       </div>
       <div class="checkbox-container">
-        <mat-checkbox>Request Promotions</mat-checkbox>
+        <mat-checkbox
+          ><span class="helvetica-bold br-text-dark-gray">Request Promotions</span></mat-checkbox
+        >
       </div>
     </div>
     <button type="submit" class="br-button br-button--primary-blue br-button--desktop mt-4">

@@ -11,7 +11,7 @@
   .title {
     font-family: 'Helvetica-Neue-Bold';
     font-size: 36px;
-    padding: 40px 0px;
+    padding: 40px 0px 0px 0px;
     color: $primary;
     @media screen and (max-width: $mobile-view) {
       width: 90%;
@@ -19,6 +19,7 @@
       font-size: 28px;
     }
   }
+
   .home-name {
     font-family: 'Helvetica-Neue-Bold';
     font-size: 36px;
@@ -99,6 +100,9 @@
           .mat-checkbox-inner-container {
             width: 44px;
             height: 44px;
+          }
+          span {
+            font-size: 18px;
           }
         }
       }

@@ -15,9 +15,21 @@
         }
         &.home-name {
           color: $primary;
+          @media screen and (max-width: $mobile-view) {
+            font-family: 'Helvetica-Neue-Bold' !important;
+          }
+        }
+        &.community {
+          color: $dark-gray;
+          @media screen and (max-width: $mobile-view) {
+            font-family: 'Helvetica-Neue-Bold' !important;
+          }
         }
         &.price {
           color: $primary-light;
+          @media screen and (max-width: $mobile-view) {
+            font-family: 'Helvetica-Neue-Bold' !important;
+          }
         }
       }
     }
@@ -56,4 +68,7 @@
     justify-content: center;
     padding: 15px 0px;
   }
+}
+.button-bg-color {
+  background-color: $bg-primary-light !important;
 }
