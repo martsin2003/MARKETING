@@ -27,9 +27,9 @@
   </div>
 </div>
 
-<div class="display-none">
+<div class="">
   <div class="div-max-width">
-    <div _ngcontent-ocp-c24="" class="button-close d-flex justify-content-end">
+    <div class="button-close d-flex justify-content-end">
       <img src="assets/icons/times.svg" />
     </div>
 
@@ -55,13 +55,19 @@
         </p>
       </div>
       <div class="d-flex justify-content-center mt-3 flex-column">
-        <button class="m-3 br-button br-button--primary-blue br-button--desktop">
+        <button
+          class="m-3 br-button br-button--primary-blue br-button--desktop"
+          (click)="openSignInDialog()"
+        >
           SIGN IN
         </button>
 
         <h3 class="helvetica-light">OR</h3>
 
-        <button class="m-3 br-button br-button--secondary-blue br-button--desktop">
+        <button
+          class="br-button br-button--secondary-blue br-button--desktop m-3"
+          (click)="openCreateDialog()"
+        >
           CREATE ACCOUNT
         </button>
       </div>
@@ -69,7 +75,7 @@
   </div>
 </div>
 <!-- Sign-in-to-my-account -->
-<div>
+<div class="display-none">
   <div class="div-max-width">
     <div class="button-close d-flex justify-content-end">
       <img src="assets/icons/times.svg" />
@@ -93,7 +99,7 @@
   </div>
 </div>
 <!-- sign-in-to-my-account-2 -->
-<div>
+<div class="display-none">
   <div class="div-max-width">
     <div class="button-close d-flex justify-content-end">
       <img src="assets/icons/times.svg" />
@@ -122,7 +128,7 @@
   </div>
 </div>
 <!-- This is create account - my time -->
-<div>
+<div class="display-none">
   <div class="div-max-width">
     <div class="button-close d-flex justify-content-end">
       <img src="assets/icons/times.svg" />

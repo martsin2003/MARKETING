@@ -73,6 +73,12 @@ a {
   padding: 0px;
 }
 
+::ng-deep mat-expansion-panel-header {
+  &:hover {
+    background: unset !important;
+  }
+}
+
 // header style
 .br-header {
   font-family: HelveticaNeue-Bold;
