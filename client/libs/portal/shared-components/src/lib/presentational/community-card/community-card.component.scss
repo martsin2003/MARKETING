@@ -1,93 +1,7 @@
-.items {
-  width: calc(50% - 40px);
-  display: flex;
-  height: auto;
-  margin: 10px;
-  background: white;
-  padding: 10px;
-  box-shadow: 0px 0px 4px -1px rgb(155, 155, 155);
-  &__first-half {
-    flex: 1;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    padding: 8px;
-    img {
-      width: 100%;
-    }
-    .place {
-      display: flex;
-      align-items: center;
-      mat-icon {
-        margin-right: 5px;
-      }
-    }
-    @media screen and (max-width: 940px) {
-      mat-checkbox,
-      .place {
-        display: none;
-      }
-    }
-  }
-  &__second-half {
-    flex: 1;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    padding: 8px;
-    .home-name {
-      width: 100%;
-      text-align: start;
-      font-weight: 600;
-      font-size: 18px;
-    }
-    .details {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-family: 'Open Sans', sans-serif;
-      padding: 8px 0px;
-      font-size: 14px;
-      font-weight: 100;
-      color: rgb(78, 78, 78);
-      mat-icon {
-        margin-right: 5px;
-      }
-      .second-icon {
-        margin-left: 20px;
-      }
-    }
-    .place {
-      display: none;
-      align-items: center;
-      mat-icon {
-        margin-right: 5px;
-      }
-    }
-    mat-checkbox {
-      display: none;
-      margin-top: 5px;
-    }
-    @media screen and (max-width: 940px) {
-      mat-checkbox,
-      .place {
-        display: flex;
-      }
-    }
-  }
-  @media screen and (max-width: 940px) {
-    width: 100%;
-    flex-direction: column;
-  }
-}
-
 .community-card {
   padding: 8px;
   color: #404042;
-  font-family: HelveticaNeue-Bold;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
 
   &__checkbox {
     font-size: 18px;
@@ -132,7 +46,8 @@
     align-items: center;
     margin-top: 5px;
     img {
-      margin-right: 2px;
+      max-width: 35px;
+      margin-right: 10px;
     }
   }
   &__home-inside-icon {
@@ -153,6 +68,13 @@
   }
   &__compare {
     flex: 1;
+    ::ng-deep .mat-checkbox-inner-container {
+      width: 24px !important;
+      height: 24px !important;
+      .mat-checkbox-frame {
+        border-width: 1px !important;
+      }
+    }
     @media screen and(max-width: 500px) {
       order: 2;
       margin-top: 10px;
