@@ -18,6 +18,7 @@
     &--bigger-text {
       text-align: center;
       font-size: 18px;
+      line-height: 24px;
       @media screen and(max-width: $mobile-view) {
         font-family: $helvetica-light;
         text-align: start;
@@ -55,9 +56,11 @@
     font-size: 18px;
     font-family: $helvetica-bold;
     color: $primary-dark;
+    line-height: 24px;
   }
   &--smaller-text-font {
     font-size: 14px;
+    line-height: 22px;
     font-family: $helvetica-bold;
     color: $dark-gray;
   }
