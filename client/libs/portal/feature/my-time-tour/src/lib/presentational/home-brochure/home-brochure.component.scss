@@ -14,8 +14,9 @@
     }
   }
   &__info {
-    padding: 10px;
     color: #fff;
+    padding: 15px;
+    box-sizing: content-box;
   }
   &__text {
     display: flex;
@@ -31,5 +32,11 @@
     &--bold {
       font-family: $helvetica-bold;
     }
+  }
+  .image-wrapper {
+    min-width: 35px;
+    display: flex;
+    justify-content: center;
+    margin-right: 15px;
   }
 }
