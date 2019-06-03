@@ -15,11 +15,10 @@
     <div class="community-list__communities" *ngIf="view !== 'map'">
       <ng-container *ngIf="communities$ | async as communities">
         <div class="community-list__community" *ngFor="let community of communities">
-          <brookfield-community-card
-            class="community-list__community-card"
+          <brookfield-card-info
             [community]="community"
             (cardSelected)="communitySelected($event)"
-          ></brookfield-community-card>
+          ></brookfield-card-info>
         </div>
       </ng-container>
     </div>
