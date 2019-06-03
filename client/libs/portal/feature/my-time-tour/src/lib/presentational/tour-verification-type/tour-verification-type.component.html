@@ -1,5 +1,5 @@
 <div class="tour-verification-type">
-  <div class="tour-verification-type__text tour-verification-type__text--centered">
+  <div class="tour-verification-type__text--bigger-text tour-verification-type__text--centered">
     My Time Home Tours are free of charge. However, we need one of the following to confirm your
     appointment:
   </div>
@@ -11,7 +11,7 @@
 
           <img class="m-2" src="assets/icons/your-photo.svg" />
         </div>
-        <div class="verification-type-card__text my-3">
+        <div class="verification-type-card__text verification-type-card--text-bigger-font my-3">
           Your Government-Issued Photo ID and Your Photo
         </div>
         <button
@@ -23,18 +23,22 @@
       </div>
       <div class="verification-type-card__text"></div>
     </div>
-    <div class="verification-type-card">
+    <div class="verification-type-card mb-5">
       <div class="verification-type-card__content">
         <div class="verification-type-card__icons">
           <img class="m-2" src="assets/icons/credit-card.svg" />
         </div>
-        <div class="verification-type-card__text my-3">Your Credit Card*</div>
+        <div class="verification-type-card__text verification-type-card--text-bigger-font my-3">
+          Your Credit Card*
+        </div>
         <button class="br-button br-button--primary-blue br-button--desktop" (click)="verify('cc')">
           VERIFY WITH CREDIT CARD
         </button>
       </div>
-      <div class="verification-type-card__text my-3">
-        Your credit card will not be charged.
+      <div
+        class="verification-type-card__text verification-type-card--smaller-text-font my-3 font-14"
+      >
+        *Your credit card will not be charged.
       </div>
     </div>
   </div>

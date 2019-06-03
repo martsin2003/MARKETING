@@ -15,6 +15,17 @@
         text-align: start;
       }
     }
+    &--bigger-text {
+      text-align: center;
+      font-size: 18px;
+      line-height: 24px;
+      @media screen and(max-width: $mobile-view) {
+        font-family: $helvetica-light;
+        text-align: start;
+        margin: 20px;
+        font-size: 16px;
+      }
+    }
   }
   &__cards {
     margin-top: 30px;
@@ -41,6 +52,18 @@
   &__text {
     text-align: center;
   }
+  &--text-bigger-font {
+    font-size: 18px;
+    font-family: $helvetica-bold;
+    color: $primary-dark;
+    line-height: 24px;
+  }
+  &--smaller-text-font {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: $helvetica-bold;
+    color: $dark-gray;
+  }
   &__content {
     display: flex;
     flex-direction: column;
@@ -50,6 +73,9 @@
     background: #fff;
     border: 1px solid #c0c7cb;
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+    @media screen and(max-width: $mobile-view) {
+      padding: 20px;
+    }
   }
   &__icons {
     display: flex;
