@@ -20,9 +20,11 @@ import { MoreInfoFormComponent } from './containers/more-info-form/more-info-for
 import { BottomSheetComponent } from './presentational/bottom-sheet/bottom-sheet.component';
 import { CardInfoComponent } from './containers/card-info/card-info.component';
 import { CommunityCardComponent } from './presentational/community-card/community-card.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ErrorContentComponent } from './presentational/error-content/error-content.component';
 
 @NgModule({
-  imports: [CommonModule, MaterialModule, RouterModule],
+  imports: [CommonModule, MaterialModule, RouterModule, ReactiveFormsModule],
   declarations: [
     CommunityCardComponent,
     ViewFilterComponent,
@@ -42,7 +44,8 @@ import { CommunityCardComponent } from './presentational/community-card/communit
     MoreInfoFormComponent,
     BottomSheetComponent,
     CardInfoComponent,
-    CommunityCardComponent
+    CommunityCardComponent,
+    ErrorContentComponent
   ],
   exports: [
     CommunityCardComponent,
@@ -54,7 +57,8 @@ import { CommunityCardComponent } from './presentational/community-card/communit
     HomeCardComponent,
     MoreInfoFormComponent,
     BottomSheetComponent,
-    CardInfoComponent
+    CardInfoComponent,
+    ErrorContentComponent
   ],
   entryComponents: [BottomSheetComponent]
 })

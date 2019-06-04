@@ -1,6 +1,7 @@
 import { TourStepData } from '../../view-model/tour-step.interface';
 import { Component, OnInit, Output, EventEmitter, ViewChild, Input } from '@angular/core';
 import { MatDatepicker } from '@angular/material';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'brookfield-tour-time',
@@ -13,8 +14,9 @@ export class TourTimeComponent implements OnInit {
   @Input() isMobileView: boolean;
 
   data: TourStepData;
+  tourTimeForm: FormGroup;
 
-  constructor() {}
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit() {
     this.data = {
@@ -23,6 +25,7 @@ export class TourTimeComponent implements OnInit {
       title: 'The Torrington',
       subTitle: 'Select a Date and Time to See'
     };
+    this.tourTimeForm = this.initTourTimeForm();
   }
 
   continue() {
@@ -31,5 +34,12 @@ export class TourTimeComponent implements OnInit {
 
   back() {
     this.goBack.emit();
+  }
+
+  initTourTimeForm(): FormGroup {
+    return this.fb.group({
+      date: null,
+      time: null
+    });
   }
 }
