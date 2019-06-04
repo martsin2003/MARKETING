@@ -6,7 +6,7 @@ import { MoveInNowHomesState } from './move-in-now-homes.reducer';
 import { moveInNowHomesQuery } from './move-in-now-homes.selectors';
 import { LoadMoveInNowHomes } from './move-in-now-homes.actions';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class MoveInNowHomesFacade {
   loaded$ = this.store.pipe(select(moveInNowHomesQuery.getLoaded));
   allMoveInNowHomes$ = this.store.pipe(select(moveInNowHomesQuery.getAllMoveInNowHomes));
