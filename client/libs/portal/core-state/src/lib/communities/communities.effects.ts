@@ -1,23 +1,20 @@
-import { CommunitiesService } from './../../../../core-data/data-services/src/lib/communities/communities.service';
 import { Injectable } from '@angular/core';
 import { Effect, Actions, ofType } from '@ngrx/effects';
 import { DataPersistence } from '@nrwl/nx';
-
-import { CommunitiesPartialState } from './communities.reducer';
+import { CommunitiesService } from '@brookfield/portal/core-data/data-services';
 import {
   LoadCommunities,
   CommunitiesLoaded,
   CommunitiesLoadError,
   CommunitiesActionTypes
 } from './communities.actions';
-import { switchMap, map, mergeMap } from 'rxjs/operators';
-import { of, from } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { CommunitiesState } from './communities.reducer';
 
 @Injectable()
 export class CommunitiesEffects {
   @Effect() loadCommunities$ = this.dataPersistence.fetch(CommunitiesActionTypes.LoadCommunities, {
-    run: (action: LoadCommunities, state: CommunitiesPartialState) => {
-      // Your custom REST 'load' logic goes here. For now just return an empty list...
+    run: (action: LoadCommunities, state: CommunitiesState) => {
       return this.communitiesService.loadCommunities().pipe(
         map(result => {
           return new CommunitiesLoaded(result.allTblCommunities.nodes);
@@ -34,6 +31,6 @@ export class CommunitiesEffects {
   constructor(
     private actions$: Actions,
     private communitiesService: CommunitiesService,
-    private dataPersistence: DataPersistence<CommunitiesPartialState>
+    private dataPersistence: DataPersistence<CommunitiesState>
   ) {}
 }
