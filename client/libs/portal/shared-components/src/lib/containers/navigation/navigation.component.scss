@@ -87,6 +87,13 @@
         }
       }
     }
+    &__desktop-logo {
+      display: flex;
+      align-items: center;
+      img {
+        height: 50px !important;
+      }
+    }
   }
   .desktop-nav-item {
     background: transparent;
