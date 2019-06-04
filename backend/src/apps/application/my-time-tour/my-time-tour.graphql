@@ -1,0 +1,9 @@
+type GetNetverifyLinkPayload {
+  success: Boolean!
+  error: String
+  link: String
+}
+
+type Query {
+  getNetverifyLink(linkType: String!, userReference: String!): GetNetverifyLinkPayload
+}

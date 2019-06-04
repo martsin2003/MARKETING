@@ -8,7 +8,6 @@ import { TourTypeComponent } from './presentational/tour-type/tour-type.componen
 import { TourTimeComponent } from './presentational/tour-time/tour-time.component';
 import { TourTermsComponent } from './presentational/tour-terms/tour-terms.component';
 import { TourVerificationComponent } from './containers/tour-verification/tour-verification.component';
-import { TourVerificationDlComponent } from './presentational/tour-verification-dl/tour-verification-dl.component';
 import { TourVerificationCcComponent } from './presentational/tour-verification-cc/tour-verification-cc.component';
 import { TourVerificationPhotoComponent } from './presentational/tour-verification-photo/tour-verification-photo.component';
 import { TourVerificationThanksComponent } from './presentational/tour-verification-thanks/tour-verification-thanks.component';
@@ -21,6 +20,8 @@ import { TourBackButtonComponent } from './presentational/tour-back-button/tour-
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material';
 import { HomeBrochureComponent } from './presentational/home-brochure/home-brochure.component';
+import { TourVerificationPhotoTypeComponent } from './presentational/tour-verification-photo-type/tour-verification-photo-type.component';
+import { TourVerificationJumioComponent } from './presentational/tour-verification-jumio/tour-verification-jumio.component';
 
 @NgModule({
   imports: [
@@ -38,7 +39,6 @@ import { HomeBrochureComponent } from './presentational/home-brochure/home-broch
     TourTimeComponent,
     TourTermsComponent,
     TourVerificationComponent,
-    TourVerificationDlComponent,
     TourVerificationCcComponent,
     TourVerificationPhotoComponent,
     TourVerificationThanksComponent,
@@ -47,7 +47,10 @@ import { HomeBrochureComponent } from './presentational/home-brochure/home-broch
     TourConfirmComponent,
     TourVerificationTypeComponent,
     TourBackButtonComponent,
-    HomeBrochureComponent
-  ]
+    HomeBrochureComponent,
+    TourVerificationPhotoTypeComponent,
+    TourVerificationJumioComponent
+  ],
+  entryComponents: [TourVerificationPhotoTypeComponent]
 })
 export class PortalFeatureMyTimeTourModule {}
