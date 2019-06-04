@@ -6,7 +6,7 @@ import { CommunityPlansState } from './community-plans.reducer';
 import { communityPlansQuery } from './community-plans.selectors';
 import { LoadCommunityPlans } from './community-plans.actions';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class CommunityPlansFacade {
   loaded$ = this.store.pipe(select(communityPlansQuery.getLoaded));
   allCommunityPlans$ = this.store.pipe(select(communityPlansQuery.getAllCommunityPlans));
