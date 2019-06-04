@@ -297,8 +297,8 @@
 
 ::ng-deep .mat-checkbox-inner-container {
   @media screen and(max-width: $mobile-view) {
-    height: 22px !important;
-    width: 22px !important;
+    height: 44px !important;
+    width: 44px !important;
     background: #fff !important;
   }
 }
@@ -368,6 +368,8 @@
   border: 1px solid $form-field-border;
   color: $dark-gray;
   font-size: 18px;
+  padding: 10px;
+  outline: none;
 }
 
 .br-input-width {
