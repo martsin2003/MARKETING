@@ -42,7 +42,6 @@ export class TourVerificationComponent implements OnInit {
     } else if (step === TourVerificationStep.photo) {
       return this.showSelectDocumentTypeModal();
     }
-    console.log('step: ', step);
     this.verificationStep = step;
   }
 
@@ -76,7 +75,6 @@ export class TourVerificationComponent implements OnInit {
       .getJumioLink(this.jumioVerificationType)
       .pipe(take(1))
       .subscribe(result => {
-        console.log('result: ', result);
         this.jumioLink = result.getNetverifyLink.link;
         this.verificationStep = TourVerificationStep.jumio;
       });

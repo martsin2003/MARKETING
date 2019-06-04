@@ -19,7 +19,6 @@ export class MyTimeTourComponent implements OnInit {
 
   ngOnInit() {
     this.isMobileView$ = this.detectMobileViewService.isMobileView();
-    console.log('this.route: ', this.route.snapshot.queryParamMap.get('step'));
     const step = this.route.snapshot.queryParamMap.get('step');
     if (step) {
       this.step = Number(step);

@@ -35,21 +35,6 @@ export class CommunitiesListComponent implements OnInit, OnDestroy {
     this.setUpDescriptionChange();
     this.loadCommunities();
     this.initGoogleMaps();
-
-    function receiveMessage(event) {
-      if (event && event.data) {
-        const data = JSON.parse(event.data);
-        console.log('Netverify Web was loaded in an iframe. ', event);
-        console.log('auth token:', data.authorizationToken);
-        console.log('transaction reference:', data.transactionReference);
-        console.log('customer internal reference:', data.customerInternalReference);
-        console.log('event type:', data.eventType);
-        console.log('date-time:', data.dateTime);
-        console.log('event value:', data.payload.value);
-        console.log('event metainfo:', data.payload.metainfo);
-      }
-    }
-    window.addEventListener('message', receiveMessage, false);
   }
 
   ngOnDestroy() {

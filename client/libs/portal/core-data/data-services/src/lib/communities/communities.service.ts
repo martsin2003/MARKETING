@@ -26,14 +26,7 @@ export class CommunitiesService extends TblCommunityServiceGenerated {
       })
       .pipe(
         map((queryResult: any) => {
-          console.log('queryResult: ', queryResult);
           return queryResult.data as any;
-        })
-      )
-      .pipe(
-        map(res => {
-          console.log('res: ', res);
-          return res;
         })
       );
   }
