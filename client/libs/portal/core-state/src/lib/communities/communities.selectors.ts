@@ -1,13 +1,26 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import { COMMUNITIES_FEATURE_KEY, CommunitiesState } from './communities.reducer';
 import * as fromCommunities from './communities.reducer';
 
-const getCommunitiesState = createFeatureSelector<CommunitiesState>(COMMUNITIES_FEATURE_KEY);
+const getCommunitiesState = createFeatureSelector<fromCommunities.CommunitiesState>(
+  fromCommunities.COMMUNITIES_FEATURE_KEY
+);
 
-const getLoaded = (state: CommunitiesState) => state.loaded;
-const getError = (state: CommunitiesState) => state.error;
-const getLoading = (state: CommunitiesState) => state.isLoading;
-const getSelectedCommunityId = (state: CommunitiesState) => state.selectedCommunityId;
+const getLoaded = createSelector(
+  getCommunitiesState,
+  (state: fromCommunities.CommunitiesState) => state.loaded
+);
+const getLoading = createSelector(
+  getCommunitiesState,
+  (state: fromCommunities.CommunitiesState) => state.isLoading
+);
+const getError = createSelector(
+  getCommunitiesState,
+  (state: fromCommunities.CommunitiesState) => state.error
+);
+const getSelectedCommunityId = createSelector(
+  getCommunitiesState,
+  (state: fromCommunities.CommunitiesState) => state.selectedCommunityId
+);
 
 const getCommunitiesEntities = createSelector(
   getCommunitiesState,
@@ -16,10 +29,7 @@ const getCommunitiesEntities = createSelector(
 
 const getAllCommunities = createSelector(
   getCommunitiesState,
-  getLoaded,
-  (state: CommunitiesState, isLoaded) => {
-    return isLoaded ? fromCommunities.selectAllCommunities : [];
-  }
+  fromCommunities.selectAllCommunities
 );
 
 const getSelectedCommunity = createSelector(

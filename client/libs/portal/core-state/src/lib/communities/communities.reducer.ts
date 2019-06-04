@@ -11,9 +11,15 @@ export interface CommunitiesState extends EntityState<CommunityView | Community>
   error?: any;
 }
 
+function selectCommunityId(a: Community): string {
+  return a.intCommunityId;
+}
+
 export const adapter: EntityAdapter<CommunityView | Community> = createEntityAdapter<
   CommunityView | Community
->();
+>({
+  selectId: selectCommunityId
+});
 
 export const initialState: CommunitiesState = adapter.getInitialState({
   selectedCommunityId: null,
