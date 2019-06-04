@@ -3,7 +3,7 @@
 .community-card {
   padding: 10px;
   color: #404042;
-  font-family: HelveticaNeue-Bold;
+  box-shadow: $card-shadow;
 
   &__checkbox {
     font-size: 18px;
@@ -51,8 +51,8 @@
     align-items: center;
     margin-top: 5px;
     img {
-      max-width: 50px;
-      margin-right: 2px;
+      max-width: 35px;
+      margin-right: 10px;
     }
   }
   &__icon-text {

@@ -2,56 +2,63 @@
   <span class="title helvetica-bold" [ngClass]="{ 'pb-0': containerHomeDesignDetail?.homeName }">{{
     containerHomeDesignDetail ? containerHomeDesignDetail.title : 'Request More Info'
   }}</span>
-  <span class="home-name helvetica-bold">{{ containerHomeDesignDetail?.homeName }}</span>
-  <form class="form">
+  <span class="home-name">{{ containerHomeDesignDetail?.homeName }}</span>
+  <form
+    class="form"
+    [formGroup]="moreInfoForm"
+    (submit)="onSubmit()"
+    #moreInfoFormRef="ngForm"
+    autocomplete="off"
+  >
     <div class="item">
-      <mat-form-field appearance="outline">
-        <mat-label>First Name</mat-label>
-        <input matInput required placeholder="First Name" />
-      </mat-form-field>
-      <mat-form-field appearance="outline">
-        <mat-label>Last Name</mat-label>
-        <input matInput required placeholder="Last Name" />
-      </mat-form-field>
+      <div class="br-input-wrapper fb-50 p-2">
+        <label class="br-input-label">First Name *</label>
+        <input class="br-input" formControlName="firstName" type="text" />
+      </div>
+      <div class="br-input-wrapper fb-50 p-2">
+        <label class="br-input-label">Last Name *</label>
+        <input class="br-input" formControlName="lastName" type="text" />
+      </div>
     </div>
     <div class="item">
-      <mat-form-field appearance="outline">
-        <mat-label>Email</mat-label>
-        <input matInput required placeholder="Email" />
-      </mat-form-field>
-      <mat-form-field appearance="outline">
-        <mat-label>Phone</mat-label>
-        <input matInput required placeholder="Phone" />
-      </mat-form-field>
-    </div>
-    <div class="radio-buttons">
-      <mat-radio-group>
-        <mat-radio-button value="1">Mobile</mat-radio-button>
-        <mat-radio-button value="2">Home</mat-radio-button>
-        <mat-radio-button value="3">Work</mat-radio-button>
-      </mat-radio-group>
+      <div class="br-input-wrapper fb-50 p-2">
+        <label class="br-input-label">Email *</label>
+        <input class="br-input" formControlName="email" type="text" />
+        <div class="br-error-container" *ngIf="showErrors(moreInfoForm.get('email'))">
+          <brookfield-error-content
+            [errors]="moreInfoForm.get('email').errors"
+            [controlErrorsMappingKey]="'requestMoreInfoEmail'"
+          ></brookfield-error-content>
+        </div>
+      </div>
+      <div class="br-input-wrapper fb-50 p-2">
+        <label class="br-input-label">Phone *</label>
+        <input class="br-input" formControlName="phone" type="text" />
+      </div>
     </div>
     <div class="wrp-comments">
-      <mat-form-field appearance="outline" class="example-full-width">
-        <mat-label>Comments</mat-label>
-        <textarea matInput rows="3" placeholder="Comments"></textarea>
-      </mat-form-field>
+      <div class="br-input-wrapper fb-50 p-2">
+        <label class="br-input-label">Comments</label>
+        <textarea class="br-textarea" formControlName="comments" type="text"></textarea>
+      </div>
     </div>
     <div class="requests">
       <div class="checkbox-container">
-        <mat-checkbox
-          ><span class="helvetica-bold br-text-dark-gray"
-            >Request a Private Tour</span
-          ></mat-checkbox
+        <mat-checkbox class="helvetica-bold br-text-dark-gray" formControlName="private"
+          >Request a Private Tour</mat-checkbox
         >
       </div>
       <div class="checkbox-container">
-        <mat-checkbox
-          ><span class="helvetica-bold br-text-dark-gray">Request Promotions</span></mat-checkbox
-        >
+        <mat-checkbox formControlName="promotion">
+          <span class="helvetica-bold br-text-dark-gray">Request Promotions</span>
+        </mat-checkbox>
       </div>
     </div>
-    <button type="submit" class="br-button br-button--primary-blue br-button--desktop mt-4">
+    <button
+      type="submit"
+      [disabled]="moreInfoForm.invalid"
+      class="br-button br-button--primary-blue br-button--desktop mt-4"
+    >
       GET INFO
     </button>
   </form>

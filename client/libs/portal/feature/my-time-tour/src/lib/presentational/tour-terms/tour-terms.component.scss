@@ -30,11 +30,16 @@
     &--primary {
       color: $primary-dark;
     }
+
     &--terms {
       @media screen and(max-width: $mobile-view) {
         color: $primary;
       }
     }
+  }
+  &--text-bold {
+    font-family: $helvetica-bold;
+    color: $primary;
   }
   &__bottom {
     display: flex;
@@ -53,4 +58,13 @@
 }
 ::ng-deep .mat-checkbox-label {
   font-family: $helvetica-light;
+}
+::ng-deep .mat-checkbox-inner-container {
+  width: 24px !important;
+  height: 24px !important;
+  background: white;
+  .mat-checkbox-frame {
+    border-width: 1px;
+    border-color: $form-field-border;
+  }
 }

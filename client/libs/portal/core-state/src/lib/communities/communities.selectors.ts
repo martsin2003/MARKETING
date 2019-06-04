@@ -1,41 +1,50 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import { COMMUNITIES_FEATURE_KEY, CommunitiesState } from './communities.reducer';
+import * as fromCommunities from './communities.reducer';
 
-// Lookup the 'Communities' feature state managed by NgRx
-const getCommunitiesState = createFeatureSelector<CommunitiesState>(COMMUNITIES_FEATURE_KEY);
+const getCommunitiesState = createFeatureSelector<fromCommunities.CommunitiesState>(
+  fromCommunities.COMMUNITIES_FEATURE_KEY
+);
 
 const getLoaded = createSelector(
   getCommunitiesState,
-  (state: CommunitiesState) => state.loaded
+  (state: fromCommunities.CommunitiesState) => state.loaded
+);
+const getLoading = createSelector(
+  getCommunitiesState,
+  (state: fromCommunities.CommunitiesState) => state.isLoading
 );
 const getError = createSelector(
   getCommunitiesState,
-  (state: CommunitiesState) => state.error
+  (state: fromCommunities.CommunitiesState) => state.error
+);
+const getSelectedCommunityId = createSelector(
+  getCommunitiesState,
+  (state: fromCommunities.CommunitiesState) => state.selectedCommunityId
+);
+
+const getCommunitiesEntities = createSelector(
+  getCommunitiesState,
+  fromCommunities.selectCommunitiesEntities
 );
 
 const getAllCommunities = createSelector(
   getCommunitiesState,
-  getLoaded,
-  (state: CommunitiesState, isLoaded) => {
-    return isLoaded ? state.list : [];
-  }
+  fromCommunities.selectAllCommunities
 );
-const getSelectedId = createSelector(
-  getCommunitiesState,
-  (state: CommunitiesState) => state.selectedId
-);
-const getSelectedCommunities = createSelector(
-  getAllCommunities,
-  getSelectedId,
-  (communities, id) => {
-    const result = communities.find(it => it['id'] === id);
-    return result ? Object.assign({}, result) : undefined;
+
+const getSelectedCommunity = createSelector(
+  getCommunitiesEntities,
+  getSelectedCommunityId,
+  (communitiesEntities, selectedId) => {
+    return selectedId ? communitiesEntities[selectedId] : null;
   }
 );
 
 export const communitiesQuery = {
   getLoaded,
   getError,
+  getLoading,
+  getCommunitiesEntities,
   getAllCommunities,
-  getSelectedCommunities
+  getSelectedCommunity
 };

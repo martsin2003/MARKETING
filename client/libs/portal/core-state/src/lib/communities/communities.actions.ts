@@ -1,5 +1,5 @@
+import { CommunityView, Community } from '@brookfield/portal/core-data/data-services';
 import { Action } from '@ngrx/store';
-import { Entity } from './communities.reducer';
 
 export enum CommunitiesActionTypes {
   LoadCommunities = '[Communities] Load Communities',
@@ -18,7 +18,7 @@ export class CommunitiesLoadError implements Action {
 
 export class CommunitiesLoaded implements Action {
   readonly type = CommunitiesActionTypes.CommunitiesLoaded;
-  constructor(public payload: Entity[]) {}
+  constructor(public payload: CommunityView[] | Community[]) {}
 }
 
 export type CommunitiesAction = LoadCommunities | CommunitiesLoaded | CommunitiesLoadError;

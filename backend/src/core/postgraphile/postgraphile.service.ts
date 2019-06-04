@@ -38,7 +38,6 @@ export class PostgraphileService {
     const fetcher = async ({ query: queryDocument, variables, operationName, context }) => {
       let userId = null;
       const authorization = get(context, 'graphqlContext.req.headers.authorization', null);
-      console.log('authorization: ', authorization);
       if (authorization) {
         const data: any = jwt.decode(authorization.split(' ')[1], {
           complete: true
@@ -46,7 +45,6 @@ export class PostgraphileService {
         userId = data.payload.id;
       }
       const query = print(queryDocument);
-      console.log('query: ', query);
       const fetchResult = await fetch(
         `http://localhost:${config.get('postgraphile.internalPort')}/graphql`,
         {

@@ -11,7 +11,7 @@
   .title {
     font-family: $helvetica-bold;
     font-size: 36px;
-    padding: 40px 0px 0px 0px;
+    padding: 40px 0px 0px;
     color: $primary;
     @media screen and (max-width: $mobile-view) {
       width: 90%;
@@ -33,41 +33,32 @@
     }
   }
   .form {
-    width: 540px;
+    width: 630px;
     min-width: 300px;
-    max-width: 540px;
+    max-width: 630px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    .hint {
+      width: calc(100% - 30px);
+      font-family: $helvetica-light;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: end;
+    }
     .item {
       width: 100%;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
-      mat-form-field {
-        width: 258px;
+      .br-input-wrapper {
+        flex-basis: calc(50% - 8px) !important;
       }
       @media screen and (max-width: $mobile-view) {
         flex-direction: column;
-        mat-form-field {
+        .br-input-wrapper {
           width: 100%;
-        }
-      }
-    }
-    .radio-buttons {
-      width: 100%;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      padding: 0px 0px 25px;
-      ::ng-deep mat-radio-button {
-        font-family: 'Helvetica Neue';
-        font-weight: 100;
-        color: rgb(94, 94, 94);
-        margin-left: 20px;
-        ::ng-deep .mat-radio-outer-circle {
-          border-width: 1px !important;
         }
       }
     }
@@ -81,25 +72,36 @@
     .requests {
       width: 100%;
       display: flex;
+      padding: 8px;
       .checkbox-container {
         width: 50%;
         display: flex;
         justify-content: flex-start;
-        ::ng-deep mat-checkbox {
-          .mat-checkbox-label {
-            font-family: 'Helvetica Neue';
-          }
-          .mat-checkbox-frame {
-            border-width: 1px;
-            border-radius: 0px;
-          }
-          .mat-checkbox-layout {
-            display: flex;
-            align-items: center;
-          }
-          .mat-checkbox-inner-container {
-            width: 44px;
-            height: 44px;
+
+        ::ng-deep {
+          .mat-checkbox {
+            .mat-checkbox-label {
+              font-family: 'Helvetica Neue';
+            }
+            .mat-checkbox-ripple {
+              visibility: hidden !important;
+            }
+            &.mat-checkbox-checked.mat-accent .mat-checkbox-background {
+              background-color: $primary !important;
+            }
+            .mat-checkbox-frame {
+              border-width: 1px;
+              border-radius: 0px;
+              border-color: $form-field-border;
+            }
+            .mat-checkbox-layout {
+              display: flex;
+              align-items: center;
+            }
+            .mat-checkbox-inner-container {
+              width: 24px;
+              height: 24px;
+            }
           }
           span {
             font-size: 18px;
@@ -112,6 +114,10 @@
           width: 100%;
           &:first-child {
             margin-bottom: 20px;
+          }
+          .mat-checkbox-inner-container {
+            width: 44px;
+            height: 44px;
           }
         }
       }
@@ -126,6 +132,11 @@
     @media screen and (max-width: $mobile-view) {
       width: 90%;
       max-width: none;
+    }
+    .br-button {
+      @media screen and (max-width: $mobile-view) {
+        width: calc(100% - 16px);
+      }
     }
   }
 }

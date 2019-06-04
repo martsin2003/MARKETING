@@ -11,7 +11,6 @@ export class AuthService {
   }
   async login(username, password) {
     const zipCode = await this.zipCodeRepository.findOne();
-    console.log('zipCode: ', zipCode);
     return 'success';
   }
 }

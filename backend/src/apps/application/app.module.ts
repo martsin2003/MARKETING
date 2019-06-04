@@ -1,3 +1,4 @@
+import { CommunitiesModule } from './communities/communities.module';
 import { AuthModule } from './auth/auth.module';
 import { PostgraphileService } from './../../core/postgraphile/postgraphile.service';
 import { PostgraphileModule } from './../../core/postgraphile/postgraphile.module';
@@ -10,9 +11,13 @@ import { mergeSchemas } from 'graphql-tools';
 import { ModuleRef } from '@nestjs/core';
 import * as config from 'config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { MyTimeTourModule } from './my-time-tour/my-time-tour.module';
 
 @Module({
   imports: [
+    MyTimeTourModule,
+    AuthModule,
+    CommunitiesModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: config.get<string>('database.host'),
@@ -25,7 +30,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       keepConnectionAlive: true
     }),
     GraphQLModule.forRootAsync({
-      imports: [PostgraphileModule, AuthModule],
+      imports: [PostgraphileModule],
       useFactory: (postgraphileService: PostgraphileService, moduleRef: ModuleRef) => {
         return {
           context: ({ req }) => ({ req }),
@@ -36,7 +41,6 @@ import { TypeOrmModule } from '@nestjs/typeorm';
             const delegates = graphqlFactory.createDelegates();
             const schemas = [localSchema];
             const graphileSchema = await postgraphileService.getSchema();
-            console.log('graphileSchema: ', graphileSchema);
             if (graphileSchema) {
               schemas.push(graphileSchema);
             }

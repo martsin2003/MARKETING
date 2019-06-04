@@ -9,10 +9,6 @@ export default {
     try {
       return getConnectionManager().get('CustomConnection');
     } catch (e) {
-      console.log(config.get<string>('database.host'));
-      console.log(config.get<string>('database.port'));
-      console.log(config.get<string>('database.username'));
-      console.log(__dirname);
       return createConnection({
         name: 'CustomConnection',
         type: 'postgres',

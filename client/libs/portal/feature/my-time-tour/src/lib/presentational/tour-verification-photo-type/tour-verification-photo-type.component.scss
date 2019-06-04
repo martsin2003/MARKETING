@@ -1,0 +1,28 @@
+@import 'variables.scss';
+.tour-verification-photo-type {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and(max-width: $mobile-view) {
+    align-items: flex-start;
+  }
+  &__actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    @media screen and(max-width: $mobile-view) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__button {
+    width: 250px;
+    min-width: 100px;
+    margin: 0 10px;
+    @media screen and(max-width: $mobile-view) {
+      margin: 10px 0;
+      width: 100%;
+    }
+  }
+}

@@ -3,10 +3,15 @@
     class="d-flex flex-column my-time-tour-container align-items-center tour-time__main-container"
   >
     <brookfield-tour-step [data]="data" [whiteBackground]="true"></brookfield-tour-step>
-    <form class="d-flex flex-row justify-content-center flex-wrap" autocomplete="off">
+    <form
+      [formGroup]="tourTimeForm"
+      class="d-flex flex-row justify-content-center flex-wrap"
+      autocomplete="off"
+    >
       <div class="br-input-wrapper tour-time__select-date-field my-2">
         <label class="br-input-label">Date:</label>
         <input
+          formControlName="date"
           [matDatepicker]="picker"
           placeholder="Choose a date"
           (focus)="picker.open()"
@@ -25,6 +30,7 @@
       <div class="d-flex flex-column tour-time__select-date-field tour-time__select-time my-2">
         <label class="br-input-label">Time:</label>
         <mat-select
+          formControlName="time"
           class="br-input br-my-time-select pl-6"
           placeholder="TIME"
           panelClass="my-time-picker"

@@ -14,7 +14,6 @@ export class SecondaryNavMobileComponent implements OnInit {
   ngOnInit() {}
 
   navigateTo(url: string) {
-    console.log('clicked', url);
     this.navigate.emit(url);
   }
 }

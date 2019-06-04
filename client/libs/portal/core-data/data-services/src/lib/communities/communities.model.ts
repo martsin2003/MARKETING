@@ -1,3 +1,47 @@
+// TODO - update types of each property
+export interface CommunityView {
+  commid: string | null;
+  commname: string | null;
+  commnamefull: string | null;
+  commslug: string | null;
+  commtype: string | null;
+  commmhbr: string | null;
+  commaddress: string | null;
+  commaddress2: string | null;
+  commcity: string | null;
+  commstate: string | null;
+  commzip: string | null;
+  commcitystatezip: string | null;
+  commcounty: string | null;
+  commlat: string | null;
+  commlng: string | null;
+  commhascoords: string | null;
+  commusecoordsfordirections: string | null;
+  commdirections: string | null;
+  commhours: string | null;
+  commfeatures: string | null;
+  commdescription: string | null;
+  commvideotoururl: string | null;
+  commsiteplanpdf: string | null;
+  commhasisp: string | null;
+  commhasfullisp: string | null;
+  commispimg: string | null;
+  commisppath: string | null;
+  commisplat: string | null;
+  commisplng: string | null;
+  commispzoom: string | null;
+  commimg: string | null;
+  commhassmarthome: string | null;
+  commhassmarthometech: string | null;
+  commmycommandtypedisplay: string | null;
+  commmycommandpricingdisplay: string | null;
+  commmycommandimg: string | null;
+  commhasgallery: string | null;
+  commhasamenities: string | null;
+  commhasareaamenities: string | null;
+  commpricedfro: string | null;
+}
+
 export interface Community {
   intCommunityId: string;
   intCrmCommunityId: number | null;
