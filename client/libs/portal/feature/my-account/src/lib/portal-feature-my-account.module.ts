@@ -15,11 +15,13 @@ import { CreateAccountComponent } from './presentational/create-account/create-a
 import { SignInDialogComponent } from './presentational/sign-in-dialog/sign-in-dialog.component';
 import { CreateAnAccountDialogComponent } from './presentational/create-an-account-dialog/create-an-account-dialog.component';
 import { ForgotPasswordComponent } from './presentational/forgot-password/forgot-password.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     MaterialModule,
+    ReactiveFormsModule,
     PortalSharedComponentsModule,
     RouterModule.forChild([
       { path: '', pathMatch: 'full', component: MyAccountComponent },

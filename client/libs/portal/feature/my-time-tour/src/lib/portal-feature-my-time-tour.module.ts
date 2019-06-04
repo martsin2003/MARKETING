@@ -15,7 +15,7 @@ import { TourVerificationThanksComponent } from './presentational/tour-verificat
 import { TourReasonComponent } from './presentational/tour-reason/tour-reason.component';
 import { TourCreatePasswordComponent } from './presentational/tour-create-password/tour-create-password.component';
 import { TourConfirmComponent } from './presentational/tour-confirm/tour-confirm.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TourVerificationTypeComponent } from './presentational/tour-verification-type/tour-verification-type.component';
 import { TourBackButtonComponent } from './presentational/tour-back-button/tour-back-button.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -27,6 +27,7 @@ import { HomeBrochureComponent } from './presentational/home-brochure/home-broch
     CommonModule,
     MaterialModule,
     FormsModule,
+    ReactiveFormsModule,
     MatNativeDateModule,
     MatDatepickerModule,
     RouterModule.forChild([{ path: '', pathMatch: 'full', component: MyTimeTourComponent }])

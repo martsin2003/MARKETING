@@ -3,43 +3,46 @@
     containerHomeDesignDetail ? containerHomeDesignDetail.title : 'Request More Info'
   }}</span>
   <span class="home-name">{{ containerHomeDesignDetail?.homeName }}</span>
-  <form class="form" autocomplete="off">
-    <div class="hint">* Requiered fields</div>
+  <form class="form" [formGroup]="moreInfoForm" (submit)="onSubmit()" autocomplete="off">
     <div class="item">
       <div class="br-input-wrapper fb-50 p-2">
         <label class="br-input-label">First Name *</label>
-        <input class="br-input" type="text" />
+        <input class="br-input" formControlName="firstName" type="text" />
       </div>
       <div class="br-input-wrapper fb-50 p-2">
         <label class="br-input-label">Last Name *</label>
-        <input class="br-input" type="text" />
+        <input class="br-input" formControlName="lastName" type="text" />
       </div>
     </div>
     <div class="item">
       <div class="br-input-wrapper fb-50 p-2">
         <label class="br-input-label">Email *</label>
-        <input class="br-input" type="text" />
+        <input class="br-input" formControlName="email" type="text" />
       </div>
       <div class="br-input-wrapper fb-50 p-2">
         <label class="br-input-label">Phone *</label>
-        <input class="br-input" type="text" />
+        <input class="br-input" formControlName="phone" type="text" />
       </div>
     </div>
     <div class="wrp-comments">
       <div class="br-input-wrapper fb-50 p-2">
         <label class="br-input-label">Comments</label>
-        <textarea class="br-textarea" type="text"></textarea>
+        <textarea class="br-textarea" formControlName="comments" type="text"></textarea>
       </div>
     </div>
     <div class="requests">
       <div class="checkbox-container">
-        <mat-checkbox>Request a Private Tour</mat-checkbox>
+        <mat-checkbox formControlName="private">Request a Private Tour</mat-checkbox>
       </div>
       <div class="checkbox-container">
-        <mat-checkbox>Request Promotions</mat-checkbox>
+        <mat-checkbox formControlName="promotion">Request Promotions</mat-checkbox>
       </div>
     </div>
-    <button type="submit" class="br-button br-button--primary-blue br-button--desktop mt-4">
+    <button
+      type="submit"
+      [disabled]="moreInfoForm.invalid"
+      class="br-button br-button--primary-blue br-button--desktop mt-4"
+    >
       GET INFO
     </button>
   </form>
