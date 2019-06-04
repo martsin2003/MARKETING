@@ -1,0 +1,63 @@
+<div class="d-flex flex-column div-max-width">
+  <div class="d-flex flex-row w-auto">
+    <div class="w-50">
+      <img
+        class="create-account-image-mobile w-100 h-100"
+        src="/assets/images/mobile/create_an_account_3x.png"
+      />
+    </div>
+    <div class="pr-4 br-text-dark-gray br-content-text--large w-50">
+      <div class="button-close d-flex justify-content-end" (click)="onNoClick()">
+        <img src="assets/icons/times.svg" />
+      </div>
+      <div class="d-flex flex-column justify-content-start mt-auto">
+        <h2 class="p-2 br-header-text--medium br-text-primary ml-2 mb-3">
+          Create Account
+        </h2>
+        <ul class="m-0">
+          <li>Save favorite communities and homes</li>
+          <li>Design and save personalized home plans</li>
+          <li>Manage My Time Home Tours</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex flex-column mx-5 mt-5">
+    <div class="d-flex flex-row">
+      <div class="br-input-wrapper fb-50 p-2 w-50">
+        <label class="br-input-label">First Name</label>
+        <input class="br-input" type="text" />
+      </div>
+
+      <div class="br-input-wrapper fb-50 p-2 w-50">
+        <label class="br-input-label">Last Name</label>
+        <input class="br-input" type="text" />
+      </div>
+    </div>
+
+    <div class="br-input-wrapper fb-50 p-2">
+      <label class="br-input-label">Email</label>
+      <input class="br-input" type="text" />
+    </div>
+    <div class="d-flex flex-row">
+      <div class="br-input-wrapper fb-50 p-2 w-50">
+        <label class="br-input-label">Password</label>
+        <input class="br-input" type="text" />
+      </div>
+
+      <div class="br-input-wrapper fb-50 p-2 w-50">
+        <label class="br-input-label">Confirm Password</label>
+        <input class="br-input" type="text" />
+      </div>
+    </div>
+    <div class=" button m-auto my-4">
+      <button
+        class="w-100 br-button br-button--primary-blue w-50"
+        color="primary"
+        (click)="openCreateDialog()"
+      >
+        CREATE AN ACCOUNT
+      </button>
+    </div>
+  </div>
+</div>

@@ -11,3 +11,8 @@
     padding: 20px;
   }
 }
+@media screen and(max-width: $mobile-view) {
+  .no-margin-mobile {
+    margin: 0px !important;
+  }
+}

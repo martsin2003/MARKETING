@@ -59,3 +59,8 @@
     margin-right: 10px;
   }
 }
+@media screen and(max-width: $mobile-view) {
+  .no-margin-mobile {
+    margin: 8px !important;
+  }
+}

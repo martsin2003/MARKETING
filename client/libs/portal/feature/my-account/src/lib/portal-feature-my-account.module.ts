@@ -12,6 +12,8 @@ import { FavoritesDialogComponent } from './presentational/favorites-dialog/favo
 import { HomeTourCardComponent } from './presentational/home-tour-card/home-tour-card.component';
 import { SignInComponent } from './presentational/sign-in/sign-in.component';
 import { CreateAccountComponent } from './presentational/create-account/create-account.component';
+import { SignInDialogComponent } from './presentational/sign-in-dialog/sign-in-dialog.component';
+import { CreateAnAccountDialogComponent } from './presentational/create-an-account-dialog/create-an-account-dialog.component';
 import { ForgotPasswordComponent } from './presentational/forgot-password/forgot-password.component';
 
 @NgModule({
@@ -36,8 +38,15 @@ import { ForgotPasswordComponent } from './presentational/forgot-password/forgot
     HomeTourCardComponent,
     SignInComponent,
     CreateAccountComponent,
+    SignInDialogComponent,
+    CreateAnAccountDialogComponent,
     ForgotPasswordComponent
   ],
-  entryComponents: [FavoritesDialogComponent, ForgotPasswordComponent]
+  entryComponents: [
+    FavoritesDialogComponent,
+    SignInDialogComponent,
+    CreateAnAccountDialogComponent,
+    ForgotPasswordComponent
+  ]
 })
 export class PortalFeatureMyAccountModule {}

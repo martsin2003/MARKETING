@@ -1,36 +1,47 @@
 <div class="d-flex flex-column align-items-center tour-time">
-  <div class="d-flex flex-column my-time-tour-container align-items-center">
+  <div
+    class="d-flex flex-column my-time-tour-container align-items-center tour-time__main-container"
+  >
     <brookfield-tour-step [data]="data" [whiteBackground]="true"></brookfield-tour-step>
-    <div class="w-50 d-flex flex-row justify-content-center tour-time__hide-mobile">
-      <div class="w-50 mr-2 d-flex flex-column">
-        <div class="br-text-pure-white">
-          Date
-        </div>
+    <form class="d-flex flex-row justify-content-center flex-wrap" autocomplete="off">
+      <div class="br-input-wrapper tour-time__select-date-field my-2">
+        <label class="br-input-label">Date:</label>
         <input
-          matInput
-          class="search-box__item search-box__item--input my-2 br-input"
-          type="text"
-          placeholder="01/03/2019"
+          [matDatepicker]="picker"
+          placeholder="Choose a date"
+          (focus)="picker.open()"
+          class="br-input pl-6"
         />
+        <mat-datepicker-toggle matSuffix [for]="picker" class="toggle-icon" [disableRipple]="true">
+          <img src="assets/icons/calendar-blue.svg" matDatepickerToggleIcon alt="" />
+        </mat-datepicker-toggle>
+        <mat-datepicker
+          #picker
+          panelClass="my-date-picker"
+          [touchUi]="isMobileView ? true : false"
+        ></mat-datepicker>
       </div>
 
-      <div class="w-50 ml-2 d-flex flex-column br-text-pure-white">
-        <div class="br-text-pure-white">
-          Time
-        </div>
+      <div class="d-flex flex-column tour-time__select-date-field tour-time__select-time my-2">
+        <label class="br-input-label">Time:</label>
         <mat-select
-          class="search-box__item search-box__item--input my-2 br-input"
+          class="br-input br-my-time-select pl-6"
           placeholder="TIME"
+          panelClass="my-time-picker"
         >
           <mat-option>10:00 AM</mat-option>
           <mat-option>11:30 AM</mat-option>
           <mat-option>1:00 PM</mat-option>
           <mat-option>2:30 PM</mat-option>
         </mat-select>
+        <img class="toggle-icon" src="assets/icons/my-time-clock.svg" alt="" />
       </div>
-    </div>
+    </form>
 
-    <button class="br-button br-button--primary-blue br-button--desktop my-3" (click)="continue()">
+    <button
+      class="br-button br-button--primary-blue br-button--desktop mb-3 mt-4"
+      (click)="continue()"
+    >
       CONTINUE
     </button>
   </div>

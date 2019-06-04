@@ -1,0 +1,10 @@
+<ng-container *ngIf="community">
+  <brookfield-community-card
+    [community]="community"
+    (cardSelected)="compareCard($event)"
+  ></brookfield-community-card>
+</ng-container>
+
+<ng-container>
+  <brookfield-home-card *ngIf="!community"></brookfield-home-card>
+</ng-container>

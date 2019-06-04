@@ -26,9 +26,7 @@ export class HomeCardComponent implements OnInit {
 
   ngOnInit() {}
 
-  compareCard(id) {
-    this.cardSelected.emit(this.community.id);
-  }
+  compareCard(id) {}
 
   goToDetails() {
     this.router.navigateByUrl('/find/home-plan-detail');

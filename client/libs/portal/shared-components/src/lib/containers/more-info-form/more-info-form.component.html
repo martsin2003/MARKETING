@@ -3,39 +3,33 @@
     containerHomeDesignDetail ? containerHomeDesignDetail.title : 'Request More Info'
   }}</span>
   <span class="home-name">{{ containerHomeDesignDetail?.homeName }}</span>
-  <form class="form">
+  <form class="form" autocomplete="off">
+    <div class="hint">* Requiered fields</div>
     <div class="item">
-      <mat-form-field appearance="outline">
-        <mat-label>First Name</mat-label>
-        <input matInput required placeholder="First Name" />
-      </mat-form-field>
-      <mat-form-field appearance="outline">
-        <mat-label>Last Name</mat-label>
-        <input matInput required placeholder="Last Name" />
-      </mat-form-field>
+      <div class="br-input-wrapper fb-50 p-2">
+        <label class="br-input-label">First Name *</label>
+        <input class="br-input" type="text" />
+      </div>
+      <div class="br-input-wrapper fb-50 p-2">
+        <label class="br-input-label">Last Name *</label>
+        <input class="br-input" type="text" />
+      </div>
     </div>
     <div class="item">
-      <mat-form-field appearance="outline">
-        <mat-label>Email</mat-label>
-        <input matInput required placeholder="Email" />
-      </mat-form-field>
-      <mat-form-field appearance="outline">
-        <mat-label>Phone</mat-label>
-        <input matInput required placeholder="Phone" />
-      </mat-form-field>
-    </div>
-    <div class="radio-buttons">
-      <mat-radio-group>
-        <mat-radio-button value="1">Mobile</mat-radio-button>
-        <mat-radio-button value="2">Home</mat-radio-button>
-        <mat-radio-button value="3">Work</mat-radio-button>
-      </mat-radio-group>
+      <div class="br-input-wrapper fb-50 p-2">
+        <label class="br-input-label">Email *</label>
+        <input class="br-input" type="text" />
+      </div>
+      <div class="br-input-wrapper fb-50 p-2">
+        <label class="br-input-label">Phone *</label>
+        <input class="br-input" type="text" />
+      </div>
     </div>
     <div class="wrp-comments">
-      <mat-form-field appearance="outline" class="example-full-width">
-        <mat-label>Comments</mat-label>
-        <textarea matInput rows="3" placeholder="Comments"></textarea>
-      </mat-form-field>
+      <div class="br-input-wrapper fb-50 p-2">
+        <label class="br-input-label">Comments</label>
+        <textarea class="br-textarea" type="text"></textarea>
+      </div>
     </div>
     <div class="requests">
       <div class="checkbox-container">

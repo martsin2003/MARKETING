@@ -10,7 +10,7 @@
     <h1 class="br-text-primary-dark br-header-text--medium">How It Works</h1>
   </div>
   <div>
-    <ol class="sign-in-ol-mobile p-0 helvetica-light font-18">
+    <ol class="sign-in-ol-mobile p-0 helvetica-light br-content-text--large">
       <li>Select the home you'd like to visit.</li>
       <li>Sign in or create an account. Select a day and time to tour the home.</li>
       <li>Verify your identity with your driver's license or credit card information.*</li>
@@ -27,9 +27,9 @@
   </div>
 </div>
 
-<div class="display-none">
+<div class="">
   <div class="div-max-width">
-    <div _ngcontent-ocp-c24="" class="button-close d-flex justify-content-end">
+    <div class="button-close d-flex justify-content-end">
       <img src="assets/icons/times.svg" />
     </div>
 
@@ -40,7 +40,7 @@
       <h1 class="br-text-primary-dark br-header-text--medium">How It Works</h1>
     </div>
     <div>
-      <ol class="sign-in-ol-mobile p-0 helvetica-light font-18">
+      <ol class="sign-in-ol-mobile p-0 helvetica-light br-content-text--large">
         <li>Sign in or create an account. Select a day and time to tour the home.</li>
         <li>Verify your identity with your driver's license or credit card information.*</li>
         <li>
@@ -55,13 +55,19 @@
         </p>
       </div>
       <div class="d-flex justify-content-center mt-3 flex-column">
-        <button class="m-3 br-button br-button--primary-blue br-button--desktop">
+        <button
+          class="m-3 br-button br-button--primary-blue br-button--desktop"
+          (click)="openSignInDialog()"
+        >
           SIGN IN
         </button>
 
         <h3 class="helvetica-light">OR</h3>
 
-        <button class="m-3 br-button br-button--secondary-blue br-button--desktop">
+        <button
+          class="br-button br-button--secondary-blue br-button--desktop m-3"
+          (click)="openCreateDialog()"
+        >
           CREATE ACCOUNT
         </button>
       </div>
@@ -69,7 +75,7 @@
   </div>
 </div>
 <!-- Sign-in-to-my-account -->
-<div>
+<div class="display-none">
   <div class="div-max-width">
     <div class="button-close d-flex justify-content-end">
       <img src="assets/icons/times.svg" />
@@ -78,7 +84,9 @@
       <h1 class="br-text-primary-dark br-header-text--medium m-3">Sign In to My Account</h1>
     </div>
     <div class="d-flex justify-content-center mt-3 flex-column">
-      <p class="helvetica-light font-18 br-text-dark-gray pl-3 m-0">Enter Your Email</p>
+      <p class="helvetica-light br-content-text--large br-text-dark-gray pl-3 m-0">
+        Enter Your Email
+      </p>
       <input class="br-input m-3" />
       <button class="m-3 br-button br-button--primary-blue br-button--desktop">
         NEXT
@@ -91,7 +99,7 @@
   </div>
 </div>
 <!-- sign-in-to-my-account-2 -->
-<div>
+<div class="display-none">
   <div class="div-max-width">
     <div class="button-close d-flex justify-content-end">
       <img src="assets/icons/times.svg" />
@@ -100,7 +108,7 @@
       <h1 class="br-text-primary-dark br-header-text--medium m-3">Sign In to My Account</h1>
     </div>
     <div class="d-flex justify-content-center mt-3 flex-column">
-      <p class="helvetica-light font-18 br-text-dark-gray pl-3 m-0 ">Password</p>
+      <p class="helvetica-light br-content-text--large br-text-dark-gray pl-3 m-0 ">Password</p>
       <input class="br-input m-3" />
       <button class="m-3 br-button br-button--primary-blue br-button--desktop">
         SIGN-IN
@@ -112,7 +120,7 @@
       <p class="text-center">
         <a
           (click)="forgotPasswordDialog()"
-          class="helvetica-light font-18 br-text-dark-gray helvetica-light"
+          class="helvetica-light br-content-text--large br-text-dark-gray helvetica-light"
           >Forgot password?</a
         >
       </p>
@@ -120,7 +128,7 @@
   </div>
 </div>
 <!-- This is create account - my time -->
-<div>
+<div class="display-none">
   <div class="div-max-width">
     <div class="button-close d-flex justify-content-end">
       <img src="assets/icons/times.svg" />
@@ -132,12 +140,12 @@
       <h1 class="br-text-primary-dark br-header-text--medium m-3">Let's Get Started</h1>
     </div>
     <div>
-      <p class="helvetica-light font-18 br-text-dark-gray pl-3 mb-2">
+      <p class="helvetica-light br-content-text--large br-text-dark-gray pl-3 mb-2">
         Enter your email address below to begin scheduling your My Time Home Tour.
       </p>
     </div>
     <div class="d-flex justify-content-center mt-3 flex-column">
-      <p class="helvetica-light font-18  pl-3 m-0 br-text-dark-gray">Email</p>
+      <p class="helvetica-light br-content-text--large  pl-3 m-0 br-text-dark-gray">Email</p>
       <input class="br-input mt-3 ml-3 mr-3 mb-0" />
       <button class="m-3 br-button br-button--primary-blue br-button--desktop">
         CONTINUE

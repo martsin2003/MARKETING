@@ -9,6 +9,7 @@ import { Community } from 'libs/portal/core-data/data-services/src/lib/communiti
 export class CommunityCardComponent implements OnInit {
   @Output() cardSelected = new EventEmitter<string>();
   @Input() community: Community;
+
   constructor() {}
 
   ngOnInit() {}

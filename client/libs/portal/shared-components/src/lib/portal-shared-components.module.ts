@@ -3,7 +3,6 @@ import { CarouselComponent } from './presentational/carousel/carousel.component'
 import { MaterialModule } from '@brookfield/material';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CommunityCardComponent } from './containers/community-card/community-card.component';
 import { ViewFilterComponent } from './containers/view-filter/view-filter.component';
 import { DesktopViewFilterComponent } from './presentational/desktop-view-filter/desktop-view-filter.component';
 import { MobileViewFilterComponent } from './presentational/mobile-view-filter/mobile-view-filter.component';
@@ -19,6 +18,8 @@ import { FooterMobileComponent } from './presentational/footer-mobile/footer-mob
 import { HomeCardComponent } from './presentational/home-card/home-card.component';
 import { MoreInfoFormComponent } from './containers/more-info-form/more-info-form.component';
 import { BottomSheetComponent } from './presentational/bottom-sheet/bottom-sheet.component';
+import { CardInfoComponent } from './containers/card-info/card-info.component';
+import { CommunityCardComponent } from './presentational/community-card/community-card.component';
 
 @NgModule({
   imports: [CommonModule, MaterialModule, RouterModule],
@@ -39,7 +40,9 @@ import { BottomSheetComponent } from './presentational/bottom-sheet/bottom-sheet
     CarouselComponent,
     HomeCardComponent,
     MoreInfoFormComponent,
-    BottomSheetComponent
+    BottomSheetComponent,
+    CardInfoComponent,
+    CommunityCardComponent
   ],
   exports: [
     CommunityCardComponent,
@@ -50,7 +53,8 @@ import { BottomSheetComponent } from './presentational/bottom-sheet/bottom-sheet
     CarouselComponent,
     HomeCardComponent,
     MoreInfoFormComponent,
-    BottomSheetComponent
+    BottomSheetComponent,
+    CardInfoComponent
   ],
   entryComponents: [BottomSheetComponent]
 })

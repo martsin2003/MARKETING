@@ -297,8 +297,8 @@
 
 ::ng-deep .mat-checkbox-inner-container {
   @media screen and(max-width: $mobile-view) {
-    height: 22px !important;
-    width: 22px !important;
+    height: 44px !important;
+    width: 44px !important;
     background: #fff !important;
   }
 }
@@ -337,7 +337,6 @@
   &--no-border {
     border: none;
   }
-
   &--desktop {
     min-width: 226px;
 
@@ -354,11 +353,14 @@
 }
 
 .br-input-label {
-  height: 22px;
-  font-family: HelveticaNeue-Light;
-  font-size: 16px;
-  margin-bottom: 2px;
-  color: #5f6062;
+  line-height: 21px;
+  font-family: $helvetica;
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: $dark-gray;
+  &--white {
+    color: $pure-white;
+  }
 }
 
 .br-textarea {
@@ -366,6 +368,8 @@
   border: 1px solid $form-field-border;
   color: $dark-gray;
   font-size: 18px;
+  padding: 10px;
+  outline: none;
 }
 
 .br-input-width {
@@ -396,6 +400,10 @@
 .fixed-width-container {
   max-width: $max-width-container !important;
   margin: 0 auto;
+}
+
+.filter-container {
+  background: $pure-white;
 }
 
 .no-underline {
