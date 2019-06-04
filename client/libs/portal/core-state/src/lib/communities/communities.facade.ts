@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { select, Store } from '@ngrx/store';
 
-import { CommunitiesPartialState } from './communities.reducer';
+import { CommunitiesState } from './communities.reducer';
 import { communitiesQuery } from './communities.selectors';
 import { LoadCommunities } from './communities.actions';
 
@@ -10,9 +10,9 @@ import { LoadCommunities } from './communities.actions';
 export class CommunitiesFacade {
   loaded$ = this.store.pipe(select(communitiesQuery.getLoaded));
   allCommunities$ = this.store.pipe(select(communitiesQuery.getAllCommunities));
-  selectedCommunities$ = this.store.pipe(select(communitiesQuery.getSelectedCommunities));
+  selectedCommunity$ = this.store.pipe(select(communitiesQuery.getSelectedCommunity));
 
-  constructor(private store: Store<CommunitiesPartialState>) {}
+  constructor(private store: Store<CommunitiesState>) {}
 
   loadAll() {
     this.store.dispatch(new LoadCommunities());
