@@ -6,7 +6,7 @@ import { CommunitiesState } from './communities.reducer';
 import { communitiesQuery } from './communities.selectors';
 import { LoadCommunities } from './communities.actions';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class CommunitiesFacade {
   loaded$ = this.store.pipe(select(communitiesQuery.getLoaded));
   allCommunities$ = this.store.pipe(select(communitiesQuery.getAllCommunities));
