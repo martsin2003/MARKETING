@@ -16,19 +16,19 @@
         &.home-name {
           color: $primary;
           @media screen and (max-width: $mobile-view) {
-            font-family: 'Helvetica-Neue-Bold' !important;
+            font-family: $helvetica-bold;
           }
         }
         &.community {
           color: $dark-gray;
           @media screen and (max-width: $mobile-view) {
-            font-family: 'Helvetica-Neue-Bold' !important;
+            font-family: $helvetica-bold;
           }
         }
         &.price {
           color: $primary-light;
           @media screen and (max-width: $mobile-view) {
-            font-family: 'Helvetica-Neue-Bold' !important;
+            font-family: $helvetica-bold;
           }
         }
       }
