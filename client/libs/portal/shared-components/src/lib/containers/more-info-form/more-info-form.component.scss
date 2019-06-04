@@ -111,6 +111,10 @@
           &:first-child {
             margin-bottom: 20px;
           }
+          .mat-checkbox-inner-container {
+            width: 44px;
+            height: 44px;
+          }
         }
       }
     }
