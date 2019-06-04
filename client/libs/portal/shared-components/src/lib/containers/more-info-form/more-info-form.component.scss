@@ -9,7 +9,7 @@
   padding-bottom: 30px;
   box-sizing: border-box;
   .title {
-    font-family: 'Helvetica-Neue-Bold';
+    font-family: $helvetica-bold;
     font-size: 36px;
     padding: 40px 0px 0px;
     color: $primary;
@@ -19,8 +19,9 @@
       font-size: 28px;
     }
   }
+
   .home-name {
-    font-family: 'Helvetica-Neue-Bold';
+    font-family: $helvetica-bold;
     font-size: 36px;
     color: $primary;
     padding: 0px 0px 30px;
@@ -101,6 +102,9 @@
               width: 24px;
               height: 24px;
             }
+          }
+          span {
+            font-size: 18px;
           }
         }
       }

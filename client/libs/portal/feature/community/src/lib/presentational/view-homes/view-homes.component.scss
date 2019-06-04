@@ -23,6 +23,7 @@
     text-align: center;
     @media screen and (max-width: $mobile-view) {
       font-size: 28px;
+      font-family: $helvetica-bold;
     }
   }
   &__tools-panel {

@@ -13,18 +13,24 @@
       }
       .home-type {
         font-size: 36px;
-        font-weight: bold;
         color: #0f2d4f;
+        font-family: $helvetica-bold;
+        @media screen and (max-width: $mobile-view) {
+          padding-bottom: 0.8rem;
+          font-size: 28px;
+        }
       }
       .place-detail {
         font-size: 18px;
         font-weight: bold;
         color: #404042;
+        font-family: $helvetica-bold;
       }
       .price-detail {
         font-size: 18px;
         font-weight: bold;
         color: #6295ba;
+        font-family: $helvetica-bold;
       }
     }
     &__btn-container {
@@ -81,6 +87,9 @@
         color: #404042;
         font-weight: 'Regular';
         font-family: 'Helvetica Neue';
+        @media screen and (max-width: $mobile-view) {
+          font-size: 20px;
+        }
       }
     }
     @media screen and (max-width: 650px) {

@@ -1,13 +1,15 @@
 <div class="content-title">
   <div class="hd-header-text">
-    <span class="home-name br-header-text br-header-text--large">{{ detailInfo?.homeName }}</span>
+    <span class="home-name br-header-text br-header-text--large helvetica-bold">{{
+      detailInfo?.homeName
+    }}</span>
     <span class="home-d br-content-text br-content-text--large" *ngIf="detailInfo?.homeDetails">
       {{ detailInfo?.homeDetails }}
     </span>
-    <span class="sub-title br-content-text br-content-text--large">
+    <span class="sub-title br-content-text br-content-text--large helvetica-bold">
       {{ detailInfo?.communityName }}
     </span>
-    <span class="price br-content-text br-content-text--large">
+    <span class="price br-content-text br-content-text--large helvetica-bold">
       {{ detailInfo?.startingPrice }}
     </span>
   </div>
