@@ -8,12 +8,14 @@ import { NxModule } from '@nrwl/nx';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { CommunitiesEffects } from './communities/communities.effects';
 import { CommunityPlansEffects } from './community-plans/community-plans.effects';
+import { MoveInNowHomesEffects } from './move-in-now-homes/move-in-now-homes.effects';
+
 @NgModule({
   imports: [
     CommonModule,
     NxModule.forRoot(),
     StoreModule.forRoot(reducers),
-    EffectsModule.forRoot([CommunitiesEffects, CommunityPlansEffects]),
+    EffectsModule.forRoot([CommunitiesEffects, CommunityPlansEffects, MoveInNowHomesEffects]),
     !environment.production ? StoreDevtoolsModule.instrument() : []
   ]
 })

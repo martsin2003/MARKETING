@@ -6,7 +6,7 @@ export const COMMUNITIES_FEATURE_KEY = 'communities';
 
 export interface CommunitiesState extends EntityState<CommunityView | Community> {
   selectedCommunityId?: string | null;
-  isLoading: boolean;
+  loading: boolean;
   loaded: boolean;
   error?: any;
 }
@@ -23,7 +23,7 @@ export const adapter: EntityAdapter<CommunityView | Community> = createEntityAda
 
 export const initialState: CommunitiesState = adapter.getInitialState({
   selectedCommunityId: null,
-  isLoading: false,
+  loading: false,
   loaded: false
 });
 
@@ -35,14 +35,14 @@ export function communitiesReducer(
     case CommunitiesActionTypes.CommunitiesLoaded: {
       return adapter.upsertMany(action.payload, {
         ...state,
-        isLoading: false,
+        loading: false,
         loaded: true
       });
     }
     case CommunitiesActionTypes.LoadCommunities: {
       return {
         ...state,
-        isLoading: true
+        loading: true
       };
     }
   }

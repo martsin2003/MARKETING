@@ -11,7 +11,7 @@ const getLoaded = createSelector(
 );
 const getLoading = createSelector(
   getCommunitiesState,
-  (state: fromCommunities.CommunitiesState) => state.isLoading
+  (state: fromCommunities.CommunitiesState) => state.loading
 );
 const getError = createSelector(
   getCommunitiesState,
