@@ -8,7 +8,7 @@ import { errorMappings } from './error-mappings';
   styleUrls: ['./error-content.component.scss']
 })
 export class ErrorContentComponent implements OnInit, OnChanges {
-  @Input() formControlTitle: string;
+  @Input() controlErrorsMappingKey: string;
   @Input() errors: ValidationErrors | null;
 
   errorToDisplay: string;
@@ -25,6 +25,6 @@ export class ErrorContentComponent implements OnInit, OnChanges {
 
   private findErrors() {
     const firstErrorKey = Object.keys(this.errors)[0];
-    this.errorToDisplay = errorMappings[this.formControlTitle][firstErrorKey];
+    this.errorToDisplay = errorMappings[this.controlErrorsMappingKey][firstErrorKey];
   }
 }

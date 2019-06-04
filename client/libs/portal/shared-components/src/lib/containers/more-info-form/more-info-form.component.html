@@ -27,7 +27,7 @@
         <div class="br-error-container" *ngIf="showErrors(moreInfoForm.get('email'))">
           <brookfield-error-content
             [errors]="moreInfoForm.get('email').errors"
-            [formControlTitle]="'requestMoreInfoEmail'"
+            [controlErrorsMappingKey]="'requestMoreInfoEmail'"
           ></brookfield-error-content>
         </div>
       </div>

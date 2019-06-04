@@ -19,6 +19,9 @@ export class ResetPasswordComponent implements OnInit {
   }
 
   onSubmit() {
+    if (this.resetPasswordForm.invalid) {
+      return;
+    }
     console.log(this.resetPasswordForm);
     this.passwordUpdated = true;
   }
@@ -33,6 +36,9 @@ export class ResetPasswordComponent implements OnInit {
   }
 
   showErrors(field: AbstractControl) {
-    return field.invalid && (field.touched && this.resetPasswordRef.submitted);
+    if (!this.resetPasswordRef) {
+      return false;
+    }
+    return field.invalid && (field.touched || this.resetPasswordRef.submitted);
   }
 }

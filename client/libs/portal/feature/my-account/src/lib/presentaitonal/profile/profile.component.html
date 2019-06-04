@@ -39,7 +39,7 @@
         <div class="br-error-container" *ngIf="showErrors(profileForm.get('email'))">
           <brookfield-error-content
             [errors]="profileForm.get('email').errors"
-            [formControlTitle]="'editMyProfileEmail'"
+            [controlErrorsMappingKey]="'editMyProfileEmail'"
           ></brookfield-error-content>
         </div>
       </div>
