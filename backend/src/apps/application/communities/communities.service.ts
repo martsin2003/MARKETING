@@ -12,7 +12,6 @@ export class CommunitiesService {
   }
   async getCommunities(username, password) {
     const zipCode = await this.communityRepository.findOne();
-    console.log('zipCode: ', zipCode);
     return 'success';
   }
 }

@@ -34,11 +34,9 @@ export class MyTimeTourService {
       }
     })
       .then(response => {
-        console.log('response: ', response);
         return response.data.redirectUrl;
       })
       .catch(error => {
-        console.log('error: ', error);
         throw error;
       });
   }

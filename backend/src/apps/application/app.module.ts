@@ -39,7 +39,6 @@ import { MyTimeTourModule } from './my-time-tour/my-time-tour.module';
             const delegates = graphqlFactory.createDelegates();
             const schemas = [localSchema];
             const graphileSchema = await postgraphileService.getSchema();
-            console.log('graphileSchema: ', graphileSchema);
             if (graphileSchema) {
               schemas.push(graphileSchema);
             }
