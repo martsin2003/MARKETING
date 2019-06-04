@@ -3822,6 +3822,15 @@ export interface TblSiteplanGeneratedQuery {
   } | null,
 };
 
+export interface GetNetVerifyLinkQuery {
+  getNetverifyLink:  {
+    __typename: "GetNetverifyLinkPayload",
+    success: boolean,
+    error: string | null,
+    link: string | null,
+  } | null,
+};
+
 export interface tblCommunityFragmentGeneratedFragment {
   __typename: "TblCommunity",
   intCommunityId: string,

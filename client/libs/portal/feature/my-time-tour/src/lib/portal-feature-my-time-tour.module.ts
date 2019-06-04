@@ -21,6 +21,8 @@ import { TourBackButtonComponent } from './presentational/tour-back-button/tour-
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material';
 import { HomeBrochureComponent } from './presentational/home-brochure/home-brochure.component';
+import { TourVerificationPhotoTypeComponent } from './presentational/tour-verification-photo-type/tour-verification-photo-type.component';
+import { TourVerificationJumioComponent } from './presentational/tour-verification-jumio/tour-verification-jumio.component';
 
 @NgModule({
   imports: [
@@ -47,7 +49,10 @@ import { HomeBrochureComponent } from './presentational/home-brochure/home-broch
     TourConfirmComponent,
     TourVerificationTypeComponent,
     TourBackButtonComponent,
-    HomeBrochureComponent
-  ]
+    HomeBrochureComponent,
+    TourVerificationPhotoTypeComponent,
+    TourVerificationJumioComponent
+  ],
+  entryComponents: [TourVerificationPhotoTypeComponent]
 })
 export class PortalFeatureMyTimeTourModule {}

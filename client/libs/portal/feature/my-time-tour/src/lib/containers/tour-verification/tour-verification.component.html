@@ -1,5 +1,8 @@
 <div class="tour-verification">
-  <brookfield-tour-step *ngIf="verificationStep !== 'thanks'" [data]="data"></brookfield-tour-step>
+  <brookfield-tour-step
+    *ngIf="verificationStep !== 'thanks' && verificationStep !== 'jumio'"
+    [data]="data"
+  ></brookfield-tour-step>
 
   <ng-container [ngSwitch]="verificationStep">
     <ng-container *ngIf="!verificationStep">
@@ -14,11 +17,18 @@
         (nextStep)="next($event)"
       ></brookfield-tour-verification-cc>
     </ng-container>
+    <ng-container *ngSwitchCase="'jumio'">
+      <brookfield-tour-verification-jumio
+        *ngIf="jumioLink"
+        [jumioLink]="jumioLink"
+        (jumioVerificationSubmitted)="jumioVerificationSubmitted()"
+      ></brookfield-tour-verification-jumio>
+    </ng-container>
     <ng-container *ngSwitchCase="'photo'">
-      <brookfield-tour-verification-dl
+      <brookfield-tour-verification-photo
         (goBack)="backToType()"
         (takePhotos)="takePhotos()"
-      ></brookfield-tour-verification-dl>
+      ></brookfield-tour-verification-photo>
     </ng-container>
     <ng-container *ngSwitchCase="'thanks'">
       <brookfield-tour-verification-thanks (next)="next()"></brookfield-tour-verification-thanks>

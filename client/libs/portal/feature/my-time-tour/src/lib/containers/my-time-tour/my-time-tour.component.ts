@@ -1,4 +1,4 @@
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { DetectMobileViewService } from '@brookfield/common/utilities';
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
@@ -9,24 +9,36 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-time-tour.component.scss']
 })
 export class MyTimeTourComponent implements OnInit {
-  step = 0;
+  step = 3;
   isMobileView$: Observable<boolean>;
-  constructor(private detectMobileViewService: DetectMobileViewService, private router: Router) {}
+  constructor(
+    private detectMobileViewService: DetectMobileViewService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
     this.isMobileView$ = this.detectMobileViewService.isMobileView();
+    console.log('this.route: ', this.route.snapshot.queryParamMap.get('step'));
+    const step = this.route.snapshot.queryParamMap.get('step');
+    if (step) {
+      this.step = Number(step);
+    }
   }
 
   timeStepCompleted() {
     this.step++;
+    this.updateRouter(this.step);
   }
 
   nextStep() {
     this.step++;
+    this.updateRouter(this.step);
   }
 
   back() {
     this.step--;
+    this.updateRouter(this.step);
   }
 
   cancelAppointment() {
@@ -35,5 +47,13 @@ export class MyTimeTourComponent implements OnInit {
 
   routeToUrl(url: string) {
     this.router.navigateByUrl(url);
+  }
+
+  updateRouter(step: number) {
+    this.router.navigate([], {
+      queryParams: {
+        step
+      }
+    });
   }
 }

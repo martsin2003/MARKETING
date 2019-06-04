@@ -1,0 +1,31 @@
+<div class="tour-verification-photo-type">
+  <div
+    class="tour-verification-photo-type__title mb-4 br-header-text--medium br-text-primary helvetica-bold"
+  >
+    Select The Type of Document You Wish to Scan
+  </div>
+  <div class="tour-verification-photo-type__description mb-4 helvetica-bold br-text-dark-gray">
+    United States has been set as issuing country of your documents.
+    <span class="text-underline helvetica-bold br-text-dark-gray">Change country.</span>
+  </div>
+  <div class="tour-verification-photo-type__actions">
+    <button
+      class="br-button br-button--secondary-blue tour-verification-photo-type__button"
+      (click)="typeSelected('DRIVING_LICENSE')"
+    >
+      DRIVER'S LICENSE
+    </button>
+    <button
+      class="br-button br-button--secondary-blue tour-verification-photo-type__button"
+      (click)="typeSelected('ID_CARD')"
+    >
+      IDENTITY CARD
+    </button>
+    <button
+      class="br-button br-button--secondary-blue tour-verification-photo-type__button"
+      (click)="typeSelected('PASSPORT')"
+    >
+      PASSPORT
+    </button>
+  </div>
+</div>

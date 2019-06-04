@@ -10,6 +10,19 @@ export class MyTimeTourResolver {
     @Args('linkType') linkType: string,
     @Args('userReference') userReference: string
   ) {
-    return this.myTimeTourService.getNetverifyLink(linkType, userReference);
+    return this.myTimeTourService
+      .getNetverifyLink(linkType, userReference)
+      .then(link => {
+        return {
+          success: true,
+          link
+        };
+      })
+      .catch(error => {
+        return {
+          success: false,
+          error
+        };
+      });
   }
 }
