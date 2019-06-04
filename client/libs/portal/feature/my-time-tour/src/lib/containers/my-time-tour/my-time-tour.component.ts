@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-time-tour.component.scss']
 })
 export class MyTimeTourComponent implements OnInit {
-  step = 3;
+  step = 0;
   isMobileView$: Observable<boolean>;
   constructor(
     private detectMobileViewService: DetectMobileViewService,

@@ -16,6 +16,8 @@ import { MyTimeTourModule } from './my-time-tour/my-time-tour.module';
 @Module({
   imports: [
     MyTimeTourModule,
+    AuthModule,
+    CommunitiesModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: config.get<string>('database.host'),
@@ -28,7 +30,7 @@ import { MyTimeTourModule } from './my-time-tour/my-time-tour.module';
       keepConnectionAlive: true
     }),
     GraphQLModule.forRootAsync({
-      imports: [PostgraphileModule, AuthModule, CommunitiesModule],
+      imports: [PostgraphileModule],
       useFactory: (postgraphileService: PostgraphileService, moduleRef: ModuleRef) => {
         return {
           context: ({ req }) => ({ req }),
