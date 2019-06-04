@@ -2,7 +2,7 @@
   <div class="br-header-text br-header-text--medium text-center br-text-primary-dark">
     Edit My Profile
   </div>
-  <form [formGroup]="profileForm" (submit)="onSubmit()">
+  <form [formGroup]="profileForm" (submit)="onSubmit()" #profileFormRef="ngForm">
     <div class="form-section">
       <div class="br-input-wrapper">
         <label for="first-name" class="br-input-label">First Name</label>
@@ -36,6 +36,12 @@
           type="text"
           placeholder="mal_rubin@gmail.com"
         />
+        <div class="br-error-container" *ngIf="showErrors(profileForm.get('email'))">
+          <brookfield-error-content
+            [errors]="profileForm.get('email').errors"
+            [formControlTitle]="'editMyProfileEmail'"
+          ></brookfield-error-content>
+        </div>
       </div>
     </div>
 

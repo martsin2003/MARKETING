@@ -3,27 +3,21 @@
     containerHomeDesignDetail ? containerHomeDesignDetail.title : 'Request More Info'
   }}</span>
   <span class="home-name">{{ containerHomeDesignDetail?.homeName }}</span>
-  <form class="form" [formGroup]="moreInfoForm" (submit)="onSubmit()" autocomplete="off">
+  <form
+    class="form"
+    [formGroup]="moreInfoForm"
+    (submit)="onSubmit()"
+    #moreInfoFormRef="ngForm"
+    autocomplete="off"
+  >
     <div class="item">
       <div class="br-input-wrapper fb-50 p-2">
         <label class="br-input-label">First Name *</label>
         <input class="br-input" formControlName="firstName" type="text" />
-        <div class="br-error-container" *ngIf="showErrors(moreInfoForm.get('firstName'))">
-          <brookfield-error-content
-            [errors]="moreInfoForm.get('firstName').errors"
-            [formControlTitle]="'requestMoreInfoEmail'"
-          ></brookfield-error-content>
-        </div>
       </div>
       <div class="br-input-wrapper fb-50 p-2">
         <label class="br-input-label">Last Name *</label>
         <input class="br-input" formControlName="lastName" type="text" />
-        <div class="br-error-container" *ngIf="showErrors(moreInfoForm.get('lastName'))">
-          <brookfield-error-content
-            [errors]="moreInfoForm.get('lastName').errors"
-            [formControlTitle]="'requestMoreInfoEmail'"
-          ></brookfield-error-content>
-        </div>
       </div>
     </div>
     <div class="item">
@@ -40,12 +34,6 @@
       <div class="br-input-wrapper fb-50 p-2">
         <label class="br-input-label">Phone *</label>
         <input class="br-input" formControlName="phone" type="text" />
-        <div class="br-error-container" *ngIf="showErrors(moreInfoForm.get('phone'))">
-          <brookfield-error-content
-            [errors]="moreInfoForm.get('phone').errors"
-            [formControlTitle]="'requestMoreInfoEmail'"
-          ></brookfield-error-content>
-        </div>
       </div>
     </div>
     <div class="wrp-comments">

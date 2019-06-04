@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { FormGroup, Validators, FormBuilder, AbstractControl } from '@angular/forms';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { FormGroup, Validators, FormBuilder, AbstractControl, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'brookfield-more-info-form',
@@ -7,6 +7,8 @@ import { FormGroup, Validators, FormBuilder, AbstractControl } from '@angular/fo
   styleUrls: ['./more-info-form.component.scss']
 })
 export class MoreInfoFormComponent implements OnInit {
+  @ViewChild('moreInfoFormRef') moreInfoFormRef: NgForm;
+
   @Input() containerHomeDesignDetail: { title: string; homeName: string };
 
   moreInfoForm: FormGroup;
@@ -34,6 +36,6 @@ export class MoreInfoFormComponent implements OnInit {
   }
 
   showErrors(field: AbstractControl) {
-    return field.invalid && field.touched;
+    return field.invalid && (field.touched && this.moreInfoFormRef.submitted);
   }
 }

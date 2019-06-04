@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormGroup, FormBuilder, Validators, AbstractControl, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'brookfield-profile',
@@ -7,6 +7,8 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
+  @ViewChild('profileFormRef') profileFormRef: NgForm;
+
   profileForm: FormGroup;
 
   constructor(private fb: FormBuilder) {}
@@ -21,12 +23,16 @@ export class ProfileComponent implements OnInit {
 
   initProfileForm(): FormGroup {
     return this.fb.group({
-      firstName: [null, Validators.compose([Validators.required])],
-      lastName: [null, Validators.compose([Validators.required])],
-      email: [null, Validators.compose([Validators.required])],
-      currentPassword: [null, Validators.compose([Validators.required])],
-      newPassword: [null, Validators.compose([Validators.required])],
-      consfirmPassword: [null, Validators.compose([Validators.required])]
+      firstName: [null, [Validators.required]],
+      lastName: [null, [Validators.required]],
+      email: [null, Validators.compose([Validators.required, Validators.email])],
+      currentPassword: [null, [Validators.required]],
+      newPassword: [null, [Validators.required]],
+      consfirmPassword: [null, [Validators.required]]
     });
+  }
+
+  showErrors(field: AbstractControl) {
+    return field.invalid && (field.touched || this.profileFormRef.submitted);
   }
 }

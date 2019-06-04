@@ -3,10 +3,11 @@ export const errorMappings = {
     email: 'Please enter a valid email.',
     required: 'This field is required.'
   },
-  editMyProfile: {
+  editMyProfileEmail: {
+    email: 'Please enter a valid email.',
     required: 'This field is required.'
   },
-  resetPassword: {
+  resetPasswordEmail: {
     email: 'Please enter a valid email.',
     required: 'This field is required.'
   }

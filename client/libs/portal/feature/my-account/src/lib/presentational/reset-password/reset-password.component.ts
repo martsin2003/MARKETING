@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormGroup, FormBuilder, Validators, AbstractControl, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'brookfield-reset-password',
@@ -7,8 +7,9 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./reset-password.component.scss']
 })
 export class ResetPasswordComponent implements OnInit {
-  passwordUpdated: boolean;
+  @ViewChild('resetPasswordRef') resetPasswordRef: NgForm;
 
+  passwordUpdated: boolean;
   resetPasswordForm: FormGroup;
 
   constructor(private fb: FormBuilder) {}
@@ -29,5 +30,9 @@ export class ResetPasswordComponent implements OnInit {
       newPassword: [null, Validators.compose([Validators.required])],
       confirmNewPassword: [null, Validators.compose([Validators.required])]
     });
+  }
+
+  showErrors(field: AbstractControl) {
+    return field.invalid && (field.touched && this.resetPasswordRef.submitted);
   }
 }

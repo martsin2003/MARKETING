@@ -1,7 +1,5 @@
-import { Component, OnInit, Input, OnChanges, SimpleChanges, OnDestroy } from '@angular/core';
-import { FormControl, ValidationErrors } from '@angular/forms';
-import { take, takeUntil } from 'rxjs/operators';
-import { Subject } from 'rxjs';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { ValidationErrors } from '@angular/forms';
 import { errorMappings } from './error-mappings';
 
 @Component({
@@ -9,22 +7,15 @@ import { errorMappings } from './error-mappings';
   templateUrl: './error-content.component.html',
   styleUrls: ['./error-content.component.scss']
 })
-export class ErrorContentComponent implements OnInit, OnChanges, OnDestroy {
+export class ErrorContentComponent implements OnInit, OnChanges {
   @Input() formControlTitle: string;
   @Input() errors: ValidationErrors | null;
-
-  private destroy$: Subject<boolean> = new Subject<boolean>();
 
   errorToDisplay: string;
 
   constructor() {}
 
   ngOnInit() {}
-
-  ngOnDestroy() {
-    this.destroy$.next(true);
-    this.destroy$.complete();
-  }
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes.errors && changes.errors.currentValue) {
