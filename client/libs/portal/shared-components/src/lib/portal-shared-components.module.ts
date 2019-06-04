@@ -21,6 +21,7 @@ import { BottomSheetComponent } from './presentational/bottom-sheet/bottom-sheet
 import { CardInfoComponent } from './containers/card-info/card-info.component';
 import { CommunityCardComponent } from './presentational/community-card/community-card.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ErrorContentComponent } from './presentational/error-content/error-content.component';
 
 @NgModule({
   imports: [CommonModule, MaterialModule, RouterModule, ReactiveFormsModule],
@@ -43,7 +44,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MoreInfoFormComponent,
     BottomSheetComponent,
     CardInfoComponent,
-    CommunityCardComponent
+    CommunityCardComponent,
+    ErrorContentComponent
   ],
   exports: [
     CommunityCardComponent,
@@ -55,7 +57,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeCardComponent,
     MoreInfoFormComponent,
     BottomSheetComponent,
-    CardInfoComponent
+    CardInfoComponent,
+    ErrorContentComponent
   ],
   entryComponents: [BottomSheetComponent]
 })

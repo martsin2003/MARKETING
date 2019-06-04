@@ -1,0 +1,8 @@
+@import 'variables.scss';
+
+.error {
+  color: $error;
+  font-size: 14px;
+  font-family: $helvetica-light;
+  padding: 2px 0px;
+}

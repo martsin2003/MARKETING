@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { FormGroup, Validators, FormBuilder, AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'brookfield-more-info-form',
@@ -31,5 +31,9 @@ export class MoreInfoFormComponent implements OnInit {
       private: null,
       promotion: null
     });
+  }
+
+  showErrors(field: AbstractControl) {
+    return field.invalid && field.touched;
   }
 }

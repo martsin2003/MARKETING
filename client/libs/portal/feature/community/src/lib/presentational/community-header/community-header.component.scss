@@ -107,7 +107,7 @@
       color: white;
       font-family: 'Helvetica Neue', 'Medium';
       transform: translateY(-450px);
-      transition-duration: 0.3s;
+      transition-duration: transform 0.3s;
       z-index: 1000;
       .menu-item,
       .close-menu {
