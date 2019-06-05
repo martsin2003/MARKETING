@@ -1,0 +1,50 @@
+@import 'variables.scss';
+
+body {
+  width: 100%;
+  margin: 0px;
+}
+
+.container-header {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  &__header {
+    color: #000;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    background: #f1f1f1;
+    .title {
+      width: 25%;
+      text-align: center;
+      padding: 8px 16px;
+      &:hover {
+        background: gray;
+      }
+      .button {
+        color: #000;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.bloc-info {
+  max-width: 1100px;
+  margin: 88px;
+  margin-left: auto;
+  margin-right: auto;
+  &__title {
+    margin: 16px 0px;
+    padding: 0px 16px;
+    font-size: 15px;
+    font-size: 'Lato', sans-serif;
+  }
+  h1 {
+    font-size: 36px;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    margin: 10px 0px;
+  }
+}
