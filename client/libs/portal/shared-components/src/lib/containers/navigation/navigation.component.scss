@@ -82,7 +82,7 @@
         &.active {
           color: $primary-light;
           &::after {
-            border-bottom: 4px solid $primary-light;
+            border-color: $primary-light;
           }
         }
       }
@@ -107,14 +107,22 @@
     &:hover,
     &.active {
       position: relative;
-      font-family: $helvetica-bold;
       &::after {
         content: '';
         position: absolute;
         width: 100%;
         bottom: 0;
         left: 0;
-        border-bottom: 4px solid $pure-white;
+        border-bottom: 0px solid $pure-white;
+        animation: showUnderscore 0.15s forwards;
+        @keyframes showUnderscore {
+          from {
+            border-width: 0px;
+          }
+          to {
+            border-width: 4px;
+          }
+        }
       }
     }
   }
