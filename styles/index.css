@@ -1,4 +1,4 @@
-.background-gray {
+.background-gray-of-card {
   background: #616161 !important;
 }
 
@@ -310,6 +310,53 @@ body {
   padding: 12px 24px !important;
   font-family: "Lato", sans-serif;
   cursor: pointer;
+}
+
+.container-who-we-are {
+  padding: 0px 16px;
+}
+.container-who-we-are__text-who {
+  padding: 64px 0px;
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+}
+.container-who-we-are__text-who span {
+  border-bottom: 6px solid #ccc;
+  border-color: #616161;
+  padding: 16px 0px;
+  font-size: 24px;
+  font-family: "Lato", sans-serif;
+}
+
+.container-cards {
+  display: flex;
+}
+.container-cards .cards-user {
+  display: block;
+  padding: 0px 8px;
+}
+.container-cards .cards-user img {
+  width: 100%;
+}
+.container-cards .info {
+  padding: 0px 16px;
+}
+.container-cards .info h1 {
+  font-size: 24px;
+  font-family: "Lato", sans-serif;
+  margin: 10px 0px;
+}
+.container-cards .info__text-founder {
+  font-size: 15x;
+  font-family: "Lato", sans-serif;
+  margin: 15px 0px;
+  opacity: 0.6;
+}
+.container-cards .info__text-comment {
+  font-size: 15x;
+  font-family: "Lato", sans-serif;
+  margin: 15px 0px;
 }
 
 /*# sourceMappingURL=index.css.map */
