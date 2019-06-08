@@ -331,16 +331,18 @@ body {
 
 .container-cards {
   display: flex;
+  padding-bottom: 32px;
 }
 .container-cards .cards-user {
-  display: block;
-  padding: 0px 8px;
+  flex: 1;
+  margin: 0px 8px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .container-cards .cards-user img {
   width: 100%;
 }
 .container-cards .info {
-  padding: 0px 16px;
+  padding: 0px 16px 16px;
 }
 .container-cards .info h1 {
   font-size: 24px;
@@ -357,6 +359,15 @@ body {
   font-size: 15x;
   font-family: "Lato", sans-serif;
   margin: 15px 0px;
+}
+.container-cards .info .card-user-button {
+  padding: 8px 16px;
+  font-family: "Lato", sans-serif;
+  color: #000;
+  background-color: #f1f1f1;
+  font-size: 15px;
+  text-align: center;
+  line-height: 1.5;
 }
 
 /*# sourceMappingURL=index.css.map */
