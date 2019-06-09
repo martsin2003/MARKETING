@@ -35,9 +35,13 @@ body {
 .container-header__header .title:hover {
   background: #ccc;
 }
-.container-header__header .title .button {
-  color: #000;
+.container-header__header .button {
+  width: 100%;
+  height: 100%;
   text-decoration: none;
+  z-index: 1000;
+  font-family: "Lato", sans-serif;
+  color: #000 !important;
 }
 
 .main-container {
@@ -452,11 +456,17 @@ body {
 .container-footer .inoki .fa {
   cursor: pointer;
 }
-.container-footer .inoki p {
+.container-footer .footer-powered {
   margin: 10px 0px;
   font-size: 15px;
   font-family: "Lato", sans-serif;
   text-align: center;
+}
+.container-footer .footer-powered a {
+  color: black;
+}
+.container-footer .footer-powered a:hover {
+  color: #4caf50;
 }
 
 /*# sourceMappingURL=index.css.map */

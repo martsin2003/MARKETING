@@ -14,24 +14,16 @@
 <body>
   <div class="container-header">
     <div class="container-header__header">
-      <div class="title background-gray">
-        <a href="#" class="button">Home</a>
-      </div>
-      <div class="title background-gray">
-        <a href="#" class="button">Plans</a>
-      </div>
-      <div class="title background-gray">
-        <a href="#" class="button">About</a>
-      </div>
-      <div class="title background-gray">
-        <a href="#" class="button">Contact</a>
-      </div>
+        <a href="#home" class="title background-gray button">Home</a>
+        <a href="#pricing-plans" class="title background-gray button">Plans</a>
+        <a href="#about" class="title background-gray button">About</a>
+        <a href="#contact" class="title background-gray button">Contact</a>
     </div>
   </div>
 
-  <div class="main-container">
+  <div class="main-container" id="home">
     <div class="content-after-header">
-      <span class="content-after-header__title">MARKETING</span>
+      <span class="content-after-header__title" >MARKETING</span>
       <p class="content-after-header__subtitle">Template by w3.css</p>
     </div>
 
@@ -78,7 +70,7 @@
       </div>
     </div>
 
-    <div class="container-pricing-plans">
+    <div class="container-pricing-plans" id="pricing-plans">
       <span class="container-pricing-plans__title">Pricing Plans</span>
       <span class="container-pricing-plans__text">Choose a pricing plan that fits your needs.</span>
     </div>
@@ -128,7 +120,7 @@
       </div>
     </div>
 
-    <div class="container-who-we-are">
+    <div class="container-who-we-are" id="about">
       <div class="container-who-we-are__text-who">
         <span>Who We Are</span>
       </div>
@@ -173,7 +165,7 @@
       </div>
     </div>
 
-    <div class="container-contact-us">
+    <div class="container-contact-us" id="contact">
       <div class="container-contact-us__text-us">
         <span>Contact Us</span>
       </div>
@@ -202,7 +194,7 @@
 
 <div class="container-footer">
   <span>Footer</span>
-  <a class="button">
+  <a class="button gray-hover">
     <i class="fa fa-arrow-up"></i>
     To the top
   </a>
@@ -214,7 +206,7 @@
     <i class="fa fa-twitter"></i>
     <i class="fa fa-linkedin"></i>
   </div>
-  <p>
+  <p class="footer-powered">
     Powered by 
     <a href="https://www.w3schools.com/w3css/default.asp">w3.css</a>
   </p>
